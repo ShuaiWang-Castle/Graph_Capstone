@@ -1,7 +1,13 @@
 {
   "schema": "safe_graph_contraction_public_preview_v1",
   "source_commit": "fd425fd9d275a2ddd77ec6c91ad648a398cbdbd6",
-  "scope": "original Python source, provenance metadata and closed summaries only",
+  "scope": "original Python source, provenance metadata, closed summaries and explicit import-only native refusal shims",
+  "release_overlays": [
+    "README.md",
+    "LICENSE",
+    "research/baselines/run_kapoce.py",
+    "research/full_kapoce/run_full.py"
+  ],
   "formal_43x5_results_included": false,
   "third_party_graph_archives_or_papers_included": false,
   "files": [
@@ -12,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3140,
-      "sha256": "4efa616092b90417f7612787441eb91a1f69db3a3f81fa587860cd5360c9d89e"
+      "bytes": 3436,
+      "sha256": "045ca3b36943307d713e5ce79ceb98936485dd1ea071e233ce66ce42b78ccf8d"
     },
     {
       "path": "analysis/README.md",
@@ -411,6 +417,11 @@
       "sha256": "9d5608bd7885bf67611bfca2c718415d42a3a3b03ddec8f4d237f5e3b75ae201"
     },
     {
+      "path": "research/baselines/run_kapoce.py",
+      "bytes": 511,
+      "sha256": "4d5a8a2550eecf9ad5311c9c18498d30409040ed3adec84b86b97df593037fa1"
+    },
+    {
       "path": "research/baselines/sparse_criteria.py",
       "bytes": 9988,
       "sha256": "6ed3276dfa8718d2f0d4ba519b1cd523c221a71dd57cc92d22aa419eb913b2a3"
@@ -419,6 +430,11 @@
       "path": "research/baselines/weighted_reference.py",
       "bytes": 22269,
       "sha256": "1e1222b7442cf8e22f208d3d16489cd54d504a8bba61fb7b73924c7c556882a1"
+    },
+    {
+      "path": "research/full_kapoce/run_full.py",
+      "bytes": 517,
+      "sha256": "58ade9992b0472e1f47d43144038b16a4cf5704655abc2d6630162ad90e57ff9"
     },
     {
       "path": "research/skill-provenance.json",
