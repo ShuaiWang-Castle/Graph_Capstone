@@ -1,0 +1,1239 @@
+{
+  "status": "complete_configuration_v1_under_final_review",
+  "scope": "full predeclared evaluation of the implemented capped checker",
+  "public_datasets": [
+    "ca-GrQc",
+    "ca-HepTh",
+    "email-Eu-core",
+    "facebook_combined",
+    "ca-CondMat",
+    "p2p-Gnutella08"
+  ],
+  "development_datasets": [
+    "karate",
+    "les_miserables",
+    "florentine",
+    "davis"
+  ],
+  "proposal": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "resolution": "1",
+    "minimum_size": 2,
+    "candidate_policy": "complete_certificate_independent_louvain_forest",
+    "dense_spectral_boundary": 64,
+    "arpack_tolerance": 1e-07,
+    "arpack_max_iterations": 10000,
+    "candidate_count_cap": null
+  },
+  "gamma": [
+    "1/2",
+    "1",
+    "2"
+  ],
+  "checker": {
+    "verification": "auto",
+    "exact_max_size": 64,
+    "dense_max_size": 64,
+    "screen_tolerance": 1e-10,
+    "oversize_policy": "record_cap_exclusion_before_assembly"
+  },
+  "global_baselines": [
+    "singleton_dominance",
+    "positive_closure_edge",
+    "degree_proportional_twins"
+  ],
+  "global_baseline_policy": {
+    "pair_strict": true,
+    "twin_strict": false,
+    "twin_composition": "proved_compatible_degree_proportional_profile_components"
+  },
+  "downstream": {
+    "algorithm": "networkx_louvain",
+    "seeds": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "workload_prefixes": [
+      1,
+      3,
+      9
+    ],
+    "paired_order": "alternate_by_dataset_index_proposal_seed_gamma_index_downstream_index",
+    "discovery_incumbent": "retain_for_both_arms",
+    "record_lifted_labels": true
+  },
+  "numerical_milp": {
+    "datasets": [
+      "karate",
+      "les_miserables",
+      "florentine",
+      "davis"
+    ],
+    "max_vertices": 150,
+    "time_limit_seconds": 60,
+    "mip_rel_gap": 0,
+    "arithmetic": "floating_numerical_diagnostic"
+  },
+  "native_kapoce": {
+    "routine": "weighted_recursive",
+    "datasets": [
+      "karate",
+      "les_miserables",
+      "florentine",
+      "davis"
+    ],
+    "timeout_seconds": 30,
+    "max_vertices": 2000,
+    "max_absolute_scaled_cost": 20000,
+    "aggregate_limit": 62500000,
+    "full_solver": false,
+    "instrumentation": "assertions PARANOID fail-on-signed-integer-overflow; current residual Twin Simple guard retained"
+  },
+  "memory": {
+    "public": "peak_process_RSS_for_complete_case_including_shared_graph_and_retained_candidates",
+    "isolated_scaling": "one_process_per_checker_graph_block"
+  },
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "controlled_cases": [
+    {
+      "case_id": "controlled-000-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 3
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-001-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 4
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-002-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 5
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-003-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 8
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-004-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 16
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-005-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 32
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-006-matching_cliques",
+      "family": "matching_cliques",
+      "parameters": {
+        "k": 64
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-007-common_hub_matching",
+      "family": "common_hub_matching",
+      "parameters": {
+        "k": 6
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-008-uniform_advantage_counterexample",
+      "family": "uniform_advantage_counterexample",
+      "parameters": {},
+      "gamma": [
+        "1/8"
+      ],
+      "role": "derived_mechanism_negative_control",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-009-weighted_planted_blocks",
+      "family": "weighted_planted_blocks",
+      "parameters": {
+        "block_sizes": [
+          4,
+          5,
+          6
+        ],
+        "p": "4/5",
+        "q": "1/25",
+        "node_factors": [
+          1,
+          2,
+          4
+        ],
+        "internal_base": 3,
+        "external_base": 1,
+        "seed": 201,
+        "relabel_seed": 1000201
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-010-weighted_planted_blocks",
+      "family": "weighted_planted_blocks",
+      "parameters": {
+        "block_sizes": [
+          4,
+          5,
+          6
+        ],
+        "p": "4/5",
+        "q": "1/25",
+        "node_factors": [
+          1,
+          2,
+          4
+        ],
+        "internal_base": 3,
+        "external_base": 1,
+        "seed": 202,
+        "relabel_seed": 1000202
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-011-weighted_planted_blocks",
+      "family": "weighted_planted_blocks",
+      "parameters": {
+        "block_sizes": [
+          4,
+          5,
+          6
+        ],
+        "p": "4/5",
+        "q": "1/25",
+        "node_factors": [
+          1,
+          2,
+          4
+        ],
+        "internal_base": 3,
+        "external_base": 1,
+        "seed": 203,
+        "relabel_seed": 1000203
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-012-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-013-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-014-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-015-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-016-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-017-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-018-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-019-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-020-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-021-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-022-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-023-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "7/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-024-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-025-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-026-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-027-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-028-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-029-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/200",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-030-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-031-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-032-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "0",
+        "addition_probability": "0",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-033-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 101,
+        "noise_seed": 100101,
+        "relabel_seed": 1000101
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-034-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 102,
+        "noise_seed": 100102,
+        "relabel_seed": 1000102
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-035-noisy_planted_clusters",
+      "family": "noisy_planted_clusters",
+      "parameters": {
+        "communities": 8,
+        "block_size": 30,
+        "p": "13/20",
+        "q": "1/50",
+        "deletion_probability": "1/10",
+        "addition_probability": "1/1000",
+        "seed": 103,
+        "noise_seed": 100103,
+        "relabel_seed": 1000103
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-036-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 16,
+        "outside_vertices": 100,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-037-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 16,
+        "outside_vertices": 1000,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-038-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 16,
+        "outside_vertices": 10000,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-039-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 32,
+        "outside_vertices": 100,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-040-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 32,
+        "outside_vertices": 1000,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-041-profile_scaling",
+      "family": "profile_scaling",
+      "parameters": {
+        "k": 32,
+        "outside_vertices": 10000,
+        "hub_size": 4,
+        "core_weight": 1,
+        "attachment_weight": 1,
+        "outside_weight": 1
+      },
+      "gamma": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "role": "confirmatory_controlled",
+      "native_preprocessing": false,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": false
+    },
+    {
+      "case_id": "controlled-042-hard_exterior_attachment",
+      "family": "hard_exterior_attachment",
+      "parameters": {
+        "k": 3,
+        "attachment_weight": 5
+      },
+      "gamma": [
+        "1"
+      ],
+      "role": "exploratory_proved_failure_stress",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-043-hard_exterior_attachment",
+      "family": "hard_exterior_attachment",
+      "parameters": {
+        "k": 6,
+        "attachment_weight": 8
+      },
+      "gamma": [
+        "1"
+      ],
+      "role": "exploratory_proved_failure_stress",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    },
+    {
+      "case_id": "controlled-044-hard_exterior_attachment",
+      "family": "hard_exterior_attachment",
+      "parameters": {
+        "k": 16,
+        "attachment_weight": 18
+      },
+      "gamma": [
+        "1"
+      ],
+      "role": "exploratory_proved_failure_stress",
+      "native_preprocessing": true,
+      "candidate_bank_seed": 0,
+      "supplied_block_comparison": true,
+      "candidate_bank_evaluation": true
+    }
+  ],
+  "supplied_block_methods": [
+    "degree_median",
+    "degree_zero",
+    "degree_anchor",
+    "degree_full_pair",
+    "uniform_copy",
+    "lange_positive_closure_star",
+    "bocker_almost_clique"
+  ],
+  "supplied_block_config": {
+    "exact_max_size": 64,
+    "uniform_max_graph_vertices": 150,
+    "uniform_max_exterior_vertices": 150,
+    "positive_closure_max_vertices": 128,
+    "signed_internal_enumeration_max_size": 16,
+    "weighted_reference_arithmetic": "exact_rational",
+    "supplied_blocks": "all optional reference blocks per controlled generator; no truth injected into discovery",
+    "development_bank_seed": 0,
+    "production_median_verification": "auto",
+    "forced_exact_median_panel": "separate boundary/mechanism reference, not production coverage"
+  },
+  "c_subinstance": {
+    "stratum": "controlled reference blocks and all development-bank blocks of size2..64",
+    "exact_max_active_vertices": 10,
+    "numerical_max_active_vertices": 50,
+    "numerical_time_limit_seconds": 5,
+    "tolerance": 1e-08,
+    "outside_pruning": "omit vertices with nonpositive global B to every K vertex; isolate them freely",
+    "coefficient_source": "original full degrees and S",
+    "tie_test": "isolation_score equals optimum; never infer from returned labels"
+  },
+  "scaling": {
+    "methods": [
+      "degree_median",
+      "degree_full_pair",
+      "dense_exterior_diagnostic"
+    ],
+    "isolated_processes": true,
+    "replicate_count": 3,
+    "repeat_order": "cyclic rotation of method order by replicate",
+    "block_source": "profile_scaling controlled reference K",
+    "dense_mode": "float assembly diagnostic only; never certified",
+    "include_input_and_graph_preparation_in_peak_RSS": true,
+    "memory_replicate_count": 1,
+    "timing_memory_separation": "tracemalloc only separate memory run, exclude those timings"
+  },
+  "public_supplied_baselines": [
+    "bocker_almost_clique_strict"
+  ],
+  "orchestration": {
+    "parallel_benchmark_children": 1,
+    "suite_order": [
+      "public",
+      "controls",
+      "scaling"
+    ],
+    "failures": "preserve exit/log and halt for repair on any unexpected nonzero child; exclusions/timeouts are structured normal records"
+  },
+  "recursive_cheap": {
+    "strata": [
+      "public",
+      "development",
+      "controlled_bank"
+    ],
+    "max_block_size": 64,
+    "include_round_decisions": false,
+    "round_limit": null,
+    "criteria": [
+      "singleton_dominance_strict",
+      "positive_closure_edge_strict",
+      "degree_proportional_twins_compatible_weak",
+      "bocker_almost_clique_strict"
+    ],
+    "bank_policy": "fixed original bank mapped and deduplicated each quotient",
+    "cannot_link_constraints": false
+  },
+  "native_full_solver": {
+    "strata": "development and controlled cases with native_preprocessing=true",
+    "entry": "ExactSolver::solve",
+    "timeout_seconds": 30,
+    "max_vertices": 2000,
+    "max_absolute_scaled_cost": 20000,
+    "aggregate_limit": 62500000,
+    "paired_arms": [
+      "unreduced",
+      "degree_quotient"
+    ],
+    "paired_order": "alternate_by_case_index_gamma_index",
+    "same_incumbent": "actual fixed discovery partition retained in quotient",
+    "instrumentation": "assertions PARANOID fail-on-signed-integer-overflow",
+    "timeouts": "retain supplied incumbent and completed initial lower bound only",
+    "one_vertex_quotient": "analytically validate the only partition outside native n>=2 domain",
+    "arithmetic": "exact_integer_optimization; compare exact original Q after independent lifting",
+    "reporting_eligibility": {
+      "completed_time_speedup": "both arms optimal or optimal_trivial; analytic one-node rows separate from native-only timing",
+      "censoring": "timeout is unresolved right-censored; no completed-time ratio using timeout limit",
+      "domain_exclusions": "retain all rows, reasons and denominators; exclude skipped/unavailable/failed from solve-time speedup aggregation"
+    }
+  }
+}

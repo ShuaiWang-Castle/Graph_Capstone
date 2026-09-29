@@ -1,0 +1,68 @@
+{
+  "ca-GrQc": {
+    "url": "https://snap.stanford.edu/data/ca-GrQc.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/ca-GrQc.html",
+    "sha256": "a254442cdf5d684712578b630c2e0d7543518ab154ef2341cabb607572ce7230",
+    "bytes": 109261,
+    "retrieved_at_utc": "2026-09-29T04:28:09.953543+00:00",
+    "path": "data/raw/ca-GrQc.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "undirected"
+  },
+  "ca-HepTh": {
+    "url": "https://snap.stanford.edu/data/ca-HepTh.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/ca-HepTh.html",
+    "sha256": "7235c7e11887f8a32dfd03a3aa0c77efdf89d41591a959c7d6e4ca11b1299bb5",
+    "bytes": 210596,
+    "retrieved_at_utc": "2026-09-29T04:28:11.017510+00:00",
+    "path": "data/raw/ca-HepTh.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "undirected"
+  },
+  "email-Eu-core": {
+    "url": "https://snap.stanford.edu/data/email-Eu-core.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/email-Eu-core.html",
+    "sha256": "4b47acdb80197b085fe63c819c357ae488131ee904ed93d1b219a68b0f9e245f",
+    "bytes": 79754,
+    "retrieved_at_utc": "2026-09-29T04:28:11.727282+00:00",
+    "path": "data/raw/email-Eu-core.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "directed"
+  },
+  "facebook_combined": {
+    "url": "https://snap.stanford.edu/data/facebook_combined.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/ego-Facebook.html",
+    "sha256": "125e84db872eeba443d270c70315c256b0af43a502fcfe51f50621166ad035d7",
+    "bytes": 218576,
+    "retrieved_at_utc": "2026-09-29T04:49:30.627984+00:00",
+    "path": "data/raw/facebook_combined.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "undirected"
+  },
+  "ca-CondMat": {
+    "url": "https://snap.stanford.edu/data/ca-CondMat.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/ca-CondMat.html",
+    "sha256": "11b47db52441ce0140f2ec54999345459fecbc52ff6f9fe3956dc3cad9835872",
+    "bytes": 727502,
+    "retrieved_at_utc": "2026-09-29T04:49:32.487864+00:00",
+    "path": "data/raw/ca-CondMat.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "undirected"
+  },
+  "p2p-Gnutella08": {
+    "url": "https://snap.stanford.edu/data/p2p-Gnutella08.txt.gz",
+    "source_page": "https://snap.stanford.edu/data/p2p-Gnutella08.html",
+    "sha256": "cb3019062be21e55b03f19a73e88edf34693bafb68ae581621cc7a037fa604a9",
+    "bytes": 63491,
+    "retrieved_at_utc": "2026-09-29T04:49:33.148922+00:00",
+    "path": "data/raw/p2p-Gnutella08.txt.gz",
+    "access": "public dataset; no additional redistribution license inferred",
+    "processing": "planned: undirected simple union, remove self-loops, retain all listed endpoints; record actual processed counts",
+    "original_direction": "directed"
+  }
+}

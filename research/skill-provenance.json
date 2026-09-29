@@ -1,0 +1,20 @@
+{
+  "retrieved_at": "2026-09-29",
+  "usage": "Project-local pinned source checkouts; guidance read directly, no system-wide installation",
+  "repositories": [
+    {
+      "name": "CCFA-Skills",
+      "url": "https://github.com/mikubaka88/CCFA-Skills",
+      "commit": "5969e6b20a3bbcef9118fa00796d1417d48fcbf3",
+      "path": "research_skills/CCFA-Skills",
+      "license_file": "research_skills/CCFA-Skills/LICENSE"
+    },
+    {
+      "name": "Supervisor-Skills",
+      "url": "https://github.com/HKUSTDial/Supervisor-Skills",
+      "commit": "207bc6f7a1aa107e544099c2c7cc86816fba9628",
+      "path": "research_skills/Supervisor-Skills",
+      "license_file": "research_skills/Supervisor-Skills/LICENSE"
+    }
+  ]
+}

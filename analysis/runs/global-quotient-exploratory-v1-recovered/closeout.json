@@ -1,0 +1,1583 @@
+{
+  "schema": "independent-global-quotient-recovered-closeout-v1",
+  "status": "completed_exploratory_audit_independently_closed_out",
+  "created_utc": "2026-09-29T08:52:02.103078+00:00",
+  "review_mode": "stdlib read-only JSON/path/hash integrity closeout; no numerical graph/solver/test execution",
+  "aggregate_counts": {
+    "cases": 67,
+    "resolution_tuples": 193,
+    "arm_rows": 579,
+    "tuple_strata": {
+      "public": 54,
+      "controlled": 127,
+      "development": 12
+    },
+    "resolution_status_counts": {
+      "unresolved_above_enumeration_cap": 461,
+      "resolved_enumeration": 23,
+      "resolved_sign": 77,
+      "unavailable": 18
+    },
+    "by_arm_resolution_status": {
+      "original": {
+        "unresolved_above_enumeration_cap": 178,
+        "resolved_enumeration": 8,
+        "resolved_sign": 7
+      },
+      "production": {
+        "unresolved_above_enumeration_cap": 135,
+        "resolved_enumeration": 6,
+        "resolved_sign": 52
+      },
+      "recursive": {
+        "unresolved_above_enumeration_cap": 148,
+        "resolved_enumeration": 9,
+        "resolved_sign": 18,
+        "unavailable": 18
+      }
+    },
+    "original_optima_established_rows": 100,
+    "original_optima_established_tuples": 59,
+    "established_rows_by_arm": {
+      "original": 15,
+      "production": 58,
+      "recursive": 27
+    },
+    "independent_direct_original_proofs": 15,
+    "production_safety_dependent_proofs": 58,
+    "recursive_reviewed_replay_dependent_proofs": 27,
+    "unresolved_or_unavailable_rows": 479,
+    "audit_error_rows": 0,
+    "selected_failed_native_arms": 2,
+    "all_source_failed_native_arms": 4,
+    "unique_native_conditional_completed_arm_records": 68,
+    "unique_native_completed_records_compared_to_independent_proof": 62,
+    "resolved_rows_with_native_comparison": 68,
+    "native_comparison_row_observations": 132,
+    "conditional_native_completed_records_without_independent_proof": 6,
+    "dependency_traces": 86,
+    "trivial_resolved_rows": 2
+  },
+  "checks": {
+    "all_expected_tuple_arm_keys_exactly_once": true,
+    "all_stratum_cells_rederived": true,
+    "original_optimum_established_required_with_no_error": true,
+    "recorded_sign_or_all_partitions_n_le_10_proof_metadata_consistent": true,
+    "exact_Q_upper_lift_and_cross_arm_proofs_equal": true,
+    "production_exact_acceptance_graph_gamma_and_raw_block_trace_consistent": true,
+    "recursive_replay_and_selected_raw_groups_consistent": true,
+    "failed_native_only_rechecked_feasible_incumbent": true,
+    "conditional_completed_native_consistent_where_independent_proof_available": true,
+    "unresolved_unavailable_and_trivial_rows_retained": true,
+    "all_output_source_copy_and_bound_hashes_verified": true
+  },
+  "bound_output_sha256": {
+    "analysis/runs/global-quotient-exploratory-v1-recovered/audit-config.json": "fe216482eaaf990eeb91c2f3882899965e0844ee0074564d9ab81343f48e2a93",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/input-hashes.json": "580e0f847367475159ce866cf46d976ca5496fd10fdd1b46cd85ebac62c07fd2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma0-original.json": "fca285f54afe58d765cccff9f1e9d87b36885ea06fa8d519cd301a416670d4fb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma0-production.json": "6bdc311f48376106ab706fb36d3e38a11102ef4a0a27c6a398b04fb887121ea1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma0-recursive.json": "9e9dd37e92a591f147285d93555abc39436a0a5d2ef1378db51a1e4aa2fa3060",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma1-original.json": "4a8cc275ce77dafe751ed6f848875e2a8b18f0619d19d37c95ac13bf0ea4a0ac",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma1-production.json": "976362daa9238d1cfdaa812b04875676aef3000a0a164a4ffeef408562885ee1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma1-recursive.json": "c0540885e214e87f9fb244e2ea938c6b695e65087a8aec9a644acb5316769bce",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma2-original.json": "07a3a7e91c5b6fdd1bd3bb1070fb95dba8fb92a70440e67b4c6e3b3501cf488b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma2-production.json": "f629e39080db30ccb71ae04786c0ce139c33bd4a31d1896124976f55b611c9c0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal0-gamma2-recursive.json": "4cea9bf4a322d2c4aba6470b4503d2172f3b0df941917df0d68a487bbba8c5c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma0-original.json": "49a75dd9f266086d5d7da7157b31afbdb3080def13360368560fba8612f49c64",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma0-production.json": "83c42909a62767d6d121f5a4336f2db0608543b147bd29b0cd1dcff77986812c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma0-recursive.json": "58a01dad6f84ded8b69fcaeef8c13649d7e8a58d34129cef732251591b4cadfe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma1-original.json": "4ac7e42bbaa421aa3717b8cd4843193075419c035c0cb901aed3e4c15eb818f1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma1-production.json": "429ae262e5b10587a1fe74f169d4c18a443f61b07e1657b00cb4e5f26709bac9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma1-recursive.json": "4869be1317c6d83dd59b72770e4d50ea9a0a0a75652bbdb316756c4e8c188b5e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma2-original.json": "bd42fac4da5d50077bf8339d380b7b7adc9f4f10e19619c04f070faad097bb26",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma2-production.json": "9d1bd63552aa1fd8e6cf60379cd0795ff3a40f91e6ed7dbce66cd0c25f6d5291",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal1-gamma2-recursive.json": "799aef07fe66cfcbfa3a9052820d9adc9a94d2cb1ad6e5a3277d1fc79f3005b6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma0-original.json": "a3c5aea6dbbac17598b298c092604047a67b0d25d534369d93419574695a79d1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma0-production.json": "82f2942d3533c3cc1bd02cffdfe956c7a85a63c0ce147f5c380b8a5937511bd8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma0-recursive.json": "b5b41c312d7b3a18f60f88847f0a6b7023c4d14a34db65313b80254705bc1ce9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma1-original.json": "42546af7171be7c6b0314083b31d402aa0c487ef622538c741cf190faf34bb99",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma1-production.json": "3391730ce5a1f83c2c899d35e81c7c0845de0226e598741867288b3080857dbe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma1-recursive.json": "178ff156010cabdc074aa6dafddd338c2740fb09bef28a9a4559a6dfaa0c2131",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma2-original.json": "e55f822cf124a7bcbbee1f08cf457ed4fc8235fadeb2bc5aa9c75d1fc403fcf4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma2-production.json": "e0419569da5623ffa04075997a6077dedd79d4971c8411fac8b6279bc0c675d6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-CondMat-proposal2-gamma2-recursive.json": "bbf9b18fb81fa911ad3ed7022e4966976a03ec673e5cb1c2cdad4d204b713efa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma0-original.json": "ced5af3e835c1687cf7df5bdf7684b8e7553e59f1bfcb5eb47c71b58c52c97ff",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma0-production.json": "690d9da32c677476754a423f32629b9372f53a17883f91cac27ce2b6af55ad18",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma0-recursive.json": "d946e1a7f9c825ceb1aaa2bc33afe0391f73516cf6f6848df61e46e16d541b57",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma1-original.json": "cce12f14739e6a8ee124917f9ed5cacfa770f3759c43034e3189d164a243cc73",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma1-production.json": "0d535640efa0a6f50a89e16dd95bfa2ed06e6e40edbefd5f3fd62cb747ebed5c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma1-recursive.json": "67897b10dd7747f17c861adc8df86b607025ab8bdc9aad7b8a13b1b56d302b3e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma2-original.json": "83b3ca4d16f7cbbde0deb6ec57f3a8fbf3e0d04b9fb467e196a80f6acc7a8432",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma2-production.json": "2a48421637948fe1abc187b5c8ab94b236ae073d94f999b70f31fbbcf260e1c8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal0-gamma2-recursive.json": "ebbf027fa7109f473a6e0b36d4ac124695a2e643b823073260a6ff4e74ab1ad6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma0-original.json": "2e6bf22489ce9901bcba10639cc6966ba6b5feb8fab8f411f294c5bc502b7bcb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma0-production.json": "62a4cfa76733034dd106cfd7cfbbe487e4b64556e5905183a7baaab4654e9383",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma0-recursive.json": "6f93a23477630ea5c2aeaef51561195e242e98f914fe13e17ca88505391094ba",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma1-original.json": "2d98a7b218ecac8135a4b6614c9c52a4f985b06ff6854320d59a13e71ff4b3dd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma1-production.json": "6783283e79d8594df6fcdda52bb29bd230351f05f2ef9bece46e73388b576452",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma1-recursive.json": "38e528380b59fe59472c2dad83d12b1139104286d6ce4cd9e7874ac0067b501e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma2-original.json": "90a6c9da96c9326971b81a5727f824eafac14cbafc2f2c2af921bc0bc26cda51",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma2-production.json": "01c2b4c272de214d6de00ed70b462dabbae24b0c53e8c0f411c930daa3a132fe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal1-gamma2-recursive.json": "bde4971829f78862cb67d08f782f7cd5c6c1fae4f900676e71bdd663f4e1fcef",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma0-original.json": "7edc4344e8b3e664c212365764e83b5cfa51df0ce7460c85c107097b35bf42af",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma0-production.json": "1d7d24dd1bfb634630634be607788b75d7b134f88482910fc9c6aaa0a8cd8348",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma0-recursive.json": "b75eac278b7921d96dd657813e7bb0e62d7bc5a524ddfa8c894cf9ed78ae1036",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma1-original.json": "300ae33c1d6b13464b87141690a92703989c29457ec8a14c14e4de8eadbb5fc3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma1-production.json": "aca01882b5887055f5c89c352c4bb7e483b57a7d71b9fbf8ea7b9117dacf5730",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma1-recursive.json": "c8f15a185cfdc7ab5799ca3789478e0b8ce82c56aaaa50bfa711c5f05e710b74",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma2-original.json": "c8dc84eefdbe98a24416c60d9d11af215cfc0f49899d2ae6818b25fa14f35c96",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma2-production.json": "3bef85cf06f1d1550ca08113ee6315801bd5793dbca75a408af9eaa97e9f58cb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-GrQc-proposal2-gamma2-recursive.json": "45a3df7a5c0028dcaefbb918d455b94307967a498de0e51a18e0319ff6bfcf9d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma0-original.json": "75f7dab638dfe020c156e42ef0cc4b88197ba5db7af7acb3366874376b4711a3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma0-production.json": "da4ed013183368fc805812ca0cc4b8f940246ed748c054234d9b33b3ab2b93a1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma0-recursive.json": "ee5e16a45f2e3c7c4f047e2ebf72a5ebbe5fec60180cf9a570744373c0ddc393",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma1-original.json": "d26facb2c759b0ba8815c43a173796c1c3f05779ebb052832b34cba6064c2c33",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma1-production.json": "24f3a9adb5007b9d222f1bcda2647f947a055d00eec8905937580b1918f5992b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma1-recursive.json": "f593ca2b7a09e39abea2a2e0a8c29da4a4e4320fd69be79bd70ff0dfbb95d1c8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma2-original.json": "5ebce8c194ffb2f1db9e46c90485190abc1e01137ddb8c07d4f631f7e6489c5f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma2-production.json": "3e7fc9294bd37129dfb6c48061761b3d51ef95db91af79aec8f641f01ef5a59c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal0-gamma2-recursive.json": "a2899941f1445a837e23daff1b93c8acc2d651f0a09e3d0baed2e7c090719ade",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma0-original.json": "69e93e254800dba2527ffb8bbe95cb8c29d8d7ee04edc5690ca97e14ea9c49b5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma0-production.json": "80555b2f0bd4a8a3f076544eeb74f327e216a6da261a81592e160d1a1b9ba3e1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma0-recursive.json": "1caaa5dd036b595a101820139bf2843c8bcb952797310b6de2ff87ee7f2b3c6c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma1-original.json": "e15f53dafc4065f5a0a2ccbf9f48745c5e0d9c5adde491453d4e1f9f1d6de3d8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma1-production.json": "62fc88e69e96d88e28021d8acd2f2d4b6a507df0cd5cb45cffc19c3232ac736b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma1-recursive.json": "67ba36a13d55a119d3eaff8e74264a466f0bb18ec345c4b9dbf3f4771f821bbe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma2-original.json": "14640fe85e24cf185586b68e9c0c1ef6a4e5a44cdf490196833506125e4e51b6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma2-production.json": "4bed6b01c8eac91cac5c2105d7a4379314f0cd67c1d0fce6db9544b619804fb0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal1-gamma2-recursive.json": "3e6b11c1e68cdcce6d67b78889a7f1352879c71b91a61de6a76d849b98360f84",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma0-original.json": "f912bca7e6c89498598b5c82e3ece5127b4f2e1d9c198a3b45f023841a0061c3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma0-production.json": "093bf6485f44b8dbe6ab3e2670ea790a9d85c5cfb535f64cabfb44e7b73bc62e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma0-recursive.json": "26fcbcd56aed72f49781f24450d724969018eee300fe2441b08ca58fd43b1f13",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma1-original.json": "e1e377743b221cfc67b4a8324a8cd9ef6a4611634c0146d2adc06f114ab2b24e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma1-production.json": "e2c5a3da6818c9160442113ccbbd790b25302b2c1425267bf8c819ef57692211",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma1-recursive.json": "c81f9f5548ecdde89cd1b87c6f6bc4d0e156bab9752043b556a96cb97a2a5bcb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma2-original.json": "e38923685fda4a85296be0254b24a0054068746af1ff42dd9988695b0b2a4923",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma2-production.json": "ba0c6d3a9d8558d9d8133c7677e4eeaecfb3bcda74307131f20622c425a1f613",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/ca-HepTh-proposal2-gamma2-recursive.json": "8da7f796ee3436284ff77da47d521381539321317bb8f4929d4f15e0da823291",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma0-original.json": "012a6915a1dadbc139f8599aa1b66c0e8f084b5475869e4481e0996003f99326",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma0-production.json": "9614c065a1e71464629cba9892c97d492899c807f618da4028e0273ecea900b9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma0-recursive.json": "ff630a2cf53d3675f1610a3bde63dbd8a60c7e75425baa997aff764bc3e252fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma1-original.json": "142953a6ee0ba45487a3bfd93cf6afbd33a9bb87a86e5f8db3e91e672d9f6f20",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma1-production.json": "be8176d1b3059c7f6d5b37f72af774ed0cc0fbbc6468642d6b5785139f39f2fa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma1-recursive.json": "21987446633e9bfd78ec2ec9f272ec6f9472d22da312a69f7c682fea21e1611e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma2-original.json": "60b71892c61748f036f32464786dcc8d43a8914a23ec0f90393a0cf58048b17a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma2-production.json": "6500f384e3197007d63795c82ed8ddf35129e86f80060d230f7cb19f5151939a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-000-matching_cliques-gamma2-recursive.json": "dc89de3a21460fa2fa293f03293b119d60088f35c97c6aed6ebd0452a05a8016",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma0-original.json": "171ed6beaa5b36caca784481853a720ee2da2126a46907f560cf84d9797be4e9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma0-production.json": "62e5e3b25aa92cd02fd39ed1406a2279f58e24a6128d146ab544d67f78f5e602",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma0-recursive.json": "cd2c3b5570d3fb6d89abaffab39aae408c4a5584c78da79b829ba93ed0655faf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma1-original.json": "04d9e1a1ad8b8d9a79bf4d337852dc6ec41e29c4422b6d991e1ebdaef80e42a6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma1-production.json": "9507eee2e782756fb49b6f280732372f8340cfdee897bf62e8e5dc5e10594851",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma1-recursive.json": "1da3b8077d80a730fb53a8b0470f2dc977e916fd06494bce7add77f90f82b448",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma2-original.json": "97471cbd318d9790321a93c2a87aacf80579df17738a026b31dbee56d9d47fa7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma2-production.json": "79faac1813c651acedbd9fcd66d75b8d82bb05085f9a2cf13a8016f858919878",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-001-matching_cliques-gamma2-recursive.json": "7e2dc8ef0af5f015b257aba0f72fc8e43396fcd9f65ecab1ee606954023f98a1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma0-original.json": "5c43d999ba7d1212aca5aba258baa130a6388ccff6c5f9b29101523c73ec3722",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma0-production.json": "3304e13b90a7108099fe1b8d7855feeb7b5143f98ade1e4bcbf8751f1523aeaa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma0-recursive.json": "47f127329c70d939f3b2986d1abbbf65d22ffc512e549bdfc6f15f4a6bde7605",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma1-original.json": "ffb88ea382640e15d63defa22b81990c647bdf010204cb14b3d02474f040e877",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma1-production.json": "22ca910b959ec00a3edb21ccb190788a07e95f443f8c2afe0ae72c15ace884d8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma1-recursive.json": "b5a8a5b4c85eccc127ae28888c83f123a4cfba129a0f87b7a60f5e2410fff16e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma2-original.json": "9b2ff5a4922eeeb90dd6c88d13b15d9726c5ad3bd36ba9b0ad3993490fc70e72",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma2-production.json": "58777ee29302d87822bebb46f440696ec9149bcfe77094e05e426b1af3131378",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-002-matching_cliques-gamma2-recursive.json": "dc11fda570c749bcf1ca2f08cbebb5f97491cdbb9ba0fc3b03170760a367a431",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma0-original.json": "41ca562d59ac03c58c37603082319d6ea21e7795fa78359908f164315d46a91f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma0-production.json": "5a1012776981c396c306d2ad128e47c22093c8d5e6c0bd49b05de1de58e52f72",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma0-recursive.json": "63e28a23c77c25eae271dcb8adb1743265be3c8f7abed5a415f81de09ad7b537",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma1-original.json": "eca35f5825df23a495910b808ffe9c3b16b2bf6cdfb91be188d5a8d24c4a6d48",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma1-production.json": "b5a48c487e15c1050c5dab1ca0d3e0d9291ee94ac7bc46b095bb285fd85cfc8b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma1-recursive.json": "84a587f220068c23612a76f15c3cade82cb8f0d524ada0a87fe81af2a9e8b1d7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma2-original.json": "6e60895ee433f128ccd91ea04483753c75ed9c7975ed95f531d2a75e7912ff4b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma2-production.json": "668fb982d4f8cb291a46960058c02d5ecc0d2588585e23a9a4800055b300ddbc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-003-matching_cliques-gamma2-recursive.json": "b85774c0104196fb4ad9e6ebaf33fb7d2ee23ee0b8c69eb6a7358ad21203b28e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma0-original.json": "d734e1b3bb6d3d3b66a8007f91e0f0841674104a94842bc8be0101942837c01f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma0-production.json": "96a7a17816392f518aa43fedadfbb5ea3ba89e96dd2ccc75dec60f19936d1bbe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma0-recursive.json": "946ef08f0d6e8dcc95a295194c5a7ee53b3adc7bfccbdab904f62fec697e63f9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma1-original.json": "428c36d49adf14cecb2835f98f9ae461f49d3605446a7824365c38890e0c92c0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma1-production.json": "e649dd96615e4f2b09ddf2b92ebee57abc47bfa2e39cdb322a321f765d5537fb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma1-recursive.json": "cadbf2e765c913b32097177ffd7b99b293dc4d215621bca16c2e978e3cd6e3e7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma2-original.json": "741192dc915c89bc984bd178764aa175b324942e2488d24d5f6222a9f4560525",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma2-production.json": "238d24564bd7cc0832ac8baa6a07f56b758a347699dda593dbbaf05a42090ede",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-004-matching_cliques-gamma2-recursive.json": "b9179b224d09cc717680e0e5b61b4e5d5c3158734b26e3569d69666fbaebc860",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma0-original.json": "f4f64ca6d3f22fdd1bdd264e799c9182e3d7ced35312015f39b6f10ddfd0db7b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma0-production.json": "a7fb47b389c11a32ebc7200bb075f9e774ff07d3258d70b6c0a30bc318314c23",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma0-recursive.json": "7a5632d6a1e74c9a1f5a96653997db33a96adea44c88d051db0da14023b76030",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma1-original.json": "8f3d119c85516f2fd3d13268977a1124563f88c6fb08b7808eea6a20b2d46124",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma1-production.json": "52815862eceb957afdb91e71d31028e8c090b88eaef82e6c88cf36945aba5553",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma1-recursive.json": "87871782a1388430978fe56c7d15af6b48e9b627e1adf063d0c1c4fa9be2ed5a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma2-original.json": "eeab2bc084ac61bf1f95d1acf465ce2dfadd01acab290450750f8c1f44272cfd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma2-production.json": "eea60c08114253ba6daf4dad717e57024224c17a929461fbf22252cc086b1105",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-005-matching_cliques-gamma2-recursive.json": "3aaa3b1221f7c0cfa66d24ee01083944ae14bf35cc858708aa36a87cbef07246",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma0-original.json": "54bcba74ae6de97fa4ed46f01f613ea7fdbb3964275c6f1fa90d8d5cd0196e6f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma0-production.json": "2bbab27c091dd38b8ae1f060c5d92500cfc9c3253de9ff7f304b4887fefd5753",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma0-recursive.json": "0ccd2cfff99e1bcdd57c4432fa9fdec95406b546c573155d78f637faa9860905",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma1-original.json": "79736a3ccc56469f1ba90bafdcc1594e53512eef3bcc3ba268f8dde6050609a5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma1-production.json": "09cfe6951d985031b730fa3bdc694d8640dff48e6669f8338e6f79ebacd7d046",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma1-recursive.json": "c505cc645b5ab17c140608c804254e20b193f1cbf0ca3efd6b6d6aa8a206e513",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma2-original.json": "d3b4dac849b97d246694b48395f1162a3d4f822934b1d4913e67ecc905d3b018",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma2-production.json": "b0f691a4ed7555fe1552966ef70d6ef342d70304ac668c995cb9f34bf56847b2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-006-matching_cliques-gamma2-recursive.json": "ed7626c29a4c0b0d6a4aadac1f4a90ef607f3d4a28621449bd45a7c249f4cafb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma0-original.json": "cc0e9404522b504365b511b8e167592f563b8b528a4b653771ed7e12a1f34fc0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma0-production.json": "5985c50c7cadbc87e46ee571f4cc568f5ffa639af6ed9f040dd5067ccd8c0e24",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma0-recursive.json": "0ec8b0851fe8cfb57eed2495a9f597964a23811c8ceccdf00c92a6ac629af7c2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma1-original.json": "dbdfc4d90c2828e940e02aa592fa1ae9f14b6a93b85a2fb13ffcdbf3d122446a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma1-production.json": "007d59e9c4d8b9ca9eac8606307bb32c674dff5291fed8d7eb70ddbfc5e431e2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma1-recursive.json": "f298231eda2fcc96396a493cb75439920d030fa60301ae7e5e5c9e9a903bd554",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma2-original.json": "d75c09a95adf52161649d43147c0017eb79fbb622f9894c542051e184ba246f7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma2-production.json": "c051845e7dd76544fd3778f4cbedfb9d540d8d07b3418c28366a3b1796a0a2c7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-007-common_hub_matching-gamma2-recursive.json": "3b5dcdc6ab9048e742eacc6015b4d6c517a2fa34614ba0f1cbe7cc5789a20f59",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-008-uniform_advantage_counterexample-gamma0-original.json": "001452e434ae809d2fc9188b62f3a291b481894db212c33e020bebc78ebf23c9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-008-uniform_advantage_counterexample-gamma0-production.json": "d155165c36e03a12e735343a7483252770d3b74cfd24fea1553b2ad85b18a8d4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-008-uniform_advantage_counterexample-gamma0-recursive.json": "39fd28b7b80208fea09433947dc55e3fe000235c5e9f4dc91461142e10c356e9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma0-original.json": "83cc3ff98104119d35669f1c32f992bb53955e06f3ec8a4b336c281c86683a20",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma0-production.json": "12588dee7590acf672139f6dab04824ad3a8550260480067fc509e1d809100e5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma0-recursive.json": "0a73c2602c950df4f195df3de400ae167f685b65f43c5927b4e6e82adef1cda7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma1-original.json": "46b30fa14d185a656c4b3b608483993d0b175ee2cab989d8f4e36cf2065ecb12",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma1-production.json": "bd451a7ce985bae7123d2fcd8ed4ec9454408f47dfe764b07f3e3bf049d449bd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma1-recursive.json": "4f985865af7ba1c0be2e608daad6a06bb0ecca6ac99ab2cf58b175044e36fe67",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma2-original.json": "7a1aa4923c80df2cd3911fa96a1f02afa3a8b923aed72ddd611b32725abc08be",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma2-production.json": "58637856982daf989f2ea6e0532dec6a48132ced57d3f5c488560ff9ade6de60",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-009-weighted_planted_blocks-gamma2-recursive.json": "f80c0162a041b47b4ae50e7f05ea5c1275a26bb8272e60d86f395d72b108fa89",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma0-original.json": "7456015aad2eaf8a81ec3b3855bd0b4c6e22ab30cd326957c2e39d4c66ccaa32",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma0-production.json": "e3f4c29e0687fa51ee515a7a4e45badd2c259dbdc65ee2c9b50d989a40c3ffc3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma0-recursive.json": "4ddc544de568af1f1a0261880d0bdfab3df2ea65742c263efadc660165b1fc52",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma1-original.json": "a5a15f1fb6461dcc324102366b2cc5a9f1cf74fceef16787cc1d440c945f757d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma1-production.json": "f95c1c9ed9e8395fc5b8584d28e82ac1d6e14d240e976cab252f523820a27bf9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma1-recursive.json": "07a09dc643ba3218ce6e059eaddcf6aa4fc8451ea60772b679fce92efbfb6efe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma2-original.json": "e408e2885db6b46490c759b33d0fddac18eb5d574d16eb141868d4da0d6478ce",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma2-production.json": "83ac3975eb5583a9d2c7d9dcd634b390b4cea759fb103f00613f219600161eae",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-010-weighted_planted_blocks-gamma2-recursive.json": "821e7ea8628fa01934603f87983213c3ee472c58656787fd78a81bece7be3876",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma0-original.json": "e545c04f5bbba66fc95d3fc1550ff528f0f11c155d3d4c078ebbca11e0e7d433",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma0-production.json": "5d3456e9d93334c3397454df0416012e6189597cd79b0b2305a323f588d77736",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma0-recursive.json": "3624c12bf35b481cecac8f7fb9ef243ae8aa95105c331a364ce9ac4ee3c918cd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma1-original.json": "1017cca1b42de3a15a7326f27e0bc1b8e32dc7770146262233bb8b01db40b31e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma1-production.json": "d95ecacd78e0e61146e06ba1cb4b695ab32487ebabb963521738afd7aa9a6e63",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma1-recursive.json": "bf53fe193da39347037ffa9bac981289374a07c10cd67f6d4d0a09928bd6209c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma2-original.json": "b44108029594735b443de2bb6ce9534ae0abdef8ae29cce43295b548f75689be",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma2-production.json": "f018065ddad71dfdb73cf2acd5b1db829c06185f6989c4c83d12489f60c80d8b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-011-weighted_planted_blocks-gamma2-recursive.json": "753e234a01012a37997166c35251f9c53c28d38b54bc813e3650f098f60f4fa5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma0-original.json": "c819cfa9a77f8e87db7406a915f666a2bf28c0d7d6e32831efa24d8242316e8d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma0-production.json": "23e1ea66280f38d90f0ea7e9d0f17521d58ec6f9ad6c1ab55f6ca548b39ba771",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma0-recursive.json": "c3a119439500634518b8b4603dbdac78efd8b33a739f71c47ef75d5a89989f39",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma1-original.json": "86af43f693db76fc77a0039fb20ddc15de6743a2aa16f7c572934edca170a69d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma1-production.json": "9a99eb39de555b2ae6334412f5d86c99672d4f7cc32b994555e9aafc6027505a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma1-recursive.json": "273865fc05fc63fb2adbcaa1c25fa0ee9fabda01882f14c68766eefec7eb47d6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma2-original.json": "4dea22108c1d07ac9f3655f8d5d5551dc018232af2f48399684d86f5bb98d8a5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma2-production.json": "2df9fc4dcf8944184e830875086e991aefd6faf68e2467402e3553c416f6e057",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-012-noisy_planted_clusters-gamma2-recursive.json": "2ee8145e2a0a11c6a7026303c802ce85e803001a491dd91fc073530491d5d4fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma0-original.json": "79dad9152f6ac116fe95fd49a896d4ed8f6e8d62490778fecf19513a1c5bf40f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma0-production.json": "773d5bd0b45216bb44f15646e318d623f316ff6f7170a01dae1c82013f4d0a0f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma0-recursive.json": "a252bbcea980e7ed8577e661f256c55a112df0a4a6a72eb1650f66ee6701c996",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma1-original.json": "0754bb2f5fc0b1f3f51cc9ad029818f145cc1653c19f5f1a7e5c72554863f9dc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma1-production.json": "3f882eb64b2a0bdec22c0e3ffabc8cfe44ed8104bae3ae814ec9644e458cd3b1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma1-recursive.json": "5afd8847c6b02111ddeb304299c32404c6332013d78464720d3fe8249444d315",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma2-original.json": "07abff777bd165bafdd6c5b493f31939e5b9d2e84f93adad2a384710d3cc0e92",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma2-production.json": "f4a6f9c2af047094038dcd3a62ba38950733e6be4b4331ec0da0daab37e87616",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-013-noisy_planted_clusters-gamma2-recursive.json": "01f01ca0250c78b42b2c4be239cb886b325a9f59746b4b354206ffb6d2a972c5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma0-original.json": "dec159693ea75b49c523a3d300fca3476cb81df77e65ce8104432017565484e2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma0-production.json": "68bb478b336d734c36a8efa7cbd1b45308e01226bcc7ec770f8c2a5ca48faa64",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma0-recursive.json": "5bd954a33a7ce754608d65a15e12f699eb103143c60b0eab4c5ec8ffe82c2527",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma1-original.json": "d6a35309350b2d7bd0085c0031a29d67739be424a2fdb6141a6868d1d7645b1b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma1-production.json": "4ed9be9721a91a18cd8b1bb6dc5a598a4a784ac95ac2b6368f2b7b1429f3fcb2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma1-recursive.json": "b47908ed4beb54e1420443a67adc01bb871770fdd970b11ab0be2163bc86676c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma2-original.json": "2ccd65ea50a319c0e9b6a98f5c9604b0ef95199aaa77e1688a5d627a85a70001",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma2-production.json": "31a5cbd568897c6221e37ee4b03c06a4faa9effa2572ddd7eddeec4f127d689a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-014-noisy_planted_clusters-gamma2-recursive.json": "c12d9aa85449b3afa1c0a0a5eb896df7a25ec853c27b609d4a56b1ed79a18afc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma0-original.json": "b25cd6ce775be09d480daba04cf8cda8728e61101cd5ad72ed16f4d208cc4c9b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma0-production.json": "cde9dc04ca444e2d18971df07c3823b0851c107124e2de1374983ce7583ef022",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma0-recursive.json": "8108caa8719480a249efccf08246d6c791981f7cb03eef9a0527904c19c8b302",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma1-original.json": "7a1dbd54ab161ea2616be2bc3014b5dc21a2bb7a149dc491145b53d3f198f403",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma1-production.json": "8a75f7ffa1694e3fe552868fdae20446cec357d8400a2f3b541f5e4a2d9bbf62",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma1-recursive.json": "c58a1fe20c2f0792bdeaa69812251c0023880faa578ccb180b3944f5061d8ac3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma2-original.json": "9c890b984ebd9de95d397917edbacbe320c573c2a40b7f3dfa38d154fc90d820",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma2-production.json": "25c81bc1f9e5efa8b334e863896438616a43cede180233ce130469c38b0225f7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-015-noisy_planted_clusters-gamma2-recursive.json": "181aadbe699a42fdbfce1bef8dd0ed2a19bab78a352a701b1dcc08dc870b805b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma0-original.json": "7cea1cbab594bb6c16f1d7944dc42ce9b87722c187ae69e5d9f5f345c9428a18",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma0-production.json": "5a195f77ff896650c6cad82d6b5d72aa816f976dd41cf591218abf0e7bbadf03",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma0-recursive.json": "a82beb9d7701e0056817ab48d8612baa2876cfc58f454b468a160d05706b4b91",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma1-original.json": "5b5f6681f625aaac19e852bf0569ae123b52030612f36b8bfe76b02bfd85ad29",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma1-production.json": "699ff38d38aa174b7a55348ab8e3f57d68518c0da380cd2fd6674c37b14961ca",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma1-recursive.json": "8e471fa81a3e9d666c5c45d3dae1ee7e1241091bb90d49a1e8f390385168b242",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma2-original.json": "da5a005ff6ca7f64b881d78f99d87b1eb5f2db5d5e7eada305cf144a1b78fd7b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma2-production.json": "9ffa13869a03303900d75c333ae961bd12eb8922eaf784d00ca7acbe18f22e9c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-016-noisy_planted_clusters-gamma2-recursive.json": "7740a1ccabae910352beb0a305c6b926845154ca0b713fa79d3fb983cabc7dc6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma0-original.json": "64ad682f01f5338c62584b75f7cae6a940d94347cf38032b57c3be6fde7d9a8e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma0-production.json": "3a497248041d82056e485eb52a046d65472c7071dc4c49d2d00639d04c7d9fa4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma0-recursive.json": "931745b39662cbc37a4fd4810cbc8dd96137a5b628b6da45024305baa7259ed1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma1-original.json": "9a0f278c77c911cd77660251398c82d258851d775517b7da544793e9c3789ecd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma1-production.json": "f8ccbf32e959e33805245c5507628855d20741216f93b384cbe51c36fd6c790b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma1-recursive.json": "30e3fe25d262ce063d05fc73e606483b4d61342bf28fcf76a0f400da211799e6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma2-original.json": "cd17d1c118aa5362b1264fab302c36361a89e02b027a465f5ffcd05f09ae767e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma2-production.json": "b4a51bc8d8d9cb2c67917647d26eb9b735df507d24a5db21bfd0d1e23078a787",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-017-noisy_planted_clusters-gamma2-recursive.json": "9320d47cd38549a6386cb9b0d808eba517ea52eff4c2ce502ea92ba84a311a10",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma0-original.json": "cc0acd9fed84ce320dd82a64c34fbc3be0be594ba6de791bbb7a850f1ab64119",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma0-production.json": "784f23fd0e492963beb51e762cc7887045a634aa8cc62e485fc77e914ae87f41",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma0-recursive.json": "1be061a1f2b70e71c4ddcf1be902aa1e91d884b16487213f8b381fa2d553f227",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma1-original.json": "20de523026a8b376e07c9036cfdc8312be82f22b793ae694979c98abd9f0c397",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma1-production.json": "a3e045bd2a66f6dcef3a830216410e5294c1e74293d834fda9d5a72d63e4c817",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma1-recursive.json": "ebd2397f502ebdb0e662ed3a7366bd2e517a760ff48aab7e2927fab67ae3a5a9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma2-original.json": "18217c5a3956219480bdbfd3ac354196b08298cf05cb3c906ba144f9f20fd245",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma2-production.json": "42c5f19af15ef91565d5e689b466a6985b5da7e68d08733703dfd89683ee0351",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-018-noisy_planted_clusters-gamma2-recursive.json": "3bda2f7d7757705232285af5175e4db252690ccb8e1e34165bf124c5cc37e1d8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma0-original.json": "0c206b7a647a0dfe43681e9475f1e47cf55c9902bc5aa155247684230f79bfc4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma0-production.json": "08d5dbe2b24ea56e6cd34769b935b4d232ff4b96b09f6cc947613bc727694ba1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma0-recursive.json": "eba2c3dd83dda2757b89be72cacdd301d9a98d3658a8897c91c522689d0732c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma1-original.json": "5d9451c55baee186f747d0f5d0c81feee2e7b4d6e96fd5ffbc1a01a08ed5c951",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma1-production.json": "b0078b21b22320d97f716afb4c60a8e1b6a392f7b487b5c570fb1aaf666d241e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma1-recursive.json": "aec6ed26ab9764c186676802bfb03b9d5e0fcf2671bac31684fbcbfeab0d66be",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma2-original.json": "4a28d68f2b9d4edc9dc172bffc9358e258ea542e42f7bc8da9371ce139f55038",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma2-production.json": "3479a329fed68e72f132fdbaae630f985c111e183ccd0cf1a6ff4aa6855c95c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-019-noisy_planted_clusters-gamma2-recursive.json": "e46e486fc57fdbc53b6b3e66dc6a9dd766d941b3961900c332764155906533b1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma0-original.json": "b7f43204c7b9671dfd501afab3c9cd527184919848d1c93df37f2c0cc28a9d61",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma0-production.json": "1abddbc1545e2ead8e35bc7bf7f4bd2f0689b395cc9a49aea84177c6932a7db8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma0-recursive.json": "233a0fdbdd5f3473cef6a71aef6144dd86ee46f28b12cbab30a3fa7bc21fcb70",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma1-original.json": "41e613d464aede63e9753cb16d6c7fb791e241da64d620281374e7315ffc6d1b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma1-production.json": "207f5d6483d6f04e4e519980da44ab474fba5ecb269e9ee11534eaa65c6c55df",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma1-recursive.json": "3271049d50cc20b9947ac6ced271a51b288b613dadc606561c39b2dce8eda195",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma2-original.json": "88a24b11cce67411a06f903bd0f3e39260a15949bd5ff768d38b6dae3eccccc3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma2-production.json": "43f5edbdf14b7fff1f4af76369e1f0989b24199bda4110e6b49858e7b029214f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-020-noisy_planted_clusters-gamma2-recursive.json": "18815f28b088190d93c4a54225c70dfbb6aecaf65dc7b4672fff00c6d2d29b4f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma0-original.json": "574acdfb845e3ec8286282d80c80c73415e54c8f666d62d56415b305ada37ea9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma0-production.json": "b88e6ebcd7adec94c86b5d1b49485af60fcaf54036bee7cdee9ec8b88f0a1912",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma0-recursive.json": "a552df42621455c4eb98cf10d9f6ffbe12c37c30a417e79e3b2ea8f73b7bd629",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma1-original.json": "2c06f7025fbd29fd747e9a4e882d5cde48fbe17020f1b0b721a134645422d9f8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma1-production.json": "0662b4c77821a947c43f8ae85fb6b87ebe17041701be80aad936edbca7e92cd8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma1-recursive.json": "159a7ec7c72e333a56ec50fb3d9fad292aad49a6094825cfb98b2f5b87b1d50f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma2-original.json": "8524a061896175cb76a33350329d8d581c234a79f41ca37dbfe8cf1fa57ffb57",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma2-production.json": "524c4183cfee816021d19b2e71aef90726283dd8e8bb35fe4833290deb013d41",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-021-noisy_planted_clusters-gamma2-recursive.json": "cac10969eec8d568ef61435d9cbad066cccde1ad79b1743308e85cace759a9b0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma0-original.json": "7bd4f110e5609ef4bfc7745c10494176bf8ff6570d56027492c8375d10cf2425",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma0-production.json": "720c709921daaa1418f8a4a580613e46cc8a74b8056d5fc1cecdee95290a6da8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma0-recursive.json": "122031dd0292b884435cdaa37f5466ff212a6478c1fabb7289a0c16e51815f97",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma1-original.json": "4696ead6f62cdc1be4be2abdd71ac9e808c8de7cc048acdce3018514e6d5fdc3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma1-production.json": "86852440cdb581ebd44f93effc8e7fe4ddb13de5daa53e0a7c3dd6b361c84627",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma1-recursive.json": "84c71d07f605f6bd0de9392b50a531c961f8e26c5a2e50438ad7da0529ee414d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma2-original.json": "856736199a0af2cc0225dd9d2800a48ef7022f7b5905e3123eaec6c29340a9d6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma2-production.json": "b30768213dc88d3e227f0f0b7b3ffd9664ad8f7f4634a4a06b97e8003aa1ca3b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-022-noisy_planted_clusters-gamma2-recursive.json": "54671c92d9be34f25534208b9252057e190ee57ee52bef427b5f49d32d79a767",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma0-original.json": "abf96af54c7d173f5c211b51cbd315001bbdcbe7a97f82da6917d2b6cd626c5e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma0-production.json": "ab6c726215b24b3f489c9ecf48122382ed20cdede16bca47d6f8c4d60d6aea29",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma0-recursive.json": "24bbdc0b3d206c060f570a40262f58b20b9b1ee04a5a1a841259dcbd41b68f89",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma1-original.json": "ff7a7b324a42876dec02dfaa9d54aead7c22f9c7dcb5d94e5180c770d1f8f9bf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma1-production.json": "0003bf8d52d0fee722d4f8b232a8497e0d615c9d999aef98d7758a3f29d95e16",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma1-recursive.json": "254c3f234b419e432c069db655e58f648eb26fa21b0399cccff6c22fb0324383",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma2-original.json": "4f57007d2f5a3e3a0d9aa81ef2aec2a56e3cbcea6ff751aa91b31752811338fb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma2-production.json": "d26945b21498d7099c0789679037272fa3e1817d6e27cdce4359e9c84d0ff746",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-023-noisy_planted_clusters-gamma2-recursive.json": "7f3628cba4b4831c4771dd7e8448ef0fb4ad9ca30a77080f4d1f3075747e3be8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma0-original.json": "7564c9873a66695c72440751de96bb25de4f023a48f0e728c98f16154e93acb1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma0-production.json": "bd5d86b0dbc1c84c70f8a0a04051db59fd2f7592cc3b0a1fd28fbfc61fb145c7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma0-recursive.json": "7661c3e0006c98ce5b47603ad43ec985e7f43523d1689fc67b36082a52b28cf7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma1-original.json": "888fd64ac50565c107dcbafdc552766d002a9507947b6db569d24aea17f35055",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma1-production.json": "0e093c3b57ccc6dce388bb997b51b805d0157fca1983caf01abb514a8a057428",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma1-recursive.json": "f953cdd8e394ced062eb9ff41b3e7feebc6cb840bf480dd04304c5171ea2d526",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma2-original.json": "51c02a3b3c1998afbb97108d9b52ad71e46ffb4eb766121a0a74cca5003072cd",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma2-production.json": "09b2a3bccbc18299d6447f1a2923e714920162875d826ef68e93da3ad2c63074",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-024-noisy_planted_clusters-gamma2-recursive.json": "a2786b5d9190a36e5372d13a1775afefc1f2f47ed5878faa004a06032775b3b2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma0-original.json": "3114b25974c1477ee31389d5fa54f521568399a66aef159c815475adb35bac79",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma0-production.json": "47d773e3bc4c6ad9990214bd89b251aa0fd2e5cbd948e1e8981bc6bfcb317beb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma0-recursive.json": "df8f22c0bee2da28fce131859b1d552d9890b038be7148303e9775a522d7d9df",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma1-original.json": "3cab33022b985a4a56e0c2a5d7b7bf0a14bf3f860cc2731cfdb5c2b4132661e0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma1-production.json": "4b89c01b2464af65d49482b7df75df2be1b27e66e3df68f5e361bea120009f88",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma1-recursive.json": "57eec86a48acb347afae1f59731092a66f183d837d267038c2f1468e025da103",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma2-original.json": "57c84343196370e03d302d05a927616cd666d71a82a8f6f7db3df3ab3153b044",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma2-production.json": "1f665036a2b0c41536619a6a116c56992ddb79d8c03d5fc789f2da9ef68389fa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-025-noisy_planted_clusters-gamma2-recursive.json": "8ce85d3bfd9a66c78bacd673149bd52bc37769b0f9baa53ed7b199a712c0dfd1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma0-original.json": "4a915665fa71f8aa2539ac1718059434ea2a7ade4a3a341a526a4a863cb66836",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma0-production.json": "c49ee37437340deb9d28914beda5187874282c27ac4b87eb57a439a874029aac",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma0-recursive.json": "b1f7a8ab415fd373ea8ae45c80fdf355dabbb4d82b4bf8585e0f5d826a29e1b2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma1-original.json": "59a3901efd5d274a607e4c79cda2c0fc8fd32cc9988ece3ff9be835f65000d2d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma1-production.json": "3ab69d3d437ac5cb4f37b01144b6f0325ef475971f687910f341e3173bd344f9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma1-recursive.json": "1ff99c007231536b73f0d6a0847f9b15fbf03adde97352b4ba4bee7f44af76c1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma2-original.json": "4d0a9a5390197a18310ce686a5afc29949612720ee33345c5af7de7d2cc5fd64",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma2-production.json": "6b2e422ee79f6fdcbd2fc78fbe9a6143b9085c672e945ad4871ed0aa490577ca",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-026-noisy_planted_clusters-gamma2-recursive.json": "77a89c5f18f91a777bc4ba6c27f7850f3e0de0dbf6e20728314460a37af0bebf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma0-original.json": "2eefe09cb7c81cd99a5e78c81e2172026238bd3f81676c765544d9f1e4439386",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma0-production.json": "83a8f9a430cfe1eba2b436a21590ee48cfb418c5e5fd353722b8c92bf3ac6072",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma0-recursive.json": "2dba97aedb578f09ea8b881232e6aae065895b59eac79e67ce8a160efb3af253",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma1-original.json": "b9c44a28aa8ceffa158278a8a94b7cfaa167704197386f756a4d256a5dc8330d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma1-production.json": "a24b49e73898a2f0492e43f6346cb55c92061f98eaa1b655c02ee70a691d7e85",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma1-recursive.json": "0c1ef2810c57eaf82a69a7c32ff6f56ddf11aa3e0d06bd5198ec772d58aeecc4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma2-original.json": "67142aa0db33b053921a4bb0023a9c5d0abc56c1e7e10b24e371a37016f3480e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma2-production.json": "c456e30d59cd43e6acdbc934b1b3f5a1f26f8fda4878b709b5456c22dc9ce182",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-027-noisy_planted_clusters-gamma2-recursive.json": "506d72deafcd8b618f0d5f0b3ad34416b3c0a4cc9c2855a5a0c3407ccdaf5815",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma0-original.json": "3f36404dc104f2ea2d832de0397a7476dc27df0d1fc0f56283ef760b6506ef49",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma0-production.json": "436e779a24d40db5353f88c4f4f5e7af9b68be4f452426ff5dbf0dd0bf38b51b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma0-recursive.json": "e5457d8b7158339a7b17272046ce5393a8219efb2a96ee33d1d2a0c9394516de",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma1-original.json": "34b4c72120b5de4ec185dc62c9c8b155ecb0c9ba711acd0e2d24357d55987492",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma1-production.json": "e781fbdfdc8f23ab28509b6666b93c0be52e842e39465b0e7f74173d582e62f1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma1-recursive.json": "733aa3bf2e20cae99610043d318280a43857b3023ea1dc84135ec86606a6d32b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma2-original.json": "946212e59c7c90dcc7968251953dbe31943acff31283360869d51bdb95b9726a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma2-production.json": "581547010265c4572f6438ccfb046e2fc09f5f4349f5a5caa83c53d7e81c0a66",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-028-noisy_planted_clusters-gamma2-recursive.json": "ea4d48320e9d66c95e1cf034a91dae720b6bc280d84d22e19ddef17ff397b536",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma0-original.json": "dfef3d7b46115e4488b0af236d3d40aa33239b436db084ce593c768c6e61007f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma0-production.json": "5bbc8d17e058990955f1f7c60842876eb8718ccfb6e06eba5d0420f0ec675aed",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma0-recursive.json": "670644727daff13006607dcdb08248ecaa6e4d0dafd1954d403543d3dfd0a49a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma1-original.json": "2388c2c189e5842d18add77accfaa587440cd19048c88f2b7ca6c7b68d4e7168",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma1-production.json": "9ac6da33cc5702fd979a7fc4b1cdafa0380acc04d8721f40b7450b56b50d7bc7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma1-recursive.json": "9100acd084021d0e78b76cecae35281ac15aa738bc6a4873335b68c119b4f764",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma2-original.json": "586c331e1353d3ea21768f96c97d7edb83afde813e87270fb80627d166445514",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma2-production.json": "aa8c4d2d3a349229b8ca2124aac8ca346cc2dac3029e33ef35601d13dfe6fffc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-029-noisy_planted_clusters-gamma2-recursive.json": "08bd4d078ba6fb5f83e485fb4349d87939b289b0577f1fdfbfff6f8963a5a69e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma0-original.json": "a39771fd6e98ddf5d271dee0bed3a2e852ed4165bfb20d3a54f4561ca0666d26",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma0-production.json": "937500f8ebcc0716067c879c262281f0e2fcc9fa18fcfd71ebdffb6c9c4552a2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma0-recursive.json": "1652c9f0df6b439b9acc8113c080270303f5f5cb272fec602b94e479f75aa40a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma1-original.json": "532470ea12d7dd1fdd1899ff1a163c2f844922b0373a7570d3249e718cb8dd6f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma1-production.json": "59e51b2ff614be585dcfc77566466a8e2c0c67ff448f53542670e732f3d80444",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma1-recursive.json": "0c39e69e4ae735f4f85ee606523b3e984300a93e0f0f3b4d5738e4250e0e5c15",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma2-original.json": "ba140c89c2ba4a1bfbe73dafa49b96f935e8c4146fb8fc9c16a9c3b214a2e896",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma2-production.json": "9aa619c3dc540d98d896d3d2af8c7c31799e389eb368658974dacd9bf968cc41",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-030-noisy_planted_clusters-gamma2-recursive.json": "9af23c5df460c6a8795a3e451ed293a7d3993a7a27d9db40481efeedc3114130",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma0-original.json": "b5cb28c4bad8b07049331279ff562d943320887fcb3e5186a9b99ffff87e98d2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma0-production.json": "2c40d199224d0fccf9ebb734a37f2fc443262fecd59e8d6ed784c2bee88ae398",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma0-recursive.json": "3750c8bdc95918d2ed33152686a8723c5b03b2f1b536b34e6f1913820702be31",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma1-original.json": "51fab45362fd9f569ee02c3842f97bc2b628c834086a1598f3631d43f29e5b5a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma1-production.json": "532b8cc6a53e35117068b1b4f3c3c19aa986621c397352ffd5c6b6248d2a4aae",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma1-recursive.json": "8fe491e2af4f2b32f12b99431db9cab4efab30c30c05e182e125b2b5b2ea49c2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma2-original.json": "429bcd1fe5b3129afb71cd80ec168b081ab6197063961006dc4147c5a8d66c9c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma2-production.json": "891d1a3ccec2f7a6fccc89df06e0c9c0f661e2d7cd689321eb639acbd9fbaa6b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-031-noisy_planted_clusters-gamma2-recursive.json": "44519fbced48ae6a4bd0a9975f5937517f09f7afbc1e8ae05d24c9fdb51718b0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma0-original.json": "8f44004732cf10409441edb8f6fada5c35c963c2672aeabb2f8e01d475cfc9fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma0-production.json": "2ee920e1edbdefb993751c555db4f2251f331316c18c1c402c0bc161e22ee776",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma0-recursive.json": "a553b56e039fe087fa3815b0387122a053f322ec021e8bc0d84c3de8d0998c68",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma1-original.json": "d479ce6e7f2d8ed1b765dc9e7cc2dcdbaeedcb13c18b96b4ab12863426470002",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma1-production.json": "e1e7d75bd0d1eb020b8a42777eb7aedd8b98c3791cd9673eddbb1d1851eb0c7f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma1-recursive.json": "4780a81061150397744eea4b2fbd2bfc94cc112d62151ffabfcf1166721025a6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma2-original.json": "bc84231b9b6e6071f11b6c15b2e0bc7bb65fc03d89707e135d8f08fe3e950266",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma2-production.json": "763816ddd2a8e796d7dd323249c5300a7d1cea1028ddeb746cefbd4de964c1f1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-032-noisy_planted_clusters-gamma2-recursive.json": "80cf3fcb6e0a99a70c83f5f0d5ce4cd0bc936c53968bbc5403599126a4a79589",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma0-original.json": "1246b2ba6079e2b936d53e89ecfe51740dd7484585ee4e47b4b6ec764fb5fd5d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma0-production.json": "1527145bf0cbd82655f1b8832743d2f802039ed97747822474e9dfb2eedb3cbf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma0-recursive.json": "6dcf58411c40d3b49ae7dad161ca957d3c12fb064ea5518dde29f9f00dc95e91",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma1-original.json": "413f881db2bade6a9cf54eb02ef06c16659d39aa27af6ed535387b683689364c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma1-production.json": "8c669cd53c5ff0b11386e64faecefcb84075aaf6a2413a5b5218c801155a0e5d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma1-recursive.json": "bf6e3517e925cde16a192fe95915e9bb4e18c6d1bb257b590d58de57f6d5a03b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma2-original.json": "2172b83320bd21adfeb36995543a2cd9c61864ce6710b841a5fad5afbf408ef1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma2-production.json": "a9edc139b16f79d71a363179c9bb54780e425ad0299d01dabc7add9c6d64e6c3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-033-noisy_planted_clusters-gamma2-recursive.json": "f7c895945607511ef5d5ab7905e1665aaac893b47f3f399d409fc2ce6e55b93c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma0-original.json": "8c1c95afd82d09c9c18f9682923f3c5b2a153600431d57ad5f9165e16feadaea",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma0-production.json": "6b68acade316c89ca677be673d34b830214b0d273edccbd9ea97ce8e5d558c55",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma0-recursive.json": "41894bf089ea99edc42d6fec863154ba2f6ce5982b7c15f97ce20b9e8e6e9e9b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma1-original.json": "19eaaf5c1d6f0c5adea12f2e74aead31cb1b0da0d20265d1539710704e13ac2c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma1-production.json": "a71a59be8b4ee103e27f96a1b3a0c23fc0363c3fec890e56a395cd1ff79861b3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma1-recursive.json": "8b0c81e3b6a8f9c97bc47033b76e609795d46a2ba85cd474d7988e4463c42c24",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma2-original.json": "b97578a6e6ef7e6b75b1917701c3ada8402a910da85b53e4aab1785ab41ca34c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma2-production.json": "2ae431ba0770fdb610e307df1c161b085d156b1955e0ad0c0aecbc32f3f61441",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-034-noisy_planted_clusters-gamma2-recursive.json": "41f072caca257bb2457dbb621ff7e4f490bbbca0a9dab58858a88448da7f566e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma0-original.json": "9673eddece41ed18f045101e88a85c773239a9930cc0cc743b4eb8e8bbb79e3a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma0-production.json": "e24d41894056156fa9fd2db0f005aa00420085ff6a6f292898435ce6b9da368a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma0-recursive.json": "914ba89ed4c56c1a4545b71f161d8fa23b04a076c8cbcdb0b84460adb70efa61",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma1-original.json": "6397639486d92c622e727d7c77a5c1f7ce04b73843d66523b64adaa079a3e68b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma1-production.json": "e4f472ca8143795cc2a2ed146075982199fcc1ef7399e90037cb5cc5af87d5e3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma1-recursive.json": "46e6a383de0d9144bf3fa56b457201359f2ae60837336a617f114d5120f7b9e4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma2-original.json": "00810ec0891bb53948e9dc47a8f2de5e43364099b74a732bc4f9544102b48c0a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma2-production.json": "e9554c4b8f38037e7e04efc446a084dc505e89e559b52248c18a3a0be0a3b805",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-035-noisy_planted_clusters-gamma2-recursive.json": "653383cb7ce1f43609e3847fa1016c436c3993e68ac476370aad456b83c35ff2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma0-original.json": "c06700d6aa6d6cffe8c94508ac2b19dcf26067be0b3e48a801494160849cf987",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma0-production.json": "27718c65bbeb4807806cb1844894e6d120afed004d947a868def2080aad33290",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma0-recursive.json": "b290b3b6f4e1808fc89bb3e588439aa7c2d86e698b6bd135d4a23ec161608965",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma1-original.json": "428c0cbd74a10301c799e5fb364b8c8b791bcff7de8f2edd06ad62957de93dbb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma1-production.json": "46f6411b349d4b506c4cb0fb7df495a4d0014910b0a11072b11b5cee337ccf55",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma1-recursive.json": "0e76466e6ceb41c2d063bbc204a5fb16c532b1dc4db27bc37d6db592fc3936df",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma2-original.json": "5bd68c7e4ac5deef5c50064fefe10ddd3ae99c3d2cf31cbcb9b53ed41cdd4852",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma2-production.json": "ddbfdcdf78cbdc1fb172edc6cb1bb7dcd1f267690aba868911fa60f3faa51f5b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-036-profile_scaling-gamma2-recursive.json": "6910defa3921c3ec28ee63b9be75665aff9f2189dd8f3a736a75a7d431202dda",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma0-original.json": "851052fd23fc0b1fce2e874ae11d2c8bab39030b63dbd08927b8eef88020d9f3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma0-production.json": "f21167d164e383ad04073da90b06f9182222c8ab4713d5bb6f3f5c3e2c566f62",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma0-recursive.json": "a19686ce23361ecb2d1ea446635f70bc4f9e1c40191fea1291c6b6a519897fd2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma1-original.json": "6dcfdfbfab2e092a9c254751b7a334a162669a9b6ffabe8bc6ded198b23ef084",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma1-production.json": "20277573acf3aece07940089a6470631565ef2b45c17aab9a7df8cdb58d7f9e5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma1-recursive.json": "34a686b976498448a637df3fbc518a4ed3ab915f76259b62301c5fdd8a16c763",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma2-original.json": "a3f0d4b1127ca24d7c9b9baaa87f8343c04d6b1e4ae28c3e04666ad0022d281b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma2-production.json": "0ea6dc9e43e380d60244ab54b9f32074f5abf1a5373b3444b424c0df7e4c5199",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-037-profile_scaling-gamma2-recursive.json": "ede1971824b0af695986a3f85c242e5ea6782a52ea65dabf651ce17f4dba2a62",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma0-original.json": "9dc428db0279a73807aa5156472fd8014212f5fdbb8f24e566cf260daba31a90",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma0-production.json": "f2cf5f53c4aea4339d87dda70dc60ca88e9b641cc6c7216280d89433f45d61e9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma0-recursive.json": "393865436b7942678a109ad850ecca68ad48f67807388e84445a6cbb2b58b531",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma1-original.json": "f2a147f8741a65d2d2ae8b8c8c316643797db4a101b672f9d9369314a999126a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma1-production.json": "9ae870b2e4b9383c3f51b72bf603e259f7ed3c6a3a3f6b444a37174f29d89aba",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma1-recursive.json": "752c7eefaff42a7a7cfc682835937fdd80edec3b05dda01970e3d9a87d5ccae6",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma2-original.json": "8e030cdfda667b4596b537159323e3c768a6e17c278848829a0af14eb339b574",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma2-production.json": "67e0edb4e89945c714a65c4f3d3a73c678b105a8ec1dca6ceff3f071828b6e47",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-038-profile_scaling-gamma2-recursive.json": "67b10be37f58ae0a362e7a7a9211bb39bbda9fa0f6dcc189862452be213c1081",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma0-original.json": "b8d4060db7c8ebeb951f7e18faa79bdacca8c69b951cf82741ca11c71e912bbc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma0-production.json": "3c2be391b1765867d558e3f4785771eb984b4dc96c6ffa0e8101347fa90e319b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma0-recursive.json": "29519bc1479283fa86a167eb2994728375999b4d061908a9dc1228bb04a3aa58",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma1-original.json": "8899a7081c141eac5221fb4e57723f0cccd442d0578e19e3719840db965137ca",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma1-production.json": "86175e8b2df443f490d6aa1e5a31d172dd374882898711d20fef3a2d0163c709",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma1-recursive.json": "30c8b8ae40c560fac67c5b2dc66c53dc4cb36765defa55ab5f3e169ddff8fc6a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma2-original.json": "c71a1e2a1e3309fb1db81d8777ea1f038cab3271ca27dd1598e3b5e4a1ecd541",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma2-production.json": "0b8ae656c1d78e5fddd462151cb25fbf088454c6ce0ae37a2bd810c40e128e20",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-039-profile_scaling-gamma2-recursive.json": "03e88b2b62f205bf26dc038bc1c07b959521fd8eed959a382ad4a59fd8f5b1ef",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma0-original.json": "96040e5290277095fd28271687a6870f212335ab2c44037730f6171e7de86b95",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma0-production.json": "0debd7ecec972e12f7cb01ea2cbe4b14ed7183bd304692320ce018d7294ca101",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma0-recursive.json": "7a48acc65f5b99238d123199cd45fbd7aac77c72c083dc074b38f74ad975dcbe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma1-original.json": "cc0a1478320f4a560ba4a6a6b126122af74f8d0ed5b3b05de3db03ee3fafa110",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma1-production.json": "a51f91e0fa5dbbf3d4f9d74b4bc71b8f6339b1557ae979550f0107cc477cfb07",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma1-recursive.json": "5d0bcee4a2bf9d55aac8807951d14915d74dde37c0e7f6ab39cdb2abc5b9d03d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma2-original.json": "bcaa3a4e270571d5a62ec49e61899c3859f0e2c4bafd8ae2c7e95ca5dc2c02d9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma2-production.json": "90d8f41d2ae66e1dd1ec159c260e23f476657c67a8da2083c5b3da70fcb016e5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-040-profile_scaling-gamma2-recursive.json": "b7ace3a902c01591ca435c8f353825fbafd8cf03bc2886c0d5e40701a89a818d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma0-original.json": "86c7e2fd6140248e98a1b89e328a3873b92674dfdec34aee48a82670c07d072f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma0-production.json": "ab4ff2c4373924d664b3369ce3985c2a8ecdd93aeb50b1f723392ccb240944c9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma0-recursive.json": "1a8ecafffa9745ea766d1ec480f24093a7506eec46f11e8801561eb1309902a3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma1-original.json": "e2794ed0f442d81cee7c5ef78a572459d186f2268907072f5a332e6d44759889",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma1-production.json": "b90cfffb9c16457943de15db114a2180bf9d1a89211b281364bef7e24258bdbb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma1-recursive.json": "b140db0803de074a927dcdcb681771f6ce51aba20e4c801dd321ec69c5fd5bd5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma2-original.json": "b211203bbceede67ec9ade15dc8513488ac02bcf8a35b717bb4413f65be18836",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma2-production.json": "77708741689f9706b74f2c6b961a7a280659d39930e0e7d1b075b4a70bd817a4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-041-profile_scaling-gamma2-recursive.json": "23213634b2d358f02ee4f034f0b5140b6a8f059d2e21d99770e70cb8c4f3f787",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-042-hard_exterior_attachment-gamma0-original.json": "beda3d6aed2fcbe2d7f8e2c87ed8e240095a760a4f78cec328f991db8a23f8d0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-042-hard_exterior_attachment-gamma0-production.json": "b6dbe0f884065223647285a34c7adade0bd5bc481dca08c26d4f7d8e75ffd422",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-042-hard_exterior_attachment-gamma0-recursive.json": "2f5ef3aaba42bb670fd2b6425894d4770a3f946747c14f4756f462b07125fc1d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-043-hard_exterior_attachment-gamma0-original.json": "eee50f90d20df14120723efa4d5bdf149ad629c8077be97d4292f8946e94e77a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-043-hard_exterior_attachment-gamma0-production.json": "de99f06350fbe23a052703a4b4dccaf99e59b86d3fe99659fd9ca3976d5bc6d4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-043-hard_exterior_attachment-gamma0-recursive.json": "f5d3d64711b3e0eb3e5d7146c88a0d89ec988b8efcea19ffabb2f91fb8ca89fa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-044-hard_exterior_attachment-gamma0-original.json": "9191694d6544536b2afc42b5756c27415ce1ed44d1a3826d64d3a0e4e3ab495d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-044-hard_exterior_attachment-gamma0-production.json": "c5cebf43c76135fdd05e4310e8c7816a43fb60c76d51cb8413df8652fc2e1a5d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/controlled-044-hard_exterior_attachment-gamma0-recursive.json": "6c4c717adfc8de73aeeee1ecc94d17e247846f7b686cd9200bdccbf5a66e88a4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma0-original.json": "506dcd33c5918710fdbfa0104eda09e7900a4efb2e9f4564d57ab03f06140123",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma0-production.json": "8ba820e3336432c956f39af7f24074a527f5c44b42d6075461207c9a094be990",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma0-recursive.json": "ff565ca5d066c67f23fdd4dc1a0c120f0dcf245052d7a05bccef9f8df5606d7b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma1-original.json": "2da466196da9562cccb6e8140f459b53258e255d6e76fc240f35d6dd2d4a041f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma1-production.json": "626d5b42dcc9a937e0e6cf5785f08972dca3c3a7f4e2cebc991ae3116032edb9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma1-recursive.json": "90009439f74cb0aa6fdfcfdd9049bf67c27b94fe7de81218ec53bc4c80b47255",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma2-original.json": "e67225052d6fe96e6aeb2eae5cd83faa29df3186eb0de24dee73f42053c8a359",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma2-production.json": "0e989757d06566a62acdc77e739bbf0c5236f65493b750fa10bc3ab593b0cd86",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-davis-gamma2-recursive.json": "451e5cb29c32cecadce4b14d72429b0cdf0bf06c4c75ed6c3eaa44c720343579",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma0-original.json": "2150657ad0940ed72d336ff40110d8112200ebe73ae157fec21f68d63e330029",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma0-production.json": "1dcf49a3e541e0d7e65398b5ac67bf8fb81cb9b29cfa9de4623afa03742c9a49",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma0-recursive.json": "3435366493e69d5b7a510d372f082ace7396cd3cd6a1bd6a287d5e5446da1100",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma1-original.json": "ba334b24cbb4ad6e86a8c8807de937a5e40e76a35e091bb617bfb2adfbb6c8eb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma1-production.json": "2c58618fc999d4cd2a2745294bf90df1c74746aff792f9714f046cacf3868fbe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma1-recursive.json": "80234583fcaee210bf9e84fba072f74e5abc9e74a6f666ad80f052032287b166",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma2-original.json": "ffba6e22cc21678e47fbbf9da37ec2fe4caf867acc6c910a2c83efdc5e0e070f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma2-production.json": "3c97be8a62667e38621b3860a1d787f6badaee35b99541561277fa1b2a21658a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-florentine-gamma2-recursive.json": "015313187fe3a0d0386d63222c47075f706a6c7ae93f0d7541926145f6f15753",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma0-original.json": "38827f801265028b96178e7f86c401c10fee4d0eb88a47bf19bf12df25da45bb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma0-production.json": "4f087662e9695ce5d9d37e82f2fa019858575d12b78089b4254c9556acb41664",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma0-recursive.json": "e418eb50865e422971b21dfe6e075bb1f9043456a4ac98e6c99af93c94d75b1f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma1-original.json": "0b3b38002b244468c3c42cf0e55ada4a76f3276cf3e03a04d970d1139c311264",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma1-production.json": "8dfaa9faa089c7206ec1dc21c84738ee6c4d6605d12c7a1293711a710fc1914b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma1-recursive.json": "cefe25cab021bbb63dbb25c1d505494c413867b469843029124fbddb09c27376",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma2-original.json": "a401a5bb93892fb8543800d40356430c524ccd4f33020f179bfa7177a523e2ea",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma2-production.json": "cb66ff3ecdfb2b7349d16f5850d632226cc4e60237266c1351f4aa008258a7f7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-karate-gamma2-recursive.json": "fe22ea5df4c4b1d9d9e639a0a292c5849435dda29b8fbb971b420f8c7cee0220",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma0-original.json": "ea27b0c9851d492ca2be556d35e0b94ecc295c7f39bd0ea2fc5fd278baa4152b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma0-production.json": "d80d4cf55622012a97cd37d3801ccd5ff86d7ff73c6832d5a8c519e18a65aa84",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma0-recursive.json": "ac0faa5874566d08cc1f87a9c03c3d493bf5d10708273e9552d04948460552fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma1-original.json": "0457f8403eb76a7d19674c87a6dbdd5e60f67fe8e8b25b337b8e3008d9ca37c3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma1-production.json": "bf04e08d74f01e8e12bcafcfd6b3fee6a66fb57b6560453e64f3793414ecb45f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma1-recursive.json": "9d7648116863693b6cf44afff498346f3bb40ae40817ce47593835ac951f38a7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma2-original.json": "d7a25af8b855572a5732364616f240c7c89e8797623092dc9d85b82e90210aa5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma2-production.json": "34e5f1990d99b255d20b799a08e830a2c754fa48e570104b5b2b31bafd4e6240",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/development-les_miserables-gamma2-recursive.json": "45a5fadeaa87bbd6aa62030e8dbd759075cf41f9becf063d273e4b02643828ec",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma0-original.json": "9af9eded0e86c4e473b951ed563fca8f746ead93ada73d0ffad88ba5396c0db1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma0-production.json": "f159b4a95026e9c848ffc808a20fee8007d7012de592096d9600749c2bba5055",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma0-recursive.json": "8b1f545a294dba8e11aebffebfc42ac07ee1b03bfd454f912c92866ed1092c18",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma1-original.json": "0452a5fd770b022304dd59b1dbdbbb42a770e3662c331f8122c652a2aafeb247",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma1-production.json": "9fd256b46406cb246dbbd5aaf9fa594342eb96419c4d0d337f8627285b9721f3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma1-recursive.json": "8acfa6c2dd92fd43324a57f9d5bd98e14e0aaba781da85d631f5890de258b933",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma2-original.json": "2118c878c311befc4599392e98637c4abb9827cd6a05d5c742bd61cc0705ad57",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma2-production.json": "0ad78b96716d673051bb9e13c1856c726d3b5f64d91a141f4fa6c0859c43f107",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal0-gamma2-recursive.json": "9fe57fa908ba7d2c071dde568fd24d07c61bbf3edd2967412836ae107ec46b89",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma0-original.json": "a9391009ce0a5b9fcffc23e0e9ffdf6ac73da2e978e4df17278b5e2aff8e12f2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma0-production.json": "9d1f29ab2aa5dab2a60c11ffac49f0b97940c76da39fdf64b426f2bfd93356c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma0-recursive.json": "e18f5f690334683dc9246686bcf2ba563873b579977c78bdd7bf9c841a7913ea",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma1-original.json": "a86d246d119465adc8579dcadb80abe01194aafa644361b9d02cc114f9023f96",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma1-production.json": "07d93741fbd8d7a3596f591e910da3b6dce47b999498c91d8b32f5160ab0abe5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma1-recursive.json": "736fbf8839cdb7547bcb7681e680cd1cf906d32477b31ab615edd355d02d6e1c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma2-original.json": "639dadb518c0e3c8b41696c03f1ad6e3aa586184df5b4d85625dc8eb78b02fb9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma2-production.json": "29167a55015baf1ef020432c75e75659eddaf0a6ffb94058d1961b245405b434",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal1-gamma2-recursive.json": "e2e9e4f6c5ec19a8f5259722ce36162d106bff7c6a2cd0e11b9b982361c2b267",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma0-original.json": "a3cbe656e43d62a8f182e8a8e09a1ec4efdec4e1a5ab06745f44cfc7a1283891",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma0-production.json": "cd85f2abe6c5c65a6dd5bd6c176add50cc488b0e90404afd361fd58d4c669475",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma0-recursive.json": "4c82c45ca53e36ea8603941e899cf60c71581ef0001df5bdb346d7ce1a09d007",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma1-original.json": "e6c9b9cd6ad0bc2724d70998c150717cbbbdba7f5ee3fda43ebefc22dacb938d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma1-production.json": "fdf456fc5115159d37fc99516828306b2fb0a33a060d41bdf79b556e5add7559",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma1-recursive.json": "9a82d4d045e5f0445ce14834bacdfd7c743f6039898008e0746463d0908b628a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma2-original.json": "ad57609433e797dc50ee9cdc9c864ab42158a3bd13a30c3020eeaf82fc517eba",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma2-production.json": "5202edd2488eac51e841fa04d7df92e73ed65db880c748ab1ed9222ebad6cd70",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/email-Eu-core-proposal2-gamma2-recursive.json": "18d7505e7b41c87bc104e51f40b6d05af1c270921f5cb5b9e05739c1d73b0b26",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma0-original.json": "8e88260324208eaaf82263c574c908db215d83a27e14adfcc04802adc6c0d03e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma0-production.json": "7f2a718bce5e67e93e9cb0f9b8a96c23f5a7f7d6036dcaa21f71de3e7afd25fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma0-recursive.json": "ef8274a0f168cb78df2c192e5f43eba0dd7149f34708d9348272b06bc3266f27",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma1-original.json": "e41c97224cc544f034c0eb54058b25cd895a4a4355d2962898753a57d94a5109",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma1-production.json": "3100851407703675c3e6dcfeb0a3741ac9f984a2e4e29fa8063ca74975360088",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma1-recursive.json": "0826ce055bc201b832fa8d68f76b05016a842e509b3592cd6a2587067c810794",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma2-original.json": "19eeaef168373634fb51f25632202c1c48f7fc66f747c6f4d33dd02b3b825092",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma2-production.json": "5c6010b1c7a5baf81a02f9bad67b26671dd43d2006cd36822f5b1220512f0bdb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal0-gamma2-recursive.json": "830c916c807e4c479639195a1c6495cbb186ec354a294b7e93cdb3cb9c565a9e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma0-original.json": "06b37caf61ee9cf163780148908946340c3c97e5a4d1a4425e2dfe6df53b8adc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma0-production.json": "814db4b1273d80d45b4c778fa9ae2874db4decafb0938f592f694ab48b27c843",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma0-recursive.json": "82f30aaebc46ff265153771959a5aa0e6db7845179b00f059a4b0e052192487e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma1-original.json": "f306dbafe9d7f15f8fec487107ddb3bbe9d418fd41a1d39223a9188e2a29feb7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma1-production.json": "f1b596078f4b4c36c4742688df49210144f6c01abf7b24d30e1e233e0fe9ab3f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma1-recursive.json": "33b36ef0a5bf1c4cbcb7d08b70994a2355789d1ad14295def51c7ebb5043baff",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma2-original.json": "47685b63792e2fd6b5c7c630505b87826dafe3e66283741d2265d8b9ece69150",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma2-production.json": "e4a2d29a07723339d63235360376c43aed8f0bfbd642d833c5f23b7cb888c302",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal1-gamma2-recursive.json": "63a0c27ab6f5640548f5c5e6b0e8a0d5952ab588b09df4148f81cfcaf03bb647",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma0-original.json": "5db73a9476b6e4b206b3c9392be0bc5527a3f93b20213b027b27247c179630e2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma0-production.json": "a5793280d279bff1fb9dc6292c9db5433d129ba5e8ca65326ad345a662c575fe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma0-recursive.json": "961073360f38120b75b896297c70ccd82d46fdadda827e7db15027e90866c716",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma1-original.json": "9d0c49fed6f6e842b4b3667c79c4ae81c1d1739778c291167c1b3311c2077dfe",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma1-production.json": "76126f5895470b7b21fb00d76d7c261cecd88872947573d0a33513adf5837080",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma1-recursive.json": "c79d755e91e251b70b6c095bbff956f6073e64c59e164a143d3a60e0b3606e79",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma2-original.json": "12d5fae2f45595fba08916b23b60b4ece29fcf76b28dbba9586ff3755c5c3706",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma2-production.json": "803117faef6b0974b9d5029b23f8ff11e0d60ff0c077f3d27ed0740b1b54a48e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/facebook_combined-proposal2-gamma2-recursive.json": "26e629ba60a027d6d0e4fdf646eceae70c54fee1cec4a180e971d0d1a9d2706a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma0-original.json": "089007800fe144f37fc741351164384ea256f561099931300bfdecbf19a808e3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma0-production.json": "afc1ac5b1af17fc40aade5fd928cc9a8d6f762b0cdcff81b6800d4710270ea30",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma0-recursive.json": "ce8513ba6c98571b817a2adac44ec237723f970061a49c38dbbfed9a15e9313d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma1-original.json": "ff523996351a0bdf323bea4d73b2e82c6c0abd9bb0f0fd96a0ab2e68d6d9df99",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma1-production.json": "001166e8abff2a0c9fdae5c6663cdc3c9bbd467e5ef2f2f88c4638f021f62ff1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma1-recursive.json": "ec81ef7539baee28b67533318982e1eb6f31858996d6b0e8d6e720eddbe34267",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma2-original.json": "a74d9d1b681fa400f6e2e2cc3a730b24ef6bd0e4a48f4b3cc3a0db4946cb911b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma2-production.json": "a957b66b0b0c94ec7d1d5d7c13a17e8c768441b2ae2950823c720ff6995126ef",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal0-gamma2-recursive.json": "840c1becc12af569cb462334d01c3a8fdb2b2011dcd86b7417ad21e97a3cbe7d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma0-original.json": "715f1b02d9ba0888b81e320f12e9b38d1dab4b73f74f17c73c3b2b3e3612e5f9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma0-production.json": "bbc15534b73666bdd5105aba48893aa5f25cf8186e3484fa15e1b59737a420ac",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma0-recursive.json": "3a8c12f683935486f9b7c506497739180bedea764886942bcf126ed7f407bbed",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma1-original.json": "b763c87e2e322604f96a8459cccae487cab26f2e590c3c028d6a723cde6de8c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma1-production.json": "39ef73235e9b0dbd6efe672183a3efac24bb3a66f0bdb1164f76ae8814a5061e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma1-recursive.json": "2ad75475011c2b0d3937ac3e142cdbdb10f6274fb0b9a0d154a6413ae23a73ab",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma2-original.json": "c99fd2472e2c4cd18afd89a8b2ed17c1b2276bb38c6f819983eca5585f63c069",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma2-production.json": "445dfc9e58dba90d51f56fee3511ff56f55f3d7fb0753f88049e8525cb89ce48",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal1-gamma2-recursive.json": "991cd2efd2848d7743142cc8523b53b7cfacfbccf5fee2b2e51fadc4bc155cfa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma0-original.json": "721a6dbcf382850e995bebbfe6dac015aa0d2f61ae123d19e9faf961c266359e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma0-production.json": "df4a0f5b29d739290c04bd66fca508bc09e4308a1086d57e4e6b4e8b52217461",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma0-recursive.json": "eae8947b5daa1daf407d8a1dd7040a0ddb055f1b0fb4aec8a0292211452112d9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma1-original.json": "316e83c11e19395aaf6828470f8bbdcb3bb119e5fc4267613da9067fa6c35e08",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma1-production.json": "373bc8c99078a0538b4cc6497535f03950e1ff02fc95dc521e9a6c3ccbf1b8b3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma1-recursive.json": "4f57215eaa4e45aeb5df261b243728552bd8b1a0d0b799a1a097f7dbb3367412",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma2-original.json": "aaf13ffb7f77a5b7958780055f658c2c80103dbc3c08a12818f850da24106baa",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma2-production.json": "16070d4596572657f42886fc4d59ef3d201b2444eccfc1e3a506e577dafa70bf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/records/p2p-Gnutella08-proposal2-gamma2-recursive.json": "604e5df9f2efb377aa5d931265cc55f51d5e26d7715f334c8270a384e17c8b59",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/collect_recovery.py": "27bbf275776ea0d1744a2370bbbce15c47c9fa6c3a97cd09f4d713c1389bddaf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/global_quotient_audit.py": "e0b881dcca83d2cb844d31c668722e9e964a49b5938b0594b4b31f2da56b9f8a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/global_quotient_recovery/__init__.py": "4f23a2c96a7203db5d0c778ed4a71d5e0ccaa2da1cf496ced180966cb6f7ae6e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/global_quotient_recovery/audit.py": "b172e835e96aa11ccd05e242b6ad72c7ecd3ef3424be4f232878e73a30971cce",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/global_quotient_recovery/plan.md": "1cd0a14a7a6118cf07634c7eb73a8f31c552518f7328054b59b3cd57f299c42f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/global_quotient_recovery/test_audit.py": "71441f111ea27c7b36ba6c0b14dda294711f07b74c70a57e3f57f1d54eff65fc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/report.py": "79488ced74123a188ce81ed9e85eef846f080f37b8c117a6acb1664d08c5734c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/test_global_quotient_audit.py": "6c8ccff05c14a461ccbb36af66a7e28e417dd9f55bcab1ebd4103f00ed75c21d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/source/analysis/test_report.py": "a4808d60e7050a2fb5598d5315546d3cc2d5b917d9f13224da6512e75962eb99",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/summary.json": "cee7d1a5a28b1a90bf314998aa6e56d8bb73363f23d29967d5edfe110339ab47",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma0-production.json": "634dd7b7a16f6d3148eb3ea052cb702f254216d37cf240d81130fd217b6e96ff",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma0-recursive.json": "a24478d2e7dc699014a2e687e888f2cbba5f9495247fc64cc75cc9980e0f3275",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma1-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma1-recursive.json": "af49d44db06f580b1586f093faf3bfcbf44a2f862136e3aad68e8fd4d0ba6e44",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-000-matching_cliques-gamma2-recursive.json": "82ce9671eb2223a314a308144dd7975f8871bca93455964b9f8a9b107d942df5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma0-production.json": "71839c59a094ef46c46056739709b7689af2eb89bce641c198f9df98dd3f6464",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma0-recursive.json": "e9d54963cc293d971d9b6b88c4bcbd4e097aca353874872843f795d0ebc31db7",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma1-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma1-recursive.json": "1f25e193e3c0d9e81f8685a6b4078d99c022c0fb2ac67020dfd70499c9c2a2c4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-001-matching_cliques-gamma2-recursive.json": "20146a08c45cf8b5dae7083905404d196be1335c0798b76f900870848dbe8e79",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma0-production.json": "8ba872d390cf49a998ae5ecef0905ba76548bd86d2a2ad19bd8e0d29d5fbdafb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma0-recursive.json": "317c3fa4145a2fbb8d7439e13319a8d3fb75e882545f5274ec5988fbddd48682",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma1-production.json": "2f1cf20ed5b1663a38b9a3d89c7fe4ec43f04475f65cc1769bd4c84e6636d206",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma1-recursive.json": "c99ea1080d10b2f4b98d5db0407213cc253199c5699614143b53cc0b1fa07f09",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-002-matching_cliques-gamma2-recursive.json": "001dfb8611fedd0eec2a04ca02e3420ab07fcfb03bb020ef1a7b0ca8939fe1ff",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-003-matching_cliques-gamma0-production.json": "a963a56a687ca029bd7048af966b756c72342001dcb5b9cbebf676c4450ed267",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-003-matching_cliques-gamma1-production.json": "e0d3c552a614299c8278e1b9e04bc1e9f525ab314f1b018a5b257e69a189ecd9",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-003-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-003-matching_cliques-gamma2-recursive.json": "7457e009096a43a9af8ede02fccea8aeaedcd35dff40ed182efb9ac02be6f790",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-004-matching_cliques-gamma0-production.json": "97fe2dfbc5ed2b2a924b000b3ace64cc457227770361d61d0f1ab9cab6f0df30",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-004-matching_cliques-gamma1-production.json": "61dcca22dea98e34e6df5b8454aebe1a0e87a1a9b213d8d6f84a15c64c309138",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-004-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-004-matching_cliques-gamma2-recursive.json": "ed3becfce25555ff8286bf556af4612a5d859a37b3578c9a171f41b84d90682e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-005-matching_cliques-gamma0-production.json": "579a5678abf1ef26c4d288a118cca1d474f13d8e075f17a052cb098bb773f56f",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-005-matching_cliques-gamma1-production.json": "ea2a6a6eab037d88da05ec44c8efd0eb295e8a0f74682ef85a2025604b379e6c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-005-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-005-matching_cliques-gamma2-recursive.json": "d2205e1b420370c46c232bdaf93dcf42eca07d57fc44d79250eef4a89503c73c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-006-matching_cliques-gamma0-production.json": "87020509ddd286a23e0547aef110d8ffabfa19c1bcf3e4b239912bca85313a88",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-006-matching_cliques-gamma1-production.json": "d6f1d7a94abdb58b1c178bfcff6a870af43dc260251df50033234b18ac4dcb3a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-006-matching_cliques-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-006-matching_cliques-gamma2-recursive.json": "0ddf033d441e3e12656a6c60cecb42ff8f85571eaa614056591bdd33193cdf75",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-007-common_hub_matching-gamma0-production.json": "e001f42c248a423a74a14d3d7228cb78072b0f7336931d7c8f0508e538fc60e0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-007-common_hub_matching-gamma1-production.json": "858a3ff77674fbffd75ff77b010659ac15ec3e7c8110f7ab4613d03b0dc34dd3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-007-common_hub_matching-gamma2-production.json": "15951b3f29c55c289c0d5d16e248db532d660c5f1075268d91b0b9472748e281",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-007-common_hub_matching-gamma2-recursive.json": "02cb8651886e0a9cf07eeea9834af751fd87756a23f03093b3d770ac47697063",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-008-uniform_advantage_counterexample-gamma0-production.json": "81e8cca0df9823c05b5327d9102164855c093b8f30daa613e791c62701c19193",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-008-uniform_advantage_counterexample-gamma0-recursive.json": "621b2f5c54232f57512ba90e5897a1553453255b648e56bad401dc986063c2a3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma0-production.json": "9dca1560592a8ffe6b34209f9bf1527f54a96424736b2dff238237f81d37237e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma0-recursive.json": "99d4486680222e7e5ce39f2e0652fe263eac3ed25d716127370ade8235287fc5",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma1-production.json": "c3748eab0fc403b0b1e75639d7ae838bc453420ffd13f6eb647032ecff25be6c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma1-recursive.json": "4c97f609a1675d55bc95f010fcb00fc423b6d21b926f7d8e09429fd24b971419",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma2-production.json": "f63844598d7edf9ed7771b89668d207002c3c115ae00a0993bc06a0aef21ee26",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-009-weighted_planted_blocks-gamma2-recursive.json": "80df6c1ad88602f94140af90a5d3056f597d15f57f671380607c52a54e39de48",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma0-production.json": "8c2ef1c488fcb9e9c99f4a0a98affda4a1ec2f73505c19386adc35eec93ddb79",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma0-recursive.json": "f5a60904faa14200e439ec204ba20cb8501402ab8332e641f4b3498bad987a69",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma1-production.json": "91583e11334459ee3a1e9e095a65a4ae6ab7fb127c69fa50bf73cfcc5cf68be1",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma1-recursive.json": "ca967b20fa909ca004782f17571b7898498e281651eb9ddc05fc0579b5fa32dc",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma2-production.json": "54ab2f171a98f518fa75df50c5b7d0979f4474d86db47f72e79ce998e97396ac",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-010-weighted_planted_blocks-gamma2-recursive.json": "87959fd9afad596a57f45022593fa55ad9a1add7021959afe5ed2256b8e5f196",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma0-production.json": "d065e2eae4f2560ac1c9c6291522354056db7eca28e849729c4a631089ddbad3",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma0-recursive.json": "ea47d3ac71857c7d655311f54132a2a604f02540a0b967a907411dfddee1b351",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma1-production.json": "f3e77688e2eab660c3a4776d51a050ffd36e59721a93372cd27ec3708f266212",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma1-recursive.json": "0dfeb2d95a6ee6f19a480eb7fa6082b72144b7e2c1269737c75fe4734ad9b542",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma2-production.json": "2362ece9abae225790b0b840a18620d14296744410141ac689ccfe6025588093",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-011-weighted_planted_blocks-gamma2-recursive.json": "5e584882151acd4872dcef9effcb40fac3a57ae8edb12a52933d64dc5510fa14",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-013-noisy_planted_clusters-gamma0-production.json": "f4ffe81a32f572dfa0348ab5de442cd6179f10337e5833298b9538e2dcdaaa75",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-014-noisy_planted_clusters-gamma0-production.json": "fb2b3e29947ec3f91e8dedb5056e19919514c9db56fdad71bde065c36d029034",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-014-noisy_planted_clusters-gamma1-production.json": "d88f0bc6104bf6601cc66a3515f5777f08b1f3498bb4b57e0a80470ed99166af",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-024-noisy_planted_clusters-gamma0-production.json": "ed9e4231bece82ed7095428979f6db4805d4d5dbe2428255883ae5bd05612ddb",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-024-noisy_planted_clusters-gamma1-production.json": "3c9497c036fd80667dc145e84ef7a826a1f100d48ea88d0df436a6c2306db02e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-024-noisy_planted_clusters-gamma2-production.json": "ebab2861560ff2da773ce555ade79e61b2831a8960476127cd5288b76be7e7ee",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-025-noisy_planted_clusters-gamma0-production.json": "51be86f3c58392e99f42ed6b4cc18082bc41998a6c3c29d721d8d70dba40e20b",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-025-noisy_planted_clusters-gamma1-production.json": "ac8a6019ee69c67e2613881006197be3be8d3184fb952076d6abcc0de73ad141",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-025-noisy_planted_clusters-gamma2-production.json": "04f8b9c4f496c74c216dbfd4a6a77973733ede53109bec43b244cf9a9eb546d4",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-026-noisy_planted_clusters-gamma0-production.json": "68858df5d86618fb7ebe9dc69f766ab852ed0431e2d62e7780d0381cceb38e06",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-026-noisy_planted_clusters-gamma1-production.json": "675aacdd9e13995bcfe5cfb68aed35c035c632a956155223678f33cc0987ac3e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-026-noisy_planted_clusters-gamma2-production.json": "65a89b7cb8814d715f78f20826661c7e5c43a8d30cd780aa20c8ee5338a5960c",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-027-noisy_planted_clusters-gamma0-production.json": "95af22e0cd0ac3276a915dc6a004a73a8ef89889342772c41f8ae74c9a8f00a8",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-027-noisy_planted_clusters-gamma1-production.json": "53f7bab18268ea2d95bae280e5d4fc893785aa29fd4d4af0c654d2ba88b5202a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-027-noisy_planted_clusters-gamma2-production.json": "f2d95e60de9eca68daf1c6456c64b30b7aa6d34ad5214b3fce6ebd2963e4203d",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-028-noisy_planted_clusters-gamma0-production.json": "abb3eee08ee851ae317c956c3af736a51819b2717431a233f7a414829f02ed97",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-028-noisy_planted_clusters-gamma1-production.json": "b2b30e523b737a5557746bb78e41cce478861bca1810e01090c6fa41984a81f0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-028-noisy_planted_clusters-gamma2-production.json": "983ab7665ae766a848148532cee484648ddef9156fdddeb04c17996bdbaf76e2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-029-noisy_planted_clusters-gamma0-production.json": "7059f07745bd3dd18496266828d5084d1bd9d7384518e0b55f60e76d3c7fa5ef",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-029-noisy_planted_clusters-gamma1-production.json": "488624061b10af67fa89fde33d2e7810a800da8effc768664f435f8ae6662c1e",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-029-noisy_planted_clusters-gamma2-production.json": "f2dabdeb52e437889eb5a009ea890d69b8e542301285d62715a6fa73a23c0e07",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-032-noisy_planted_clusters-gamma0-production.json": "d0ad714ee02221f460820006f2f73d642b03cf2c2d7c87176080a984d0c5b7cf",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-042-hard_exterior_attachment-gamma0-production.json": "552fa2ac43f214d7679f207ac359bfb9d30636558598a530f9dd7b7b59e6d6c0",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-042-hard_exterior_attachment-gamma0-recursive.json": "a8af95fe283f1662ed9efbe0ea84aff2e7717ce1f2a43a09c5be905c68befdca",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-043-hard_exterior_attachment-gamma0-production.json": "c427f03a473654b3f6cc2336c62ef355ec31655b30173d12f8bb315f317630c2",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-043-hard_exterior_attachment-gamma0-recursive.json": "4f71667ed7b03d7de7452ef82eb7a112f08e506c3bd3b54bbf6c90bd05e20b9a",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-044-hard_exterior_attachment-gamma0-production.json": "449c8659e3f252b849e4c2034a10de6ce9d237810885606746a92e8446b52371",
+    "analysis/runs/global-quotient-exploratory-v1-recovered/traces/controlled-044-hard_exterior_attachment-gamma0-recursive.json": "eca1df4604547f8bed4127fbd912fe2311084343f3ea05af10ad75a3850f613f"
+  },
+  "bound_external_identities": {
+    "freeze": {
+      "path": "analysis/global_quotient_recovery/freeze.json",
+      "sha256": "bd5fd20873b0177f0f2abbb8c62fedf1521265b2ad141517982910a31a3c994f"
+    },
+    "review": {
+      "path": "reviews/global-quotient-recovery-review.json",
+      "sha256": "da19fe56709d85dee3410d350257d76488989be236f91a33469e0b8d3b36b332"
+    },
+    "execution": {
+      "path": "analysis/global_quotient_recovery/execution-attempt-1.json",
+      "sha256": "9d5674d4b88990820bd99fbfb7ee1e8360a1f15d02faaecc388bc56154dcc2ae"
+    },
+    "execution_start": {
+      "path": "analysis/global_quotient_recovery/execution-attempt-1.started.json",
+      "sha256": "ced210c136a25d54ff07aa64eee09a1ec6f0a880ba2f074f6903441cab57707b"
+    },
+    "execution_output": {
+      "path": "analysis/global_quotient_recovery/execution-attempt-1.txt",
+      "sha256": "cee7d1a5a28b1a90bf314998aa6e56d8bb73363f23d29967d5edfe110339ab47"
+    },
+    "collection_map": {
+      "path": "analysis/global_quotient_recovery/collection-map.json",
+      "sha256": "20106e7b4a399bc05183182a61287f15ae2563d41aa02ecb8a1ebe4ce4e64f31"
+    }
+  },
+  "freeze_artifacts_verified": 1516,
+  "input_evidence_records_verified": 1452,
+  "actual_output_count_before_closeout": 677,
+  "actual_output_counts_by_directory": {
+    ".": 3,
+    "records": 579,
+    "source/analysis": 5,
+    "source/analysis/global_quotient_recovery": 4,
+    "traces": 86
+  },
+  "stratum_arm_cells": [
+    {
+      "arm": "original",
+      "audit_error_rows": 0,
+      "denominator": 127,
+      "native_adapter_status_counts": {
+        "optimal": 32,
+        "skipped_numeric_domain": 5,
+        "timeout": 24,
+        "unavailable": 66
+      },
+      "original_optima_established": 15,
+      "original_optimum_proofs_passed": 15,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 68,
+        "verified": 59
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "uncontracted": 127
+      },
+      "status_counts": {
+        "resolved_enumeration": 8,
+        "resolved_sign": 7,
+        "unresolved_above_enumeration_cap": 112
+      },
+      "stratum": "controlled",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 112
+      }
+    },
+    {
+      "arm": "production",
+      "audit_error_rows": 0,
+      "denominator": 127,
+      "native_adapter_status_counts": {
+        "optimal": 29,
+        "optimal_trivial": 1,
+        "skipped_numeric_domain": 21,
+        "timeout": 10,
+        "unavailable": 66
+      },
+      "original_optima_established": 58,
+      "original_optimum_proofs_passed": 58,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 68,
+        "verified": 59
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "completed": 109,
+        "unavailable": 18
+      },
+      "status_counts": {
+        "resolved_enumeration": 6,
+        "resolved_sign": 52,
+        "unresolved_above_enumeration_cap": 69
+      },
+      "stratum": "controlled",
+      "trivial_rows": 1,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 69
+      }
+    },
+    {
+      "arm": "recursive",
+      "audit_error_rows": 0,
+      "denominator": 127,
+      "native_adapter_status_counts": {
+        "not_predeclared_recursive_native_arm": 127
+      },
+      "original_optima_established": 27,
+      "original_optimum_proofs_passed": 27,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 68,
+        "verified": 59
+      },
+      "recursive_replay_status_counts": {
+        "not_replayed_unresolved_or_unavailable": 100,
+        "replayed_groups_match": 27
+      },
+      "source_status_counts": {
+        "None": 18,
+        "completed": 109
+      },
+      "status_counts": {
+        "resolved_enumeration": 9,
+        "resolved_sign": 18,
+        "unavailable": 18,
+        "unresolved_above_enumeration_cap": 82
+      },
+      "stratum": "controlled",
+      "trivial_rows": 1,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 82,
+        "predeclared_bank_skip": 18
+      }
+    },
+    {
+      "arm": "original",
+      "audit_error_rows": 0,
+      "denominator": 12,
+      "native_adapter_status_counts": {
+        "failed": 1,
+        "optimal": 3,
+        "skipped_numeric_domain": 2,
+        "timeout": 6
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 12
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "uncontracted": 12
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 12
+      },
+      "stratum": "development",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 12
+      }
+    },
+    {
+      "arm": "production",
+      "audit_error_rows": 0,
+      "denominator": 12,
+      "native_adapter_status_counts": {
+        "failed": 1,
+        "optimal": 3,
+        "skipped_numeric_domain": 3,
+        "timeout": 5
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 12
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "completed": 12
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 12
+      },
+      "stratum": "development",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 12
+      }
+    },
+    {
+      "arm": "recursive",
+      "audit_error_rows": 0,
+      "denominator": 12,
+      "native_adapter_status_counts": {
+        "not_predeclared_recursive_native_arm": 12
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 12
+      },
+      "recursive_replay_status_counts": {
+        "not_replayed_unresolved_or_unavailable": 12
+      },
+      "source_status_counts": {
+        "completed": 12
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 12
+      },
+      "stratum": "development",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 12
+      }
+    },
+    {
+      "arm": "original",
+      "audit_error_rows": 0,
+      "denominator": 54,
+      "native_adapter_status_counts": {
+        "not_recorded": 54
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 54
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "uncontracted": 54
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 54
+      },
+      "stratum": "public",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 54
+      }
+    },
+    {
+      "arm": "production",
+      "audit_error_rows": 0,
+      "denominator": 54,
+      "native_adapter_status_counts": {
+        "not_recorded": 54
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 54
+      },
+      "recursive_replay_status_counts": {},
+      "source_status_counts": {
+        "completed": 54
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 54
+      },
+      "stratum": "public",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 54
+      }
+    },
+    {
+      "arm": "recursive",
+      "audit_error_rows": 0,
+      "denominator": 54,
+      "native_adapter_status_counts": {
+        "not_predeclared_recursive_native_arm": 54
+      },
+      "original_optima_established": 0,
+      "original_optimum_proofs_passed": 0,
+      "production_recheck_status_counts": {
+        "not_rechecked_no_arm_resolved": 54
+      },
+      "recursive_replay_status_counts": {
+        "not_replayed_unresolved_or_unavailable": 54
+      },
+      "source_status_counts": {
+        "completed": 54
+      },
+      "status_counts": {
+        "unresolved_above_enumeration_cap": 54
+      },
+      "stratum": "public",
+      "trivial_rows": 0,
+      "unavailability_reasons": {
+        "positive pair and vertex count exceeds fixed enumeration cap": 54
+      }
+    }
+  ],
+  "established_row_keys": [
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 0,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 1,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-000-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 0,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 1,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-001-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 0,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 1,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-002-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-003-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-003-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-003-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-003-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-003-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-004-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-004-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-004-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-004-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-004-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-005-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-005-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-005-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-005-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-005-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-006-matching_cliques",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-006-matching_cliques",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-006-matching_cliques",
+      "gamma_index": 2,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-006-matching_cliques",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-006-matching_cliques",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-007-common_hub_matching",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-007-common_hub_matching",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-007-common_hub_matching",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-008-uniform_advantage_counterexample",
+      "gamma_index": 0,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-008-uniform_advantage_counterexample",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-008-uniform_advantage_counterexample",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-009-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-010-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 1,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-011-weighted_planted_blocks",
+      "gamma_index": 2,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-013-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-014-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-014-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-024-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-024-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-024-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-025-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-025-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-025-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-026-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-026-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-026-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-027-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-027-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-027-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-028-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-028-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-028-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-029-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-029-noisy_planted_clusters",
+      "gamma_index": 1,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-029-noisy_planted_clusters",
+      "gamma_index": 2,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-032-noisy_planted_clusters",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-042-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "original"
+    },
+    {
+      "case_prefix": "controlled-042-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-042-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-043-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-043-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "recursive"
+    },
+    {
+      "case_prefix": "controlled-044-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "production"
+    },
+    {
+      "case_prefix": "controlled-044-hard_exterior_attachment",
+      "gamma_index": 0,
+      "arm": "recursive"
+    }
+  ],
+  "selected_native_failed_arm_keys": [
+    {
+      "case_prefix": "development-davis",
+      "gamma_index": 2,
+      "native_arm": "reduced"
+    },
+    {
+      "case_prefix": "development-davis",
+      "gamma_index": 2,
+      "native_arm": "unreduced"
+    }
+  ],
+  "run_prerequisite_denominators": {
+    "all_formal_source_failed_native_arms": 4,
+    "arm_rows": 579,
+    "logical_jobs": 139,
+    "resolution_tuples": 193,
+    "selected_native_failed_arms": 2,
+    "source_attempts": 140
+  },
+  "execution_elapsed_seconds_not_a_performance_endpoint": 61.05309750000015,
+  "limitations": [
+    "This checks recorded proofs, dependencies and identities; it does not regenerate graphs or independently rerun the mathematical computations.",
+    "Recursive safety remains reviewed same-source replay, not an independent implementation of prior criteria.",
+    "Completed native optimality claims remain conditional on the pinned solver implementation; they do not resolve the independent audit when the sign/enumeration proof is unavailable.",
+    "The two selected Davis gamma2 native failures retain only a freshly checked feasible incumbent; native optimum, packing bound, gap and completed-time inference are excluded.",
+    "This post-freeze exploratory audit is separate from original confirmatory measurements and supplies no performance, dominance, novelty or venue-quality judgment."
+  ],
+  "performance_or_dominance_claim": false,
+  "scientific_novelty_or_venue_approval": false,
+  "modified_existing_source_or_results": false,
+  "self_referential_hashes": false
+}
