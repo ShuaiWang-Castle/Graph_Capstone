@@ -1,0 +1,30 @@
+{
+  "schema": "metric-sdp-formal-prospective-analysis-methods-v1",
+  "scope": "Prospective fixed-inventory descriptive analysis only; no scientific execution or utility/venue approval",
+  "fixed_counts": {"cases": 43, "controlled_cases": 39, "development_cases": 4, "arms": 5, "jobs": 215, "primary_pairs": 86},
+  "config_sha256": "0cc4683dd320812370f5fb0943850283461cf89a5b13fadd91a2a3ebc6ad5f51",
+  "primary_comparisons": ["SD/S", "SD/SW"],
+  "primary_estimand": "Within each fixed case, complete compute cost ratio T_SD/T_reference conditional on both arms independently verified at original-normalized interval width <=1/1000, within300 compute seconds and monitored6GiB",
+  "target_interpretation": "Equal fixed width tolerance, not equal returned primal objective or discrete optimum",
+  "cost": {
+    "numerator": "Runtime full_compute_seconds, independently authenticated against controller and required-work accounting",
+    "included": "Own common preparation/discovery/incumbent, original CSR/bank checkpoint, composition and synchronous accepted-operation checkpoint, quotient/full-trace validation, component presolve, model/cuts/solver/repair/exact validation/lift and intermediate checkpoints",
+    "excluded": "Fixed imports/input decoding, final proof/result serialization, post-measurement collection and independent proof audit",
+    "diagnostics": "Disjoint ledger stages explain the full compute total; callback/round/composition-internal measures are subsets and never added again. Process wall includes imports/input/output and is a separate quantity.",
+    "unresolved": "No successful-time ratio or imputed300-second runtime. A hard wall interruption before compute-finished can carry an explicit300-second compute lower bound; RSS/init/final-serialization limits remain distinct."
+  },
+  "denominators": "All215 job rows and86 primary pair rows always retained, including unexecuted, failure, time/RSS/round/accuracy/serialization limits and absent intervals; no favorable-case selection",
+  "summaries": "Per-case rows; per-comparison both/A-only/B-only/neither-target counts; faster/equal/slower/undefined counts over each complete stratum denominator; conditional median/min/max of costs, ratio and reciprocal speedup with explicit non-null n",
+  "zero_cost": "T_reference=0 gives null ratio; T_SD=0 with positive reference gives ratio0 and null reciprocal; both target pairs remain in counts",
+  "strata": "Controlled vs previously used development, family/dataset, original role, exact gamma and fixed original n bins1-32/33-64/65-128/129-300; unknown original n retained. Panels overlap and are not additional independent trials.",
+  "correlation": "Finite inventory with correlated parameters/seeds; no IID tests, confidence intervals, population-success rate or pooled independence claim",
+  "coverage": "Final quotient coverage only after complete preprocessing; accepted-operation/own-stage removal counts on interrupted jobs are explicitly durable recorded prefixes, not fixed points/final quotients. Independent exact safety replay required before calling them validated.",
+  "authentication": "Externally supplied exact config/freeze pins; all23 transitive runtime and recursively bound packet bytes; fixed schedule/controller/worker/result/failure identities and immutable full raw inventory including three sibling operator sidecars and partials; exact operator command/environment/source/config/selected-backend lineage, terminal exit and retained log digest; cross-arm original objective/bank/incumbent; exact scalar interval arithmetic and no callback double counting",
+  "scientific_credit_gate": "No ratio at verified target until a separately authored, externally SHA-pinned independent exactness/data closeout covers all215 outcomes and binds raw-inventory/source/config/freeze. A reported target or status alone is not proof replay.",
+  "independent_closeout": "Separate original CSR/objective/metadata/bank reconstruction; sequential current-quotient relaxed-safe operation replay; exact quotient/component proof/raw binding; original PSD/diag/box/all-triangle primal lift and original upper transfer; full interval/width/limits/accounting checks; every unresolved/unexecuted outcome preserved",
+  "composition_author": "/root/experiment_supervisor",
+  "composition_author_may_self_approve_exactness_closeout": false,
+  "scientific_execution_performed": false,
+  "formal_execution_approved": false,
+  "C001_or_venue_approval": false
+}

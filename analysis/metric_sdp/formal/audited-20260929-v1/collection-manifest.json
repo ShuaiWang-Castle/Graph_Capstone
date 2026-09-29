@@ -1,0 +1,46 @@
+{
+  "C001_or_venue_approval": false,
+  "audit_refusal": null,
+  "collector_source_sha256": {
+    "analysis/metric_sdp/formal/__init__.py": "8b316b426f3d5b9ae54e37fdb244e35214fdacf5878abc6ca93f3b29e2a78bc9",
+    "analysis/metric_sdp/formal/collect.py": "f5b8fc05746b87aea3e0c5f7bb51f810820293d1324506a0eddf855a5c99e7c2"
+  },
+  "composition_authorship_disclosed": "/root/experiment_supervisor",
+  "config_sha256": "0cc4683dd320812370f5fb0943850283461cf89a5b13fadd91a2a3ebc6ad5f51",
+  "controller_state": "completed",
+  "correlation_scope": "finite39 controlled plus4 development cases; seeds/parameters are correlated; no independent-trial inference",
+  "exit_code": 0,
+  "fixed_counts": {
+    "cases": 43,
+    "jobs": 215,
+    "primary_pairs": 86
+  },
+  "freeze_sha256": "42822c1289866c2fbe5bdbeecf6e636211a3d966f21787bdf3ff664f8e4b24f4",
+  "independent_exactness_audit": {
+    "path": "analysis/metric_sdp/formal_audit/audit-20260929-v1/closeout.json",
+    "reviewer_task": "/root/formal_data_auditor",
+    "sha256": "cbf69b8e96671434ec899e441efb8f8377839c1ea4a2a07c2049841d0a3d4d52"
+  },
+  "integrity_issues": [],
+  "operator_evidence": {
+    "attempt_sha256": "fd022b0690c4342777b4020e98efd0af943390cb0e69ee3a0a07f1fb7f6cef18",
+    "backend": "direct",
+    "exit_code": 0,
+    "operator_wall_seconds": 15970.030472875107,
+    "started_sha256": "6b583d93ec9aca361c92de3b7d9620412606e71cec1fd71c25dcea2535e6a2d9",
+    "state": "complete",
+    "stdout_sha256": "5fbb95f77b13d32b9dedd21052b2f6be16a6c41d02e74c945ac13e1a8d7a349b"
+  },
+  "output_artifact_sha256": {
+    "job-rows.json": "d5b19506474924834693010e6766548e8f8a6e4354d4b6e9d89b94813397deb4",
+    "primary-pair-rows.json": "9866ade9fb43126074fdbf33591cbd9b9727fabfaf827a7f1b8baaa805b35e36",
+    "raw-inventory.json": "1cdf07c752648b882a570293d95c0791802b84eb575cfe0104141a5da693cf5d",
+    "summary.json": "d6329644815d5b7079f14de0cf240d53fe7fcca7ef2906d40dc6b5d145e9b753"
+  },
+  "proof_replayed_by_this_collector": false,
+  "raw_inventory_sha256": "1cdf07c752648b882a570293d95c0791802b84eb575cfe0104141a5da693cf5d",
+  "schema": "metric-sdp-formal-descriptive-collection-v1",
+  "scientific_credit_authorized": true,
+  "status": "independently_audited_descriptive_collection",
+  "timing_semantics": "complete worker compute cost; final serialization excluded; stages and callback are explanatory subsets, never summed into cost again"
+}

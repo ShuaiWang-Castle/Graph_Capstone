@@ -1,0 +1,1831 @@
+{
+  "overall": {
+    "audited_verified_target": 182,
+    "controller_target_claimed": 182,
+    "dispatched": 215,
+    "limit_counts": {
+      "full_wall_limit": 33,
+      "none": 182
+    },
+    "per_arm": {
+      "D": {
+        "audited_verified_target": 36,
+        "controller_target_claimed": 36,
+        "planned": 43,
+        "statuses": {
+          "full_wall_limit": 7,
+          "verified_target": 36
+        }
+      },
+      "S": {
+        "audited_verified_target": 37,
+        "controller_target_claimed": 37,
+        "planned": 43,
+        "statuses": {
+          "full_wall_limit": 6,
+          "verified_target": 37
+        }
+      },
+      "SD": {
+        "audited_verified_target": 36,
+        "controller_target_claimed": 36,
+        "planned": 43,
+        "statuses": {
+          "full_wall_limit": 7,
+          "verified_target": 36
+        }
+      },
+      "SW": {
+        "audited_verified_target": 36,
+        "controller_target_claimed": 36,
+        "planned": 43,
+        "statuses": {
+          "full_wall_limit": 7,
+          "verified_target": 36
+        }
+      },
+      "U": {
+        "audited_verified_target": 37,
+        "controller_target_claimed": 37,
+        "planned": 43,
+        "statuses": {
+          "full_wall_limit": 6,
+          "verified_target": 37
+        }
+      }
+    },
+    "planned_cases": 43,
+    "planned_jobs": 215,
+    "planned_primary_pairs": 86,
+    "scientific_credit_authorized": true,
+    "status_counts": {
+      "full_wall_limit": 33,
+      "verified_target": 182
+    },
+    "unexecuted": 0
+  },
+  "paired_panels": [
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.1095352706033736,
+        "minimum": 0.006353958044201136,
+        "n": 36
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 1.5085172913968563,
+        "minimum": 0.006229042075574398,
+        "n": 36
+      },
+      "conditional_target_pair_count": 36,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 36,
+        "neither_target": 6
+      },
+      "panel": "all",
+      "planned_case_denominator": 43,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 0.9996208716811162,
+        "minimum": 0.5735766757573162,
+        "n": 36
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 17,
+        "slower": 19,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 1.0003794040029754,
+        "minimum": 0.00913440083379766,
+        "n": 36
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.01065820874646306,
+        "median": 0.01065820874646306,
+        "minimum": 0.01065820874646306,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.010542041156440973,
+        "median": 0.010542041156440973,
+        "minimum": 0.010542041156440973,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=common_hub_matching",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9891006460104623,
+        "median": 0.9891006460104623,
+        "minimum": 0.9891006460104623,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0110194589736647,
+        "median": 1.0110194589736647,
+        "minimum": 1.0110194589736647,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 1.5704255406744778,
+        "minimum": 1.5704255406744778,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5737202079035342,
+        "median": 1.5737202079035342,
+        "minimum": 1.5737202079035342,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:davis",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 1.0020979455209582,
+        "median": 1.0020979455209582,
+        "minimum": 1.0020979455209582,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 0.9979064466399364,
+        "median": 0.9979064466399364,
+        "minimum": 0.9979064466399364,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.04240291705355048,
+        "median": 0.04240291705355048,
+        "minimum": 0.04240291705355048,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.04103587521240115,
+        "median": 0.04103587521240115,
+        "minimum": 0.04103587521240115,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:florentine",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.967760665158416,
+        "median": 0.967760665158416,
+        "minimum": 0.967760665158416,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0333133345901249,
+        "median": 1.0333133345901249,
+        "minimum": 1.0333133345901249,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.6082680830731988,
+        "median": 0.6082680830731988,
+        "minimum": 0.6082680830731988,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.6132170418277383,
+        "median": 0.6132170418277383,
+        "minimum": 0.6132170418277383,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:karate",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 1.00813614735387,
+        "median": 1.00813614735387,
+        "minimum": 1.00813614735387,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 0.9919295152988756,
+        "median": 0.9919295152988756,
+        "minimum": 0.9919295152988756,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.8841207083314657,
+        "median": 0.8841207083314657,
+        "minimum": 0.8841207083314657,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.881013082806021,
+        "median": 0.881013082806021,
+        "minimum": 0.881013082806021,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:les_miserables",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9964850664664223,
+        "median": 0.9964850664664223,
+        "minimum": 0.9964850664664223,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.003527331870654,
+        "median": 1.003527331870654,
+        "minimum": 1.003527331870654,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.027200874872505665,
+        "median": 0.008044290821999311,
+        "minimum": 0.006353958044201136,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.027103125117719173,
+        "median": 0.009191916324198246,
+        "minimum": 0.006229042075574398,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "family=hard_exterior_attachment",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.1426633531274677,
+        "median": 0.9964063746021163,
+        "minimum": 0.9803404479919818,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0200538007467574,
+        "median": 1.0036065861173546,
+        "minimum": 0.8751483954246032,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.4351574168540537,
+        "median": 0.013269541785120964,
+        "minimum": 0.008159416727721691,
+        "n": 7
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.4433143748901784,
+        "median": 0.015008291229605675,
+        "minimum": 0.007960333954542875,
+        "n": 7
+      },
+      "conditional_target_pair_count": 7,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 7
+      },
+      "panel": "family=matching_cliques",
+      "planned_case_denominator": 7,
+      "speedup_B_over_A": {
+        "maximum": 1.7100231740121425,
+        "median": 0.9866016422879162,
+        "minimum": 0.8054661047937607,
+        "n": 7
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 3,
+        "slower": 4
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.2415171712980395,
+        "median": 1.013580311584535,
+        "minimum": 0.5847873965671176,
+        "n": 7
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 8.217163667082787,
+        "minimum": 0.6284611248411238,
+        "n": 17
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 68.80157070793211,
+        "minimum": 1.9458100832998753,
+        "n": 17
+      },
+      "conditional_target_pair_count": 17,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 17,
+        "neither_target": 6
+      },
+      "panel": "family=noisy_planted_clusters",
+      "planned_case_denominator": 24,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 1.002737613763929,
+        "minimum": 0.5735766757573162,
+        "n": 17
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 9,
+        "slower": 8,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 0.9972698603040799,
+        "minimum": 0.00913440083379766,
+        "n": 17
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.007149582728743553,
+        "median": 0.007149582728743553,
+        "minimum": 0.007149582728743553,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=uniform_advantage_counterexample",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9865122492462989,
+        "median": 0.9865122492462989,
+        "minimum": 0.9865122492462989,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0136721574050458,
+        "median": 1.0136721574050458,
+        "minimum": 1.0136721574050458,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.012039207853376865,
+        "median": 0.011334791779518127,
+        "minimum": 0.01121750008314848,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.012254542205482721,
+        "median": 0.011862375307828188,
+        "minimum": 0.011784959118813276,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "family=weighted_planted_blocks",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.081144007217369,
+        "median": 1.0505869428534496,
+        "minimum": 0.9853119451294233,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 2,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.014907009849198,
+        "median": 0.9518488753381489,
+        "minimum": 0.9249461619583721,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.3349498328752816,
+        "minimum": 0.006353958044201136,
+        "n": 35
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 1.5737202079035342,
+        "minimum": 0.006229042075574398,
+        "n": 35
+      },
+      "conditional_target_pair_count": 35,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 35,
+        "neither_target": 6
+      },
+      "panel": "gamma=1",
+      "planned_case_denominator": 42,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 0.9999838335548858,
+        "minimum": 0.5735766757573162,
+        "n": 35
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 17,
+        "slower": 18,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 1.0000161667064724,
+        "minimum": 0.00913440083379766,
+        "n": 35
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.007149582728743553,
+        "median": 0.007149582728743553,
+        "minimum": 0.007149582728743553,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "gamma=1/8",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9865122492462989,
+        "median": 0.9865122492462989,
+        "minimum": 0.9865122492462989,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0136721574050458,
+        "median": 1.0136721574050458,
+        "minimum": 1.0136721574050458,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.9934099374804646,
+        "minimum": 0.008159416727721691,
+        "n": 28
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 2.1471480834297836,
+        "minimum": 0.007960333954542875,
+        "n": 28
+      },
+      "conditional_target_pair_count": 28,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 28,
+        "neither_target": 6
+      },
+      "panel": "original_role=confirmatory_controlled",
+      "planned_case_denominator": 35,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 1.0013607236594075,
+        "minimum": 0.5735766757573162,
+        "n": 28
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 14,
+        "slower": 14,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 0.9986430135052762,
+        "minimum": 0.00913440083379766,
+        "n": 28
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.007149582728743553,
+        "median": 0.007149582728743553,
+        "minimum": 0.007149582728743553,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "original_role=derived_mechanism_negative_control",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9865122492462989,
+        "median": 0.9865122492462989,
+        "minimum": 0.9865122492462989,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0136721574050458,
+        "median": 1.0136721574050458,
+        "minimum": 1.0136721574050458,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.027200874872505665,
+        "median": 0.008044290821999311,
+        "minimum": 0.006353958044201136,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.027103125117719173,
+        "median": 0.009191916324198246,
+        "minimum": 0.006229042075574398,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "original_role=exploratory_proved_failure_stress",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.1426633531274677,
+        "median": 0.9964063746021163,
+        "minimum": 0.9803404479919818,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0200538007467574,
+        "median": 1.0036065861173546,
+        "minimum": 0.8751483954246032,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.7461943957023323,
+        "minimum": 0.04240291705355048,
+        "n": 4
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5737202079035342,
+        "median": 0.7471150623168796,
+        "minimum": 0.04103587521240115,
+        "n": 4
+      },
+      "conditional_target_pair_count": 4,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 4
+      },
+      "panel": "original_role=previously_used_development_public",
+      "planned_case_denominator": 4,
+      "speedup_B_over_A": {
+        "maximum": 1.00813614735387,
+        "median": 0.9992915059936902,
+        "minimum": 0.967760665158416,
+        "n": 4
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 2,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0333133345901249,
+        "median": 1.0007168892552951,
+        "minimum": 0.9919295152988756,
+        "n": 4
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.011334791779518127,
+        "minimum": 0.006353958044201136,
+        "n": 15
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5737202079035342,
+        "median": 0.011862375307828188,
+        "minimum": 0.006229042075574398,
+        "n": 15
+      },
+      "conditional_target_pair_count": 15,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 15
+      },
+      "panel": "size=1-32",
+      "planned_case_denominator": 15,
+      "speedup_B_over_A": {
+        "maximum": 1.7100231740121425,
+        "median": 0.9891006460104623,
+        "minimum": 0.8054661047937607,
+        "n": 15
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 6,
+        "slower": 9
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.2415171712980395,
+        "median": 1.0110194589736647,
+        "minimum": 0.5847873965671176,
+        "n": 15
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 8.217163667082787,
+        "minimum": 0.6284611248411238,
+        "n": 17
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 68.80157070793211,
+        "minimum": 1.9458100832998753,
+        "n": 17
+      },
+      "conditional_target_pair_count": 17,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 17,
+        "neither_target": 6
+      },
+      "panel": "size=129-300",
+      "planned_case_denominator": 24,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 1.002737613763929,
+        "minimum": 0.5735766757573162,
+        "n": 17
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 9,
+        "slower": 8,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 0.9972698603040799,
+        "minimum": 0.00913440083379766,
+        "n": 17
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.6082680830731988,
+        "median": 0.42123704170808196,
+        "minimum": 0.23420600034296513,
+        "n": 2
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.6132170418277383,
+        "median": 0.42121389601379633,
+        "minimum": 0.22921075019985437,
+        "n": 2
+      },
+      "conditional_target_pair_count": 2,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 2
+      },
+      "panel": "size=33-64",
+      "planned_case_denominator": 2,
+      "speedup_B_over_A": {
+        "maximum": 1.00813614735387,
+        "median": 0.9934038504380003,
+        "minimum": 0.9786715535221308,
+        "n": 2
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0217932629196287,
+        "median": 1.0068613891092522,
+        "minimum": 0.9919295152988756,
+        "n": 2
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.4351574168540537,
+        "median": 1.1596390625927597,
+        "minimum": 0.8841207083314657,
+        "n": 2
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.4433143748901784,
+        "median": 1.1621637288480997,
+        "minimum": 0.881013082806021,
+        "n": 2
+      },
+      "conditional_target_pair_count": 2,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 2
+      },
+      "panel": "size=65-128",
+      "planned_case_denominator": 2,
+      "speedup_B_over_A": {
+        "maximum": 1.005683667826492,
+        "median": 1.001084367146457,
+        "minimum": 0.9964850664664223,
+        "n": 2
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.003527331870654,
+        "median": 0.9989378927780599,
+        "minimum": 0.9943484536854659,
+        "n": 2
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.3850536248646677,
+        "minimum": 0.006353958044201136,
+        "n": 32
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 273.10959520796314,
+        "median": 1.9811942712403834,
+        "minimum": 0.006229042075574398,
+        "n": 32
+      },
+      "conditional_target_pair_count": 32,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "B_only_target": 1,
+        "both_target": 32,
+        "neither_target": 6
+      },
+      "panel": "stratum=controlled",
+      "planned_case_denominator": 39,
+      "speedup_B_over_A": {
+        "maximum": 109.4762555525217,
+        "median": 0.9996208716811162,
+        "minimum": 0.5735766757573162,
+        "n": 32
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 15,
+        "slower": 17,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.7434460679204922,
+        "median": 1.0003794040029754,
+        "minimum": 0.00913440083379766,
+        "n": 32
+      }
+    },
+    {
+      "comparison": "SD/S",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.7461943957023323,
+        "minimum": 0.04240291705355048,
+        "n": 4
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5737202079035342,
+        "median": 0.7471150623168796,
+        "minimum": 0.04103587521240115,
+        "n": 4
+      },
+      "conditional_target_pair_count": 4,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 4
+      },
+      "panel": "stratum=development",
+      "planned_case_denominator": 4,
+      "speedup_B_over_A": {
+        "maximum": 1.00813614735387,
+        "median": 0.9992915059936902,
+        "minimum": 0.967760665158416,
+        "n": 4
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 2,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0333133345901249,
+        "median": 1.0007168892552951,
+        "minimum": 0.9919295152988756,
+        "n": 4
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.1095352706033736,
+        "minimum": 0.006353958044201136,
+        "n": 36
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 0.8276912081055343,
+        "minimum": 0.006108207628130913,
+        "n": 36
+      },
+      "conditional_target_pair_count": 36,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 36,
+        "neither_target": 7
+      },
+      "panel": "all",
+      "planned_case_denominator": 43,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9925623534653728,
+        "minimum": 0.010115555899699254,
+        "n": 36
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 15,
+        "slower": 21,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.0074985713344482,
+        "minimum": 0.7873725913667599,
+        "n": 36
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.01065820874646306,
+        "median": 0.01065820874646306,
+        "minimum": 0.01065820874646306,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.009825124870985746,
+        "median": 0.009825124870985746,
+        "minimum": 0.009825124870985746,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=common_hub_matching",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.921836408415835,
+        "median": 0.921836408415835,
+        "minimum": 0.921836408415835,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0847911743022693,
+        "median": 1.0847911743022693,
+        "minimum": 1.0847911743022693,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 1.5704255406744778,
+        "minimum": 1.5704255406744778,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5724670831114054,
+        "median": 1.5724670831114054,
+        "minimum": 1.5724670831114054,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:davis",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 1.0012999931445656,
+        "median": 1.0012999931445656,
+        "minimum": 1.0012999931445656,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 0.9987016946434975,
+        "median": 0.9987016946434975,
+        "minimum": 0.9987016946434975,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.04240291705355048,
+        "median": 0.04240291705355048,
+        "minimum": 0.04240291705355048,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.045678041875362396,
+        "median": 0.045678041875362396,
+        "minimum": 0.045678041875362396,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:florentine",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 1.077238196081552,
+        "median": 1.077238196081552,
+        "minimum": 1.077238196081552,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 0.9282997981667328,
+        "median": 0.9282997981667328,
+        "minimum": 0.9282997981667328,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.6082680830731988,
+        "median": 0.6082680830731988,
+        "minimum": 0.6082680830731988,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.618717041797936,
+        "median": 0.618717041797936,
+        "minimum": 0.618717041797936,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:karate",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 1.0171782130536016,
+        "median": 1.0171782130536016,
+        "minimum": 1.0171782130536016,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 0.9831118944220876,
+        "median": 0.9831118944220876,
+        "minimum": 0.9831118944220876,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.8841207083314657,
+        "median": 0.8841207083314657,
+        "minimum": 0.8841207083314657,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.8755528749898076,
+        "median": 0.8755528749898076,
+        "minimum": 0.8755528749898076,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=development:les_miserables",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.9903092040929258,
+        "median": 0.9903092040929258,
+        "minimum": 0.9903092040929258,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0097856264154896,
+        "median": 1.0097856264154896,
+        "minimum": 1.0097856264154896,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.027200874872505665,
+        "median": 0.008044290821999311,
+        "minimum": 0.006353958044201136,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.02543362509459257,
+        "median": 0.010216625407338142,
+        "minimum": 0.0062699588015675545,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "family=hard_exterior_attachment",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9867800130172024,
+        "minimum": 0.9350296714279801,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0694847773897882,
+        "median": 1.0133970964231185,
+        "minimum": 0.7873725913667599,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.4351574168540537,
+        "median": 0.013269541785120964,
+        "minimum": 0.008159416727721691,
+        "n": 7
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.445209207944572,
+        "median": 0.013412708882242441,
+        "minimum": 0.007099875248968601,
+        "n": 7
+      },
+      "conditional_target_pair_count": 7,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 7
+      },
+      "panel": "family=matching_cliques",
+      "planned_case_denominator": 7,
+      "speedup_B_over_A": {
+        "maximum": 1.0234216886750835,
+        "median": 0.975039778822043,
+        "minimum": 0.8701449485778452,
+        "n": 7
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 3,
+        "slower": 4
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.149233816313464,
+        "median": 1.0255991824334714,
+        "minimum": 0.9771143323087035,
+        "n": 7
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 8.217163667082787,
+        "minimum": 0.6284611248411238,
+        "n": 17
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 1.9921479593031108,
+        "minimum": 0.7787721250206232,
+        "n": 17
+      },
+      "conditional_target_pair_count": 17,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 17,
+        "neither_target": 7
+      },
+      "panel": "family=noisy_planted_clusters",
+      "planned_case_denominator": 24,
+      "speedup_B_over_A": {
+        "maximum": 1.240855655818653,
+        "median": 0.9869114779911207,
+        "minimum": 0.010115555899699254,
+        "n": 17
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 6,
+        "slower": 11,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.0132621033403333,
+        "minimum": 0.805895508724785,
+        "n": 17
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.006108207628130913,
+        "median": 0.006108207628130913,
+        "minimum": 0.006108207628130913,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "family=uniform_advantage_counterexample",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.8428214449306453,
+        "median": 0.8428214449306453,
+        "minimum": 0.8428214449306453,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.1864909299766202,
+        "median": 1.1864909299766202,
+        "minimum": 1.1864909299766202,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.012039207853376865,
+        "median": 0.011334791779518127,
+        "minimum": 0.01121750008314848,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.011976790614426136,
+        "median": 0.011540624778717756,
+        "minimum": 0.011296667158603668,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "family=weighted_planted_blocks",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.0181593983553865,
+        "median": 1.0070574615438708,
+        "minimum": 0.9948155028378198,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 2,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0052115162534065,
+        "median": 0.992991997166625,
+        "minimum": 0.9821644838865909,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.3349498328752816,
+        "minimum": 0.006353958044201136,
+        "n": 35
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 0.8755528749898076,
+        "minimum": 0.0062699588015675545,
+        "n": 35
+      },
+      "conditional_target_pair_count": 35,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 35,
+        "neither_target": 7
+      },
+      "panel": "gamma=1",
+      "planned_case_denominator": 42,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9948155028378198,
+        "minimum": 0.010115555899699254,
+        "n": 35
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 15,
+        "slower": 20,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.0052115162534065,
+        "minimum": 0.7873725913667599,
+        "n": 35
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.006108207628130913,
+        "median": 0.006108207628130913,
+        "minimum": 0.006108207628130913,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "gamma=1/8",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.8428214449306453,
+        "median": 0.8428214449306453,
+        "minimum": 0.8428214449306453,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.1864909299766202,
+        "median": 1.1864909299766202,
+        "minimum": 1.1864909299766202,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.9934099374804646,
+        "minimum": 0.008159416727721691,
+        "n": 28
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 1.4597037078347057,
+        "minimum": 0.007099875248968601,
+        "n": 28
+      },
+      "conditional_target_pair_count": 28,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 28,
+        "neither_target": 7
+      },
+      "panel": "original_role=confirmatory_controlled",
+      "planned_case_denominator": 35,
+      "speedup_B_over_A": {
+        "maximum": 1.240855655818653,
+        "median": 0.9908634904144702,
+        "minimum": 0.010115555899699254,
+        "n": 28
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 11,
+        "slower": 17,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.00923680979687,
+        "minimum": 0.805895508724785,
+        "n": 28
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.007247332949191332,
+        "median": 0.007247332949191332,
+        "minimum": 0.007247332949191332,
+        "n": 1
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.006108207628130913,
+        "median": 0.006108207628130913,
+        "minimum": 0.006108207628130913,
+        "n": 1
+      },
+      "conditional_target_pair_count": 1,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 1
+      },
+      "panel": "original_role=derived_mechanism_negative_control",
+      "planned_case_denominator": 1,
+      "speedup_B_over_A": {
+        "maximum": 0.8428214449306453,
+        "median": 0.8428214449306453,
+        "minimum": 0.8428214449306453,
+        "n": 1
+      },
+      "time_outcomes_complete_denominator": {
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.1864909299766202,
+        "median": 1.1864909299766202,
+        "minimum": 1.1864909299766202,
+        "n": 1
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.027200874872505665,
+        "median": 0.008044290821999311,
+        "minimum": 0.006353958044201136,
+        "n": 3
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.02543362509459257,
+        "median": 0.010216625407338142,
+        "minimum": 0.0062699588015675545,
+        "n": 3
+      },
+      "conditional_target_pair_count": 3,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 3
+      },
+      "panel": "original_role=exploratory_proved_failure_stress",
+      "planned_case_denominator": 3,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9867800130172024,
+        "minimum": 0.9350296714279801,
+        "n": 3
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 2
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0694847773897882,
+        "median": 1.0133970964231185,
+        "minimum": 0.7873725913667599,
+        "n": 3
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.7461943957023323,
+        "minimum": 0.04240291705355048,
+        "n": 4
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5724670831114054,
+        "median": 0.7471349583938718,
+        "minimum": 0.045678041875362396,
+        "n": 4
+      },
+      "conditional_target_pair_count": 4,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 4
+      },
+      "panel": "original_role=previously_used_development_public",
+      "planned_case_denominator": 4,
+      "speedup_B_over_A": {
+        "maximum": 1.077238196081552,
+        "median": 1.0092391030990835,
+        "minimum": 0.9903092040929258,
+        "n": 4
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 3,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0097856264154896,
+        "median": 0.9909067945327925,
+        "minimum": 0.9282997981667328,
+        "n": 4
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.011334791779518127,
+        "minimum": 0.006353958044201136,
+        "n": 15
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5724670831114054,
+        "median": 0.011540624778717756,
+        "minimum": 0.006108207628130913,
+        "n": 15
+      },
+      "conditional_target_pair_count": 15,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 15
+      },
+      "panel": "size=1-32",
+      "planned_case_denominator": 15,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9948155028378198,
+        "minimum": 0.8428214449306453,
+        "n": 15
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 7,
+        "slower": 8
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.1864909299766202,
+        "median": 1.0052115162534065,
+        "minimum": 0.7873725913667599,
+        "n": 15
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 8.217163667082787,
+        "minimum": 0.6284611248411238,
+        "n": 17
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 1.9921479593031108,
+        "minimum": 0.7787721250206232,
+        "n": 17
+      },
+      "conditional_target_pair_count": 17,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 17,
+        "neither_target": 7
+      },
+      "panel": "size=129-300",
+      "planned_case_denominator": 24,
+      "speedup_B_over_A": {
+        "maximum": 1.240855655818653,
+        "median": 0.9869114779911207,
+        "minimum": 0.010115555899699254,
+        "n": 17
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 6,
+        "slower": 11,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.0132621033403333,
+        "minimum": 0.805895508724785,
+        "n": 17
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 0.6082680830731988,
+        "median": 0.42123704170808196,
+        "minimum": 0.23420600034296513,
+        "n": 2
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 0.618717041797936,
+        "median": 0.423538604285568,
+        "minimum": 0.22836016677320004,
+        "n": 2
+      },
+      "conditional_target_pair_count": 2,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 2
+      },
+      "panel": "size=33-64",
+      "planned_case_denominator": 2,
+      "speedup_B_over_A": {
+        "maximum": 1.0171782130536016,
+        "median": 0.9961089959378222,
+        "minimum": 0.975039778822043,
+        "n": 2
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0255991824334714,
+        "median": 1.0043555384277796,
+        "minimum": 0.9831118944220876,
+        "n": 2
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.4351574168540537,
+        "median": 1.1596390625927597,
+        "minimum": 0.8841207083314657,
+        "n": 2
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.445209207944572,
+        "median": 1.1603810414671898,
+        "minimum": 0.8755528749898076,
+        "n": 2
+      },
+      "conditional_target_pair_count": 2,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 2
+      },
+      "panel": "size=65-128",
+      "planned_case_denominator": 2,
+      "speedup_B_over_A": {
+        "maximum": 1.0070039641453077,
+        "median": 0.9986565841191167,
+        "minimum": 0.9903092040929258,
+        "n": 2
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 1,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0097856264154896,
+        "median": 1.0014151882952886,
+        "minimum": 0.9930447501750876,
+        "n": 2
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 230.46330058388412,
+        "median": 1.3850536248646677,
+        "minimum": 0.006353958044201136,
+        "n": 32
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 231.7437628749758,
+        "median": 1.0387663536239415,
+        "minimum": 0.006108207628130913,
+        "n": 32
+      },
+      "conditional_target_pair_count": 32,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 32,
+        "neither_target": 7
+      },
+      "panel": "stratum=controlled",
+      "planned_case_denominator": 39,
+      "speedup_B_over_A": {
+        "maximum": 1.270046749105339,
+        "median": 0.9868457455041615,
+        "minimum": 0.010115555899699254,
+        "n": 32
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 12,
+        "slower": 20,
+        "undefined": 7
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 98.85764162795354,
+        "median": 1.0133295998817258,
+        "minimum": 0.7873725913667599,
+        "n": 32
+      }
+    },
+    {
+      "comparison": "SD/SW",
+      "conditional_full_cost_A_seconds": {
+        "maximum": 1.5704255406744778,
+        "median": 0.7461943957023323,
+        "minimum": 0.04240291705355048,
+        "n": 4
+      },
+      "conditional_full_cost_B_seconds": {
+        "maximum": 1.5724670831114054,
+        "median": 0.7471349583938718,
+        "minimum": 0.045678041875362396,
+        "n": 4
+      },
+      "conditional_target_pair_count": 4,
+      "inference": "finite correlated inventory, descriptive conditional summaries; no IID test/CI or external-population claim",
+      "pair_outcomes": {
+        "both_target": 4
+      },
+      "panel": "stratum=development",
+      "planned_case_denominator": 4,
+      "speedup_B_over_A": {
+        "maximum": 1.077238196081552,
+        "median": 1.0092391030990835,
+        "minimum": 0.9903092040929258,
+        "n": 4
+      },
+      "time_outcomes_complete_denominator": {
+        "faster": 3,
+        "slower": 1
+      },
+      "time_ratio_A_over_B": {
+        "maximum": 1.0097856264154896,
+        "median": 0.9909067945327925,
+        "minimum": 0.9282997981667328,
+        "n": 4
+      }
+    }
+  ]
+}
