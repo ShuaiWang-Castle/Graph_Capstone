@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-09-30T09:24:23.261705+00:00",
+  "fresh_workspace": "/private/tmp/community_replay_576_20260930T0921Z",
+  "indexed_files_verified": 3017,
+  "rows": 576,
+  "cases": 24,
+  "core_score_recomputed_matches": 564,
+  "quality_unknown_timeouts": 12,
+  "original_index_sha256": "d8a261bb924942f33ec0c7e620bd96a4fba16ea3703838288199eec828401628",
+  "recomputed_scores_sha256": "4d9c511ecadffcdc49d6d328687dbeb0972b512a3c194af82234aff5582340fd",
+  "forbid_original_indexed_input_opens": true,
+  "model_or_embedding_files_materialized": 0,
+  "actual_commands": [
+    ".venv/bin/python tools/portable_replay.py verify --root . --index provenance/replay_index.json",
+    ".venv/bin/python tools/portable_replay.py materialize --source-root . --index provenance/replay_index.json --destination /tmp/community_replay_576_20260930T0921Z",
+    ".venv/bin/python /private/tmp/community_replay_576_20260930T0921Z/tools/portable_replay.py evaluate --root /private/tmp/community_replay_576_20260930T0921Z --index /private/tmp/community_replay_576_20260930T0921Z/replay_index.json --output /private/tmp/community_replay_576_20260930T0921Z/replayed_scores.json --forbid-original-input-opens"
+  ],
+  "limitations": [
+    "Offline score equality is conditional on original valid cover and complete truth, scorer source and numerical runtime; Hungarian ties can differ across SciPy implementations.",
+    "ONMI saved values/source hashes verified only, not recomputed.",
+    "Inference cost is original recorded wall/RSS; offline reevaluation has no new algorithm timing and does not reset the research deadline.",
+    "Uses the original isolated Python dependencies, not a completely rebuilt environment. The guard denies original indexed payload opens and is not an OS security sandbox. No new inference/ONMI recomputation or time measurement. Complete training models remain separately in DELIVERY."
+  ]
+}

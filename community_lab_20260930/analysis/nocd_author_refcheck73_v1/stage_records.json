@@ -1,0 +1,602 @@
+[
+  {
+    "job_id": "lfr_n1000_o00_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o00_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.6214198330417275,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.387962041888386,
+      "sample_seconds": 0.6542745074257255,
+      "full_evaluation_seconds": 0.04740304220467806,
+      "forward_loss_backward_seconds": 3.0802747807465494,
+      "optimizer_seconds": 0.09533453779295087,
+      "checkpoint_write_seconds": 0.052025042939931154,
+      "elapsed": 5.322631791699678
+    },
+    "metadata": {
+      "known_k": 19,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o00_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o00_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 24.838255832903087,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2484997906722128,
+      "sample_seconds": 0.9955179989337921,
+      "full_evaluation_seconds": 0.6563315424136817,
+      "forward_loss_backward_seconds": 20.710527994204313,
+      "optimizer_seconds": 0.684980237390846,
+      "checkpoint_write_seconds": 0.20673137484118342,
+      "elapsed": 24.529981082770973
+    },
+    "metadata": {
+      "known_k": 104,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o20_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o20_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 26.33939545787871,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.6038571251556277,
+      "sample_seconds": 0.9731932189315557,
+      "full_evaluation_seconds": 0.7170696235261858,
+      "forward_loss_backward_seconds": 21.807401239406317,
+      "optimizer_seconds": 0.5765216178260744,
+      "checkpoint_write_seconds": 0.3197685484774411,
+      "elapsed": 26.023594124708325
+    },
+    "metadata": {
+      "known_k": 125,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o20_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o20_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.874306584242731,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2399303340353072,
+      "sample_seconds": 0.649695719126612,
+      "full_evaluation_seconds": 0.050457751378417015,
+      "forward_loss_backward_seconds": 3.4875634028576314,
+      "optimizer_seconds": 0.09821536671370268,
+      "checkpoint_write_seconds": 0.05690770782530308,
+      "elapsed": 5.588787083979696
+    },
+    "metadata": {
+      "known_k": 23,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o00_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o00_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.382590958848596,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2323854160495102,
+      "sample_seconds": 0.6508877724409103,
+      "full_evaluation_seconds": 0.047797709703445435,
+      "forward_loss_backward_seconds": 2.9993848293088377,
+      "optimizer_seconds": 0.09511770587414503,
+      "checkpoint_write_seconds": 0.05355599895119667,
+      "elapsed": 5.084510374814272
+    },
+    "metadata": {
+      "known_k": 18,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o40_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o40_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 6.0094901248812675,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2229905831627548,
+      "sample_seconds": 0.6464168801903725,
+      "full_evaluation_seconds": 0.05319104250520468,
+      "forward_loss_backward_seconds": 3.6418256191536784,
+      "optimizer_seconds": 0.10247462568804622,
+      "checkpoint_write_seconds": 0.04315553931519389,
+      "elapsed": 5.717989707831293
+    },
+    "metadata": {
+      "known_k": 26,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "training_loss_patience",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o40_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o40_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 6.089988292194903,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2217947500757873,
+      "sample_seconds": 0.6645377124659717,
+      "full_evaluation_seconds": 0.05491450149565935,
+      "forward_loss_backward_seconds": 3.7077461946755648,
+      "optimizer_seconds": 0.10015616845339537,
+      "checkpoint_write_seconds": 0.05473349895328283,
+      "elapsed": 5.809683999978006
+    },
+    "metadata": {
+      "known_k": 26,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o20_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o20_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 26.14835545886308,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2688467078842223,
+      "sample_seconds": 0.9681820450350642,
+      "full_evaluation_seconds": 0.7260090420022607,
+      "forward_loss_backward_seconds": 22.038795130327344,
+      "optimizer_seconds": 0.5681354594416916,
+      "checkpoint_write_seconds": 0.24934087321162224,
+      "elapsed": 25.84240254200995
+    },
+    "metadata": {
+      "known_k": 129,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o20_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o20_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.656473207753152,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.4371165418997407,
+      "sample_seconds": 0.5951140690594912,
+      "full_evaluation_seconds": 0.047754543367773294,
+      "forward_loss_backward_seconds": 3.1465526479296386,
+      "optimizer_seconds": 0.08842340996488929,
+      "checkpoint_write_seconds": 0.04900341387838125,
+      "elapsed": 5.368815583176911
+    },
+    "metadata": {
+      "known_k": 24,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "training_loss_patience",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o40_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o40_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 28.03012058418244,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2594539588317275,
+      "sample_seconds": 0.9593379963189363,
+      "full_evaluation_seconds": 0.8403693758882582,
+      "forward_loss_backward_seconds": 23.808031077496707,
+      "optimizer_seconds": 0.5790170868858695,
+      "checkpoint_write_seconds": 0.25117166293784976,
+      "elapsed": 27.722489917185158
+    },
+    "metadata": {
+      "known_k": 147,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o40_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o40_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 28.332868667319417,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2647589999251068,
+      "sample_seconds": 0.9467432056553662,
+      "full_evaluation_seconds": 0.8120585824362934,
+      "forward_loss_backward_seconds": 24.077375206165016,
+      "optimizer_seconds": 0.5853387410752475,
+      "checkpoint_write_seconds": 0.30952800158411264,
+      "elapsed": 28.023117375094444
+    },
+    "metadata": {
+      "known_k": 147,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o20_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o20_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 6.191077250055969,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.5768772917799652,
+      "sample_seconds": 0.6633722297847271,
+      "full_evaluation_seconds": 0.05128099862486124,
+      "forward_loss_backward_seconds": 3.432085085660219,
+      "optimizer_seconds": 0.0973384901881218,
+      "checkpoint_write_seconds": 0.056637412402778864,
+      "elapsed": 5.883293708786368
+    },
+    "metadata": {
+      "known_k": 24,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o40_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o40_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 28.511965041980147,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2595476252026856,
+      "sample_seconds": 0.9484721878543496,
+      "full_evaluation_seconds": 0.8454374214634299,
+      "forward_loss_backward_seconds": 24.302502275444567,
+      "optimizer_seconds": 0.5816342136822641,
+      "checkpoint_write_seconds": 0.2436431236565113,
+      "elapsed": 28.20995879219845
+    },
+    "metadata": {
+      "known_k": 149,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o40_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o40_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 6.125112040899694,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.4270400828681886,
+      "sample_seconds": 0.6322275465354323,
+      "full_evaluation_seconds": 0.0549225858412683,
+      "forward_loss_backward_seconds": 3.5666847974061966,
+      "optimizer_seconds": 0.10010073380544782,
+      "checkpoint_write_seconds": 0.052130330353975296,
+      "elapsed": 5.838728082831949
+    },
+    "metadata": {
+      "known_k": 26,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "training_loss_patience",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o20_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o20_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 25.75500095775351,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2630428750999272,
+      "sample_seconds": 0.9537814683280885,
+      "full_evaluation_seconds": 0.7196554150432348,
+      "forward_loss_backward_seconds": 21.701597347855568,
+      "optimizer_seconds": 0.5718607557937503,
+      "checkpoint_write_seconds": 0.22669974761083722,
+      "elapsed": 25.461257459130138
+    },
+    "metadata": {
+      "known_k": 125,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o00_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o00_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.353277792222798,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2284011668525636,
+      "sample_seconds": 0.6510390099138021,
+      "full_evaluation_seconds": 0.04677437525242567,
+      "forward_loss_backward_seconds": 2.984596889000386,
+      "optimizer_seconds": 0.0939706121571362,
+      "checkpoint_write_seconds": 0.05771683529019356,
+      "elapsed": 5.068492792081088
+    },
+    "metadata": {
+      "known_k": 18,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o00_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o00_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.5338087091222405,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.23723516613245,
+      "sample_seconds": 0.6652857009321451,
+      "full_evaluation_seconds": 0.04895983310416341,
+      "forward_loss_backward_seconds": 3.130311958026141,
+      "optimizer_seconds": 0.0959990406408906,
+      "checkpoint_write_seconds": 0.06374695431441069,
+      "elapsed": 5.2477076249197125
+    },
+    "metadata": {
+      "known_k": 19,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o00_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o00_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 24.98943524993956,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2634785831905901,
+      "sample_seconds": 1.0051967515610158,
+      "full_evaluation_seconds": 0.6296421643346548,
+      "forward_loss_backward_seconds": 20.768326953984797,
+      "optimizer_seconds": 0.6696097883395851,
+      "checkpoint_write_seconds": 0.31108408281579614,
+      "elapsed": 24.67928170785308
+    },
+    "metadata": {
+      "known_k": 104,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o20_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o20_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 26.595013207755983,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.5158247919753194,
+      "sample_seconds": 0.9645525887608528,
+      "full_evaluation_seconds": 0.7377023710869253,
+      "forward_loss_backward_seconds": 22.137675832025707,
+      "optimizer_seconds": 0.570744383148849,
+      "checkpoint_write_seconds": 0.3254835861735046,
+      "elapsed": 26.281154958996922
+    },
+    "metadata": {
+      "known_k": 129,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o40_m20_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o40_m20_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 6.30228554084897,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.4895004169084132,
+      "sample_seconds": 0.6527144680730999,
+      "full_evaluation_seconds": 0.05364487459883094,
+      "forward_loss_backward_seconds": 3.6623992579989135,
+      "optimizer_seconds": 0.09919332060962915,
+      "checkpoint_write_seconds": 0.0518657062202692,
+      "elapsed": 6.014870416838676
+    },
+    "metadata": {
+      "known_k": 26,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n1000_o20_m50_s12__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n1000_o20_m50_s12",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 5.843655915930867,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2361975000239909,
+      "sample_seconds": 0.6510865087620914,
+      "full_evaluation_seconds": 0.05062654102221131,
+      "forward_loss_backward_seconds": 3.483859575353563,
+      "optimizer_seconds": 0.09776745457202196,
+      "checkpoint_write_seconds": 0.04485403932631016,
+      "elapsed": 5.569502624683082
+    },
+    "metadata": {
+      "known_k": 23,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "training_loss_patience",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o40_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o40_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 28.442678207997233,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2693853746168315,
+      "sample_seconds": 0.9739758409559727,
+      "full_evaluation_seconds": 0.8349311649799347,
+      "forward_loss_backward_seconds": 24.123501610942185,
+      "optimizer_seconds": 0.5875309845432639,
+      "checkpoint_write_seconds": 0.3137249224819243,
+      "elapsed": 28.13240541657433
+    },
+    "metadata": {
+      "known_k": 149,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o00_m20_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o00_m20_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 24.503970792051405,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.6018800418823957,
+      "sample_seconds": 0.9582509570755064,
+      "full_evaluation_seconds": 0.6660299184732139,
+      "forward_loss_backward_seconds": 20.06742006726563,
+      "optimizer_seconds": 0.5736738322302699,
+      "checkpoint_write_seconds": 0.32190187042579055,
+      "elapsed": 24.215961874928325
+    },
+    "metadata": {
+      "known_k": 107,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  },
+  {
+    "job_id": "lfr_n5000_o00_m50_s11__nocd_author_refcheck500__s73",
+    "case_id": "lfr_n5000_o00_m50_s11",
+    "method": "nocd_author_refcheck500",
+    "pipeline_seconds": 24.097742249723524,
+    "status": "COMPLETED",
+    "stage_seconds": {
+      "setup_seconds": 1.2625318747013807,
+      "sample_seconds": 0.9802397121675313,
+      "full_evaluation_seconds": 0.6527487910352647,
+      "forward_loss_backward_seconds": 20.116330289747566,
+      "optimizer_seconds": 0.5796208055689931,
+      "checkpoint_write_seconds": 0.19444045796990395,
+      "elapsed": 23.807752832770348
+    },
+    "metadata": {
+      "known_k": 107,
+      "input_features": "row-l2-normalized adjacency only",
+      "selection": "minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation",
+      "kind": "max_epochs",
+      "compatibility_patch": "device-neutral sparse dropout",
+      "sampler": "author EdgeSampler keyed by epoch; serial direct Dataset call; no labels",
+      "upstream_gcn_sha256": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3"
+    }
+  }
+]

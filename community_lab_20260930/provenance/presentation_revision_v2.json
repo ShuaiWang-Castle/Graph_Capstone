@@ -1,0 +1,29 @@
+{
+  "revision_started_utc": "2026-09-30T09:38:17.758717+00:00",
+  "purpose": "Derived presentation repair only: independent paired panel y limits avoid clipping all n1000 points; concise log axis labels avoid overlap. No inference, scoring or gate changes.",
+  "before_render_sha256": {
+    "analysis/nocd_pairdot_gate_v1/gate_quality_cost.png": "d9e26f29cc9e2a8774937c98fb58bab88fc7918f1c9550baa30cebe9eb6d00eb",
+    "analysis/quality_cost_graph_only_native_K_cpu_1_1000_development.png": "cfcef112316e9372e656900ee10173afe0f01d6553886a1c3b50f04ee2091051",
+    "analysis/quality_cost_graph_only_native_K_cpu_1_5000_development.png": "014f970336d188c87b0dc6600912919c7d227c90362a4c59d220e8921aa5a034",
+    "analysis/quality_cost_oracle_K_cpu_1_1000_development.png": "66a9196ba71d976cda8959f695fa6fdd7c7d44776022f569f11c652b1dff386e",
+    "analysis/quality_cost_oracle_K_cpu_1_5000_development.png": "c8770758b59e94f545bc7f9d08796a229b0eaa81a699fa9278847314108a80a4"
+  },
+  "current_tool_sha256": {
+    "tools/plot_candidate_gate.py": "62d39e1ebfd25ab331e1382feff54a787b931e95dec06dc0c89b1a424d112222",
+    "tools/integrate_results.py": "2d2d5bea86bcc870b9eaf0277b35bac533795e2f61ea7c7f3058173699025bbd"
+  },
+  "raw_gate_inputs_sha256_before": {
+    "analysis/nocd_pairdot_gate_v1/gate-analysis.json": "db2bc487ee5abf839336f43511cf58087aec264889869c26b3e6e767beb072ee",
+    "analysis/nocd_pairdot_gate_v1/pairs.csv": "d309c27c8bf121e9c983e218c5da80e16401b8ef7376becb765d6c1458d89a95",
+    "analysis/nocd_pairdot_dev_all_v1/results.json": "6cf2778f854c7dc8b2fdd7a0e04d47039108ad076e55efbfad340da205666999"
+  },
+  "revision_completed_utc": "2026-09-30T09:39:18.980964+00:00",
+  "after_render_sha256": {
+    "analysis/nocd_pairdot_gate_v1/gate_quality_cost.png": "225993f8aa96b9bf58f2a762af0604e0b3bcc570b3415aa4e9eef8038911a0a0",
+    "analysis/quality_cost_graph_only_native_K_cpu_1_1000_development.png": "35000bd1be83db6ecf0a0fb1f85ac87451c6afc826cc9df98416e1bf49b375b6",
+    "analysis/quality_cost_graph_only_native_K_cpu_1_5000_development.png": "5f47b91c18af89b55f8c8480bd2da22b9a53f855e4255dda6ad43beb26eae019",
+    "analysis/quality_cost_oracle_K_cpu_1_1000_development.png": "530c8e068aac646d284c30195e596734fec6052ad505a490028e338f46a45f4d",
+    "analysis/quality_cost_oracle_K_cpu_1_5000_development.png": "0c715d158ed8c04abcc5d0cc44325fc406397ab51c1b42932a6cff3306b4018e"
+  },
+  "raw_gate_inputs_unchanged": true
+}

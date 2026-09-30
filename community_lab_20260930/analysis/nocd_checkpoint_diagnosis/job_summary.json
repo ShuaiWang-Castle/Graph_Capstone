@@ -1,0 +1,642 @@
+[
+  {
+    "job_id": "lfr_n5000_o40_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o40_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 28.413920000195503,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 400,
+    "training_loss_selected_macro_f1": 0.2179319883597255,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 100,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.27804124803511693,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o20_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o20_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 19,
+    "outer_pipeline_seconds": 5.486493041738868,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.9101770827546716,
+        "checkpoint_sha256": "46ba3b022d31dd1c5d7b484542cd157594c2ebd7d5f8152d1e0ed83f7a79581e",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 100,
+        "observation_elapsed_from_adapter_entry_seconds": 2.3253457909449935,
+        "checkpoint_sha256": "db9d649a7671f0015dd81fa9ed0e868042653afc2d78f1daeb85bc7aeb3df456",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 175,
+    "training_loss_selected_macro_f1": 0.7723619397904994,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 450,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.7994520109009725,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o00_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o00_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 5.745816083624959,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.896402332931757,
+        "checkpoint_sha256": "ebb5c142a7ca1413cb3661e104f5e8855a9d635c0a2b02ade1071e80905a10d2",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 100,
+        "observation_elapsed_from_adapter_entry_seconds": 2.4509232500568032,
+        "checkpoint_sha256": "a02bfb599ba80d902872536c7cb097ed593918921749e1c89aa1b6916dcac41c",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 300,
+        "observation_elapsed_from_adapter_entry_seconds": 3.9463538751006126,
+        "checkpoint_sha256": "82e55d70575471ac6a5b2bf0a38443b69427133317a85e3024ad6aca1cacd966",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 425,
+    "training_loss_selected_macro_f1": 0.9149118252998417,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 475,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.9243558213256294,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o40_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o40_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 20,
+    "outer_pipeline_seconds": 5.66223470820114,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 100,
+        "observation_elapsed_from_adapter_entry_seconds": 2.1061830422841012,
+        "checkpoint_sha256": "f09b79cb334fd030d12319aa4d446c002213893dfdca58e77ae68d8bfc559066",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 200,
+        "observation_elapsed_from_adapter_entry_seconds": 2.990023124963045,
+        "checkpoint_sha256": "5953a61cb5e9919b59b326254e8fc8f0768116b3cb422be38a3e13c16584db30",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 200,
+    "training_loss_selected_macro_f1": 0.704341378367036,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 400,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.738774923319868,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o40_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o40_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 27.682247541844845,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 450,
+    "training_loss_selected_macro_f1": 0.3112099238423021,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 150,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.3194673386242069,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o20_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o20_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 6.415487584192306,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.5616603340022266,
+        "checkpoint_sha256": "e97d0175c0054dc7fc642f14c2cf7035f34508fd5a571e2014a7be7d95077ea1",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.8039232501760125,
+        "checkpoint_sha256": "3ca6abfbc89a3c43d704ad8b8a266076e669be4ef3c003618ce345d07172894d",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 75,
+        "observation_elapsed_from_adapter_entry_seconds": 2.0848610843531787,
+        "checkpoint_sha256": "3433eea8d5af63259e2d0696326d07052770459e5a320097cb8cbad0a39299b5",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 425,
+    "training_loss_selected_macro_f1": 0.9461871387018107,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 475,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.946585653729901,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o00_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o00_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 5.896783584263176,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.7937949169427156,
+        "checkpoint_sha256": "b27e6a051dfb2a7a879948f5f865f6885b617066d14186baffc42d0a28b54d11",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.7937949169427156,
+        "checkpoint_sha256": "b27e6a051dfb2a7a879948f5f865f6885b617066d14186baffc42d0a28b54d11",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.9787456248886883,
+        "checkpoint_sha256": "b43237e5be09da9542f796e34a18b34457b03fbb325999a22a842f96d2123555",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 425,
+    "training_loss_selected_macro_f1": 0.9297573435504469,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 325,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.9297573435504469,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o40_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o40_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 6.392707125283778,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.5313757080584764,
+        "checkpoint_sha256": "75125d3aefecf40cf0db93785164eb87d12e1fa564bb70a1db483ba336d2888e",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.7762365001253784,
+        "checkpoint_sha256": "97325fedbae61f291e3fcbc39622b0c79a040ce7ab2dd7f04c9c8171a630a973",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 100,
+        "observation_elapsed_from_adapter_entry_seconds": 2.244724875316024,
+        "checkpoint_sha256": "24333f682cbcbd9cfc764213926d06b7f1b41c1eb16253cbd63ddf89173b0000",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 400,
+    "training_loss_selected_macro_f1": 0.9456794696553005,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 425,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.9459552263773581,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o40_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o40_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 20,
+    "outer_pipeline_seconds": 6.703119041398168,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 2.5791158750653267,
+        "checkpoint_sha256": "143bd9bb1b5e3cedb81c381aaecdd916f9832a3856f34ff55a000ddd14aa637f",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 150,
+        "observation_elapsed_from_adapter_entry_seconds": 3.471141000278294,
+        "checkpoint_sha256": "dcc941c9ed630ee2f8f7644994334fc4337f3acbbb38b08d9ef78ac5e5e08ff6",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 200,
+    "training_loss_selected_macro_f1": 0.7572579582944567,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 475,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.7914567159347392,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o20_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o20_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 25.844735875260085,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 475,
+    "training_loss_selected_macro_f1": 0.3075223338341211,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 100,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.37805069050687085,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o40_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o40_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 6.261772207915783,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.7404268751852214,
+        "checkpoint_sha256": "73a6a304f1e8457d25de082dc0f0e1a2c240941fca9a2d5028b1ed6bdbf99560",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.9759869170375168,
+        "checkpoint_sha256": "651138270748c27e3ca1925d7ad1d64f641a368f2dfd1a3dc97e4a521b257e14",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 125,
+        "observation_elapsed_from_adapter_entry_seconds": 2.63264250010252,
+        "checkpoint_sha256": "c03f8e31dd21dfec33ada43558356c7081b369b149623f5ca4f4cd3b3db5c348",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.8975185003684369,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 225,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.9217513209757268,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o20_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o20_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 6.0365392081439495,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.7451488329097629,
+        "checkpoint_sha256": "722a9ecb3dab93eb2a8dc0f8c6ff00e6c72415b8184e1385c09da47c27c7dfc2",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.946205375250429,
+        "checkpoint_sha256": "67fcf624648a005ed375ac50ca801385699d67dd135a1fd39c0d5eba23d75657",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 75,
+        "observation_elapsed_from_adapter_entry_seconds": 2.1586767500266433,
+        "checkpoint_sha256": "924f9cf073626ef6694b4196517f29607fea8bd0e152e74ed8ae7c936cdc6247",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 450,
+    "training_loss_selected_macro_f1": 0.9414373767943421,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 350,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.943069351682508,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o00_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o00_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 24.878636915702373,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 300,
+    "training_loss_selected_macro_f1": 0.4465162360579139,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 125,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.4958662562473182,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o00_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o00_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 5.780428082682192,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.874333415646106,
+        "checkpoint_sha256": "0222cd9016b983e0bce2eba0d31bead5ac00daf4d6f9f76e434e93bffea0e827",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 100,
+        "observation_elapsed_from_adapter_entry_seconds": 2.460560457780957,
+        "checkpoint_sha256": "c666932707aa97bb1f00af6e54dc9ac1810056168a8efaeec16a15419f1d5245",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 175,
+        "observation_elapsed_from_adapter_entry_seconds": 3.018842457793653,
+        "checkpoint_sha256": "a5ede3036c07814cf017775b799e0e2661a0a0963f3c59c46858b73615447b03",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 400,
+    "training_loss_selected_macro_f1": 0.9262297984027911,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 375,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.9324132382090689,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o00_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o00_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 24.449580625165254,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.48898061026654427,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 500,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.48898061026654427,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o20_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o20_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 25.36502395896241,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 400,
+    "training_loss_selected_macro_f1": 0.32089317163049574,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 100,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.3828294944695113,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o40_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o40_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 29.16408587479964,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.32532692878223457,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 300,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.3337197268231278,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o20_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o20_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 6.082367375027388,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 50,
+        "observation_elapsed_from_adapter_entry_seconds": 1.970094374846667,
+        "checkpoint_sha256": "58cc006aac9c5460a58c43ad57bf71a516a8ef6275ab96342777ab7c88b4e4b9",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 125,
+        "observation_elapsed_from_adapter_entry_seconds": 2.6039434168487787,
+        "checkpoint_sha256": "3b1111faa06030e6b72f3f1c73e9c3a275847fdaebaf364046dd0067335cc901",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 225,
+    "training_loss_selected_macro_f1": 0.8011858556170458,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 500,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.8317607700148291,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o40_m50_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o40_m50_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 27.826627250295132,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 400,
+    "training_loss_selected_macro_f1": 0.22083328603487823,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 75,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.2764606846746609,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o20_m20_s12__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o20_m20_s12",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 25.3404072499834,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.3919042818518749,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 275,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.39533893489376826,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o00_m50_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o00_m50_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 23.7772610001266,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 275,
+    "training_loss_selected_macro_f1": 0.41393311888863715,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 100,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.47217149218158133,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o00_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o00_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 23.868251250125468,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.4647716574926278,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 275,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.48146728337745553,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n5000_o20_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n5000_o20_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 26.406754250172526,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": null,
+      "0.7": null,
+      "0.85": null
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.37751075155189157,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 500,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.37751075155189157,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  },
+  {
+    "job_id": "lfr_n1000_o00_m20_s11__nocd_graph_oracleK__s73",
+    "case_id": "lfr_n1000_o00_m20_s11",
+    "status": "COMPLETED",
+    "checkpoints_evaluated": 21,
+    "outer_pipeline_seconds": 5.5417420831508934,
+    "output_selection": "minimum full training loss; never label selected",
+    "clock_scope": "adapter entry to observation, excluding process bootstrap and not including subsequent checkpoint write",
+    "first_observed_crossings": {
+      "0.5": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.507732540834695,
+        "checkpoint_sha256": "1570aa74a02eaea8b590a371bee06229301ad5a6a9d1f9d5560b7885bf5868af",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.7": {
+        "epoch": 25,
+        "observation_elapsed_from_adapter_entry_seconds": 1.507732540834695,
+        "checkpoint_sha256": "1570aa74a02eaea8b590a371bee06229301ad5a6a9d1f9d5560b7885bf5868af",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      },
+      "0.85": {
+        "epoch": 75,
+        "observation_elapsed_from_adapter_entry_seconds": 1.897129625082016,
+        "checkpoint_sha256": "c6d83e876ec7f4da351f7cd6521eb78d01c713714a4539cdcd58d89e81d39de6",
+        "discrete_saved_checkpoint_only_no_interpolation": true
+      }
+    },
+    "training_loss_selected_epoch": 500,
+    "training_loss_selected_macro_f1": 0.9303931766174328,
+    "posthoc_label_best_epoch_DIAGNOSTIC_ONLY": 275,
+    "posthoc_label_best_macro_f1_DIAGNOSTIC_ONLY": 0.931350114416476,
+    "posthoc_label_best_is_not_a_returned_method": true,
+    "returned_cover_equals_training_loss_selected_cover": true
+  }
+]

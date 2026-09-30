@@ -1,0 +1,127 @@
+{
+  "sources": [
+    {
+      "id": "snap",
+      "url": "https://github.com/snap-stanford/snap.git",
+      "path": "external/snap",
+      "command": [
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/snap-stanford/snap.git",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/snap"
+      ],
+      "started_at": "2026-09-30T05:03:28.843272+00:00",
+      "seconds": 1.650259042,
+      "returncode": 0,
+      "commit": "6924a035aabd1ce0a547b94e995e142f29eb5040",
+      "license_path": "external/snap/License.txt",
+      "license_sha256": "b99f6d50680265ca2ea515f14b9a32955b99137223c18e52fd847934a2f6e61b",
+      "license": "BSD-3-Clause",
+      "tracked_file_count": 1221,
+      "source_inventory": "work/setup/native/snap-tracked-source-hashes.json"
+    },
+    {
+      "id": "lfr",
+      "url": "https://github.com/andrealancichinetti/LFRbenchmarks.git",
+      "path": "external/lfr",
+      "command": [
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/andrealancichinetti/LFRbenchmarks.git",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/lfr"
+      ],
+      "started_at": "2026-09-30T05:03:30.502171+00:00",
+      "seconds": 0.4584836250000002,
+      "returncode": 0,
+      "commit": "ec9a860282d8fc9d52e9e08fea9ce93ddeb473af",
+      "license_path": "external/lfr/LICENSE",
+      "license_sha256": "a8b6e154af89470602cf49961ae333036085778cf75ce331ea1abe0d9e46826c",
+      "license": "MIT",
+      "tracked_file_count": 108,
+      "source_inventory": "work/setup/native/lfr-tracked-source-hashes.json"
+    },
+    {
+      "id": "nocd",
+      "path": "external/nocd",
+      "url": "https://github.com/shchur/overlapping-community-detection.git",
+      "commit": "414856fd0d8f61d5bbeec06deb60c3e7b477a342",
+      "commit_date": "2020-09-25T21:20:20+02:00",
+      "license": "MIT",
+      "license_sha256": "00993270d80aadc3ae704f42d37a6365fe990050a098d5125403a7ff255fd950",
+      "tracked_file_count": 33,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.451173+00:00",
+      "working_tree_status": ""
+    },
+    {
+      "id": "cdlib_highway",
+      "path": "external/cdlib_highway",
+      "url": "https://github.com/GiulioRossetti/cdlib.git",
+      "commit": "f054f7ca237e4caed008c8e831f248b7f4bd41e8",
+      "commit_date": "2026-05-22T16:21:30-04:00",
+      "license": "BSD-2-Clause",
+      "license_sha256": "ad26816650a12ec3ed5e77e2b6f27bc5c7cf8743cead0fb1ec1f545bea34cde5",
+      "tracked_file_count": 199,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.517263+00:00",
+      "working_tree_status": ""
+    },
+    {
+      "id": "karateclub",
+      "path": "external/karateclub",
+      "url": "https://github.com/benedekrozemberczki/karateclub.git",
+      "commit": "cb46a91df8dcbeb2570debcf6a9d0c518107a2de",
+      "commit_date": "2024-07-17T21:00:21+02:00",
+      "license": "GPL-3.0",
+      "license_sha256": "e57f1c320b8cf8798a7d2ff83a6f9e06a33a03585f6e065fea97f1d86db84052",
+      "tracked_file_count": 168,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.661593+00:00",
+      "working_tree_status": ""
+    },
+    {
+      "id": "ego_reference",
+      "path": "external/ego_reference",
+      "url": "https://github.com/benedekrozemberczki/EgoSplitting.git",
+      "commit": "cce89d3f1413d6205514b5d6338a8d7290197b3f",
+      "commit_date": "2023-03-18T12:12:52Z",
+      "license": "GPL-3.0",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "tracked_file_count": 14,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.708453+00:00",
+      "working_tree_status": ""
+    },
+    {
+      "id": "egosplit_sknetwork",
+      "path": "external/egosplit_sknetwork",
+      "url": "https://github.com/ryandewolfe33/egosplit-sknetwork.git",
+      "commit": "abaf401bd09b35f45a8bd5f9bfdab2fc91933f9d",
+      "commit_date": "2026-07-02T17:34:49-04:00",
+      "license": "MIT",
+      "license_sha256": "2c4100cde6b93f747dd4e68db9d093a12931da84ebb1c1847bfecbdbb6ced0ab",
+      "tracked_file_count": 7,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.752604+00:00",
+      "working_tree_status": ""
+    },
+    {
+      "id": "highway_native_reference",
+      "path": "external/highway_native_reference",
+      "url": "https://github.com/AmbitiousK/highway-ocd-benchmark.git",
+      "commit": "27ca4ad25f4de29d40a3df7bc9d7349c52bdc6ff",
+      "commit_date": "2026-06-29T02:11:04-04:00",
+      "license": "BSD-2-Clause",
+      "license_sha256": "12a5bd72da05817d83648b412bab0fd6c4179b6566a88cd6b832f089d15caf80",
+      "tracked_file_count": 100,
+      "status": "SOURCE_AUDITED_NOT_MEASURED",
+      "audit_utc": "2026-09-30T05:08:23.806634+00:00",
+      "working_tree_status": ""
+    }
+  ],
+  "locked_at_utc": "2026-09-30T05:15:12.015986+00:00"
+}

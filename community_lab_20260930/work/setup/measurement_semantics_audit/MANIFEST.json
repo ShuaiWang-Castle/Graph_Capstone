@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-09-30T08:27:42.694154+00:00",
+  "scope": "Read-only source and initial Highway native metadata; no current C1 quality/labels/scoring/measurements",
+  "files": [
+    {
+      "path": "MEASUREMENT_SEMANTICS_EVIDENCE.json",
+      "sha256": "c76f7fd213dd53af9c89e52055cccb717460bb692fa296afddc6a32e785b8a7c",
+      "size_bytes": 53100
+    },
+    {
+      "path": "MEASUREMENT_SEMANTICS_ZH.md",
+      "sha256": "367b2d51d0d845eb05e90b9134f00556eae3bef27a83f4ed5ddd8e311e89fda1",
+      "size_bytes": 5071
+    },
+    {
+      "path": "audit.log",
+      "sha256": "b0c28f7a885c335c7e36b5f9f1b0e5f402d474f13035a473dd96e1c8af5a6b5c",
+      "size_bytes": 514
+    },
+    {
+      "path": "make_evidence.py",
+      "sha256": "392565458de08675835374b645ef4af1c44f6255dad0d5f8947dc685c680c89e",
+      "size_bytes": 7618
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "status": "C1_ADAPTER_INTEGRATION_PENDING_NO_DEV_RESULTS",
+  "registered_at_utc": "2026-09-30T07:12:12.561319+00:00",
+  "methods": [
+    {
+      "id": "nocd_pairdot_elementwise500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive elementwise; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 500,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "elementwise",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    },
+    {
+      "id": "nocd_pairdot_bmm500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive bmm; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 500,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "bmm",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    },
+    {
+      "id": "nocd_pairdot_csr500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive sampled_csr; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 500,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "sampled_csr",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    },
+    {
+      "id": "nocd_pairdot_elementwise1000",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive elementwise; training epoch cap 1000; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 1000,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "elementwise",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    }
+  ],
+  "candidate": "Only csr500 is C1; bmm500 is a simple existing operator control, elementwise500 harness mirror, elementwise1000 existing cap sensitivity not guaranteed extra cost",
+  "quality_claim_scope": "same-quality-faster only; no fixed wall-clock equal-budget quality claim"
+}

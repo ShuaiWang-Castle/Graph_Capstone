@@ -1,0 +1,163 @@
+{
+  "status": "FUNCTIONAL_SMALL_GRAPH_ONLY_NOT_QUALITY_OR_LATENCY_BENCHMARK",
+  "methods": [
+    {
+      "id": "nocd_graph_oracleK",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author PyTorch NOCD + documented graph-only/device wrapper",
+      "command": [
+        "{python}",
+        "{root}/adapters/nocd_graph_only.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 5,
+        "check_every": 1,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 64,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": "nocd_pairdot_elementwise500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive elementwise; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 5,
+        "check_every": 1,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 64,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "elementwise",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    },
+    {
+      "id": "nocd_pairdot_bmm500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive bmm; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 5,
+        "check_every": 1,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 64,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "bmm",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    },
+    {
+      "id": "nocd_pairdot_csr500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author NOCD CPU; only sampled pair-dot primitive sampled_csr; training epoch cap 500; existing primitive engineering",
+      "command": [
+        "{python}",
+        "{root}/candidates/nocd_pairdot/adapter.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 5,
+        "check_every": 1,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 64,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu",
+        "pairdot_backend": "sampled_csr",
+        "module_path": "candidates/nocd_pairdot/pairdot.py"
+      }
+    }
+  ]
+}

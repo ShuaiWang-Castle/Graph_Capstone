@@ -1,0 +1,422 @@
+--- a/adapters/run.py
++++ b/adapters/run.py
+@@ -4,7 +4,7 @@
+ Native wrappers require install/API smoke checks on the execution host.
+ """
+ from __future__ import annotations
+-import argparse,importlib.util,json,random,sys,time,subprocess,os
++import argparse,importlib.util,json,random,sys,time,subprocess,os,types
+ from pathlib import Path
+ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+ from lab.io import graph,read_json,write_json,sha256
+@@ -12,6 +12,11 @@
+ def nxgraph(n,edges):
+     import networkx as nx
+     g=nx.Graph();g.add_nodes_from(range(n));g.add_edges_from(edges);return g
++
++def load_source(name,path):
++    spec=importlib.util.spec_from_file_location(name,Path(path).resolve())
++    mod=importlib.util.module_from_spec(spec);sys.modules[name]=mod;spec.loader.exec_module(mod)
++    return mod
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--method',required=True);p.add_argument('--graph',required=True)
+@@ -25,9 +30,10 @@
+         communities=[sorted(c) for c in nx.connected_components(nxgraph(n,edges))]
+         meta['scope']='HARNESS_SMOKE_ONLY_NOT_A_COMPETITIVE_BASELINE'
+     elif a.method=='slpa':
+-        from cdlib import algorithms
+-        ans=algorithms.slpa(nxgraph(n,edges),t=int(cfg.get('t',21)),r=float(cfg.get('r',.1)))
+-        communities=ans.communities;meta['implementation']='CDlib SLPA wrapper; lock actual installed version'
++        source=Path(cfg['module_path']).resolve()
++        mod=load_source('lab_upstream_slpa',source)
++        communities=mod.slpa_nx(nxgraph(n,edges),T=int(cfg.get('t',21)),r=float(cfg.get('r',.1)))
++        meta.update(implementation='Pinned CDlib SLPA_nx via exact wrapper call; narrow dependency loading',source_sha256=sha256(source))
+     elif a.method=='highway':
+         source=Path(cfg['module_path']).resolve()
+         if not source.exists():raise FileNotFoundError('Fetch the pinned CDlib Highway.py first: '+str(source))
+@@ -45,13 +51,63 @@
+         communities=mod.highway_nx(nxgraph(n,edges),**cfg.get('parameters',{}))
+         meta.update(implementation='Pinned CDlib pure-Python Highway; NOT the native C++ performance baseline',source_sha256=sha256(source))
+     elif a.method=='ego_karateclub':
+-        from karateclub import EgoNetSplitter
++        src=Path(cfg['source_dir']).resolve()
++        # Load the actual upstream modules without unrelated embedding dependencies.
++        package=types.ModuleType('karateclub');package.__path__=[str(src/'karateclub')];sys.modules['karateclub']=package
++        load_source('karateclub.estimator',src/'karateclub/estimator.py')
++        module=load_source('lab_upstream_ego',src/'karateclub/community_detection/overlapping/ego_splitter.py')
++        EgoNetSplitter=module.EgoNetSplitter
+         splitter=EgoNetSplitter(resolution=float(cfg.get('resolution',1.0)),seed=a.seed)
++        if cfg.get('loopless_fix',False):
++            def check_graph(self,g):
++                self._check_indexing(g);return g
++            splitter._check_graph=types.MethodType(check_graph,splitter)
++        for name in ['_check_graph','_create_egonets','_map_personalities','_create_persona_graph','_create_partitions']:
++            original=getattr(splitter,name)
++            def timed(*args,_name=name,_original=original,**kwargs):
++                t=time.perf_counter();result=_original(*args,**kwargs);stage[_name+'_seconds']=time.perf_counter()-t;return result
++            setattr(splitter,name,timed)
+         splitter.fit(nxgraph(n,edges));members=splitter.get_memberships();d={}
+         for v,groups in members.items():
+             for c in groups:d.setdefault(int(c),[]).append(int(v))
+         communities=[d[c] for c in sorted(d)]
+-        meta['implementation']='Karate Club third-party EgoNetSplitter; not claimed to reproduce author distributed backend'
++        meta.update(implementation='Karate Club third-party EgoNetSplitter; not author distributed backend',
++                    loopless_fix=bool(cfg.get('loopless_fix',False)),internal_self_loops=list(map(int,__import__('networkx').nodes_with_selfloops(splitter.graph))),
++                    persona_nodes=splitter.persona_graph.number_of_nodes(),persona_edges=splitter.persona_graph.number_of_edges(),
++                    persona_counts=[len(splitter.personalities[i]) for i in range(n)],
++                    source_sha256=sha256(src/'karateclub/community_detection/overlapping/ego_splitter.py'))
++        if cfg.get('detailed_trace',False):
++            write_json(Path(a.output).parent/'ego_stage_trace.json',{'components':splitter.components,'personalities':splitter.personalities,'partitions':splitter.partitions})
++    elif a.method=='ego_sknetwork':
++        import scipy.sparse as sp
++        import sknetwork as sn
++        source=Path(cfg['module_path']).resolve();module=load_source('lab_upstream_skego',source)
++        e=np.asarray(edges,dtype=np.int32).reshape((-1,2))
++        rows=np.r_[e[:,0],e[:,1]];cols=np.r_[e[:,1],e[:,0]]
++        adj=sp.csr_matrix((np.ones(len(rows),dtype=np.float64),(rows,cols)),shape=(n,n))
++        adj.sort_indices()
++        splitter=module.EgoSplit(local_clustering='CC',global_clustering=sn.clustering.Louvain(resolution=float(cfg.get('resolution',1.)),random_state=a.seed),min_cluster_size=0,random_state=a.seed)
++        ans=splitter.fit_predict(adj).tocsr()
++        communities=[ans.indices[ans.indptr[c]:ans.indptr[c+1]].astype(int).tolist() for c in range(ans.shape[0])]
++        meta.update(implementation='egosplit-sknetwork third-party CC/Louvain; cold-process numba compilation included',source_sha256=sha256(source),
++                    explicit_bugfix=bool(cfg.get('bugfix',False)),persona_nodes=splitter.persona_graph_.shape[0],persona_edges=splitter.persona_graph_.nnz//2,
++                    persona_counts=np.diff(splitter.first_personae_index_).astype(int).tolist())
++    elif a.method=='highway_native':
++        binary=Path(cfg['binary']).resolve();outdir=Path(a.output).resolve().parent
++        edgefile=outdir/'native_edges.tsv'
++        # Upstream registers IDs before discarding self-loop lines. These lines
++        # register the full node universe and its stable order, not graph edges.
++        edgefile.write_text(''.join(f'{v}\t{v}\n' for v in range(n))+''.join(f'{u}\t{v}\n' for u,v in edges),encoding='utf-8')
++        cmd=[str(binary),'--input',str(edgefile)]
++        for key,value in cfg['parameters'].items():cmd+=['--'+key,str(value)]
++        subprocess.run(cmd,cwd=outdir,check=True)
++        native=read_json(outdir/'communities.json')
++        wrapper=load_source('lab_highway_author_wrapper',cfg['module_path'])
++        communities=wrapper._read_cpp_communities_json(outdir/'communities.json',list(range(n)),min_community_size=1)
++        communities=wrapper._remove_exact_duplicate_communities(communities,deduplicate_communities=True)
++        meta.update(implementation='Author Highway C++17 native backend, serial OpenMP unavailable',binary_sha256=sha256(binary),native_command=cmd,
++                    native_raw_groups=len(native),author_wrapper_default_dedup=True,wrapper_sha256=sha256(cfg['module_path']),
++                    node_serialization='v v registration rows are discarded by upstream after ID registration; original loopless topology preserved')
+     elif a.method=='bigclam':
+         binary=Path(cfg['binary']).resolve()
+         if not binary.is_file():raise FileNotFoundError('Compile audited SNAP examples/bigclam first')
+@@ -62,7 +118,8 @@
+         cmd=[str(binary),'-i:'+str(edgefile),'-o:'+str(prefix),'-c:'+str(cfg.get('k',-1)),
+              '-nt:'+str(cfg.get('threads',1)),'-sa:'+str(cfg.get('line_alpha',.05)),'-sb:'+str(cfg.get('line_beta',.3))]
+         if int(cfg.get('k',-1))==-1:
+-            cmd+=['-mc:'+str(cfg.get('min_k',5)),'-xc:'+str(cfg.get('max_k',100)),'-nc:'+str(cfg.get('k_trials',10))]
++            maximum=max(int(cfg.get('min_k',5)),int(np.ceil(n*float(cfg.get('max_k_fraction',.1))))) if 'max_k_fraction' in cfg else int(cfg.get('max_k',100))
++            cmd+=['-mc:'+str(cfg.get('min_k',5)),'-xc:'+str(maximum),'-nc:'+str(cfg.get('k_trials',10))]
+         subprocess.run(cmd,check=True)  # Entire adapter process tree is bounded by the outer runner.
+         outfile=Path(str(prefix)+'cmtyvv.txt')
+         if not outfile.exists():raise RuntimeError('Native BigCLAM did not produce cmtyvv.txt')
+--- a/adapters/nocd_graph_only.py
++++ b/adapters/nocd_graph_only.py
+@@ -47,50 +47,62 @@
+     model=nocd.nn.GCN(n,cfg.get('hidden_sizes',[128]),k,dropout=float(cfg.get('dropout',.5)),batch_norm=bool(cfg.get('batch_norm',True))).to(device)
+     decoder=nocd.nn.BerpoDecoder(n,adj.nnz,balance_loss=bool(cfg.get('balance_loss',True)))
+     opt=torch.optim.Adam(model.parameters(),lr=float(cfg.get('lr',.001)))
+-    rng=np.random.default_rng(a.seed);directed=np.column_stack((rows,cols));edge_set=set(rows.astype(np.int64)*n+cols)
+     batch=int(cfg.get('batch_size',20000));max_epochs=int(cfg.get('max_epochs',500))
++    sampler=nocd.sampler.EdgeSampler(adj,batch,batch)
+     check=int(cfg.get('check_every',25));patience=int(cfg.get('patience_checks',10));best=float('inf');state=None;stale=0
+     threshold=float(cfg.get('threshold',.5));trace=[];checkpoint=os.environ.get('LAB_CHECKPOINT')
++    outdir=Path(a.output).parent;stage={'setup_seconds':time.perf_counter()-t0,'sample_seconds':0.,'full_evaluation_seconds':0.,'forward_loss_backward_seconds':0.,'optimizer_seconds':0.,'checkpoint_write_seconds':0.}
+     def sync():
+         if device.type=='cuda':torch.cuda.synchronize(device)
++    def save_array(path,array):
++        path=Path(path);temp=path.with_suffix(path.suffix+'.tmp')
++        with temp.open('wb') as f:np.save(f,array,allow_pickle=False)
++        os.replace(temp,path)
++    def save_model(path,payload):
++        path=Path(path);temp=path.with_suffix(path.suffix+'.tmp')
++        torch.save(payload,temp);os.replace(temp,path)
+     def snapshot(emb,path,kind):
+         z=emb.detach().cpu().numpy();cs=[np.flatnonzero(z[:,i]>threshold).astype(int).tolist() for i in range(k)]
+         write_json(path,{'communities':cs,'method':'NOCD-G-author-PyTorch-adapter','seed':a.seed,
+           'metadata':{'known_k':k,'input_features':'row-l2-normalized adjacency only',
+                       'selection':'minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation',
+                       'kind':kind,'compatibility_patch':'device-neutral sparse dropout',
+-                      'sampler':'uniform edges and rejection-sampled ordered nonedges; no labels',
++                      'sampler':'author EdgeSampler keyed by epoch; serial direct Dataset call; no labels',
+                       'upstream_gcn_sha256':sha256(Path(cfg['source_dir'])/'nocd/nn/gcn.py')},
+-          'stage_seconds':{'elapsed':time.perf_counter()-t0},'trace':trace})
++          'stage_seconds':{**stage,'elapsed':time.perf_counter()-t0},'trace':trace})
+     trainstart=time.perf_counter();termination='max_epochs'
+     for epoch in range(max_epochs+1):
+         if epoch%check==0 or epoch==max_epochs:
++            phase=time.perf_counter()
+             model.eval()
+             with torch.no_grad():
+                 emb=functional.relu(model(x,adj_norm));loss=float(decoder.loss_full(emb,adj).item())
+-            sync();trace.append({'epoch':epoch,'elapsed_seconds':time.perf_counter()-t0,'training_reconstruction_loss':loss})
++            sync();stage['full_evaluation_seconds']+=time.perf_counter()-phase
++            trace.append({'epoch':epoch,'elapsed_seconds':time.perf_counter()-t0,'training_reconstruction_loss':loss})
+             if not np.isfinite(loss):raise FloatingPointError('Nonfinite NOCD loss')
+             if loss<best:
+                 best=loss;state=copy.deepcopy(model.state_dict());stale=0
++                phase=time.perf_counter()
+                 if checkpoint:snapshot(emb,checkpoint,'partial_checkpoint')
++                save_array(outdir/'best_embedding.npy',emb.detach().cpu().numpy())
++                save_model(outdir/'best_model.pt',{'state_dict':state,'optimizer_state_dict':opt.state_dict(),'epoch':epoch,'training_loss':loss,'seed':a.seed})
++                stage['checkpoint_write_seconds']+=time.perf_counter()-phase
+             else:stale+=1
++            phase=time.perf_counter();snapshot(emb,outdir/'checkpoints'/f'epoch_{epoch:04d}.json','measured_evaluation_checkpoint')
++            if epoch==0:save_array(outdir/'initial_embedding.npy',emb.detach().cpu().numpy())
++            stage['checkpoint_write_seconds']+=time.perf_counter()-phase
+             print(json.dumps(trace[-1]),flush=True)
+-            if stale>=patience:termination='training_loss_patience';break
++            if stale>patience:termination='training_loss_patience';break
+         if time.perf_counter()-t0>float(os.environ.get('LAB_BUDGET_SECONDS','1e20'))-3:
+             termination='internal_time_budget';break
+-        if epoch==max_epochs:break
+         if cfg.get('stochastic_loss',True):
+-            pos=directed[rng.integers(0,len(directed),size=batch)]
+-            neg=[];rounds=0
+-            while len(neg)<batch:
+-                vals=rng.integers(0,n,size=(max(batch-len(neg),256),2));rounds+=1
+-                neg.extend((int(u),int(v)) for u,v in vals if u!=v and int(u)*n+int(v) not in edge_set)
+-                if rounds>10000:raise RuntimeError('Nonedge sampling unexpectedly difficult')
+-            ones=torch.tensor(pos,dtype=torch.long,device=device);zeros=torch.tensor(neg[:batch],dtype=torch.long,device=device)
++            phase=time.perf_counter();ones,zeros=sampler[epoch];ones=ones.to(device);zeros=zeros.to(device);stage['sample_seconds']+=time.perf_counter()-phase
++        phase=time.perf_counter()
+         model.train();opt.zero_grad();emb=functional.relu(model(x,adj_norm))
+         loss=decoder.loss_batch(emb,ones,zeros) if cfg.get('stochastic_loss',True) else decoder.loss_full(emb,adj)
+         loss=loss+nocd.utils.l2_reg_loss(model,scale=float(cfg.get('weight_decay',.01)))
+-        loss.backward();opt.step()
++        loss.backward();sync();stage['forward_loss_backward_seconds']+=time.perf_counter()-phase
++        phase=time.perf_counter();opt.step();sync();stage['optimizer_seconds']+=time.perf_counter()-phase
+     if state is None:raise RuntimeError('No finite checkpoint')
+     model.load_state_dict(state);model.eval()
+     with torch.no_grad():emb=functional.relu(model(x,adj_norm))
+--- a/lab/runner.py
++++ b/lab/runner.py
+@@ -1,5 +1,5 @@
+ from __future__ import annotations
+-import json,os,signal,subprocess,time,sys
++import json,os,signal,subprocess,time,sys,threading
+ from pathlib import Path
+ import psutil
+ from lab.io import write_json,read_json,sha256,graph,cover
+@@ -21,7 +21,15 @@
+     signature=json.dumps(job,sort_keys=True)
+     specfile=directory/'spec.json';resultfile=directory/'result.json'
+     if specfile.exists() and read_json(specfile)!=job:raise ValueError('Job ID reused with different spec; use a new ID')
+-    if resultfile.exists():return read_json(resultfile)
++    if resultfile.exists():
++        cached=read_json(resultfile)
++        for field,key in [('graph','graph_sha256'),('config','config_sha256')]:
++            if cached.get(key) and sha256(job[field])!=cached[key]:
++                raise ValueError(f'{field} no longer matches the recorded run; preserve the old record and restore its input')
++        if cached.get('prediction') and cached.get('prediction_sha256'):
++            if sha256(cached['prediction'])!=cached['prediction_sha256']:
++                raise ValueError('Recorded prediction changed; do not silently reuse it')
++        return cached
+     write_json(specfile,job)
+     if job.get('blocked_reason'):
+         r={'job_id':job['job_id'],'method':job['method'],'status':'BLOCKED','reason':job['blocked_reason'],'pipeline_seconds':0.0}
+@@ -43,6 +51,7 @@
+         if sha256(file)!=digest:raise ValueError('Adapter code changed after freeze: '+file)
+     env=os.environ.copy();nt=str(job.get('threads',1))
+     env.update(OMP_NUM_THREADS=nt,OPENBLAS_NUM_THREADS=nt,MKL_NUM_THREADS=nt,NUMEXPR_NUM_THREADS=nt,
++               VECLIB_MAXIMUM_THREADS=nt,BLIS_NUM_THREADS=nt,
+                PYTHONHASHSEED=str(job['seed']),LAB_ROOT=str(root),LAB_CHECKPOINT=str(checkpoint.resolve()),
+                LAB_BUDGET_SECONDS=str(limit),LAB_CONFIG=placeholders['config'])
+     env['PYTHONPATH']=str(root)+os.pathsep+env.get('PYTHONPATH','')
+@@ -51,28 +60,46 @@
+     rec={'job_id':job['job_id'],'case_id':job.get('case_id'),'method':job['method'],
+          'information_policy':job.get('information_policy'),'device':job.get('device','cpu'),
+          'threads':job.get('threads',1),'seed':job['seed'],'command':argv,
++         'python_executable':sys.executable,'source_hashes':job.get('source_hashes',{}),
++         'declared_implementation':job.get('declared_implementation'),
++         'thread_environment':{k:env[k] for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','VECLIB_MAXIMUM_THREADS','BLIS_NUM_THREADS']},
+          'graph_sha256':sha256(job['graph']),'config_sha256':sha256(job['config']),
+          'budget_seconds':limit,'original_timeout_s':job['timeout_s'],
+          'resource_measurement':'0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.'}
+     start=time.perf_counter();p=None;peak=0;cpupeak=0;status=None
++    exited=threading.Event();exit_observation={};waiter=None
++    def observe_exit():
++        # Blocking wait avoids the monitoring interval quantizing short jobs.
++        try:exit_observation['returncode']=p.wait()
++        except Exception as e:exit_observation['wait_error']=str(e)
++        finally:
++            exit_observation['elapsed_seconds']=time.perf_counter()-start
++            exited.set()
+     try:
+         with open(directory/'stdout.log','w',encoding='utf-8') as out,open(directory/'stderr.log','w',encoding='utf-8') as err:
+             p=subprocess.Popen(argv,cwd=root,env=env,stdout=out,stderr=err,start_new_session=(os.name=='posix'))
+-            ps=psutil.Process(p.pid)
+-            while p.poll() is None:
++            waiter=threading.Thread(target=observe_exit,name='lab-process-waiter',daemon=True)
++            waiter.start()
++            try:ps=psutil.Process(p.pid)
++            except psutil.NoSuchProcess:ps=None  # A fast job may already have exited.
++            while not exited.is_set():
+                 try:
+-                    procs=[ps]+ps.children(recursive=True)
++                    procs=([ps]+ps.children(recursive=True)) if ps is not None else []
+                     rss=0;cpu=0
+                     for c in procs:
+                         try:rss+=c.memory_info().rss;t=c.cpu_times();cpu+=t.user+t.system
+                         except(psutil.NoSuchProcess,psutil.AccessDenied):pass
+                     peak=max(peak,rss);cpupeak=max(cpupeak,cpu)
+                 except(psutil.NoSuchProcess,psutil.AccessDenied):pass
++                if exited.is_set():break
+                 if time.perf_counter()-start>limit:status='TIMEOUT';stop_tree(p);break
+                 if peak>job.get('memory_mb',8192)*1024**2:status='MEMORY_LIMIT';stop_tree(p);break
+                 if sum(f.stat().st_size for f in [directory/'stdout.log',directory/'stderr.log'])>50*1024**2:
+                     status='LOG_LIMIT';stop_tree(p);break
+-                time.sleep(.2)
++                exited.wait(min(.2,max(0,limit-(time.perf_counter()-start))))
++            if waiter is not None:waiter.join()
++            if exit_observation.get('wait_error'):
++                raise RuntimeError('Process waiter failed: '+exit_observation['wait_error'])
+             if status is None:status='COMPLETED' if p.returncode==0 else 'ERROR'
+             rec['returncode']=p.returncode
+     except KeyboardInterrupt:
+@@ -81,13 +108,21 @@
+     except Exception as e:
+         status='LAUNCH_ERROR';rec['error']=str(e)
+         if p is not None:stop_tree(p)
+-    rec.update(status=status,pipeline_seconds=time.perf_counter()-start,peak_tree_rss_bytes=peak,sampled_tree_cpu_seconds=cpupeak)
++    finally:
++        if waiter is not None:waiter.join()
++    monitor_elapsed=time.perf_counter()-start
++    rec.update(status=status,pipeline_seconds=exit_observation.get('elapsed_seconds',monitor_elapsed),
++               monitor_elapsed_seconds=monitor_elapsed,
++               timing_definition='Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.',
++               peak_tree_rss_bytes=peak,sampled_tree_cpu_seconds=cpupeak)
+     target=output if status=='COMPLETED' and output.exists() else checkpoint if checkpoint.exists() else None
+     if target:
+         try:
+             n,_=graph(job['graph']);_,audit=cover(target,n)
+             rec.update(prediction=str(target.resolve()),prediction_sha256=sha256(target),cover_validation=audit,
+                        prediction_kind='completed' if target==output else 'partial_checkpoint')
+-        except Exception as e:rec['prediction_error']=str(e);rec['prediction_kind']='invalid'
++        except Exception as e:
++            rec['prediction_error']=str(e);rec['prediction_kind']='invalid'
++            if status=='COMPLETED':rec['status']='INVALID_OUTPUT'
+     elif status=='COMPLETED':rec['status']='INVALID_OUTPUT'
+     write_json(resultfile,rec);return rec
+--- a/tools/prepare_plan.py
++++ b/tools/prepare_plan.py
+@@ -14,7 +14,7 @@
+     p.add_argument('--alg-seed',type=int,default=73);p.add_argument('--methods',nargs='*');a=p.parse_args()
+     catalog=read_json(a.catalog);methods=read_json(a.method_configs)['methods'];protocol=read_json(a.protocol)
+     out=Path(a.output).resolve();jobs=[];config_dir=out.parent/'job_configs';config_dir.mkdir(parents=True,exist_ok=True)
+-    source_files=[ROOT/'adapters/run.py',ROOT/'adapters/nocd_graph_only.py',ROOT/'lab/io.py']
++    source_files=[ROOT/'adapters/run.py',ROOT/'adapters/nocd_graph_only.py',ROOT/'lab/io.py',ROOT/'lab/runner.py']
+     for case in catalog:
+         for m in methods:
+             if a.methods and m['id'] not in a.methods:continue
+@@ -36,7 +36,8 @@
+             if 'module_path' in cfg and Path(cfg['module_path']).exists():sourcehashes[cfg['module_path']]=sha256(cfg['module_path'])
+             if 'binary' in cfg and Path(cfg['binary']).is_file():sourcehashes[cfg['binary']]=sha256(cfg['binary'])
+             if 'source_dir' in cfg and Path(cfg['source_dir']).exists():
+-                for f in (Path(cfg['source_dir'])/'nocd').rglob('*.py'):sourcehashes[str(f)]=sha256(f)
++                package='karateclub' if m['id'].startswith('ego_karateclub') else 'nocd'
++                for f in (Path(cfg['source_dir'])/package).rglob('*.py'):sourcehashes[str(f)]=sha256(f)
+             cp={'job_id':stem,'case_id':case['case_id'],'method':m['id'],'command':m['command'],
+                 'graph':case.get('graph',''),'config':str(configpath),'config_sha256':sha256(configpath),
+                 'seed':a.alg_seed,'device':cfg.get('device','cpu'),'gpu':m.get('gpu'),
+@@ -53,6 +54,8 @@
+     random.Random(protocol['execution_order_seed']).shuffle(jobs)
+     plan={'purpose':'BASELINE_DISCOVERY_NOT_A_NEW_METHOD_RESULT','catalog_sha256':sha256(a.catalog),
+           'protocol_sha256':sha256(a.protocol),'methods_sha256':sha256(a.method_configs),'jobs':jobs}
++    for filename,key in [('provenance/SOURCE_LOCK.json','source_lock_sha256'),('provenance/dependency_versions.txt','dependency_lock_sha256')]:
++        if (ROOT/filename).exists():plan[key]=sha256(ROOT/filename)
+     if out.exists() and read_json(out)!=plan:raise ValueError('Plan is already frozen. Use a separately named plan after a declared change.')
+     write_json(out,plan);print(f'{len(jobs)} planned jobs; {sum("blocked_reason" in j for j in jobs)} blocked. {out}')
+ if __name__=='__main__':main()
+--- a/tools/summarize.py
++++ b/tools/summarize.py
+@@ -3,15 +3,18 @@
+ import argparse,sys,csv,time
+ from pathlib import Path
+ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+-from lab.io import read_json,write_json,graph,cover
++from lab.io import read_json,write_json,graph,cover,sha256
+ from lab.metrics import score
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--catalog',required=True);p.add_argument('--plan',required=True)
+     p.add_argument('--run-root',default=str(ROOT/'work/runs'));p.add_argument('--output',default=str(ROOT/'work/analysis'))
+     p.add_argument('--plot',action='store_true');a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
++    plan=read_json(a.plan)
++    if plan.get('catalog_sha256') and sha256(a.catalog)!=plan['catalog_sha256']:
++        raise ValueError('Catalog changed after the job-plan freeze')
+     cat={r['case_id']:r for r in read_json(a.catalog)};rows=[]
+-    for j in read_json(a.plan)['jobs']:
++    for j in plan['jobs']:
+         f=Path(a.run_root)/j['job_id']/'result.json'
+         r=read_json(f) if f.exists() else {'status':'NOT_RUN','pipeline_seconds':None}
+         row={k:j.get(k) for k in ['job_id','case_id','method','information_policy','device','threads','seed']}
+@@ -21,13 +24,21 @@
+         if r.get('prediction') and r.get('prediction_kind')!='invalid' and c.get('truth'):
+             t0=time.perf_counter()
+             try:
++                for path,digest,kind in [(c['graph'],j.get('graph_sha256'),'graph'),(c['truth'],c.get('truth_sha256'),'truth'),(r['prediction'],r.get('prediction_sha256'),'prediction')]:
++                    if not digest:raise ValueError('Missing frozen '+kind+' SHA-256; cannot score unverifiable input')
++                    if sha256(path)!=digest:raise ValueError(kind+' changed after measurement/freeze')
+                 if read_json(c['truth']).get('labels_complete') is not True:raise ValueError('PARTIAL_LABELS_NOT_SCORABLE_BY_THIS_PROTOCOL')
+                 n,_=graph(c['graph']);t,_=cover(c['truth'],n);pred,audit=cover(r['prediction'],n);s=score(t,pred,n)
+-                write_json(out/'per_job'/(j['job_id']+'.json'),{'metrics':s,'normalization':audit})
++                write_json(out/'per_job'/(j['job_id']+'.json'),{'metrics':s,'normalization':audit,
++                    'evaluation_provenance':{'graph_sha256':sha256(c['graph']),'truth_sha256':sha256(c['truth']),
++                    'prediction_sha256':sha256(r['prediction']),'metrics_source_sha256':sha256(ROOT/'lab/metrics.py'),
++                    'summarize_source_sha256':sha256(Path(__file__))}})
+                 row.update(matched_macro_f1=s['matched_macro_f1'],matched_membership_micro_f1=s['matched_membership_micro']['f1'],
+                            overlap_f1=s['overlap_node']['f1'],extra_membership_recall=s['extra_membership_after_first']['recall'],
+                            predicted_groups=s['predicted_groups'],metric_status='SCORED')
+-            except Exception as e:row.update(metric_status='SCORING_ERROR',metric_error=str(e))
++            except Exception as e:
++                row.update(metric_status='SCORING_ERROR',metric_error=str(e))
++                write_json(out/'per_job'/(j['job_id']+'.json'),{'metric_status':'SCORING_ERROR','metric_error':str(e)})
+             row['evaluation_seconds']=time.perf_counter()-t0
+         rows.append(row)
+     write_json(out/'results.json',rows)
+--- a/tools/generate_lfr.py
++++ b/tools/generate_lfr.py
+@@ -5,6 +5,7 @@
+ """
+ from __future__ import annotations
+ import argparse,subprocess,sys,time,json,itertools
++from datetime import datetime,timezone
+ from pathlib import Path
+ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+ from lab.io import read_json,write_json,sha256
+@@ -60,7 +61,15 @@
+         recfile=raw/'record.json'
+         if recfile.exists():
+             rows.append(read_json(recfile));continue
++        session=ROOT/'work/state.json'
++        if session.exists():
++            remaining=(datetime.fromisoformat(read_json(session)['deadline'])-datetime.now(timezone.utc)).total_seconds()
++            if remaining<=1:
++                row={'case_id':name,'split':a.split,'requested':{'n':n,'overlap_fraction':ov,'mu':mu,'seed':seed},'status':'NOT_RUN_BUDGET'}
++                write_json(recfile,row);rows.append(row);continue
++        else:remaining=a.timeout
+         on=round(n*ov);(raw/'time_seed.dat').write_text(str(seed)+'\n',encoding='utf-8')
++        (raw/'time_seed.before.dat').write_bytes((raw/'time_seed.dat').read_bytes())
+         argv=[str(binary),'-N',str(n),'-k',str(cfg['mean_degree']),'-maxk',str(cfg['max_degree']),
+           '-mu',str(mu),'-t1',str(cfg['degree_exponent']),'-t2',str(cfg['community_exponent']),
+           '-minc',str(cfg['min_community']),'-maxc',str(cfg['max_community']),'-on',str(on),'-om',str(cfg['overlap_memberships'])]
+@@ -68,7 +77,7 @@
+         start=time.perf_counter()
+         try:
+             with open(raw/'stdout.log','w',encoding='utf-8') as out:
+-                r=subprocess.run(argv,cwd=raw,stdout=out,stderr=subprocess.STDOUT,timeout=a.timeout,check=False)
++                r=subprocess.run(argv,cwd=raw,stdout=out,stderr=subprocess.STDOUT,timeout=min(a.timeout,remaining),check=False)
+             if r.returncode:raise RuntimeError(f'generator exit={r.returncode}')
+             g,t,meta=convert(raw,n,on,cfg['overlap_memberships'])
+             gp=base/'graphs'/f'{name}.json';tp=base/'evaluation_only'/f'{name}.json'
+@@ -76,6 +85,8 @@
+             row.update(status='GENERATED',graph=str(gp),truth=str(tp),n=n,graph_sha256=sha256(gp),truth_sha256=sha256(tp),statistics=meta)
+         except subprocess.TimeoutExpired:row.update(status='GENERATION_TIMEOUT')
+         except Exception as e:row.update(status='GENERATION_ERROR',error=str(e))
++        if (raw/'time_seed.dat').exists():(raw/'time_seed.after.dat').write_bytes((raw/'time_seed.dat').read_bytes())
++        row['generator_binary_sha256']=sha256(binary);row['generator_source_sha256']=sha256(Path(__file__))
+         row['generation_seconds']=time.perf_counter()-start;write_json(recfile,row);rows.append(row)
+         print(json.dumps({k:row[k] for k in ['case_id','status','generation_seconds']},ensure_ascii=False),flush=True)
+         write_json(base/'catalog.json',rows)

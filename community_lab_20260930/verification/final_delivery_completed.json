@@ -1,0 +1,48 @@
+{
+  "completed_utc": "2026-09-30T10:28:53.108022+00:00",
+  "status": "NO_REPRODUCIBLE_GAIN",
+  "scope": "Frozen development admission failed; local n5000 speed signal retained; confirmation not performed",
+  "started_at": "2026-09-30T05:02:08.976173+00:00",
+  "unchanged_deadline": "2026-10-01T05:02:08.976173+00:00",
+  "elapsed_seconds": 19604.131849,
+  "delivery": {
+    "archive": "DELIVERY.zip",
+    "bytes": 2217948855,
+    "sha256": "7718b644667b7576a6c6928fc37288d400f5224b120dff5c2425ec27ebd8094a",
+    "payload_files": 17361,
+    "phase": "final",
+    "verified_all_zip_payload_hashes": true,
+    "verified_embedded_replay_index_payloads": true,
+    "verified_embedded_source_archive_sha256": true
+  },
+  "independent_actual_zip_review": {
+    "path": "work/setup/final_zip_postcheck_v1/FINAL_ZIP_POSTCHECK.json",
+    "sha256": "4f2f16cfc94843f693db2fed944303b56146e8155fba14d5711cc92871b4a3e6",
+    "checks": {
+      "PASS": 1959,
+      "FAIL": 0
+    },
+    "counts": {
+      "formal_result_records": 576,
+      "formal_predictions": 564,
+      "no_cover_quality_unknown_timeouts": 12,
+      "formal_NOCD_model_jobs": 336,
+      "formal_saved_cover_checkpoints": 7879,
+      "replay_index_payloads": 3017,
+      "source_tar_members": 1853,
+      "locked_license_copies": 8,
+      "native_binaries": 3
+    }
+  },
+  "gpt_pro_pack": {
+    "path": "reports/GPT_PRO_ANALYSIS_PACK.zip",
+    "bytes": 1641426,
+    "sha256": "69b444405ac9a611d3403cdda881187bc709ee2cd8c01b90bc61905d8d9d2e5a"
+  },
+  "gpt_pro_prompt": {
+    "path": "reports/GPT_PRO_ANALYSIS_PROMPT_ZH.md",
+    "sha256": "5cde4ab61968f888c39c255a32a2808293be61f081c86f66a5052144ad0c8727"
+  },
+  "remaining_tasks": [],
+  "postpackage_record_scope": "This record, updated RESUME and independent final ZIP postcheck were created after the immutable DELIVERY.zip. They are external closeout records; the canonical archive was not rebuilt or changed."
+}

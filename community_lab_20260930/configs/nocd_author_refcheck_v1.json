@@ -1,0 +1,44 @@
+{
+  "registered_at_utc": "2026-09-30T07:27:00.672471+00:00",
+  "purpose": "Same-round source-unmodified author adapter full24 seed73 harness-output/cost cross-check; pre-candidate-quality. No candidate added, no algorithm/source changes. Run serially after current288. Historical baseline73 cost not used as primary direct performance control.",
+  "methods": [
+    {
+      "id": "nocd_author_refcheck500",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author PyTorch NOCD + documented graph-only/device wrapper",
+      "command": [
+        "{python}",
+        "{root}/adapters/nocd_graph_only.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 500,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu"
+      }
+    }
+  ]
+}

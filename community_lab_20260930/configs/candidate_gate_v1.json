@@ -1,0 +1,63 @@
+{
+  "gate_id": "C1_before_first_development_quality_v1",
+  "frozen_at_utc": "2026-09-30T07:16:08.912145+00:00",
+  "registered_mechanism": "Only author BerPo sampled ordered pairdot primitive",
+  "candidate_backends": [
+    "sampled_csr"
+  ],
+  "existing_operator_control": "bmm",
+  "candidate_configuration_count": 1,
+  "development_graphs": 24,
+  "algorithm_seeds": [
+    73,
+    74,
+    75
+  ],
+  "primary_control": "nocd_pairdot_elementwise500",
+  "secondary_operator_control": "nocd_pairdot_bmm500",
+  "budget_control": "nocd_pairdot_elementwise1000",
+  "budget_interpretation": "cap sensitivity with unchanged patience; actual epochs and full cost reported. No equal wall-clock quality claim.",
+  "harness_gate": "functional and integration audit pass plus original/mirror smoke cover, initial/best embedding and training-loss trace equality; no original frozen file modified",
+  "cost": "complete outer process pipeline including import, every pair unique/CSR/inverse, training/model selection/decode/checkpoints. No profile-derived latency claims.",
+  "paired_speed_saving": "1 - backend_complete_pipeline_seconds / matched_elementwise_complete_pipeline_seconds",
+  "failure_denominator": "retain all planned jobs and missing quality; candidates cannot have additional incomplete/invalid tasks relative to their matched elementwise control for any successful claim; no timeout completion imputation",
+  "quality_thresholds": {
+    "metrics": [
+      "matched_macro_f1",
+      "matched_membership_micro_f1"
+    ],
+    "per_size_per_algorithm_seed_mean_paired_delta_at_least": -0.01,
+    "all_regressions_delta_at_most": -0.03,
+    "regression_reporting": "list every macro/micro material decline and at-least-two-correct-recall decline; any material decline precludes pointwise/no-regression domination language"
+  },
+  "speed_thresholds": {
+    "per_size_per_algorithm_seed_median_paired_saving_at_least": 0.1,
+    "all_grid_claim_requires_both_sizes": [
+      1000,
+      5000
+    ],
+    "preregistered_limited_signal_scope": "n5000 only allowed if all three seeds there pass speed and both-size quality gates; still run/report all n1000 and freeze same one global backend",
+    "CSR_specific_attribution": "requires additional >=10% median complete saving relative to matched BMM in claimed size scope for each seed; otherwise cannot attribute unique benefit to CSR"
+  },
+  "one_global_backend_selection": {
+    "quality_eligible": "both n1000 and n5000 for each algorithm seed pass macro/micro mean quality and status gates",
+    "selection_metric": "median paired saving vs elementwise over all 72 planned pairs with complete denominator",
+    "eligible_backends": [
+      "bmm",
+      "sampled_csr"
+    ],
+    "tie_preference": "bmm",
+    "close_backend_simplification": "If BMM is eligible and CSR is fastest but lacks CSR-specific >=10% paired cost advantage in claimed scope, freeze the qualifying BMM if it passes the speed signal. Otherwise disclose lack of CSR-specific advantage without calling CSR unique."
+  },
+  "confirmation": "Only stable development signal after all three seeds. Freeze one backend/config and strongest relevant old controls; graphs211/212, algorithm173/174/175; both sizes retained; define alternative generator and degree-only negative before reading their candidate results. Never retune after independent confirmation.",
+  "inference_policy": "no case_id/n/true overlap/label/quality branch for backend/parameters; known K scalar disclosed, labels offline only",
+  "statistics": "descriptive predeclared practical criteria, not IID confidence intervals, p values or statistical noninferiority theorem",
+  "supervisor_review": "work/setup/candidate_design_review/; complete before development performance/quality execution",
+  "source_hashes": {
+    "candidates/nocd_pairdot/adapter.py": "03dbadb3c50aa3b4c0965c0dc08453baf46f3dabc43ef061339d65f6b5c1a8d0",
+    "candidates/nocd_pairdot/pairdot.py": "91aeecac59fd9b059628a37747c40dcb47a70757ec4bd4c2cd01637638cbf62e",
+    "configs/nocd_pairdot_controls_v1.json": "b28139be18aac6460c7470ea0b68a1912d6cabf26b291903b973a11f2a29a273",
+    "configs/candidate_registry_v1.json": "70b2a402a4b386fbc50cf0d13c1d387a5d2a44b41ff4a18c60fd0051adf8c86f"
+  },
+  "candidate_quality_read": false
+}

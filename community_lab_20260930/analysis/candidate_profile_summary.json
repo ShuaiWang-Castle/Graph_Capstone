@@ -1,0 +1,278 @@
+{
+  "computed_at_utc": "2026-09-30T09:14:14.980308+00:00",
+  "rows": [
+    {
+      "job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_bmm500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_bmm500__s73",
+      "backend": "bmm",
+      "active5_profiler_step_total_ms": 45.228725000000004,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 60,
+          "self_ms": 0.9912170000000026,
+          "inclusive_ms": 1.030526000000006
+        },
+        "C1_ACTUAL_HELPER_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 0.2175050000000101,
+          "inclusive_ms": 8.460758000000004
+        },
+        "C1_BMM_PAIR_DOT": {
+          "count": 10,
+          "self_ms": 0.11449400000000833,
+          "inclusive_ms": 7.778915999999995
+        },
+        "aten::index": {
+          "count": 20,
+          "self_ms": 6.725676000000009,
+          "inclusive_ms": 6.7380099999999965
+        },
+        "aten::bmm": {
+          "count": 30,
+          "self_ms": 9.298150000000009,
+          "inclusive_ms": 9.299946999999992
+        },
+        "aten::_index_put_impl_": {
+          "count": 20,
+          "self_ms": 4.525378000000008,
+          "inclusive_ms": 4.538339000000018
+        }
+      },
+      "all_training_prepare_calls": 0,
+      "median_prepare_wrapper_ms": null,
+      "median_unique_to_batch_ratio": null,
+      "prepare_ratios_by_call_order": {},
+      "manifest_sha256": "9da1586c4a4e1436b7fe63e2f3839b6524051346c41a027fe6a23d80212fd35d",
+      "kernel_averages_sha256": "f34b4a6d2db5e3e63cb6e3376a600fcfce91d47102fc10fac03275998fa3234d"
+    },
+    {
+      "job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_csr500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_csr500__s73",
+      "backend": "sampled_csr",
+      "active5_profiler_step_total_ms": 46.017872999999994,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 110,
+          "self_ms": 1.4810999999999799,
+          "inclusive_ms": 5.122063999999973
+        },
+        "C1_ACTUAL_HELPER_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 0.16599599999999465,
+          "inclusive_ms": 12.118854999999996
+        },
+        "C1_PREPARE_SAMPLED_PAIRS": {
+          "count": 10,
+          "self_ms": 9.733005000000002,
+          "inclusive_ms": 9.745378000000008
+        },
+        "C1_SAMPLED_CSR_PAIR_DOT": {
+          "count": 10,
+          "self_ms": 0.143691000000018,
+          "inclusive_ms": 1.7475959999999917
+        },
+        "aten::sparse_sampled_addmm": {
+          "count": 10,
+          "self_ms": 0.9621660000000211,
+          "inclusive_ms": 1.1055280000000007
+        },
+        "aten::index": {
+          "count": 10,
+          "self_ms": 0.12673399999999127,
+          "inclusive_ms": 0.1307090000000003
+        },
+        "aten::_index_put_impl_": {
+          "count": 10,
+          "self_ms": 0.13715800000000763,
+          "inclusive_ms": 0.1435940000000055
+        }
+      },
+      "all_training_prepare_calls": 950,
+      "median_prepare_wrapper_ms": 0.9661458898335695,
+      "median_unique_to_batch_ratio": 0.80855,
+      "prepare_ratios_by_call_order": {
+        "0": {
+          "median_unique_to_batch_ratio": 0.6231,
+          "median_wrapper_ms": 0.9740833193063736
+        },
+        "1": {
+          "median_unique_to_batch_ratio": 0.98985,
+          "median_wrapper_ms": 0.9496253915131092
+        }
+      },
+      "manifest_sha256": "2ccb358d4b256e3e23fbf01a7a2c228ce4a7e8ab6d6b7776be07e0d0dbbbadc5",
+      "kernel_averages_sha256": "38ba6ac3edc4c89b8900306d6a88421d2cbfa3c9be501e4c3fb90bc4b55b0b09"
+    },
+    {
+      "job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_elementwise500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n1000_o40_m50_s12__nocd_pairdot_elementwise500__s73",
+      "backend": "elementwise",
+      "active5_profiler_step_total_ms": 46.313038999999996,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 90,
+          "self_ms": 7.9289820000000075,
+          "inclusive_ms": 7.959606000000016
+        },
+        "C1_ELEMENTWISE_ORIGINAL_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 0.4840099999999902,
+          "inclusive_ms": 10.612700999999994
+        },
+        "aten::index": {
+          "count": 20,
+          "self_ms": 6.9776069999999955,
+          "inclusive_ms": 6.996479999999992
+        },
+        "aten::_index_put_impl_": {
+          "count": 20,
+          "self_ms": 4.63331600000001,
+          "inclusive_ms": 4.647626000000006
+        }
+      },
+      "all_training_prepare_calls": 0,
+      "median_prepare_wrapper_ms": null,
+      "median_unique_to_batch_ratio": null,
+      "prepare_ratios_by_call_order": {},
+      "manifest_sha256": "ef8c30ed1d2a421debee5a7ed6544cb38b7fbb29c04094a7f2bbc0f54455652e",
+      "kernel_averages_sha256": "6763a094f93b929b7215d56ae74811c9789bbef435b6b236d3cdcbc226fe45cb"
+    },
+    {
+      "job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_bmm500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_bmm500__s73",
+      "backend": "bmm",
+      "active5_profiler_step_total_ms": 252.75421,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 60,
+          "self_ms": 4.55559899999991,
+          "inclusive_ms": 4.60127599999996
+        },
+        "C1_ACTUAL_HELPER_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 0.43706400000003487,
+          "inclusive_ms": 43.844455999999994
+        },
+        "C1_BMM_PAIR_DOT": {
+          "count": 10,
+          "self_ms": 0.27693199999994067,
+          "inclusive_ms": 42.81727400000001
+        },
+        "aten::index": {
+          "count": 20,
+          "self_ms": 35.66892900000002,
+          "inclusive_ms": 35.70755900000001
+        },
+        "aten::bmm": {
+          "count": 30,
+          "self_ms": 48.82503600000001,
+          "inclusive_ms": 48.82811999999993
+        },
+        "aten::_index_put_impl_": {
+          "count": 20,
+          "self_ms": 22.98558100000003,
+          "inclusive_ms": 23.018167000000037
+        }
+      },
+      "all_training_prepare_calls": 0,
+      "median_prepare_wrapper_ms": null,
+      "median_unique_to_batch_ratio": null,
+      "prepare_ratios_by_call_order": {},
+      "manifest_sha256": "4b2c50b5de750748fe91ff80da36bfefbd74fea53567da0fe5119ac6a316fea4",
+      "kernel_averages_sha256": "8b21710dfe1236cd90923c1dbb3bf6ecc9f961be8f024ee272263b7105f3b74d"
+    },
+    {
+      "job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_csr500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_csr500__s73",
+      "backend": "sampled_csr",
+      "active5_profiler_step_total_ms": 203.75978899999998,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 110,
+          "self_ms": 7.478072000000231,
+          "inclusive_ms": 14.763574000000016
+        },
+        "C1_ACTUAL_HELPER_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 0.6788620000000537,
+          "inclusive_ms": 17.643271000000016
+        },
+        "C1_PREPARE_SAMPLED_PAIRS": {
+          "count": 10,
+          "self_ms": 10.680297999999961,
+          "inclusive_ms": 10.708750999999987
+        },
+        "C1_SAMPLED_CSR_PAIR_DOT": {
+          "count": 10,
+          "self_ms": 0.2570580000000136,
+          "inclusive_ms": 5.679103000000045
+        },
+        "aten::sparse_sampled_addmm": {
+          "count": 10,
+          "self_ms": 4.132915000000014,
+          "inclusive_ms": 4.315088999999966
+        },
+        "aten::index": {
+          "count": 10,
+          "self_ms": 0.17553600000005282,
+          "inclusive_ms": 0.18024500000004082
+        },
+        "aten::_index_put_impl_": {
+          "count": 10,
+          "self_ms": 0.15881900000014137,
+          "inclusive_ms": 0.16340100000002714
+        }
+      },
+      "all_training_prepare_calls": 1002,
+      "median_prepare_wrapper_ms": 1.023104414343834,
+      "median_unique_to_batch_ratio": 0.9545,
+      "prepare_ratios_by_call_order": {
+        "0": {
+          "median_unique_to_batch_ratio": 0.9044,
+          "median_wrapper_ms": 1.061249990016222
+        },
+        "1": {
+          "median_unique_to_batch_ratio": 0.9996,
+          "median_wrapper_ms": 0.9740423411130905
+        }
+      },
+      "manifest_sha256": "073e1bc55c10dc87ff980182069fc62cd92cdfbe57c615f5a9c0f4f2960f6ac5",
+      "kernel_averages_sha256": "3c0cda427e57e86938a0b158c1723263bfa914252f11f6955efcc5a6a65b6dbb"
+    },
+    {
+      "job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_elementwise500__s73__c1_diagnostic_v1",
+      "original_frozen_job_id": "lfr_n5000_o40_m50_s11__nocd_pairdot_elementwise500__s73",
+      "backend": "elementwise",
+      "active5_profiler_step_total_ms": 230.60361599999996,
+      "marked_kernel_intervals": {
+        "aten::mul": {
+          "count": 90,
+          "self_ms": 32.12509100000016,
+          "inclusive_ms": 32.159042000000106
+        },
+        "C1_ELEMENTWISE_ORIGINAL_BATCH_BERPO_LOSS": {
+          "count": 5,
+          "self_ms": 2.698521999999988,
+          "inclusive_ms": 51.96925899999999
+        },
+        "aten::index": {
+          "count": 20,
+          "self_ms": 34.62906199999996,
+          "inclusive_ms": 34.668434000000005
+        },
+        "aten::_index_put_impl_": {
+          "count": 20,
+          "self_ms": 21.557278000000068,
+          "inclusive_ms": 21.59611400000004
+        }
+      },
+      "all_training_prepare_calls": 0,
+      "median_prepare_wrapper_ms": null,
+      "median_unique_to_batch_ratio": null,
+      "prepare_ratios_by_call_order": {},
+      "manifest_sha256": "b67bdd1b84b5b028a16d272afa4a4844ec2d0020d0b890e25a30e513a19c2806",
+      "kernel_averages_sha256": "4bde9ff138d6c265f90b74c7df89f4c399ab28e0a551e70af98cfed9ad696099"
+    }
+  ],
+  "limitations": "5 early training intervals only; nested/inclusive timers cannot add. All-training wrapper wall includes instrumentation and is not headlining primitive latency. Six covers, initial/best embedding and loss trace verified same as corresponding unprofiled jobs."
+}

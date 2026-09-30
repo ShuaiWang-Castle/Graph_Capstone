@@ -1,4 +1,10 @@
-# Safe Graph Contraction for Modularity — COMPSCI 521 research draft
+# Graph Capstone — COMPSCI 521
+
+The latest completed experiment is the [2026-09-30 full-graph overlapping-community lab](community_lab_20260930/README.md): 24 LFR development graphs, 576 formal tasks (564 completed, 12 timeouts), native baselines, a single NOCD pair-dot mechanism, and an honest **NO_REPRODUCIBLE_GAIN under the frozen admission rule** result. The public snapshot includes code, reports, all formal results and a compact package for reproducing the 564 core cover scores. [中文卡点说明与数据入口](community_lab_20260930/README.md) · [GPT Pro analysis prompt](community_lab_20260930/reports/GPT_PRO_ANALYSIS_PROMPT_ZH.md).
+
+The earlier contraction study below remains archived here as a separate research direction; it was not continued in the community lab.
+
+## Safe Graph Contraction for Modularity — COMPSCI 521 research draft
 
 This open capstone repository contains original Python code, fixed study definitions, selected closed evidence, and a [working paper](manuscript/main.pdf). The paper studies exact sufficient conditions for contracting vertex sets before modularity optimization and a specified metric-SDP relaxation. The main package is `src/degree_contraction/`. This is a research draft, not an accepted conference paper or a claim of conference-level novelty.
 

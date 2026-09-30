@@ -1,0 +1,61 @@
+{
+  "status": "REGISTERED_SUPPLEMENTAL_EXISTING_STRONG_CONTROLS_BEFORE_THEIR_QUALITY",
+  "registered_at_utc": "2026-09-30T06:42:11.608282+00:00",
+  "methods": [
+    {
+      "id": "ego_sknetwork_defaults_fixed",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "Existing egosplit-sknetwork PC/Leiden/min5 with same documented bugfixes; not a new mechanism",
+      "command": [
+        "{python}",
+        "{root}/adapters/ego_sknetwork_controls.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "module_path": "adapters/vendor_patches/ego_sknetwork_fixed.py",
+        "local_clustering": "PC",
+        "global_clustering": "Leiden",
+        "min_cluster_size": 5,
+        "resolution": 1.0,
+        "threads": 1
+      }
+    },
+    {
+      "id": "ego_sknetwork_CC_Louvain_min5",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "Existing egosplit-sknetwork CC/Louvain/min5 with same documented bugfixes; not a new mechanism",
+      "command": [
+        "{python}",
+        "{root}/adapters/ego_sknetwork_controls.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "module_path": "adapters/vendor_patches/ego_sknetwork_fixed.py",
+        "local_clustering": "CC",
+        "global_clustering": "Louvain",
+        "min_cluster_size": 5,
+        "resolution": 1.0,
+        "threads": 1
+      }
+    }
+  ],
+  "reason": "Initial frozen sknetwork arm uses CC/Louvain/min0 to match Karate Club; actual upstream defaults are PC/Leiden/min5. Preserve both and separate the preexisting min5 control. No truth/overlap-specific tuning; no new candidate counted.",
+  "source_default_proof": "external/egosplit_sknetwork/egosplit_sknetwork/egosplit_sknetwork_.py::EgoSplit.__init__",
+  "prior_baseline_plan_unchanged": true
+}

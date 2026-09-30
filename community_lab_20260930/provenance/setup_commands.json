@@ -1,0 +1,15 @@
+{
+  "timestamp_note": "Manual setup command start/end times not all separately recorded; no durations invented. Per-source clone/build times in work/setup/* logs.",
+  "commands": [
+    "bash START_HERE.sh",
+    "/opt/homebrew/bin/python3.12 -m venv .venv",
+    ".venv/bin/python -m pip install -r requirements.txt scikit-learn torch python-louvain",
+    ".venv/bin/python -m pip install tqdm",
+    ".venv/bin/python -m pip install scikit-network numba",
+    ".venv/bin/python tools/lab.py selftest",
+    ".venv/bin/python tools/generate_lfr.py --binary external/lfr/unweighted_undirected/benchmark"
+  ],
+  "clone_build_commands": "work/setup/native and work/setup/python_sources command ledgers",
+  "no_global_environment_changes": true,
+  "no_push": true
+}

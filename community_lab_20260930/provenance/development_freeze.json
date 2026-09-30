@@ -1,0 +1,28 @@
+{
+  "frozen_at_utc": "2026-09-30T05:18:38.249998+00:00",
+  "no_development_quality_read": true,
+  "hashes": {
+    "adapters/nocd_graph_only.py": "657b989db62892193bbcc4eae7083e42ddee02e7da82fe63ecce360ddfe1cf78",
+    "adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+    "adapters/vendor_patches/ego_sknetwork_fixed.py": "e8e2a6fbd49d74d1ae483fba2001e53038622dc66190580a7d82b0365fa3d7ed",
+    "configs/methods.json": "b0f0fbb5ef6f0ae28a07b18df67ed3af45565d0392fd8b5ffe1f054fc70b1dbf",
+    "configs/protocol.json": "0797b3c9ab48d72b508d46883a3a92cf56c3cc6d6387b9e9b5b003d6bd5ecab2",
+    "lab/__init__.py": "99af0390aa72524c7d67ccac6672494419473d54d0911597e09523733bf18922",
+    "lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+    "lab/metrics.py": "eed7d55d566fd5623951115a0446700a09ac3e4d5a5a69a88367cc142bd85c12",
+    "lab/metrics_onmi.py": "aa9ac65205ca3025fb4ba2f086f96009a11572f2e85868da8016a13e3830fbf8",
+    "lab/runner.py": "1ffd3c784833101add43dcf344283e2ed10b31955f371117991bea5873317f5b",
+    "provenance/SOURCE_LOCK.json": "1dd48a39925ae424a4dbabd9e05152db04613c1ef9baf5dd56ab25ceedb246e9",
+    "provenance/dependency_versions.txt": "be5d9c690dfc4b9008e0706ca63aa3633b4420b45277e18147dad10649c61229",
+    "tools/check_anchor_capacity.py": "55f021e1547f8732b0ed00c72409c67420eb996f186c88ba67e3c1c67c8850b2",
+    "tools/fetch_sources.py": "6dbbc95655ad6ee648619671fa09705162378b1038c0dc02d7fb582a42ef955a",
+    "tools/generate_lfr.py": "ed43f2bbb32352dbfe428e4e0829e3ceb862f144f7e15de2ce5d188b639b5464",
+    "tools/lab.py": "ea3e2c8b10fe3135a80605c1cd28fe5aad1e12f6915b05833ae49033ea643fe7",
+    "tools/prepare_plan.py": "f5bf388c7b69d80c4103cfd3e3d4122cb3a2447ebebd636ebb95a4c6266c4e28",
+    "tools/run_jobs.py": "cf27d1907dcc2239885e230e15c7abb574e5538cca038699760ea269df9c6580",
+    "tools/session.py": "9c13de8fd1d77b5bdf9ccbdb1cc630d529998babb0e2daeb1f81c5cef129bdd4",
+    "tools/summarize.py": "65bce189a2329052698c9d7d1cdfdce3760f34f94a76f20815e9dc0f64dfaaa2"
+  },
+  "known_fixes": "Ego self-loop bypass; egosplit-sknetwork weight index, local-CSR order, empty isolate; listed separately and not novel algorithms",
+  "panels": "CPU/native-K and CPU/oracle-K separate; Python/C++ named separately"
+}

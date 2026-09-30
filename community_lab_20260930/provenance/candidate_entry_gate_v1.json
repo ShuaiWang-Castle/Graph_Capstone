@@ -1,0 +1,33 @@
+{
+  "authorized_at_utc": "2026-09-30T07:23:21.026994+00:00",
+  "status": "ENGINEERING_ENTRY_PASSED_START_PREDECLARED_DEV_EXPERIMENT",
+  "plan": "work/plans/nocd_pairdot_dev_all_v1/development.json",
+  "scheduled_jobs": 288,
+  "no_candidate_development_quality_read_before_entry": true,
+  "evidence": [
+    {
+      "path": "work/setup/candidate_integration_audit/functional_result.json",
+      "sha256": "3b02f16cd0eac0d3588c7f9437d7473adb0b99bec16b31d5bd7b76456ac0b5fb"
+    },
+    {
+      "path": "work/setup/candidate_integration_audit/integration_result.json",
+      "sha256": "a0a0d74ba7616dea884c18a19b0d8428ad565d8516b8cf5788d9919350739492"
+    },
+    {
+      "path": "work/setup/candidate_integration_audit/smoke_rng_result.json",
+      "sha256": "424c21ef37d4439b3694fb524d06378dd971f81d48bd3581340bb039089b2d92"
+    },
+    {
+      "path": "work/setup/candidate_design_review/design_review.json",
+      "sha256": "d8a073d6a92b373dbe3e14c42281e6073cc0e981426dd1e23624ce58c36e6fc2"
+    },
+    {
+      "path": "work/setup/trace_tools/nocd_smoke_root_comparison.json",
+      "sha256": "6550128ee5ecf6f52dad23cf6d826c42d44c84cd8f75601670b4d4fccab379a0"
+    },
+    {
+      "path": "configs/candidate_gate_v1.json",
+      "sha256": "2cde3f5429ea10b76e37b338ea512efe8e28ab1c2b0de9f1dc7c33df139527b1"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-09-30T09:49:12.344980+00:00",
+  "scope": "Current delivered final inventory, presentation and packaging/reproduction tools. Existing raw algorithm/source/config hashes remain immutable.",
+  "files": {
+    "tools/package_delivery.py": "1c4ed57cf3b2e498924a05b507507a86f6ca8cfbaac93d098d61f9d2df78bd27",
+    "tools/audit_delivery_inputs.py": "c769509cd035c2a5977dee315222bdb14a3e8667d2fb1769fcdc32cd6665b5d3",
+    "REPRODUCE.sh": "3fd0a017f68bc9633e07e7d3fb9145cb9384ca08a504b4804d2de49e96ea4265",
+    "tools/restore_locked_sources.py": "2521dc66d2550029e4227fce0541e79e950373267055c67089103f36b6d5836d",
+    "tools/integrate_results.py": "2d2d5bea86bcc870b9eaf0277b35bac533795e2f61ea7c7f3058173699025bbd",
+    "tools/plot_candidate_gate.py": "62d39e1ebfd25ab331e1382feff54a787b931e95dec06dc0c89b1a424d112222",
+    "tools/portable_replay.py": "985998f2f14bc121d1046d6c889b523ddf21244647a88a2db1724195c69d7ba1",
+    "tools/make_gpt_analysis_pack.py": "1c6e1566a316349616507f5e200555b0be9c852fa82949ec71bfce4a069b4a35"
+  },
+  "actual_checks": [
+    "Python py_compile for updated package/plot/integration/restore tools PASS",
+    "bash -n REPRODUCE.sh PASS",
+    "Actual full576 index verification and fresh-directory score replay PASS",
+    "Actual source payload restore PASS",
+    "Actual final_required_artifacts_v1 inventory PASS",
+    "Root inventory re-run after final report scope corrections; all four report SHA recorded"
+  ],
+  "not_executed": [
+    "Complete new environment dependency install and all-development retraining via REPRODUCE.sh",
+    "Independent confirmation and formal secondary graphs; frozen gate closed"
+  ],
+  "updated_utc": "2026-09-30T10:07:36.478702+00:00"
+}

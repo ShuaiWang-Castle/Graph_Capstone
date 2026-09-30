@@ -1,0 +1,547 @@
+{
+  "audit_utc": "2026-09-30T05:46:44.536845+00:00",
+  "run_directory": "work/baseline73_v2",
+  "scope": "Only completed terminal NOCD jobs present in this directory snapshot; no algorithm execution, labels, evaluation_only, or quality scores read. Training reconstruction loss used solely for checkpoint consistency.",
+  "completed_jobs_audited": 6,
+  "passing_jobs": 6,
+  "failing_jobs": 0,
+  "snapshot_statuses": [
+    {
+      "job_id": "lfr_n1000_o00_m50_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    },
+    {
+      "job_id": "lfr_n1000_o20_m20_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    },
+    {
+      "job_id": "lfr_n1000_o20_m50_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    },
+    {
+      "job_id": "lfr_n1000_o40_m50_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    },
+    {
+      "job_id": "lfr_n5000_o40_m20_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    },
+    {
+      "job_id": "lfr_n5000_o40_m50_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED"
+    }
+  ],
+  "skipped": [],
+  "all_audited_pass": true,
+  "rows": [
+    {
+      "job_id": "lfr_n1000_o00_m50_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n1000_o00_m50_s12__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "106e065e5c69463f52fd6b2d36e2e19c6949cfb516d4e85b2869a34d23a9e5c6",
+          "size_bytes": 5944
+        },
+        "prediction.json": {
+          "sha256": "30912fcd5da6e30363b173ca5840f3b6ab2fb92170bc1e9bfab9bd7cdbac0bb3",
+          "size_bytes": 16740
+        },
+        "best_embedding.npy": {
+          "sha256": "aed639f55cd5aef1d626216ef6e79ceb3538a5bc73a00f153725109e9b7ffbd9",
+          "size_bytes": 72128
+        },
+        "initial_embedding.npy": {
+          "sha256": "1d09cef8b4e71e40247e746bc14f9dc779e9cbbec27c94b3dc8fe2356221867e",
+          "size_bytes": 72128
+        },
+        "best_model.pt": {
+          "sha256": "e97cf9c4f53072af8895996e60aa0c797f924e6db6f59606a52dfa1ad5b5782f",
+          "size_bytes": 1571383
+        },
+        "checkpoint.json": {
+          "sha256": "bfbc8e75f54cc299dc385ea0e9f29a315a00f0193cb5e7a63f87183e0c8f2c4c",
+          "size_bytes": 16344
+        }
+      },
+      "best_embedding_shape": [
+        1000,
+        18
+      ],
+      "initial_embedding_shape": [
+        1000,
+        18
+      ],
+      "saved_model_epoch": 425,
+      "trace_minimum_epoch": 425,
+      "trace_count": 21,
+      "prediction_kind": "max_epochs",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "898f0fd80f831cccb10fec496f1dfbefac4c51abd860619b57c40c9819791ec0",
+        "config_sha256": "b6db63f34d45e028e2d7b7b5ab4d7508e93df31a676023f20ffa586eac3a4962",
+        "prediction_sha256": "30912fcd5da6e30363b173ca5840f3b6ab2fb92170bc1e9bfab9bd7cdbac0bb3"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    },
+    {
+      "job_id": "lfr_n1000_o20_m20_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n1000_o20_m20_s11__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "ff9b4ad913c485ae973a61123a22371bb839de286da2d1c8ae49f664ec1f3578",
+          "size_bytes": 5944
+        },
+        "prediction.json": {
+          "sha256": "4402ea1d715952be31f23369d430f3b9b17fe33c3e63560dd0f0409743573b28",
+          "size_bytes": 17362
+        },
+        "best_embedding.npy": {
+          "sha256": "516d5036d558b341a8719551e92f5988e8f5bd36dc06b8a070bc106713a3cad5",
+          "size_bytes": 96128
+        },
+        "initial_embedding.npy": {
+          "sha256": "f3d3c10b1db70677d1dcb7553087ad1e10a23e8977e9dcd2abd21ae4de1c32a3",
+          "size_bytes": 96128
+        },
+        "best_model.pt": {
+          "sha256": "331116380a35939617602af3860dab8f4825b6d2d9cf192aa188b824bc0d3600",
+          "size_bytes": 1580599
+        },
+        "checkpoint.json": {
+          "sha256": "a6d22ce08327633260baac7da654d9d85653f95d4949c29041780c5ded2108d1",
+          "size_bytes": 16968
+        }
+      },
+      "best_embedding_shape": [
+        1000,
+        24
+      ],
+      "initial_embedding_shape": [
+        1000,
+        24
+      ],
+      "saved_model_epoch": 425,
+      "trace_minimum_epoch": 425,
+      "trace_count": 21,
+      "prediction_kind": "max_epochs",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "b9ec7da4aa6e47601b73592baf154d2326fe95f36c4fe05faf59857cae26b7b0",
+        "config_sha256": "19efeb829365f140fb3e7db997b25680b9c271fef4804e08b086202aa0bae513",
+        "prediction_sha256": "4402ea1d715952be31f23369d430f3b9b17fe33c3e63560dd0f0409743573b28"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    },
+    {
+      "job_id": "lfr_n1000_o20_m50_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n1000_o20_m50_s11__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "bb691b73a1c08c68ba8377f7f186ffcef6c7ab07d696bcfb92b950f92763cc7f",
+          "size_bytes": 5943
+        },
+        "prediction.json": {
+          "sha256": "d66b081572837418323d8d00f398d4a1228ca1677c2d60989edf078287062fef",
+          "size_bytes": 20111
+        },
+        "best_embedding.npy": {
+          "sha256": "e0c83e327ef93e0196929774bbea7febd9a5da2f19c3e2d30a26429022c6a634",
+          "size_bytes": 96128
+        },
+        "initial_embedding.npy": {
+          "sha256": "bc4f0f96226bd7dfda7e5a759c548d258f38670efa45dceca54339e1e3006702",
+          "size_bytes": 96128
+        },
+        "best_model.pt": {
+          "sha256": "0e0666e0c77e67287c408d25f30e51b15c99dda4c639bb0207d39136f3fecb2c",
+          "size_bytes": 1580599
+        },
+        "checkpoint.json": {
+          "sha256": "ebfbd57e9cb290bac53e2ca2b591a347feca6dbd01004c11419b90f4e03ac7b7",
+          "size_bytes": 18635
+        }
+      },
+      "best_embedding_shape": [
+        1000,
+        24
+      ],
+      "initial_embedding_shape": [
+        1000,
+        24
+      ],
+      "saved_model_epoch": 175,
+      "trace_minimum_epoch": 175,
+      "trace_count": 19,
+      "prediction_kind": "training_loss_patience",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "5655a0fb6e603038468724cf7784c1d74c61d0636dae30d9c3afb214deace494",
+        "config_sha256": "19efeb829365f140fb3e7db997b25680b9c271fef4804e08b086202aa0bae513",
+        "prediction_sha256": "d66b081572837418323d8d00f398d4a1228ca1677c2d60989edf078287062fef"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    },
+    {
+      "job_id": "lfr_n1000_o40_m50_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n1000_o40_m50_s12__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "9e61a171ca953f11473a5dde7a37ea29355ee0c30dc991bbe1bcd7f91c509115",
+          "size_bytes": 5949
+        },
+        "prediction.json": {
+          "sha256": "4f9c25ffe7a42ee1f35d1616490b2cb4d2cebf963a746830bc26fae17c68c78d",
+          "size_bytes": 23356
+        },
+        "best_embedding.npy": {
+          "sha256": "40f176d90c99684213a80f14da94e66addd139702e17c0a53445e7444894657b",
+          "size_bytes": 104128
+        },
+        "initial_embedding.npy": {
+          "sha256": "e6e1c629603d93d56cb4bb756b4908d59c1dd3cdcd672cd6b425e909b1237fb0",
+          "size_bytes": 104128
+        },
+        "best_model.pt": {
+          "sha256": "a0dd27c41639e9bca6dfb862ab07b00839f92ffec6f5c6d88a095b929acbb95c",
+          "size_bytes": 1583671
+        },
+        "checkpoint.json": {
+          "sha256": "fbfa9e08c357768ca70beb7a6fcee239c0d513fc30d898b8f2e259c55c3f0b85",
+          "size_bytes": 21876
+        }
+      },
+      "best_embedding_shape": [
+        1000,
+        26
+      ],
+      "initial_embedding_shape": [
+        1000,
+        26
+      ],
+      "saved_model_epoch": 200,
+      "trace_minimum_epoch": 200,
+      "trace_count": 20,
+      "prediction_kind": "training_loss_patience",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "f6f8bf8a5134cdf18e38d9071370d0760a8003ce42977c8500f29ae6c4142fad",
+        "config_sha256": "f718f279c2cd862d42ea10e2917bfdf713bb32bf5a557410b980378b2b84303f",
+        "prediction_sha256": "4f9c25ffe7a42ee1f35d1616490b2cb4d2cebf963a746830bc26fae17c68c78d"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    },
+    {
+      "job_id": "lfr_n5000_o40_m20_s12__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n5000_o40_m20_s12__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "09f1c6f9408f7d093f9759f37e5465837a91de4be97205c6dcff033d997040f1",
+          "size_bytes": 5953
+        },
+        "prediction.json": {
+          "sha256": "7d254012a4dcd0df5a7ee055a940ccbbef297b16d5fe9469077dd3e986427c4a",
+          "size_bytes": 164206
+        },
+        "best_embedding.npy": {
+          "sha256": "e49d1ad62aeb3354f90645cf74dab7a23cee4cd706cdf4552f867f93e84c07f9",
+          "size_bytes": 2940128
+        },
+        "initial_embedding.npy": {
+          "sha256": "d64f58709bba763ee3a78e1c436c2843060947921dc450a707a13126c2ed495c",
+          "size_bytes": 2940128
+        },
+        "best_model.pt": {
+          "sha256": "7b31e879749a9f13538c92149925ef5578ad4228578e2ed2155e9d4a6e1c3359",
+          "size_bytes": 7915063
+        },
+        "checkpoint.json": {
+          "sha256": "b6eadd411be92df341ceb1cf155df0cd81aae94f4ce33ac7ac76dcf2ec0aaf93",
+          "size_bytes": 163941
+        }
+      },
+      "best_embedding_shape": [
+        5000,
+        147
+      ],
+      "initial_embedding_shape": [
+        5000,
+        147
+      ],
+      "saved_model_epoch": 450,
+      "trace_minimum_epoch": 450,
+      "trace_count": 21,
+      "prediction_kind": "max_epochs",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "c61ece0036f9fe4b85b260c16c11343db079cf989942f73ba1327d9a0aedc8fe",
+        "config_sha256": "9652dac0f85abff2b04e1a295733b1df38e1a2cae35ccbba8fa2c202cb015355",
+        "prediction_sha256": "7d254012a4dcd0df5a7ee055a940ccbbef297b16d5fe9469077dd3e986427c4a"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    },
+    {
+      "job_id": "lfr_n5000_o40_m50_s11__nocd_graph_oracleK__s73",
+      "status": "COMPLETED",
+      "path": "work/baseline73_v2/lfr_n5000_o40_m50_s11__nocd_graph_oracleK__s73",
+      "checks": {
+        "best_embedding_rank_two": true,
+        "initial_embedding_same_shape": true,
+        "best_embedding_finite": true,
+        "initial_embedding_finite": true,
+        "embedding_k_matches_explicit_known_k": true,
+        "best_embedding_gt_point5_decodes_to_prediction": true,
+        "best_model_weights_only_load": true,
+        "best_model_state_dict_tensors_finite": true,
+        "best_model_epoch_is_first_min_trace_epoch": true,
+        "best_model_loss_matches_min_trace_loss": true,
+        "optimizer_state_present": true,
+        "result_still_terminal_unchanged": true,
+        "files_unchanged_during_read": true,
+        "prediction_hash_matches_runner_record": true
+      },
+      "files": {
+        "result.json": {
+          "sha256": "1c8f92b230ff5f3a7ea5b34965ff9697e4245ce89c5112145f1604258b1aec1f",
+          "size_bytes": 5948
+        },
+        "prediction.json": {
+          "sha256": "594f97256bc16abc3a5a15338cada51f862edd8e6f79fca74a714d5e2c0aa268",
+          "size_bytes": 133380
+        },
+        "best_embedding.npy": {
+          "sha256": "760cdb0ee57db3a073c91cf42901b88d960db36c3f124d4bbe90e4f2bc7cf5f3",
+          "size_bytes": 2980128
+        },
+        "initial_embedding.npy": {
+          "sha256": "ec76c5be0d0641dad90dfe813209770221f6eb75e2d0ac4eecc7ff18c37712ce",
+          "size_bytes": 2980128
+        },
+        "best_model.pt": {
+          "sha256": "8eafcc98946775ed4130e817fa49959b54ea7cad5fd0d2fe0a3ccdd75062085f",
+          "size_bytes": 7918135
+        },
+        "checkpoint.json": {
+          "sha256": "424d94bbd5c7cfc896e85e22e5c80cd5bd845d5a442653f854baf0a048689ce8",
+          "size_bytes": 132850
+        }
+      },
+      "best_embedding_shape": [
+        5000,
+        149
+      ],
+      "initial_embedding_shape": [
+        5000,
+        149
+      ],
+      "saved_model_epoch": 400,
+      "trace_minimum_epoch": 400,
+      "trace_count": 21,
+      "prediction_kind": "max_epochs",
+      "audit_pass": true,
+      "bound_hashes": {
+        "graph_sha256": "79b9f441f15a9bd642d27166eaea695a2f5641b670c084ca99bd4fcfd8cdf6f6",
+        "config_sha256": "9f22d521285f8be5fdea8e321f3cdd1b8a3e68ceea312aad164d429ab21d2bf5",
+        "prediction_sha256": "594f97256bc16abc3a5a15338cada51f862edd8e6f79fca74a714d5e2c0aa268"
+      },
+      "recorded_source_hashes": {
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/run.py": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/adapters/nocd_graph_only.py": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/io.py": "5c86a01633d23597aec233c616cba1e1f9b4565c5ddb50807ce63e3acf32f1df",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/lab/runner.py": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/generate.py": "20b1edf3480ec4ce2a673cbe918150ef0933e834af9e99fa013b5710b97bd54d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/__init__.py": "b0f460ca44375b186fafdba39ccec0ea826d9e5aeb78bd850f64315cab058250",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/utils.py": "8599b7a68ccf663f5f3bf89e3c3faed8dd713983dab6876e3f109727758da9c9",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/train.py": "2b093942dbafbe60b1abe9d59818a8495b62c4c62c8f1636b59b597ffa56d073",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/sampler.py": "7583e9d898d4489c4890fedb41a52badefa4fbae6c6c9b7cb5416a00eac2191d",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/data.py": "01b698b9ca498deb448872cb5e2e857cfdbfebde2e3cc17d1859892e21d67df7",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/unsupervised.py": "47d1d31bc5e7bd216b77008a965d255461d7ca8e51d8717b3e35ccf8fad2a3f6",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/__init__.py": "98c0bd96df18bc2ee371c1c00cc191cb4d9b29a870585f4b079db85a586c0227",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/metrics/supervised.py": "94dd415648cabdaffc1995fd9516e76650859110b21a988ec25cb55fb10e3cdc",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/decoder.py": "099450a5fdbbb361668abfccc37e36eb20149987e6788c945c9e2cdf0d40b33b",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/gcn.py": "5e86c7485bb525a887d77754da82f0b41e20c907ce3e15fd55207b08dfd8d5b3",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/__init__.py": "61fa05b93add2387440793a967054c9b207b6cb6575df9ce6e04b0ec65d611ba",
+        "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/external/nocd/nocd/nn/imrpoved_gcn.py": "8472f1303f935b964954c7ae4a74b2fe99a6a812f17a48fbcd378391ee4cff29"
+      }
+    }
+  ],
+  "limitations": [
+    "Artifact integrity does not prove convergence, community recovery quality or full baseline completion.",
+    "Jobs absent/nonterminal at snapshot are not audited; rerun this script after they complete.",
+    "Checkpoint selection is based on full training reconstruction loss, not true labels."
+  ]
+}

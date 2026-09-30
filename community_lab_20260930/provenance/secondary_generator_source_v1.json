@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-09-30T08:10:55.216429+00:00",
+  "status": "SOURCE_PREPARED_ONLY_CONDITIONAL_AFTER_DEVELOPMENT_SIGNAL",
+  "source": "tools/generate_secondary.py",
+  "source_sha256": "890c6d8c36a206f5c198779ba4f91117881f9b5a71878586f5dd18b2f3e8a9a1",
+  "protocol": "configs/secondary_generators_v1.json",
+  "protocol_sha256": "f4b3c19f89ee0cbf7787036e7f1f584115c736eb577b2aeef8fa3ba8a3867ea7",
+  "formal_graphs_generated": 0,
+  "quality_consulted": false,
+  "functional_fixture_evidence": "work/setup/secondary_generator",
+  "review": "Root verified independent unordered-pair draws, two-membership union size inclusion/exclusion, labels offline, null no recovery labels, standard GENERATED catalog integration. Definitions distinct from LFR per-node mu. Formal execution is conditional; no seed retries or probability clipping."
+}

@@ -1,0 +1,22 @@
+{
+  "copied_utc": "2026-09-30T07:55:04.632738+00:00",
+  "purpose": "Reviewed pure postprocessing tools. No current candidate data was analyzed. Full invocation after measurements only.",
+  "files": [
+    {
+      "source": "work/setup/replay_audit/portable_replay.py",
+      "canonical_tool": "tools/portable_replay.py",
+      "sha256": "985998f2f14bc121d1046d6c889b523ddf21244647a88a2db1724195c69d7ba1"
+    },
+    {
+      "source": "work/setup/candidate_gate_analysis/analyze_gate.py",
+      "canonical_tool": "tools/analyze_candidate_gate.py",
+      "sha256": "1110d49fedc34d1d0c725962f3ac5743cfbfc6c44bf1337b5b67d6a59edd9148"
+    },
+    {
+      "source": "work/setup/candidate_gate_analysis/plot_gate.py",
+      "canonical_tool": "tools/plot_candidate_gate.py",
+      "sha256": "8b241d54c30e60f3dbe53d1920eda5b2c25ac6e403cb490d4033bcda3fb07457"
+    }
+  ],
+  "limitations": "metadata/source review plus agent synthetic fixtures does not prove real full replay/gates yet"
+}

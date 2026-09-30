@@ -1,0 +1,88 @@
+{
+  "created_at_utc": "2026-09-30T10:05:17.227015+00:00",
+  "status": "NO_REPRODUCIBLE_GAIN",
+  "status_scope": "No candidate passed pre-frozen all-grid or limited-scope practical admission. n5000 sampled-CSR has a three-algorithm-seed local development speed observation; no independent confirmation or global frontier claim.",
+  "required_artifacts_audit_pass": true,
+  "report_numerical_and_scope_review_pass": true,
+  "formal_jobs": 576,
+  "formal_status_counts": {
+    "COMPLETED": 564,
+    "TIMEOUT": 12
+  },
+  "retained_nocd_model_jobs": 336,
+  "retained_formal_saved_cover_checkpoints": 7879,
+  "prior_terminal_artifact_hashes_reverified": 12670,
+  "independent_report_checks_pass": 267,
+  "candidate_mechanisms_tested": 1,
+  "candidate_configurations": 4,
+  "candidate_complete_scored": 288,
+  "original_author_refcheck_complete_scored": 24,
+  "selected_global_backend_gate_rank_only": "nocd_pairdot_bmm500",
+  "selected_claim_scope": "none",
+  "confirmation_gate_open": false,
+  "confirmation_graphs_generated": 0,
+  "formal_secondary_graphs_generated": 0,
+  "confirmation_used_to_tune": false,
+  "labels_policy": "Only offline evaluation and posthoc diagnosis; oracle-K scalar explicitly separate. No label-driven backend/checkpoint/threshold rules.",
+  "local_development_signal": {
+    "backend": "sampled_csr",
+    "information_policy": "oracle_K",
+    "n": 5000,
+    "algorithm_seeds": [
+      73,
+      74,
+      75
+    ],
+    "paired_median_full_pipeline_saving_vs_elementwise": [
+      0.18476592067712594,
+      0.17148023336095292,
+      0.17453140487891394
+    ],
+    "same_actual_update_count_pairs": 36,
+    "global_quality_gate_failure": "n1000 seed75 mean macro delta -0.010814400079310291 < frozen -0.01",
+    "not_a_confirmed_improvement": true
+  },
+  "wall_clock": {
+    "started_at": "2026-09-30T05:02:08.976173+00:00",
+    "deadline": "2026-10-01T05:02:08.976173+00:00",
+    "elapsed_seconds_at_closeout": 18188.250842,
+    "deadline_was_reset": false,
+    "budget_exhausted": false
+  },
+  "device": "CPU only; numeric thread settings1 and serial measured jobs, no OS thread/affinity telemetry",
+  "source_restoration_actual_pass": true,
+  "source_files_restored": 1853,
+  "portable_offline_core_score_recomputed_matches": 564,
+  "portable_quality_unknown_timeouts": 12,
+  "limitations": [
+    "Local engineering observations only; no new principle/theorem, strict same-quality, significance/noninferiority, global frontier, independent confirmation, other-generator formal/real-graph/GPU/generalization or conference acceptance claim.",
+    "Sampled RSS is not true OS peak/hard memory; short native Highway results underresolved. Completed output/state consistency is not convergence or RNG-resumable training.",
+    "State-to-embedding/full-loss regeneration unknown; full fresh dependency installation/all-development rerun not performed; ONMI only preserved/source-verified in migration."
+  ],
+  "report_sha256": {
+    "reports/BASELINE_REPORT_ZH.md": "7d2f62d278439697c3328a7669625dadb19e71edc5344382586ac9ea55c33578",
+    "reports/FAILURE_MAP_ZH.md": "3de3a2414c3f558f0e91a4cf8ec7c0e5066a22f7061c5e3aaf3ef2712630c038",
+    "reports/CANDIDATE_DECISION_ZH.md": "9e4308fe6cfaf754b0245ff6c9f46b7890a65e8682c63bfcaa7f5fbb682d6fc3",
+    "reports/FINAL_REPORT_ZH.md": "3f009c0a7e110ef7f3e343b3d03e838824ed6be86e23ded48ff1c9fef2434564"
+  },
+  "evidence_sha256": {
+    "verification/final_required_artifacts_v1/audit.json": "4a5265b7264c786fc4705684c510f71c6c541d8424ab8e5a7614dfaad56e321f",
+    "work/setup/candidate_final_artifact_audit/final_delivery_review/REPORT_NUMERICAL_REVIEW.json": "db4e9b2616b1fddfb248c9c11e864e0b28ab3c37e6f63128f067286639e7c025",
+    "verification/presentation_qa_v2.json": "8884ad06f2ff4c5cd6f07bc98daae135a59c9cfee5c93f891bac63af64fe8642",
+    "verification/portable_replay_full_v1/audit.json": "4e5ea7f21066308d39b2188e07deeb7a9e11364cdfab3b723afa2922b07fa7f8",
+    "verification/source_restore_v2/audit.json": "1750538acc3a493582f8ddba43c3f9da4ac08c069e0d5e23e8db8dd105593055",
+    "work/setup/candidate_final_artifact_audit/scientific_scope_review/SCIENTIFIC_SCOPE_EVIDENCE.json": "9728b1e5d911f52de150c65f49cc447f2937350b6dabbe982f74791a4bffee78",
+    "analysis/nocd_pairdot_gate_v1/gate-analysis.json": "db2bc487ee5abf839336f43511cf58087aec264889869c26b3e6e767beb072ee",
+    "provenance/replay_index.json": "d8a261bb924942f33ec0c7e620bd96a4fba16ea3703838288199eec828401628",
+    "provenance/locked_source_trees_manifest.json": "a3e8d0ea73f04695ce1a04fc125c73ca0e458258af047d5bf1b5605e6605428c"
+  },
+  "archive_completion_contract": {
+    "canonical_archive": "DELIVERY.zip",
+    "canonical_archive_checksum_and_actual_postcheck": "DELIVERY.sha256.json",
+    "prepackage_artifacts_pass": true,
+    "zip_crc_payload_sha_embedded_replay_and_source_checks_required_after_creation": true,
+    "goal_mark_complete_only_after_actual_package_checks_pass": true
+  },
+  "remote_push_performed": false,
+  "open_latex_edited_this_round": false
+}

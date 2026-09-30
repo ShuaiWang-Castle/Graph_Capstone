@@ -1,0 +1,862 @@
+{
+  "audit_utc": "2026-09-30T08:25:44.677415+00:00",
+  "scope": "Read-only source and 24 COMPLETED initial Highway native result metadata only; no C1 output/quality, truth/score, measurement, rerun or modification of root artifacts.",
+  "sources": [
+    {
+      "path": "lab/runner.py",
+      "sha256": "d012ce685e2a82b2b43b084a5bb453d617b7a141ddb88caecd8150a01c958cd2",
+      "evidence_ranges": [
+        {
+          "start_line": 7,
+          "end_line": 17,
+          "text": "def stop_tree(p):\n    if p.poll() is not None:return\n    try:\n        if os.name=='posix':os.killpg(p.pid,signal.SIGTERM)\n        else:p.terminate()\n        try:p.wait(timeout=3)\n        except subprocess.TimeoutExpired:\n            if os.name=='posix':os.killpg(p.pid,signal.SIGKILL)\n            else:p.kill()\n    except ProcessLookupError:pass\n    p.wait()"
+        },
+        {
+          "start_line": 24,
+          "end_line": 39,
+          "text": "    if resultfile.exists():\n        cached=read_json(resultfile)\n        for field,key in [('graph','graph_sha256'),('config','config_sha256')]:\n            if cached.get(key) and sha256(job[field])!=cached[key]:\n                raise ValueError(f'{field} no longer matches the recorded run; preserve the old record and restore its input')\n        if cached.get('prediction') and cached.get('prediction_sha256'):\n            if sha256(cached['prediction'])!=cached['prediction_sha256']:\n                raise ValueError('Recorded prediction changed; do not silently reuse it')\n        return cached\n    write_json(specfile,job)\n    if job.get('blocked_reason'):\n        r={'job_id':job['job_id'],'method':job['method'],'status':'BLOCKED','reason':job['blocked_reason'],'pipeline_seconds':0.0}\n        write_json(resultfile,r);return r\n    limit=min(float(job['timeout_s']),remaining_seconds) if remaining_seconds is not None else float(job['timeout_s'])\n    if limit<=1:\n        r={'job_id':job['job_id'],'method':job['method'],'status':'NOT_RUN_BUDGET','pipeline_seconds':0.0};write_json(resultfile,r);return r"
+        },
+        {
+          "start_line": 48,
+          "end_line": 68,
+          "text": "    for field,key in [('graph','graph_sha256'),('config','config_sha256')]:\n        if key in job and sha256(job[field])!=job[key]:raise ValueError(f'{field} changed after job-plan freeze')\n    for file,digest in job.get('source_hashes',{}).items():\n        if sha256(file)!=digest:raise ValueError('Adapter code changed after freeze: '+file)\n    env=os.environ.copy();nt=str(job.get('threads',1))\n    env.update(OMP_NUM_THREADS=nt,OPENBLAS_NUM_THREADS=nt,MKL_NUM_THREADS=nt,NUMEXPR_NUM_THREADS=nt,\n               VECLIB_MAXIMUM_THREADS=nt,BLIS_NUM_THREADS=nt,\n               PYTHONHASHSEED=str(job['seed']),LAB_ROOT=str(root),LAB_CHECKPOINT=str(checkpoint.resolve()),\n               LAB_BUDGET_SECONDS=str(limit),LAB_CONFIG=placeholders['config'])\n    env['PYTHONPATH']=str(root)+os.pathsep+env.get('PYTHONPATH','')\n    if job.get('gpu') is not None:env['CUDA_VISIBLE_DEVICES']=str(job['gpu'])\n    elif job.get('device','cpu')=='cpu':env['CUDA_VISIBLE_DEVICES']=''\n    rec={'job_id':job['job_id'],'case_id':job.get('case_id'),'method':job['method'],\n         'information_policy':job.get('information_policy'),'device':job.get('device','cpu'),\n         'threads':job.get('threads',1),'seed':job['seed'],'command':argv,\n         'python_executable':sys.executable,'source_hashes':job.get('source_hashes',{}),\n         'declared_implementation':job.get('declared_implementation'),\n         'thread_environment':{k:env[k] for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','VECLIB_MAXIMUM_THREADS','BLIS_NUM_THREADS']},\n         'graph_sha256':sha256(job['graph']),'config_sha256':sha256(job['config']),\n         'budget_seconds':limit,'original_timeout_s':job['timeout_s'],\n         'resource_measurement':'0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.'}"
+        },
+        {
+          "start_line": 69,
+          "end_line": 84,
+          "text": "    start=time.perf_counter();p=None;peak=0;cpupeak=0;status=None\n    exited=threading.Event();exit_observation={};waiter=None\n    def observe_exit():\n        # Blocking wait avoids the monitoring interval quantizing short jobs.\n        try:exit_observation['returncode']=p.wait()\n        except Exception as e:exit_observation['wait_error']=str(e)\n        finally:\n            exit_observation['elapsed_seconds']=time.perf_counter()-start\n            exited.set()\n    try:\n        with open(directory/'stdout.log','w',encoding='utf-8') as out,open(directory/'stderr.log','w',encoding='utf-8') as err:\n            p=subprocess.Popen(argv,cwd=root,env=env,stdout=out,stderr=err,start_new_session=(os.name=='posix'))\n            waiter=threading.Thread(target=observe_exit,name='lab-process-waiter',daemon=True)\n            waiter.start()\n            try:ps=psutil.Process(p.pid)\n            except psutil.NoSuchProcess:ps=None  # A fast job may already have exited."
+        },
+        {
+          "start_line": 85,
+          "end_line": 99,
+          "text": "            while not exited.is_set():\n                try:\n                    procs=([ps]+ps.children(recursive=True)) if ps is not None else []\n                    rss=0;cpu=0\n                    for c in procs:\n                        try:rss+=c.memory_info().rss;t=c.cpu_times();cpu+=t.user+t.system\n                        except(psutil.NoSuchProcess,psutil.AccessDenied):pass\n                    peak=max(peak,rss);cpupeak=max(cpupeak,cpu)\n                except(psutil.NoSuchProcess,psutil.AccessDenied):pass\n                if exited.is_set():break\n                if time.perf_counter()-start>limit:status='TIMEOUT';stop_tree(p);break\n                if peak>job.get('memory_mb',8192)*1024**2:status='MEMORY_LIMIT';stop_tree(p);break\n                if sum(f.stat().st_size for f in [directory/'stdout.log',directory/'stderr.log'])>50*1024**2:\n                    status='LOG_LIMIT';stop_tree(p);break\n                exited.wait(min(.2,max(0,limit-(time.perf_counter()-start))))"
+        },
+        {
+          "start_line": 100,
+          "end_line": 117,
+          "text": "            if waiter is not None:waiter.join()\n            if exit_observation.get('wait_error'):\n                raise RuntimeError('Process waiter failed: '+exit_observation['wait_error'])\n            if status is None:status='COMPLETED' if p.returncode==0 else 'ERROR'\n            rec['returncode']=p.returncode\n    except KeyboardInterrupt:\n        status='INTERRUPTED'\n        if p is not None:stop_tree(p)\n    except Exception as e:\n        status='LAUNCH_ERROR';rec['error']=str(e)\n        if p is not None:stop_tree(p)\n    finally:\n        if waiter is not None:waiter.join()\n    monitor_elapsed=time.perf_counter()-start\n    rec.update(status=status,pipeline_seconds=exit_observation.get('elapsed_seconds',monitor_elapsed),\n               monitor_elapsed_seconds=monitor_elapsed,\n               timing_definition='Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.',\n               peak_tree_rss_bytes=peak,sampled_tree_cpu_seconds=cpupeak)"
+        },
+        {
+          "start_line": 118,
+          "end_line": 128,
+          "text": "    target=output if status=='COMPLETED' and output.exists() else checkpoint if checkpoint.exists() else None\n    if target:\n        try:\n            n,_=graph(job['graph']);_,audit=cover(target,n)\n            rec.update(prediction=str(target.resolve()),prediction_sha256=sha256(target),cover_validation=audit,\n                       prediction_kind='completed' if target==output else 'partial_checkpoint')\n        except Exception as e:\n            rec['prediction_error']=str(e);rec['prediction_kind']='invalid'\n            if status=='COMPLETED':rec['status']='INVALID_OUTPUT'\n    elif status=='COMPLETED':rec['status']='INVALID_OUTPUT'\n    write_json(resultfile,rec);return rec"
+        }
+      ]
+    },
+    {
+      "path": "adapters/run.py",
+      "sha256": "1ccb39c38467d6fdbd209feac917bbbd81f6ffef880f899875f4920945cd3807",
+      "evidence_ranges": [
+        {
+          "start_line": 95,
+          "end_line": 110,
+          "text": "    elif a.method=='highway_native':\n        binary=Path(cfg['binary']).resolve();outdir=Path(a.output).resolve().parent\n        edgefile=outdir/'native_edges.tsv'\n        # Upstream registers IDs before discarding self-loop lines. These lines\n        # register the full node universe and its stable order, not graph edges.\n        edgefile.write_text(''.join(f'{v}\\t{v}\\n' for v in range(n))+''.join(f'{u}\\t{v}\\n' for u,v in edges),encoding='utf-8')\n        cmd=[str(binary),'--input',str(edgefile)]\n        for key,value in cfg['parameters'].items():cmd+=['--'+key,str(value)]\n        subprocess.run(cmd,cwd=outdir,check=True)\n        native=read_json(outdir/'communities.json')\n        wrapper=load_source('lab_highway_author_wrapper',cfg['module_path'])\n        communities=wrapper._read_cpp_communities_json(outdir/'communities.json',list(range(n)),min_community_size=1)\n        communities=wrapper._remove_exact_duplicate_communities(communities,deduplicate_communities=True)\n        meta.update(implementation='Author Highway C++17 native backend, serial OpenMP unavailable',binary_sha256=sha256(binary),native_command=cmd,\n                    native_raw_groups=len(native),author_wrapper_default_dedup=True,wrapper_sha256=sha256(cfg['module_path']),\n                    node_serialization='v v registration rows are discarded by upstream after ID registration; original loopless topology preserved')"
+        },
+        {
+          "start_line": 118,
+          "end_line": 123,
+          "text": "        cmd=[str(binary),'-i:'+str(edgefile),'-o:'+str(prefix),'-c:'+str(cfg.get('k',-1)),\n             '-nt:'+str(cfg.get('threads',1)),'-sa:'+str(cfg.get('line_alpha',.05)),'-sb:'+str(cfg.get('line_beta',.3))]\n        if int(cfg.get('k',-1))==-1:\n            maximum=max(int(cfg.get('min_k',5)),int(np.ceil(n*float(cfg.get('max_k_fraction',.1))))) if 'max_k_fraction' in cfg else int(cfg.get('max_k',100))\n            cmd+=['-mc:'+str(cfg.get('min_k',5)),'-xc:'+str(maximum),'-nc:'+str(cfg.get('k_trials',10))]\n        subprocess.run(cmd,check=True)  # Entire adapter process tree is bounded by the outer runner."
+        },
+        {
+          "start_line": 135,
+          "end_line": 142,
+          "text": "    stage['fit_or_native_pipeline_seconds']=time.perf_counter()-start\n    communities=[sorted(set(map(int,c))) for c in communities]\n    # Across-group duplicates and uncovered vertices are intentionally not repaired.\n    for c in communities:\n        if any(v<0 or v>=n for v in c):raise ValueError('Upstream output has unmapped node IDs')\n    stage['adapter_elapsed_seconds']=time.perf_counter()-t0\n    write_json(a.output,{'communities':communities,'method':a.method,'seed':a.seed,'metadata':meta,'stage_seconds':stage})\nif __name__=='__main__':main()"
+        }
+      ]
+    },
+    {
+      "path": "adapters/nocd_graph_only.py",
+      "sha256": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5",
+      "evidence_ranges": [
+        {
+          "start_line": 25,
+          "end_line": 28,
+          "text": "    random.seed(a.seed);np.random.seed(a.seed);torch.manual_seed(a.seed)\n    device=torch.device(cfg.get('device','cpu'))\n    if device.type=='cuda':torch.cuda.manual_seed_all(a.seed)\n    torch.set_num_threads(int(cfg.get('threads',1)))"
+        },
+        {
+          "start_line": 96,
+          "end_line": 111,
+          "text": "        if time.perf_counter()-t0>float(os.environ.get('LAB_BUDGET_SECONDS','1e20'))-3:\n            termination='internal_time_budget';break\n        if cfg.get('stochastic_loss',True):\n            phase=time.perf_counter();ones,zeros=sampler[epoch];ones=ones.to(device);zeros=zeros.to(device);stage['sample_seconds']+=time.perf_counter()-phase\n        phase=time.perf_counter()\n        model.train();opt.zero_grad();emb=functional.relu(model(x,adj_norm))\n        loss=decoder.loss_batch(emb,ones,zeros) if cfg.get('stochastic_loss',True) else decoder.loss_full(emb,adj)\n        loss=loss+nocd.utils.l2_reg_loss(model,scale=float(cfg.get('weight_decay',.01)))\n        loss.backward();sync();stage['forward_loss_backward_seconds']+=time.perf_counter()-phase\n        phase=time.perf_counter();opt.step();sync();stage['optimizer_seconds']+=time.perf_counter()-phase\n    if state is None:raise RuntimeError('No finite checkpoint')\n    model.load_state_dict(state);model.eval()\n    with torch.no_grad():emb=functional.relu(model(x,adj_norm))\n    sync();snapshot(emb,a.output,termination)\n    # A program can finish its fixed budget and return a valid approximate cover;\n    # metadata explicitly distinguishes this from convergence."
+        }
+      ]
+    },
+    {
+      "path": "tools/summarize.py",
+      "sha256": "65bce189a2329052698c9d7d1cdfdce3760f34f94a76f20815e9dc0f64dfaaa2",
+      "evidence_ranges": [
+        {
+          "start_line": 24,
+          "end_line": 42,
+          "text": "        if r.get('prediction') and r.get('prediction_kind')!='invalid' and c.get('truth'):\n            t0=time.perf_counter()\n            try:\n                for path,digest,kind in [(c['graph'],j.get('graph_sha256'),'graph'),(c['truth'],c.get('truth_sha256'),'truth'),(r['prediction'],r.get('prediction_sha256'),'prediction')]:\n                    if not digest:raise ValueError('Missing frozen '+kind+' SHA-256; cannot score unverifiable input')\n                    if sha256(path)!=digest:raise ValueError(kind+' changed after measurement/freeze')\n                if read_json(c['truth']).get('labels_complete') is not True:raise ValueError('PARTIAL_LABELS_NOT_SCORABLE_BY_THIS_PROTOCOL')\n                n,_=graph(c['graph']);t,_=cover(c['truth'],n);pred,audit=cover(r['prediction'],n);s=score(t,pred,n)\n                write_json(out/'per_job'/(j['job_id']+'.json'),{'metrics':s,'normalization':audit,\n                    'evaluation_provenance':{'graph_sha256':sha256(c['graph']),'truth_sha256':sha256(c['truth']),\n                    'prediction_sha256':sha256(r['prediction']),'metrics_source_sha256':sha256(ROOT/'lab/metrics.py'),\n                    'summarize_source_sha256':sha256(Path(__file__))}})\n                row.update(matched_macro_f1=s['matched_macro_f1'],matched_membership_micro_f1=s['matched_membership_micro']['f1'],\n                           overlap_f1=s['overlap_node']['f1'],extra_membership_recall=s['extra_membership_after_first']['recall'],\n                           predicted_groups=s['predicted_groups'],metric_status='SCORED')\n            except Exception as e:\n                row.update(metric_status='SCORING_ERROR',metric_error=str(e))\n                write_json(out/'per_job'/(j['job_id']+'.json'),{'metric_status':'SCORING_ERROR','metric_error':str(e)})\n            row['evaluation_seconds']=time.perf_counter()-t0"
+        }
+      ]
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL_ZH.md",
+      "sha256": "381a20c0e1bbeeb83cb7b88b358733a7455674a64ba94a010ee915c6057e2450",
+      "evidence_ranges": [
+        {
+          "start_line": 44,
+          "end_line": 50,
+          "text": "\u4e3bpipeline\u8ba1\u65f6\u4ece\u65b0\u8fdb\u7a0b\u542f\u52a8\u5230\u6700\u540ecover\u5199\u51fa\uff0c\u5305\u542bimport/load\u3001\u9884\u5904\u7406\u3001fit\u3001decode\u3001\u6a21\u578b\u9009\u62e9\u3001checkpoint\u5199\u51fa\u4e0e\u5931\u8d25\u5c1d\u8bd5\u3002\u4e0b\u8f7d/\u7f16\u8bd1\u4f5c\u4e3a\u4e00\u6b21\u6027setup\u53e6\u62a5\u3002\u8bc4\u4ef7\u771f\u6807\u7b7e\u7684\u65f6\u95f4\u4e0d\u7b97\u7b97\u6cd5\u63a8\u65ad\u65f6\u95f4\uff0c\u4f46\u5fc5\u987b\u4fdd\u7559\u3002\u56fe\u7b97\u6cd5\u7684\u91cd\u590d\u5b89\u88c5\u4e0d\u7b97\u6bcf\u6b21\u63a8\u65ad\u3002\n\n`stage_seconds`\u53ef\u80fd\u5d4c\u5957\uff1aanchor\u65f6\u95f4\u901a\u5e38\u5305\u542b\u5728fit\u5185\uff0c\u4e0d\u80fd\u518d\u52a0\u4e00\u6b21\u3002GPU\u5185\u90e8\u5206\u9636\u6bb5\u8ba1\u65f6\u9700\u8981synchronize\uff0c\u5916\u5c42process-wall\u81ea\u7136\u5305\u542b\u9000\u51fa\u524d\u5de5\u4f5c\u3002RSS\u662f0.2\u79d2\u91c7\u6837\u7684process-tree RSS\u4e4b\u548c\uff0c\u5171\u4eab\u9875\u53ef\u80fd\u91cd\u590d\u8ba1\uff1b\u77ed\u77ac\u65f6\u5cf0\u503c\u53ef\u80fd\u6f0f\u6d4b\u3002\u663e\u5b58\u9700\u989d\u5916\u6d4b\u91cf\u3002\u4e0d\u80fd\u79f0\u8be5\u503c\u4e3a\u7cbe\u786e\u5cf0\u503c\u3002\n\nCOMPLETED\u8868\u793a\u8fd4\u56de\u4e86\u4e00\u4e2a\u6709\u6548\u8f93\u51fa\uff0c\u4e0d\u7b49\u4e8eglobal optimum\u6216\u5df2\u6536\u655b\u3002TIMEOUT/MEMORY_LIMIT/ERROR\u7b49\u72ec\u7acb\u8bb0\u5f55\u3002\u82e5\u6709\u5408\u6cd5partial checkpoint\uff0c\u53ef\u4ee5\u62a5\u544a\u5176\u9884\u7b97\u5185\u8d28\u91cf\uff0c\u4f46\u4e0d\u80fd\u628a\u5b83\u53d8\u6210completed time\u3002\u6ca1\u6709\u4efb\u4f55checkpoint\u5c31\u8d28\u91cf\u672a\u77e5\uff0c\u4e0d\u5728\u6210\u529f\u6761\u4ef6\u5747\u503c\u4e2d\u586b0\u6216\u586b\u6700\u4f18\u3002\n\ntime-to-quality\u53ea\u4f7f\u7528\u5b9e\u9645saved checkpoints\u3002\u89c2\u6d4b\u5230t\u65f6\u7b2c\u4e00\u6b21\u8fc7\u7ebf\u662f\u79bb\u6563checkpoint crossing\uff1b\u4e0d\u80fd\u7ebf\u6027\u63d2\u503c\u3001\u628a\u8d85\u65f6\u9884\u7b97\u5f53\u6210\u529f\u5230\u8fbe\u65f6\u95f4\u3002\u771f\u6807\u7b7e\u53ea\u80fd\u5728offline\u8bc4\u4f30crossing\uff1b\u4e0d\u80fd\u56e0\u6b64\u8ba9\u7b97\u6cd5\u9009\u6700\u4f73\u6807\u7b7e\u5206\u6570checkpoint\u4f5c\u4e3a\u8f93\u51fa\u3002"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "WALL_START",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        48,
+        69,
+        79,
+        80
+      ],
+      "statement": "start at perf_counter after plan/config/source hash checks and metadata preparation, before stdout/stderr open and Popen."
+    },
+    {
+      "id": "WALL_END",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        71,
+        73,
+        76,
+        114
+      ],
+      "statement": "end is dedicated wait-thread observation just after direct child p.wait returns; fallback monitor elapsed only without wait observation. End includes process teardown and scheduler observation delay, not precisely last-cover-write timestamp."
+    },
+    {
+      "id": "CHILD_WORK",
+      "status": "SOURCE_VERIFIED",
+      "source": "adapters/run.py",
+      "lines": [
+        100,
+        103,
+        108,
+        123,
+        141
+      ],
+      "statement": "Successful child wall includes imports/load, preprocessing/serialization, awaited native subprocess, training/selection/decode, child-side provenance hashing and cover/checkpoint writes. Parent p.wait does not independently wait arbitrary orphan grandchildren."
+    },
+    {
+      "id": "OUTER_EXCLUSIONS",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        48,
+        51,
+        66,
+        69,
+        114,
+        121,
+        122,
+        128
+      ],
+      "statement": "Runner preflight hash checks, root harness import, post-exit graph/cover validation, prediction hash and result.json write are excluded. Adapter-internal hash operations remain included."
+    },
+    {
+      "id": "OFFLINE_SCORE",
+      "status": "SOURCE_VERIFIED",
+      "source": "tools/summarize.py",
+      "lines": [
+        25,
+        31,
+        42
+      ],
+      "statement": "Offline graph/truth/pred hash validation, label loading, score and per_job provenance write have separate evaluation_seconds; excluded from inference pipeline_seconds."
+    },
+    {
+      "id": "RSS_ESTIMATOR",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        83,
+        87,
+        90,
+        92,
+        99,
+        117
+      ],
+      "statement": "Approximately every .2s plus query/scheduling time, sum current adapter and recursively enumerated descendants RSS, take maximum observed sum. Root monitoring process excluded; reads non-simultaneous; shared pages may double count; disappeared/inaccessible processes skipped; short/lived descendants and peaks can be missed."
+    },
+    {
+      "id": "SOFT_RESOURCE_GUARD",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        94,
+        95,
+        96,
+        7,
+        17
+      ],
+      "statement": "memory_mb interpreted as MiB and checked against sampled historical peak; on threshold crossing send process-group SIGTERM then possible SIGKILL. No OS RLIMIT/cgroup hard allocation cap. Exit checked before guard, so a completed fast process can finish before an overshoot is acted on."
+    },
+    {
+      "id": "TIMEOUT_COST",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        12,
+        17,
+        95,
+        114
+      ],
+      "statement": "TIMEOUT is monitored threshold+cleanup elapsed, can exceed nominal limit and include up to three-second graceful wait; never a successful completed time. budget_seconds remains independent."
+    },
+    {
+      "id": "THREAD_DECLARATION",
+      "status": "SOURCE_VERIFIED_RUNTIME_UNKNOWN",
+      "source": "lab/runner.py",
+      "lines": [
+        52,
+        65
+      ],
+      "statement": "threads and thread_environment record requested numerical-thread settings, not OS thread count/CPU affinity/physical-core enforcement. Torch adapter sets intra-op num_threads; BigCLAM gets -nt; native Highway metadata describes serial backend. No runtime num_threads() or thread history is recorded."
+    },
+    {
+      "id": "SAMPLED_CPU_COUNTER",
+      "status": "SOURCE_VERIFIED",
+      "source": "lab/runner.py",
+      "lines": [
+        90,
+        92,
+        117
+      ],
+      "statement": "sampled_tree_cpu_seconds is maximum sampled sum of lifetime user+system CPU counters for currently visible tree, not integrated full-job CPU usage; exited children can disappear from future samples."
+    },
+    {
+      "id": "SHORT_NATIVE_MEMORY_RANKING",
+      "status": "UNDERRESOLVED_FOR_TRUE_PEAK_COMPARISON",
+      "source": "initial_highway_native_metadata",
+      "statement": "Tiny observed RSS is legitimate raw sample data, but cannot substantiate true peak RAM/unique physical memory ranking or memory winner; no sampling history/count exists to recover what phase was observed. No value is estimated or replaced."
+    },
+    {
+      "id": "EXACT_PEAK_THREAD_SAMPLE_HISTORY",
+      "status": "UNKNOWN",
+      "statement": "Exact true peak, sampling count/timestamps, native-child coverage, OS thread count, unique physical RAM, PSS/USS and GPU memory are not available in these records."
+    }
+  ],
+  "initial_highway_native_summary": {
+    "completed_initial_native_highway_records": 24,
+    "pipeline_seconds_range": [
+      0.12513695796951652,
+      0.2838608338497579
+    ],
+    "pipeline_seconds_median": 0.1861518961377442,
+    "runs_under_nominal_sampling_interval_0p2s": 19,
+    "sampled_rss_exact_245760_bytes": 15,
+    "sampled_rss_under_1MiB": 20,
+    "sampled_rss_range_bytes": [
+      245760,
+      61407232
+    ],
+    "sampled_rss_median_bytes": 245760.0,
+    "all_recorded_runner_hashes_match": true
+  },
+  "initial_highway_native_records": [
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o00_m20_s11__highway_native__s73/result.json",
+      "sha256": "f22b8836c494761f0f30f96dc6d21f2fa1bcba3417afdb76ec7b846831fa5e16",
+      "job_id": "lfr_n1000_o00_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.12513695796951652,
+      "monitor_elapsed_seconds": 0.12525883316993713,
+      "peak_tree_rss_bytes": 311296,
+      "sampled_tree_cpu_seconds": 0.0039995,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o00_m20_s12__highway_native__s73/result.json",
+      "sha256": "132b09bb5d7551abb21dc5f8f92b50820db22995c738b62c9da2a46a44edc4ea",
+      "job_id": "lfr_n1000_o00_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13457491621375084,
+      "monitor_elapsed_seconds": 0.1346599580720067,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003761874,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o00_m50_s11__highway_native__s73/result.json",
+      "sha256": "7ade4eadcf6c6b1198615ce5f9aec16531d2611853964ac6e1721d42f28389e8",
+      "job_id": "lfr_n1000_o00_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13342958316206932,
+      "monitor_elapsed_seconds": 0.13354895822703838,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.004262291,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o00_m50_s12__highway_native__s73/result.json",
+      "sha256": "bff1bfcdf56707ae9b02404b0e31ec4b9ac1dcc5645c3c0aa4dd18c60c655b60",
+      "job_id": "lfr_n1000_o00_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13068545842543244,
+      "monitor_elapsed_seconds": 0.13079233327880502,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.004080291,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o20_m20_s11__highway_native__s73/result.json",
+      "sha256": "0a5d4b020bfa3f39f3fe705b3bf2eeca83fca6f489daae544813c36f66d46ada",
+      "job_id": "lfr_n1000_o20_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13102241698652506,
+      "monitor_elapsed_seconds": 0.13113216729834676,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003552082,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o20_m20_s12__highway_native__s73/result.json",
+      "sha256": "f4a3819488074c3ddd8089793fe565f145e57f960ff8e0780bb2c2dc75f494c0",
+      "job_id": "lfr_n1000_o20_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13025891687721014,
+      "monitor_elapsed_seconds": 0.13037791708484292,
+      "peak_tree_rss_bytes": 278528,
+      "sampled_tree_cpu_seconds": 0.004112208,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o20_m50_s11__highway_native__s73/result.json",
+      "sha256": "fb57acb047f1658583e2d542126ea29d751eb965d3f75f97b18601d686543778",
+      "job_id": "lfr_n1000_o20_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.1317982911132276,
+      "monitor_elapsed_seconds": 0.13191783288493752,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003968499,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o20_m50_s12__highway_native__s73/result.json",
+      "sha256": "4f61941834560c645c2402aa1ef56799d0ca8378797e65e43525d8fd558df07f",
+      "job_id": "lfr_n1000_o20_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13632933283224702,
+      "monitor_elapsed_seconds": 0.1364574576728046,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003911208,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o40_m20_s11__highway_native__s73/result.json",
+      "sha256": "befb777ecadb7a2030336a0394d4d9232d60f84ea866da6e8e2b0f0fd31f9238",
+      "job_id": "lfr_n1000_o40_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.12970216711983085,
+      "monitor_elapsed_seconds": 0.12985725002363324,
+      "peak_tree_rss_bytes": 278528,
+      "sampled_tree_cpu_seconds": 0.004149957,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o40_m20_s12__highway_native__s73/result.json",
+      "sha256": "92c40dc1d3cb46e7b3bc49b9c3319efa563a3c6d2f973b7d15d3e1380c9b8405",
+      "job_id": "lfr_n1000_o40_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.12694866675883532,
+      "monitor_elapsed_seconds": 0.12707324977964163,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003506582,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o40_m50_s11__highway_native__s73/result.json",
+      "sha256": "0fad9c1d37c3f842afda13e7669d74f6df51cd94a33dd1cb1bc1a9d8dbd9f6d8",
+      "job_id": "lfr_n1000_o40_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.13743704184889793,
+      "monitor_elapsed_seconds": 0.1375507079064846,
+      "peak_tree_rss_bytes": 1900544,
+      "sampled_tree_cpu_seconds": 0.003924749,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n1000_o40_m50_s12__highway_native__s73/result.json",
+      "sha256": "153010fec8221b05a0547699bdad53f3aa7f30e86fe0477516ff92808b96b35d",
+      "job_id": "lfr_n1000_o40_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.2244934169575572,
+      "monitor_elapsed_seconds": 0.22458395874127746,
+      "peak_tree_rss_bytes": 50692096,
+      "sampled_tree_cpu_seconds": 0.121634036,
+      "budget_seconds": 120.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o00_m20_s11__highway_native__s73/result.json",
+      "sha256": "3e4d8d0d5fb9a91f3747a378570d10d4dabb9aff52bcce39baa3dd29b4e20bc0",
+      "job_id": "lfr_n5000_o00_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.18152650026604533,
+      "monitor_elapsed_seconds": 0.1816221671178937,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003674333,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o00_m20_s12__highway_native__s73/result.json",
+      "sha256": "825812c868edced21565358738ef069f48cad21d439f7ecbbe389b0cc84aeca5",
+      "job_id": "lfr_n5000_o00_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.2838608338497579,
+      "monitor_elapsed_seconds": 0.283956500235945,
+      "peak_tree_rss_bytes": 56344576,
+      "sampled_tree_cpu_seconds": 0.119995874,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o00_m50_s11__highway_native__s73/result.json",
+      "sha256": "7dcc21b460ee64c16b9eb79fd6f5051b27f6b327f68e5a2fbbe81ce53f9e177f",
+      "job_id": "lfr_n5000_o00_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.21249837521463633,
+      "monitor_elapsed_seconds": 0.21262995805591345,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.004030624,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o00_m50_s12__highway_native__s73/result.json",
+      "sha256": "39b97442367dfcdb7eca10420057179bd9ede0bbf59468a1fcf2d152883f66fc",
+      "job_id": "lfr_n5000_o00_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.19262691726908088,
+      "monitor_elapsed_seconds": 0.19274045806378126,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003879166,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o20_m20_s11__highway_native__s73/result.json",
+      "sha256": "767e2c89c4241307a0b4d22fe11d0b56c3b1b2eb1330e5544d80a1887605cf6f",
+      "job_id": "lfr_n5000_o20_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.19077729200944304,
+      "monitor_elapsed_seconds": 0.19088404206559062,
+      "peak_tree_rss_bytes": 540672,
+      "sampled_tree_cpu_seconds": 0.004174874,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o20_m20_s12__highway_native__s73/result.json",
+      "sha256": "215005191c6bbe2716cc4a94b2efc62d56e86e8250aee306d80459f089f27451",
+      "job_id": "lfr_n5000_o20_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.24474924989044666,
+      "monitor_elapsed_seconds": 0.24488133331760764,
+      "peak_tree_rss_bytes": 61407232,
+      "sampled_tree_cpu_seconds": 0.136234252,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o20_m50_s11__highway_native__s73/result.json",
+      "sha256": "03be2bf3ee5dbb895a54d6f7623c01102ed567795e40eb1c1d15e6483d505e7a",
+      "job_id": "lfr_n5000_o20_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.19667170802131295,
+      "monitor_elapsed_seconds": 0.19678987469524145,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003732624,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o20_m50_s12__highway_native__s73/result.json",
+      "sha256": "be5eaa551d5c6ecf9f15bcf7a59f7f155d36cc7f5813605c09209536001f3897",
+      "job_id": "lfr_n5000_o20_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.1919927503913641,
+      "monitor_elapsed_seconds": 0.19211666705086827,
+      "peak_tree_rss_bytes": 360448,
+      "sampled_tree_cpu_seconds": 0.004397208,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o40_m20_s11__highway_native__s73/result.json",
+      "sha256": "8d41ae9e90a3e3e7627bd25b520ba43547daa2e8e1e5f88c36af5a4a73f3b78c",
+      "job_id": "lfr_n5000_o40_m20_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.21236512484028935,
+      "monitor_elapsed_seconds": 0.21250733314082026,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003980249,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o40_m20_s12__highway_native__s73/result.json",
+      "sha256": "17b1cbc466e12c3bab7d7fb51a75693f2b3350f63044fca7d0562eae16f24c0c",
+      "job_id": "lfr_n5000_o40_m20_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.1966300830245018,
+      "monitor_elapsed_seconds": 0.19676145818084478,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003685041,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o40_m50_s11__highway_native__s73/result.json",
+      "sha256": "ae46eb3be541c1aa9f21cddd9b33ee9b4e00604cf385f37639f6e77125df4879",
+      "job_id": "lfr_n5000_o40_m50_s11__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.1928101247176528,
+      "monitor_elapsed_seconds": 0.1929150829091668,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.0036384160000000002,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    },
+    {
+      "path": "work/baseline73_v2/lfr_n5000_o40_m50_s12__highway_native__s73/result.json",
+      "sha256": "dda009ba9ca857c9e9d24c2285aff909ae58f39f3d442363a4fbee267c0ad65e",
+      "job_id": "lfr_n5000_o40_m50_s12__highway_native__s73",
+      "status": "COMPLETED",
+      "device": "cpu",
+      "threads": 1,
+      "pipeline_seconds": 0.1987974587827921,
+      "monitor_elapsed_seconds": 0.19890854181721807,
+      "peak_tree_rss_bytes": 245760,
+      "sampled_tree_cpu_seconds": 0.003882666,
+      "budget_seconds": 300.0,
+      "returncode": 0,
+      "resource_measurement": "0.2s sampled sum of process-tree RSS; shared pages may be counted more than once; GPU memory needs adapter/external telemetry.",
+      "timing_definition": "Elapsed from before process launch to blocking p.wait return, observed by a dedicated wait thread; monitor completion separately recorded; resource samples remain approximately 0.2s.",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "recorded_runner_source_matches_audited": true
+    }
+  ]
+}

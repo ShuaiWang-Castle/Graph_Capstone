@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-09-30T07:01:25.461706+00:00",
+  "repository": "https://github.com/HKUSTDial/Supervisor-Skills",
+  "commit": "207bc6f7a1aa107e544099c2c7cc86816fba9628",
+  "scope": "idea-evaluator independent experimental-design review, bounded OCD current authority",
+  "copied_license": "provenance/skill_guidance/Supervisor-Skills/LICENSE",
+  "files": {
+    "provenance/skill_guidance/Supervisor-Skills/LICENSE": "b35c958b79726c115cf817635abcbc2aa1121cae5e9a1c22819f7c44f58fcaf0",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/SKILL.md": "630ce9528f472637830b216bf6de231e6dfdcdae4d3b16976324da5ce2d145fb",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-examples.md": "eb755fcda39b399a2d266a282c3b36091ef72d8e9ed49008493be172b62495a4",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/five-dimensions.md": "d855620c2587fe7b3ddb01cfe837abb594d960e0b31c2e4c22a9ad10fd393798",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/fatal-flaws.md": "236dc67ddea96aba2d52b61adb5d0d9f69c05d683d49938914f066d0996e2679",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-first-principles.md": "c9c6498d8e6aceeb94631f08306e6a54ba43a721fb8a5357d99091ab8e93eb16",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-elephant.md": "52da00af96b098887b797ec4f20cc5b74f7309a65d02fd7e5f6374fb9dc1057e",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/worked-examples.md": "10fe5cbfdceb753b07881e24d36148dc2158b349f8e8cf6a480d6f203a6a58af",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-shift-probe.md": "ca2523afea8215bba46398a338135aa78e675bfdf9ff6c89da00052934db8e8a",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/domain-evaluation-frameworks.md": "09a9e66316e67870bcf6cc686cd0b6f66995c907a68f95a99d1a2c8aa4d82820",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-hamming.md": "775b93e564cf3529a6725b9bc9db1abf24ba7eca0e7a13e5b6667a2cee59cb77",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/lifecycle-capability-matching.md": "1467485ac36508286ae9b41cf2b84ef5d13c063ac68daf2bb45bca4137ee01c2",
+    "provenance/skill_guidance/Supervisor-Skills/idea-evaluator/references/paradigm-technology-cycle.md": "7eb0b9c3d05f821af093ce7d345ee70545b1a59199359aa1c3b4134b8804912a"
+  }
+}

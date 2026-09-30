@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+replay_workspace/
+replay_scores_new.json
+replays/

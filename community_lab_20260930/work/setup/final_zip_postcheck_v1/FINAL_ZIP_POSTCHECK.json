@@ -1,0 +1,113 @@
+{
+  "completed_utc": "2026-09-30T10:23:23.324498+00:00",
+  "status": "PASS",
+  "archive": "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/DELIVERY.zip",
+  "archive_bytes": 2217948855,
+  "whole_archive_sha256_from_root_actual_package_check": "7718b644667b7576a6c6928fc37288d400f5224b120dff5c2425ec27ebd8094a",
+  "whole_archive_sha_recomputed_by_this_review": false,
+  "payload_files": 17361,
+  "checks": {
+    "PASS": 1959,
+    "FAIL": 0
+  },
+  "counts": {
+    "formal_result_records": 576,
+    "formal_predictions": 564,
+    "no_cover_quality_unknown_timeouts": 12,
+    "formal_NOCD_model_jobs": 336,
+    "formal_saved_cover_checkpoints": 7879,
+    "replay_index_payloads": 3017,
+    "source_tar_members": 1853,
+    "locked_license_copies": 8,
+    "native_binaries": 3
+  },
+  "reports_and_closeout_binding": "Four report bytes match embedded closeout/current review hashes; nine evidence members bytes match closeout; truthful NO_REPRODUCIBLE_GAIN and closed gate retained.",
+  "native_binaries": [
+    {
+      "id": "lfr",
+      "path": "external/lfr/unweighted_undirected/benchmark",
+      "tar": {
+        "sha256": "7c0f4527e0374e41ecea54f465c5396fdeeefe3e06df73543de3f9cf989df0eb",
+        "bytes": 259720,
+        "prefix32_hex": "cffaedfe0c000001000000000200000013000000d80500008500210000000000",
+        "mode": 493,
+        "mode_octal": "0o755"
+      },
+      "locked_sha256": "7c0f4527e0374e41ecea54f465c5396fdeeefe3e06df73543de3f9cf989df0eb",
+      "locked_bytes": 259720,
+      "replay_index_binding": "NOT_INDEXED_GENERATION_DEPENDENCY; actual source tar is native-locked and executable"
+    },
+    {
+      "id": "snap",
+      "path": "external/snap/examples/bigclam/bigclam",
+      "tar": {
+        "sha256": "3ced62a29d77fe7143aa13dd0d06fa002c8c186497bda6db0f3b359509ac2ba5",
+        "bytes": 4473496,
+        "prefix32_hex": "cffaedfe0c000001000000000200000013000000180700008580210000000000",
+        "mode": 493,
+        "mode_octal": "0o755"
+      },
+      "locked_sha256": "3ced62a29d77fe7143aa13dd0d06fa002c8c186497bda6db0f3b359509ac2ba5",
+      "locked_bytes": 4473496,
+      "zip": {
+        "sha256": "3ced62a29d77fe7143aa13dd0d06fa002c8c186497bda6db0f3b359509ac2ba5",
+        "bytes": 4473496,
+        "prefix32_hex": "cffaedfe0c000001000000000200000013000000180700008580210000000000",
+        "mode_octal": "0o100755",
+        "mode": 33261,
+        "create_system": 3
+      },
+      "replay_index_binding": "VERIFIED"
+    },
+    {
+      "id": "highway",
+      "path": "external/highway_native_reference/benchmark/highway/highway_cpp/build/highway",
+      "zip": {
+        "sha256": "693026cbd389a659928a90995c21880e80f56046fa7da3a1338beacfaca58940",
+        "bytes": 143640,
+        "prefix32_hex": "cffaedfe0c000001000000000200000012000000f00400008580210000000000",
+        "mode_octal": "0o100755",
+        "mode": 33261,
+        "create_system": 3
+      },
+      "copy_path": "provenance/native_binaries/highway_macos_arm64",
+      "copy": {
+        "sha256": "693026cbd389a659928a90995c21880e80f56046fa7da3a1338beacfaca58940",
+        "bytes": 143640,
+        "prefix32_hex": "cffaedfe0c000001000000000200000012000000f00400008580210000000000",
+        "mode_octal": "0o100755",
+        "mode": 33261,
+        "create_system": 3
+      },
+      "tar_policy": "build directory omitted from source tar; actual measured binary delivered as canonical indexed ZIP file and provenance copy",
+      "replay_index_binding": "VERIFIED"
+    }
+  ],
+  "source_license_scope": "Read actual archive tar all1853 members, exact set and each SHA/size; source/native locks, actual license bytes, ARM64 executable headers and archived permission bits checked.",
+  "evidence": {
+    "ZIP_COVERAGE_AUDIT.json": "414500f470a2208133dc1c2fa11f9aa61af4edda1b20af24c0d7b97b5bf9e1a1",
+    "native_source_review/audit.json": "54575453c5e03a6adc59b5547771cad87233aa97e1eaa831e7fbc0765b710252",
+    "native_source_review/MANIFEST.json": "cdeb116c9928f6f4fa06e05841937f74aa95320ec131b8a27e4714c465cbc105"
+  },
+  "limitations": [
+    "ROOT actual all-payload CRC/SHA and whole-ZIP SHA checks not repeated.",
+    "This coverage audit checks all checkpoint/model locations and prior-audit SHA bindings through actual embedded manifest; model tensors and cover schemas not reloaded.",
+    "No graph algorithm, scorer, training, native execution/rebuild or publication performed.",
+    "This postcheck is created AFTER final ZIP and delivered beside it; original archive and already-packaged review directory unchanged."
+  ],
+  "actual_commands": {
+    "main": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/work/setup/final_zip_postcheck_v1/audit_zip_coverage.py"
+    ],
+    "native": [
+      "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/.venv/bin/python",
+      "work/setup/final_zip_postcheck_v1/native_source_review/audit_native_source_from_zip.py",
+      "--archive",
+      "DELIVERY.zip",
+      "--output-dir",
+      "work/setup/final_zip_postcheck_v1/native_source_review"
+    ]
+  },
+  "tool_preparation_fixes": "Preserved tool_attempts/REPAIR_NOTE.json records initial tool schema assumptions; these are audit-tool bugs, not delivery/algorithm failures."
+}

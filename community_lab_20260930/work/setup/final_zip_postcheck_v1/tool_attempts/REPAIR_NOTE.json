@@ -1,0 +1,10 @@
+{
+  "scope": "Audit tool bugs only; no observed delivery payload failures.",
+  "corrections": [
+    "st_size is an integer property, not callable.",
+    "Pinned index uses NO_COVER_QUALITY_UNKNOWN and omits expected_metrics for timeouts.",
+    "Generic audit saved checkpoint paths are per-job relative; prefix with original runroot/job_id before set comparison."
+  ],
+  "preserved_attempt": "attempt1_schema_assumption_failure.json",
+  "no_original_record_mutation": true
+}

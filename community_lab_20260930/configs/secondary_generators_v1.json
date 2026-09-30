@@ -1,0 +1,61 @@
+{
+  "registered_at_utc": "2026-09-30T07:42:54.019171+00:00",
+  "status": "CONDITIONAL_CONFIRMATION_ONLY_NO_GENERATION_OR_CANDIDATE_QUALITY_YET",
+  "purpose": "Independent alternative mechanism and degree-only diagnostics if predeclared development signal passes; not extra LFR seeds nor new algorithm tuning",
+  "alternative": {
+    "kind": "overlapping_independent_pair_Bernoulli_SBM",
+    "n": [
+      1000,
+      5000
+    ],
+    "community_count_policy": "n/50",
+    "core_assignment": "balanced exactly50 then graph-seeded permutation",
+    "overlap_fraction": [
+      0.0,
+      0.2,
+      0.4
+    ],
+    "overlap_memberships": 2,
+    "extra_membership_assignment": "uniform other community for a graph-seeded random subset of round(n*overlap_fraction) nodes",
+    "expected_mean_degree": 20,
+    "global_expected_external_edge_fraction": [
+      0.2,
+      0.5
+    ],
+    "graph_seeds": [
+      311,
+      312
+    ],
+    "probabilities": "S shared unordered pair count; Q=n*(n-1)/2; target E=10*n; p_shared=(1-mu)*E/S; p_unshared=mu*E/(Q-S); independent Bernoulli for each pair; invalid probabilities fail without retry",
+    "distinction": "global expected external fraction is not LFR per-node native mu; balanced planted cores unlike LFR power-law community sizes; degree stochastic not hard-capped"
+  },
+  "degree_only": {
+    "kind": "independent_pair_expected_degree_Bernoulli",
+    "n": [
+      1000,
+      5000
+    ],
+    "graph_seeds": [
+      411,
+      412
+    ],
+    "expected_mean_degree": 20,
+    "expected_max_degree": 50,
+    "minimum_expected_degree": 1,
+    "rank_weights": "w_i=clip(c/i,1,50); deterministic bisection chooses c with mean(w)=20; graph-seeded random permutation",
+    "edge_probability": "min(w_u*w_v/sum(w),1), each unordered pair independent; no self-loops",
+    "truth": "no planted communities, no complete recovery labels and no strict macro/micro F1",
+    "NOCD_model_order": "fixed n/50 capacity chosen before null generation; separate fixed_K_null_diagnostic panel, never called oracle K",
+    "reported_diagnostics": "completion/cost/RSS, cover count/sizes/coverage/membership/overlap rate and reconstruction behavior; no fitted clusters labeled true or false via invented ground truth"
+  },
+  "randomness": "Seeded NumPy PCG64 per case, source/version pinned; related parameter grid not IID datasets",
+  "algorithm_seeds": [
+    173,
+    174,
+    175
+  ],
+  "controls": "freeze chosen one global primitive with elementwise and BMM/CSR direct controls plus strongest related existing methods before any confirmation results. No case/n/truth-dependent backend policy.",
+  "execution_condition": "Only after complete73/74/75 gate signal and final algorithm/confirm protocol freeze; candidate sources remain unchanged after confirmation feedback",
+  "round_deadline": "original work/state.json unchanged; no second-round allocation",
+  "generator_source_pending": "work/setup/secondary_generator/ (functional only during candidate measurements)"
+}

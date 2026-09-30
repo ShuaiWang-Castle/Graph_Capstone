@@ -1,0 +1,9 @@
+{
+  "results_sha256": "537e6c7d9d1d00f813721bbca67df1f9b372fe0e660524232adc75b54144402c",
+  "tool_sha256": "611e8bbef95586c49c2475618462d5c4866b1ce328fa0fff9a7629fc43be87e8",
+  "rows": 528,
+  "summaries": 22,
+  "direction": "comparison minus reference for quality; comparison / reference for complete time",
+  "timeout_policy": "No completed-time ratio or imputed quality for failed/incomplete pairs; all rows retained",
+  "interpretation": "Only same case, policy, device, threads and requested algorithm seed paired; language/backend differences remain disclosed in method identities. Seed is not independent RNG for deterministic/fixed-seed native arms."
+}

@@ -1,0 +1,287 @@
+{
+  "status": "FROZEN_DEVELOPMENT_BASELINES",
+  "methods": [
+    {
+      "id": "bigclam_native",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "SNAP author C++",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "bigclam",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "binary": "external/snap/examples/bigclam/bigclam",
+        "k": -1,
+        "min_k": 5,
+        "k_trials": 10,
+        "threads": 1,
+        "line_alpha": 0.05,
+        "line_beta": 0.3,
+        "max_k_fraction": 0.1
+      }
+    },
+    {
+      "id": "slpa_cdlib",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "CDlib SLPA",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "slpa",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "t": 21,
+        "r": 0.1,
+        "threads": 1,
+        "module_path": "external/cdlib_highway/cdlib/algorithms/internal/SLPA_nx.py"
+      }
+    },
+    {
+      "id": "highway_python",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "Pinned CDlib Python Highway",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "highway",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "module_path": "external/cdlib_highway/cdlib/algorithms/internal/Highway.py",
+        "parameters": {},
+        "threads": 1
+      }
+    },
+    {
+      "id": "ego_karateclub",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "third-party Karate Club EgoNetSplitter",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "ego_karateclub",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "resolution": 1.0,
+        "threads": 1,
+        "source_dir": "external/karateclub",
+        "loopless_fix": false
+      }
+    },
+    {
+      "id": "bigclam_oracleK",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "SNAP author C++ with known K",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "bigclam",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "binary": "external/snap/examples/bigclam/bigclam",
+        "k": 1,
+        "threads": 1,
+        "line_alpha": 0.05,
+        "line_beta": 0.3
+      }
+    },
+    {
+      "id": "nocd_graph_oracleK",
+      "enabled": true,
+      "information_policy": "oracle_K",
+      "implementation": "Author PyTorch NOCD + documented graph-only/device wrapper",
+      "command": [
+        "{python}",
+        "{root}/adapters/nocd_graph_only.py",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "source_dir": "external/nocd",
+        "k": 1,
+        "hidden_sizes": [
+          128
+        ],
+        "dropout": 0.5,
+        "batch_norm": true,
+        "weight_decay": 0.01,
+        "lr": 0.001,
+        "max_epochs": 500,
+        "check_every": 25,
+        "patience_checks": 10,
+        "balance_loss": true,
+        "stochastic_loss": true,
+        "batch_size": 20000,
+        "threshold": 0.5,
+        "threads": 1,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": "ego_karateclub_loopless_fix",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "Karate Club CC/Python-Louvain with explicit known walk-selfloop bypass",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "ego_karateclub",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "resolution": 1.0,
+        "threads": 1,
+        "source_dir": "external/karateclub",
+        "loopless_fix": true
+      }
+    },
+    {
+      "id": "highway_native",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "Author Highway C++17 serial",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "highway_native",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "binary": "external/highway_native_reference/benchmark/highway/highway_cpp/build/highway",
+        "threads": 1,
+        "parameters": {
+          "highway_top_r": 3,
+          "ensure_min1": 1,
+          "symmetrize": 1,
+          "mod_jaccard_alpha": 0.7,
+          "max_anchors": -1,
+          "prop_top_r": 3,
+          "prop_T": 10,
+          "prop_damping": 0.9,
+          "prop_eta_leak": 0,
+          "prop_tau": 0.85,
+          "local_enable_pattern_refinement": 1,
+          "local_confidence_self_fraction_weight": 0.85,
+          "local_confidence_low_entropy_weight": 0.15,
+          "local_pattern_confidence_floor": 0.05,
+          "local_pattern_confidence_ceiling": 1.0,
+          "local_update_strength": 0.5,
+          "local_node_mode_power": 1.5,
+          "local_pattern_target_mix": 0.75,
+          "local_target_sharpen_gamma": 1.2,
+          "local_min_abs_mass_to_keep": 1e-08,
+          "local_renormalize": 1,
+          "decode_theta": 0.3,
+          "max_memberships": 3
+        },
+        "module_path": "external/highway_native_reference/benchmark/highway/highway.py"
+      }
+    },
+    {
+      "id": "ego_sknetwork_fixed",
+      "enabled": true,
+      "information_policy": "graph_only_native_K",
+      "implementation": "egosplit-sknetwork CC/Louvain known weight-index+empty-isolate fixes; min_cluster_size=0",
+      "command": [
+        "{python}",
+        "{root}/adapters/run.py",
+        "--method",
+        "ego_sknetwork",
+        "--graph",
+        "{graph}",
+        "--output",
+        "{output}",
+        "--seed",
+        "{seed}",
+        "--config",
+        "{config}"
+      ],
+      "parameters": {
+        "module_path": "adapters/vendor_patches/ego_sknetwork_fixed.py",
+        "resolution": 1.0,
+        "bugfix": true,
+        "threads": 1
+      }
+    }
+  ],
+  "prefreeze_changes": [
+    "narrow exact upstream imports to avoid unrelated packages",
+    "NOCD author EdgeSampler and patience comparison restored",
+    "additional separately named known bugfix/strong implementation controls",
+    "BigCLAM native maxK=ceil(n/10) from graph size, never labels",
+    "Highway C++ defaults explicitly passed; isolates registered then dropped selfloop serialization"
+  ],
+  "frozen_at_utc": "2026-09-30T05:18:38.249998+00:00"
+}

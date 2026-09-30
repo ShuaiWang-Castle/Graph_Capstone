@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "id": "snap",
+      "git_url": "https://github.com/snap-stanford/snap.git",
+      "ref": null,
+      "role": "author BigCLAM C++",
+      "build_dir": "examples/bigclam",
+      "inspected_files": [
+        "examples/bigclam/ReadMe.txt",
+        "examples/bigclam/bigclam.cpp"
+      ],
+      "caution": "README defaults differ from code. Set -c,-nt,-sa,-sb explicitly. No seed flag in inspected executable."
+    },
+    {
+      "id": "lfr",
+      "git_url": "https://github.com/andrealancichinetti/LFRbenchmarks.git",
+      "ref": null,
+      "role": "author-linked overlapping LFR",
+      "build_dir": "unweighted_undirected",
+      "inspected_files": [
+        "unweighted_undirected/ReadMe.txt"
+      ],
+      "caution": "time_seed.dat; network.dat repeats undirected edges; -on and -om required for overlap."
+    },
+    {
+      "id": "nocd",
+      "git_url": "https://github.com/shchur/overlapping-community-detection.git",
+      "ref": null,
+      "role": "author PyTorch NOCD",
+      "inspected_files": [
+        "README.md",
+        "interactive.ipynb",
+        "nocd/nn/gcn.py",
+        "nocd/nn/decoder.py"
+      ],
+      "caution": "Author PyTorch release is not the TensorFlow code used in paper. Sparse dropout hardcodes CUDA; compatibility patch is logged."
+    },
+    {
+      "id": "cdlib_highway",
+      "git_url": "https://github.com/GiulioRossetti/cdlib.git",
+      "ref": "f054f7ca237e4caed008c8e831f248b7f4bd41e8",
+      "role": "pinned CDlib Highway Python implementation",
+      "inspected_files": [
+        "cdlib/algorithms/internal/Highway.py"
+      ],
+      "caution": "Python diagnosis backend, NOT author C++ speed claim. Compare quality/trace and match language for algorithmic speed claims."
+    },
+    {
+      "id": "ego_reference",
+      "git_url": "https://github.com/benedekrozemberczki/EgoSplitting.git",
+      "ref": null,
+      "role": "third-party public Ego-splitting implementation",
+      "caution": "Not author distributed backend; do not claim original-paper scalability."
+    },
+    {
+      "id": "karateclub",
+      "git_url": "https://github.com/benedekrozemberczki/karateclub.git",
+      "ref": null,
+      "role": "third-party EgoNetSplitter API",
+      "caution": "May have old dependency pins. Isolate environment; do not silently change algorithm to install."
+    }
+  ],
+  "pin_policy": "Null refs must be resolved to exact HEAD and recorded by fetch_sources.py BEFORE metrics; source lock and all compatibility patches enter the freeze. No unverified SHA is invented."
+}

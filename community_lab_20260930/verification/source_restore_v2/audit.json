@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "executed_utc": "2026-09-30T09:22:54.645726+00:00",
+  "fresh_workspace": "/private/tmp/community_source_restore_20260930T0926Z",
+  "command": [
+    "/Users/shuaiwang/Desktop/Xiaobai/community_goalmode/COMMUNITY_GOALMODE_LAB_20260930/.venv/bin/python",
+    "/private/tmp/community_source_restore_20260930T0926Z/tools/restore_locked_sources.py"
+  ],
+  "stdout": "Restored 1853 audited actual source files; rebuild native targets before measurements\n",
+  "stderr": "",
+  "archive_sha256": "106a578ffb0604d4230cbbe05b10dcbad273fcbfb13e3cf4dfd8fb56b49e9dd8",
+  "regular_files_restored": 1853,
+  "sha_size_mode_mismatches": [],
+  "third_party_pdfs_in_archive": [],
+  "native_rebuild_executed": false,
+  "scope": "Actual source restoration and exact payload/mode validation, not a full fresh dependency installation or native rebuild benchmark."
+}

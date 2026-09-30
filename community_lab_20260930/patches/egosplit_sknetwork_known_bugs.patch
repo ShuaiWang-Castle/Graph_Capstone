@@ -1,0 +1,37 @@
+--- external/egosplit_sknetwork/egosplit_sknetwork/egosplit_sknetwork_.py
++++ adapters/vendor_patches/ego_sknetwork_fixed.py
+@@ -57,6 +57,7 @@
+     egonet_old_ids = np.empty(len(egonet_nodes), dtype="int32")
+     for i, node in enumerate(egonet_nodes):
+         egonet_old_ids[i] = node
++    egonet_old_ids.sort()
+     new_ids = {node: int32(index) for index, node in enumerate(egonet_old_ids)}
+     lil = List.empty_list(int32[:])
+     for node in egonet_old_ids:
+@@ -108,7 +109,7 @@
+         og_neighbors = egonet_indices[og_n1]
+         communities = egonet_community[og_n1]
+ 
+-        for c in range(np.max(communities) + 1):
++        for c in range(np.max(communities) + 1 if len(communities) else 0):
+             new_n1 = first_personae_index[og_n1] + c
+             new_n1_indptr = next_index
+             persona_indptr[new_n1] = new_n1_indptr
+@@ -127,7 +128,7 @@
+                     new_n2 = first_personae_index[og_n2] + n2_persona_for_n1
+                     # write new n2_persona and data into persona graph
+                     persona_indices[next_index] = new_n2
+-                    persona_data[next_index] = g_data[g_indptr[og_n1]] + i
++                    persona_data[next_index] = g_data[g_indptr[og_n1] + i]
+                     next_index += 1
+     return persona_data, persona_indices, persona_indptr
+ 
+@@ -238,7 +239,7 @@
+                 persona_map = self.local_clustering_.fit_predict(egonet).astype("int32")
+             egonet_community.append(persona_map)
+             self.first_personae_index_[node] = next_index
+-            next_index += np.max(persona_map) + 1
++            next_index += np.max(persona_map) + 1 if len(persona_map) else 0
+ 
+         self.first_personae_index_[-1] = next_index
+         ei = List(egonet_indices)

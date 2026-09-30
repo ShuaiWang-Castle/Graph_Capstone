@@ -1,0 +1,69 @@
+{
+  "audited_at_utc": "2026-09-30T09:59:48.296963+00:00",
+  "status": "PASS",
+  "formal_planned_rows": 576,
+  "status_counts": {
+    "COMPLETED": 564,
+    "TIMEOUT": 12
+  },
+  "core_replay_index_files_verified": 3017,
+  "prior_terminal_artifact_hashes_reverified": 12670,
+  "retained_nocd_model_jobs": 336,
+  "retained_formal_saved_cover_checkpoints": 7879,
+  "checks": {
+    "portable_564_match_12_unknown": true,
+    "source_1853_payload_mode_restored": true,
+    "initial_artifact_audit_observed_pass": true,
+    "new312_artifact_audit_observed_pass": true,
+    "all24_author_harness_exact": true,
+    "frozen_gate_closed": true,
+    "source_tar_matches": true,
+    "source_tar_no_pdfs": true,
+    "report_BASELINE_REPORT_ZH.md": true,
+    "report_FAILURE_MAP_ZH.md": true,
+    "report_CANDIDATE_DECISION_ZH.md": true,
+    "report_FINAL_REPORT_ZH.md": true,
+    "required_tools/portable_replay.py": true,
+    "required_REPRODUCE.sh": true,
+    "required_docs/REPRODUCIBILITY_ZH.md": true,
+    "required_provenance/SOURCE_LOCK.json": true,
+    "required_provenance/dependency_versions.txt": true,
+    "required_provenance/protocol_freeze.json": true,
+    "license_highway_native_reference_LICENSE": true,
+    "license_karateclub_LICENSE": true,
+    "license_egosplit_sknetwork_LICENSE": true,
+    "license_cdlib_highway_LICENSE": true,
+    "license_lfr_LICENSE": true,
+    "license_ego_reference_LICENSE": true,
+    "license_nocd_LICENSE": true,
+    "license_snap_License.txt": true,
+    "five_canonical_plots": true
+  },
+  "errors": [],
+  "evidence_sha256": {
+    "verification/portable_replay_full_v1/audit.json": "4e5ea7f21066308d39b2188e07deeb7a9e11364cdfab3b723afa2922b07fa7f8",
+    "verification/source_restore_v2/audit.json": "1750538acc3a493582f8ddba43c3f9da4ac08c069e0d5e23e8db8dd105593055",
+    "work/setup/infrastructure_audit/final_baseline_artifacts/FINAL_BASELINE_ARTIFACT_AUDIT.json": "d31fc117cd423e061ae811583893991daefba2e37624094c4d32075218cc0faa",
+    "work/setup/candidate_final_artifact_audit/actual_20260930T0859Z/AUDIT_AGGREGATE.json": "b4e7a0209c2f30b3687e29762406174fb8258a39b1da9c4003bb7a99a820b7b8",
+    "work/setup/nocd_author_refcheck_audit/results/audit_result.json": "aaaa040b57eb91976d0a558a2c78c7bab6d2e798a190a8764e25e8827f0e9c28",
+    "analysis/nocd_pairdot_gate_v1/gate-analysis.json": "db2bc487ee5abf839336f43511cf58087aec264889869c26b3e6e767beb072ee",
+    "provenance/locked_source_trees_manifest.json": "a3e8d0ea73f04695ce1a04fc125c73ca0e458258af047d5bf1b5605e6605428c"
+  },
+  "report_sha256": {
+    "reports/BASELINE_REPORT_ZH.md": "7d2f62d278439697c3328a7669625dadb19e71edc5344382586ac9ea55c33578",
+    "reports/FAILURE_MAP_ZH.md": "3de3a2414c3f558f0e91a4cf8ec7c0e5066a22f7061c5e3aaf3ef2712630c038",
+    "reports/CANDIDATE_DECISION_ZH.md": "9e4308fe6cfaf754b0245ff6c9f46b7890a65e8682c63bfcaa7f5fbb682d6fc3",
+    "reports/FINAL_REPORT_ZH.md": "3f009c0a7e110ef7f3e343b3d03e838824ed6be86e23ded48ff1c9fef2434564"
+  },
+  "plots_sha256": {
+    "analysis/quality_cost_graph_only_native_K_cpu_1_5000_development.png": "5f47b91c18af89b55f8c8480bd2da22b9a53f855e4255dda6ad43beb26eae019",
+    "analysis/quality_cost_oracle_K_cpu_1_5000_development.png": "0c715d158ed8c04abcc5d0cc44325fc406397ab51c1b42932a6cff3306b4018e",
+    "analysis/quality_cost_graph_only_native_K_cpu_1_1000_development.png": "35000bd1be83db6ecf0a0fb1f85ac87451c6afc826cc9df98416e1bf49b375b6",
+    "analysis/quality_cost_oracle_K_cpu_1_1000_development.png": "530c8e068aac646d284c30195e596734fec6052ad505a490028e338f46a45f4d",
+    "analysis/nocd_pairdot_gate_v1/gate_quality_cost.png": "225993f8aa96b9bf58f2a762af0604e0b3bcc570b3415aa4e9eef8038911a0a0"
+  },
+  "limitations": [
+    "No inference, full-loss regeneration, new score, OS resource telemetry or statistical claim. Models/states are retained and bound to prior actual artifact audits; this is a delivery inventory.",
+    "ZIP payload validation still must execute after this pre-package gate; it is not inferred from these checks."
+  ]
+}

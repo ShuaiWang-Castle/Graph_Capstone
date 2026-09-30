@@ -1,0 +1,53 @@
+{
+  "scope": "POSTHOC_DEVELOPMENT_DIAGNOSIS_NOT_ALGORITHM_INPUT",
+  "case_id": "lfr_n1000_o40_m50_s12",
+  "graph_sha256": "f6f8bf8a5134cdf18e38d9071370d0760a8003ce42977c8500f29ae6c4142fad",
+  "truth_sha256": "ae86c3d4ac5719fbdb9f4ba7c15d60fd7e05e5bd0d14e0df4830e9adc3550f23",
+  "prediction_sha256": "65153f22d94732d20364be6bfc9dab9544d0aca72258c7801f683e141dd24115",
+  "job_id": "lfr_n1000_o40_m50_s12__ego_karateclub__s73",
+  "original_input_selfloops": 0,
+  "internal_selfloops": 1000,
+  "persona_count_distribution": {
+    "1": 1000
+  },
+  "true_overlap_nodes": 400,
+  "pred_overlap_nodes": 0,
+  "node_diagnostic": {
+    "node": 0,
+    "input_neighbors": [
+      68,
+      245,
+      258,
+      348,
+      611,
+      615,
+      626,
+      975,
+      986,
+      990
+    ],
+    "true_groups": [
+      6,
+      8
+    ],
+    "pred_groups": [
+      0
+    ],
+    "persona_count": 1
+  },
+  "stage_seconds": {
+    "load_seconds": 0.034438374917954206,
+    "_check_graph_seconds": 0.013079749885946512,
+    "_create_egonets_seconds": 0.01558958413079381,
+    "_map_personalities_seconds": 5.050003528594971e-05,
+    "_create_persona_graph_seconds": 0.005533166229724884,
+    "_create_partitions_seconds": 0.0764981247484684,
+    "fit_or_native_pipeline_seconds": 0.1701779579743743,
+    "adapter_elapsed_seconds": 0.20474020903930068
+  },
+  "source_locations": [
+    "external/karateclub/karateclub/estimator.py:_ensure_walk_traversal_conditions",
+    "external/karateclub/karateclub/community_detection/overlapping/ego_splitter.py:_create_egonet"
+  ],
+  "interpretation": "Upstream adds a self-loop for every vertex, making the ego part of its neighbor set. The ego connects the whole induced egonet; a single connected component produces one persona and loses capacity for multiple memberships before global partitioning. The separately registered loopless fix is an existing correctness control, not a novel method."
+}

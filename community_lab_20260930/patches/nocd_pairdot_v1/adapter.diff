@@ -1,0 +1,45 @@
+--- a/adapters/nocd_graph_only.py
++++ b/candidates/nocd_pairdot/adapter.py
+@@ -7,7 +7,7 @@
+ from __future__ import annotations
+ import argparse,sys,time,os,json,random,copy
+ from pathlib import Path
+-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+ from lab.io import read_json,write_json,graph,sha256
+ 
+ def main():
+@@ -22,6 +22,20 @@
+     sys.path.insert(0,str(Path(cfg['source_dir']).resolve()))
+     import nocd
+     import nocd.nn.gcn as gcn_module
++    from candidates.nocd_pairdot.pairdot import prepare_pairs,sparse_pair_dot,bmm_pair_dot,batch_loss_with_pair_dot
++    backend=cfg['pairdot_backend']
++    if backend not in ['elementwise','bmm','sampled_csr']:raise ValueError('Unregistered pairdot backend')
++    if Path(cfg['module_path']).resolve()!=Path(__file__).with_name('pairdot.py').resolve():raise ValueError('Configured pairdot source differs')
++    if cfg.get('device','cpu')!='cpu':raise ValueError('Only CPU pairdot configuration is registered')
++    if backend!='elementwise':
++        def dot(emb,pairs):
++            if backend=='bmm':return bmm_pair_dot(emb,pairs)
++            # Prepare every sampled batch inside measured training. No cached
++            # preprocessing from a free worker or a different input graph.
++            return sparse_pair_dot(emb,prepare_pairs(pairs,emb.shape[0]))
++        def batch_loss(self,emb,ones,zeros):
++            return batch_loss_with_pair_dot(self,emb,ones,zeros,dot)
++        nocd.nn.BerpoDecoder.loss_batch=batch_loss
+     random.seed(a.seed);np.random.seed(a.seed);torch.manual_seed(a.seed)
+     device=torch.device(cfg.get('device','cpu'))
+     if device.type=='cuda':torch.cuda.manual_seed_all(a.seed)
+@@ -68,7 +82,11 @@
+                       'selection':'minimum full TRAINING reconstruction loss at fixed check intervals; not heldout validation',
+                       'kind':kind,'compatibility_patch':'device-neutral sparse dropout',
+                       'sampler':'author EdgeSampler keyed by epoch; serial direct Dataset call; no labels',
+-                      'upstream_gcn_sha256':sha256(Path(cfg['source_dir'])/'nocd/nn/gcn.py')},
++                      'upstream_gcn_sha256':sha256(Path(cfg['source_dir'])/'nocd/nn/gcn.py'),
++                      'candidate_mechanism':'C1 sampled-loss pairdot primitive only',
++                      'pairdot_backend':backend,'pairdot_source_sha256':sha256(cfg['module_path']),
++                      'full_loss_selection':'unchanged author loss_full',
++                      'all_pair_preprocessing_in_pipeline':True,'new_algorithmic_principle':False},
+           'stage_seconds':{**stage,'elapsed':time.perf_counter()-t0},'trace':trace})
+     trainstart=time.perf_counter();termination='max_epochs'
+     for epoch in range(max_epochs+1):

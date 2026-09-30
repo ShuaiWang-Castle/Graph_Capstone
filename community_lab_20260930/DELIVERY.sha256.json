@@ -1,0 +1,10 @@
+{
+  "archive": "DELIVERY.zip",
+  "bytes": 2217948855,
+  "sha256": "7718b644667b7576a6c6928fc37288d400f5224b120dff5c2425ec27ebd8094a",
+  "payload_files": 17361,
+  "phase": "final",
+  "verified_all_zip_payload_hashes": true,
+  "verified_embedded_replay_index_payloads": true,
+  "verified_embedded_source_archive_sha256": true
+}

@@ -1,0 +1,83 @@
+{
+  "protocol_id": "results-first-community-lab-20260930",
+  "status": "DEVELOPMENT_GRID_RESOURCE_FREEZE_BEFORE_QUALITY",
+  "task": "undirected_unweighted_graph_only_overlapping_community_detection",
+  "priority": "A_overlap_only; do not switch to B_spectral_or_C_local_without_user_approval",
+  "lfr": {
+    "n": [
+      1000,
+      5000
+    ],
+    "overlap_fraction": [
+      0.0,
+      0.2,
+      0.4
+    ],
+    "mu": [
+      0.2,
+      0.5
+    ],
+    "dev_graph_seeds": [
+      11,
+      12
+    ],
+    "confirm_graph_seeds": [
+      211,
+      212
+    ],
+    "mean_degree": 20,
+    "max_degree": 50,
+    "degree_exponent": 2,
+    "community_exponent": 1,
+    "min_community": 20,
+    "max_community": 100,
+    "overlap_memberships": 2
+  },
+  "resources": {
+    "round_wall_hours": 24,
+    "pipeline_job_wall_hours": 24,
+    "setup_hours_limit": 2,
+    "threads_per_job": 1,
+    "concurrent_measured_jobs": 1,
+    "memory_mb_per_job": 1500,
+    "small_job_seconds": 120,
+    "medium_job_seconds": 300,
+    "max_gpu_devices": 1,
+    "use_gpu_only_if_free_and_audited": true,
+    "disk_budget_gib": 20,
+    "gpu_policy": "CPU_ONLY_no_authorized_idle_NVIDIA_device; Apple_MPS_not_equated_with_CUDA"
+  },
+  "execution_order_seed": 20260930,
+  "first_algorithm_seed": 73,
+  "development_recheck_seeds": [
+    74,
+    75
+  ],
+  "confirmation_algorithm_seeds": [
+    173,
+    174,
+    175
+  ],
+  "no_oracle_primary_panel": true,
+  "oracle_K_panel_is_separate": true,
+  "max_candidate_mechanisms": 2,
+  "max_candidate_configurations_per_mechanism": 4,
+  "target_macro_f1_levels_for_time_to_quality": [
+    0.5,
+    0.7,
+    0.85
+  ],
+  "time_to_quality_rule": "Report only measured checkpoint crossings, never interpolate a timeout into a completion. Labels cannot select the returned checkpoint.",
+  "no_winner_required": true,
+  "validation_is_not_test": true,
+  "host_adjustment": {
+    "at_utc": "2026-09-30T05:04:15.506645+00:00",
+    "before_development_quality": true,
+    "reason": "available RAM 4577378304 bytes; 35%=1602082406 bytes; freeze 1500 MiB below bound",
+    "changed": [
+      "resources.memory_mb_per_job"
+    ],
+    "kept": "all 24 graphs and 120/300 seconds; serial one thread"
+  },
+  "frozen_at_utc": "2026-09-30T05:15:12.291292+00:00"
+}

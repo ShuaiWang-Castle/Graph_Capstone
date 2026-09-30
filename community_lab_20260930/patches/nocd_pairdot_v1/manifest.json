@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-30T07:16:45.404606+00:00",
+  "not_a_new_principle": true,
+  "NOCD_source_commit": "414856fd0d8f61d5bbeec06deb60c3e7b477a342",
+  "upstream_license": "MIT",
+  "scope": "Only loss_batch pairdot; loss_full and training loop unchanged",
+  "files": [
+    {
+      "path": "adapters/nocd_graph_only.py",
+      "sha256": "cfff47caaae7a648a5bdb47d441148b2748f2e3b9e954d1b92aa95351b8383e5"
+    },
+    {
+      "path": "candidates/nocd_pairdot/adapter.py",
+      "sha256": "03dbadb3c50aa3b4c0965c0dc08453baf46f3dabc43ef061339d65f6b5c1a8d0"
+    },
+    {
+      "path": "candidates/nocd_pairdot/pairdot.py",
+      "sha256": "91aeecac59fd9b059628a37747c40dcb47a70757ec4bd4c2cd01637638cbf62e"
+    },
+    {
+      "path": "external/nocd/LICENSE",
+      "sha256": "00993270d80aadc3ae704f42d37a6365fe990050a098d5125403a7ff255fd950"
+    },
+    {
+      "path": "configs/candidate_gate_v1.json",
+      "sha256": "2cde3f5429ea10b76e37b338ea512efe8e28ab1c2b0de9f1dc7c33df139527b1"
+    }
+  ]
+}

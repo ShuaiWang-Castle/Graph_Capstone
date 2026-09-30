@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-09-30T07:18:19.391094+00:00",
+  "scope": "full24 each method; separately nested stage ratios are not additive",
+  "statistics": {
+    "nocd_graph_oracleK__n1000": {
+      "count": 12,
+      "median_ratios": {
+        "forward_loss_backward_seconds": 0.5584449434311529,
+        "sample_seconds": 0.10861883791399692,
+        "full_evaluation_seconds": 0.008256964765269586,
+        "optimizer_seconds": 0.016353019528583056,
+        "checkpoint_write_seconds": 0.008813023685386542,
+        "setup_seconds": 0.24842067283111002
+      }
+    },
+    "nocd_graph_oracleK__n5000": {
+      "count": 12,
+      "median_ratios": {
+        "forward_loss_backward_seconds": 0.8314844118090198,
+        "sample_seconds": 0.03690221399660173,
+        "full_evaluation_seconds": 0.027984791873610887,
+        "optimizer_seconds": 0.021846076679383722,
+        "checkpoint_write_seconds": 0.010779059365387787,
+        "setup_seconds": 0.05191698275101436
+      }
+    },
+    "highway_native__n1000": {
+      "count": 12,
+      "median_ratios": {
+        "native_TOTAL_over_pipeline": 0.05886600935964176,
+        "native_build_over_native_TOTAL": 0.3731836122459874
+      }
+    },
+    "highway_native__n5000": {
+      "count": 12,
+      "median_ratios": {
+        "native_TOTAL_over_pipeline": 0.19588263566963676,
+        "native_build_over_native_TOTAL": 0.4125703311681768
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "path": "data/compact-replay.zip",
+  "bytes": 24390922,
+  "sha256": "591567503c7a06697ec3266a66cb6b38310e18afedb562212b7b78dc83138759",
+  "files": 4360,
+  "indexed_payloads": 3017,
+  "index_payload_hashes_verified": true,
+  "scope": "24 generated graphs, truth for offline evaluation, 576 specs/results, 564 final covers, pinned scorer/source dependencies, formal stdout/stderr, stage and kernel profile evidence. Training models/embeddings and full saved-cover history are omitted; see full DELIVERY."
+}

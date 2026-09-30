@@ -1,0 +1,69 @@
+{
+  "registered_at_utc": "2026-09-30T06:59:30.978398+00:00",
+  "candidate_mechanisms_used": 1,
+  "max_candidate_mechanisms": 2,
+  "candidate_configs_used": 1,
+  "candidate_id": "C1_NOCD_PAIR_DOT_PRIMITIVE",
+  "scope": "oracle_K, graph-only A, CPU PyTorch, full graph; not a new clustering principle",
+  "one_sentence_observation": "Sampled BerPo loss materializes endpoint embedding copies and scatters their gradients; an existing sparse sampled-matrix primitive may compute the same ordered pair dots with fewer intermediate tensors.",
+  "actual_profile_evidence": {
+    "large_case": "lfr_n5000_o40_m50_s11",
+    "five_training_iterations_ms": 225.308,
+    "index_self_ms": 32.758,
+    "mul_self_ms": 30.31,
+    "index_put_self_ms": 23.361,
+    "batch_loss_inclusive_ms": 49.373,
+    "profile_is_diagnostic_not_baseline_latency": true,
+    "profile_path": "work/diagnostic_v2/lfr_n5000_o40_m50_s11__nocd_graph_oracleK__s73__diagnostic_v1/kernel_averages.json",
+    "six_profile_covers_equal_original_baselines": true
+  },
+  "single_change": "Only BerpoDecoder.loss_batch pair-dot primitive; full-training loss selection, GCN, sampler, initialization, epochs/patience, regularizer, optimizer, threshold and K remain identical.",
+  "candidate_configuration": {
+    "backend": "sampled_csr",
+    "always_same_policy_for_every_case": true,
+    "precision": "float32 embedding/dot as baseline",
+    "all_unique/CSR/inverse_preprocessing_charged": true
+  },
+  "controls": [
+    "original elementwise pairdot with same refactored wrapper; compare original frozen adapter for harness equivalence",
+    "existing torch.bmm pairdot with identical gathered pairs",
+    "original elementwise with max_epochs 1000 instead of 500, unchanged patience; runtime paid",
+    "original native BigCLAM same oracle-K panel; existing methods ignoring K may be shown with disclosure",
+    "existing known-fix and stronger Ego configurations/native Highway retained in their information panel"
+  ],
+  "prediction_before_candidate_quality": "Larger embedding width is the most promising speed regime; small graphs may lose to unique/CSR preparation. No guaranteed gain. Floating reduction/backward ordering may change optimization and covers, so mathematical loss identity does not imply bitwise trained output.",
+  "non_claims": [
+    "not a novel theorem",
+    "not an original sampled matrix primitive",
+    "not GPU or cross-language algorithmic superiority",
+    "not label-selected checkpoints or case rules"
+  ],
+  "mathematical_status": "Established bilinear dot and first-order derivative identity; duplicates restored in original order and both F and F.T receive gradients. Finite-precision effects must be measured.",
+  "functional_evidence_sha256": "cfeb0ffba9d7fade25acf5e57d211d3ea726e0eed2a3dcac6be68b9fce99ced1",
+  "development_policy": {
+    "all_24_cases": true,
+    "algorithm_seeds": [
+      73,
+      74,
+      75
+    ],
+    "failure_denominator_retained": true,
+    "no_per_case_branch_or_label_rule": true,
+    "max_four_configurations": true
+  },
+  "pre_confirmation_gate": {
+    "quality_metric": "matched macro F1, with membership micro/at-least-two recall reported together",
+    "noninferiority_margin_macro_micro": 0.01,
+    "material_regression_flag_absolute_macro_or_micro": 0.03,
+    "minimum_speed_gain_median": 0.1,
+    "required_recheck_on_74_75": true,
+    "expected_size_strata": [
+      1000,
+      5000
+    ],
+    "scope_limitation": "Any stratum tradeoff must remain in the tables. A stratum-only claim cannot be called whole-grid domination. Gates are feasibility/reporting criteria, not hypothesis-test p-values.",
+    "require_cost_comparison_to_bmm_control": true,
+    "selection": "one global backend configuration, never choose by case/true overlap/score at inference"
+  },
+  "confirmation_policy": "Only if stable development speed/quality signal, freeze selected single primitive implementation (including existing bmm control if it is strongest) and strongest old controls, use graph211/212 and algorithm173/174/175; no retuning after confirmation; preregister alternative generator and degree-only diagnostics before candidate scores there."
+}
