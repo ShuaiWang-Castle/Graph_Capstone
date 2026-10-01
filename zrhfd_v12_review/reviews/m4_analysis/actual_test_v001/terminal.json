@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "finished_utc": "2026-10-01T16:26:59.213736+00:00",
+  "outer_wall_seconds": 54.27622983325273,
+  "peak_sampled_process_tree_rss_bytes": 387006464,
+  "source_sha256_unchanged": true,
+  "original_raw_modified": false,
+  "measurement_completion_claim": false
+}

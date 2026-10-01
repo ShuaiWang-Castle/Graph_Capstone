@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "scope": "max_updates=1 forces new sparse active-set finish, same frozen quadratic objective; tiny exact Fraction KKT comparison",
+  "raw": [
+    {
+      "mass": 3,
+      "max_error": 0.0,
+      "telemetry": {
+        "mass": 3.0,
+        "updates": 1,
+        "edge_visits": 2,
+        "queue_pending": 0,
+        "max_queue": 2,
+        "termination": "queue_empty",
+        "runtime_seconds": 0.06404758431017399,
+        "support_size": 1,
+        "support_volume": 2.0,
+        "scaled_kkt_residual": 0.0,
+        "mass_balance_residual": 1.6601845766184287e-17,
+        "seed_is_max": true,
+        "residual_frontier_vertices": 3,
+        "support_components": 1,
+        "support_contains_seed": true,
+        "volume_bound_residual": -1.0,
+        "solver_backend": "coordinate_queue_then_sparse_active_set",
+        "coordinate_queue_pending_before_finish": 2,
+        "active_set_finish_trace": [
+          {
+            "iteration": 0,
+            "active_vertices": 1,
+            "new_active_vertices": 0,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 0.0,
+            "scaled_inactive_gradient_min": 0.0
+          }
+        ],
+        "precision_mode": "float64_approximate_telemetry_not_exact_theory"
+      }
+    },
+    {
+      "mass": 6,
+      "max_error": 0.0,
+      "telemetry": {
+        "mass": 6.0,
+        "updates": 1,
+        "edge_visits": 2,
+        "queue_pending": 0,
+        "max_queue": 2,
+        "termination": "queue_empty",
+        "runtime_seconds": 0.00026516709476709366,
+        "support_size": 1,
+        "support_volume": 2.0,
+        "scaled_kkt_residual": 0.0,
+        "mass_balance_residual": 6.640738306473715e-17,
+        "seed_is_max": true,
+        "residual_frontier_vertices": 3,
+        "support_components": 1,
+        "support_contains_seed": true,
+        "volume_bound_residual": -4.0,
+        "solver_backend": "coordinate_queue_then_sparse_active_set",
+        "coordinate_queue_pending_before_finish": 2,
+        "active_set_finish_trace": [
+          {
+            "iteration": 0,
+            "active_vertices": 1,
+            "new_active_vertices": 0,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 0.0,
+            "scaled_inactive_gradient_min": 0.0
+          }
+        ],
+        "precision_mode": "float64_approximate_telemetry_not_exact_theory"
+      }
+    },
+    {
+      "mass": 12,
+      "max_error": 4.440892098500626e-16,
+      "telemetry": {
+        "mass": 12.0,
+        "updates": 1,
+        "edge_visits": 2,
+        "queue_pending": 0,
+        "max_queue": 2,
+        "termination": "queue_empty",
+        "runtime_seconds": 0.0006120828911662102,
+        "support_size": 3,
+        "support_volume": 9.0,
+        "scaled_kkt_residual": 2.9605947323337506e-16,
+        "mass_balance_residual": 7.582909994363618e-16,
+        "seed_is_max": true,
+        "residual_frontier_vertices": 4,
+        "support_components": 1,
+        "support_contains_seed": true,
+        "volume_bound_residual": -3.0,
+        "solver_backend": "coordinate_queue_then_sparse_active_set",
+        "coordinate_queue_pending_before_finish": 2,
+        "active_set_finish_trace": [
+          {
+            "iteration": 0,
+            "active_vertices": 1,
+            "new_active_vertices": 2,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 0.0,
+            "scaled_inactive_gradient_min": -0.6665000166650001
+          },
+          {
+            "iteration": 1,
+            "active_vertices": 3,
+            "new_active_vertices": 0,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 8.881784197001252e-16,
+            "scaled_inactive_gradient_min": 0.0
+          }
+        ],
+        "precision_mode": "float64_approximate_telemetry_not_exact_theory"
+      }
+    },
+    {
+      "mass": 24,
+      "max_error": 4.876710590906441e-09,
+      "telemetry": {
+        "mass": 24.0,
+        "updates": 1,
+        "edge_visits": 2,
+        "queue_pending": 0,
+        "max_queue": 2,
+        "termination": "queue_empty",
+        "runtime_seconds": 0.0005195420235395432,
+        "support_size": 4,
+        "support_volume": 12.0,
+        "scaled_kkt_residual": 2.4253192047278085e-12,
+        "mass_balance_residual": 5.849543072145025e-12,
+        "seed_is_max": true,
+        "residual_frontier_vertices": 4,
+        "support_components": 1,
+        "support_contains_seed": true,
+        "volume_bound_residual": -12.0,
+        "solver_backend": "coordinate_queue_then_sparse_active_set",
+        "coordinate_queue_pending_before_finish": 2,
+        "active_set_finish_trace": [
+          {
+            "iteration": 0,
+            "active_vertices": 1,
+            "new_active_vertices": 2,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 0.0,
+            "scaled_inactive_gradient_min": -2.6663000366630007
+          },
+          {
+            "iteration": 1,
+            "active_vertices": 3,
+            "new_active_vertices": 1,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 3.552713678800501e-15,
+            "scaled_inactive_gradient_min": -3.9977213218353698
+          },
+          {
+            "iteration": 2,
+            "active_vertices": 4,
+            "new_active_vertices": 0,
+            "linear_solver": "sparse_direct",
+            "minimum_solution": 0.0,
+            "scaled_linear_residual": 2.1822543772032077e-12,
+            "scaled_inactive_gradient_min": 0.0
+          }
+        ],
+        "precision_mode": "float64_approximate_telemetry_not_exact_theory"
+      }
+    }
+  ]
+}

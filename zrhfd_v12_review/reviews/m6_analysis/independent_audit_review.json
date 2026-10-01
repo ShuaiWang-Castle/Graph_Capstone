@@ -1,0 +1,27 @@
+{
+  "status": "ACCEPT_PREPARATION_WITH_LIMITATIONS",
+  "reviewed_utc": "2026-10-01T08:53:14.955145+00:00",
+  "source_sha256": {
+    "experiments/m6_analysis/audit.py": "e0ad27382c12ae2493491b717c618e23381832e43e9a465eca4f8fe6da45a461",
+    "experiments/m6_analysis/check_static.py": "4460a9d633315c7054dcb4885c951be82b0089310025765903904a8adf38d493",
+    "reviews/m6_analysis/independent_receipt_fixture.py": "ed26cfea75057c9830a79d7044fa52dcaffaddeb381bf66c6dea7c89f09ce0e8",
+    "reviews/m6_analysis/independent_receipt_fixture_results.json": "69dfa5e004c9e736cd5aa21d9d984148d577219d4665463f1dc504343096a91a",
+    "reviews/m6_analysis/STDLIB_TINY_v004.json": "860a5bae3bb7e337bf52bacc360db42632d1f680ad9088a8755f73434c35c10f"
+  },
+  "independent_metadata_fixture_checks": 5,
+  "independent_checks_pass": true,
+  "owner_fixture_checks_inspected": 43,
+  "actual108_audit": "NOT_RUN",
+  "actual_graph_raw_derived_hash_and_quality_recompute": "NOT_RUN",
+  "frozen_measurement_files_changed": false,
+  "algorithms_numpy_graph_zip_or_real_signals_executed": false,
+  "resolved_static_findings": [
+    "CSV/receipt rows cell binding",
+    "Noncompleted quality mask",
+    "Completed-quality query and attempt identity",
+    "Allattempt file/census/status binding",
+    "Auditor canonical source SHA captured at start and reverified at end"
+  ],
+  "canonical_review": "reviews/m6_analysis/independent_audit_review.md",
+  "previous_review_preserved": "reviews/m6_analysis/independent_previous_d891"
+}

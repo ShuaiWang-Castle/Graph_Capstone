@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-01T16:37:15.327062+00:00",
+  "status": "ACTUAL_PNG_REVIEW_PASS",
+  "actual_plot_command": [
+    "env",
+    "seven_CPU_library_threads=1",
+    "PYTHONDONTWRITEBYTECODE=1",
+    ".venv/bin/python",
+    "experiments/plot_m4.py",
+    "--run",
+    "results/m4/test_main_v12_002",
+    "--output",
+    "figures/m4/test_main_v12_002"
+  ],
+  "source_sha256": "ffc96e038ebdb2c09074f1e41207d094ee486b5ff3192a51e1902cd8426fba9b",
+  "independent_audit_before_plot": "reviews/m4_analysis/actual_test_v001/receipt.json",
+  "audit_sha256": "e90eea4816d9f3d5273dfc712eb30d10f0b948e37d37ea0b00ccd9135da5690f",
+  "PNG_viewed": [
+    "figures/m4/test_main_v12_002/quality_cost.png",
+    "figures/m4/test_main_v12_002/truth_phi.png",
+    "figures/m4/test_main_v12_002/completion_denominators.png"
+  ],
+  "observations": [
+    "All axes/labels/legends and CI bars readable; no clipping",
+    "Oracle panels separately labeled; all12planned panels have432/432denominators",
+    "Median main F1=1 does not establish mean recovery or same-quality speedup; actual mean table separately retained",
+    "HFD-CD/TL phi curves overlap because recorded qualities match; no invented offset"
+  ],
+  "artifact_sha256": {
+    "figures/m4/test_main_v12_002/completion_denominators.pdf": "4c96f25378cb0e1ac864fea833d472b1bf342a04c4723a7b5451ec854368b16a",
+    "figures/m4/test_main_v12_002/completion_denominators.png": "c3e618580ed44a0156e7b4dd4f274d8c7c40220edd07d69393a6e3ffece82604",
+    "figures/m4/test_main_v12_002/completion_denominators.svg": "292edacfbaf4e7ea6261b8ac939547bb1cb816ad44a10a566826bb97747d3cee",
+    "figures/m4/test_main_v12_002/quality_cost.pdf": "f31a43bc8ae26bc1bda8598e0c2f762ead9d4f80d642fc3df701d159fce640db",
+    "figures/m4/test_main_v12_002/quality_cost.png": "9d3e3d3a7257e22a3c6ebce2ff5ba2afa7d79e6a466cda1e41cfbf15ae038df5",
+    "figures/m4/test_main_v12_002/quality_cost.svg": "4870c3c3463db8bec4132b5435961b90c59b6db5571772ed7b6f60acad487456",
+    "figures/m4/test_main_v12_002/truth_phi.pdf": "1cd1740f612a76951f49e4a9d8ff22bfd6ceafd3953b179c6598a70e86197cd5",
+    "figures/m4/test_main_v12_002/truth_phi.png": "d2c8d73c16f10429ecdc8381c60302c441c464320fab4409eb7ce8aaf927363f",
+    "figures/m4/test_main_v12_002/truth_phi.svg": "bb7bf1edf89390963e3301402f7585637d0e936a007d426af7abd17989d1e1b0"
+  },
+  "figure_provenance_sha256": "d72ba4ddf6293c43e471bb8bba25173519acd5f66794d0e8e5f7585d1fc28c69",
+  "quality_scope": "Full independently audited original test cohort; no test mechanism analysis or tuning"
+}

@@ -1,0 +1,2574 @@
+{
+  "protocol": "zrhfd-v12-operational-20261001",
+  "cases": [
+    {
+      "case_id": "lfr_n1000_o00_m20_s11",
+      "split": "dev",
+      "graph_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m20_s11.graph.json",
+      "graph_sha256": "a35780a9cf45692523fdb1d1201a34875c1096949d372be6c47dbfc73870d261",
+      "truth_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m20_s11.truth.json",
+      "truth_sha256": "9cc070a2e4744bd06ed4039c2dc13d90193bb5180b6eb08bf188a741e7d948c9",
+      "queries_path": "data/dev/attached_queries/lfr_n1000_o00_m20_s11.queries.json",
+      "queries_sha256": "47b50d7d437345259d605f8f95efdc12d6f4b5ed7d1aa63ccbcfc89d7800c9fe",
+      "query_count": 12,
+      "source": "attached"
+    },
+    {
+      "case_id": "lfr_n1000_o00_m20_s12",
+      "split": "dev",
+      "graph_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m20_s12.graph.json",
+      "graph_sha256": "821213e90ec77ac8424a2f1eda0a0e6cb8b7dba9217b43d703b34f067dab297d",
+      "truth_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m20_s12.truth.json",
+      "truth_sha256": "6f90d8a0f9a86778bd2ad63acaeaa0de3f8c4a2aa48eeb4426b56b48022faf1d",
+      "queries_path": "data/dev/attached_queries/lfr_n1000_o00_m20_s12.queries.json",
+      "queries_sha256": "99becc20ae2cf9dd9b0e35f56805618636bdb813b847ca856a093cdbce00a52a",
+      "query_count": 12,
+      "source": "attached"
+    },
+    {
+      "case_id": "lfr_n1000_o00_m50_s11",
+      "split": "dev",
+      "graph_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m50_s11.graph.json",
+      "graph_sha256": "c9da5300026662c691131b6bb6ea5bc9612836e2ee55fa75fb9d37718203da43",
+      "truth_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m50_s11.truth.json",
+      "truth_sha256": "06bc63e8b57bf0562a8169a5e36f20edc26adad3fbf7539d12f5ca7905de9286",
+      "queries_path": "data/dev/attached_queries/lfr_n1000_o00_m50_s11.queries.json",
+      "queries_sha256": "1e39d766d066c50f9142001140071f888461b5fdaa194295d1db94390935cb1c",
+      "query_count": 12,
+      "source": "attached"
+    },
+    {
+      "case_id": "lfr_n1000_o00_m50_s12",
+      "split": "dev",
+      "graph_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m50_s12.graph.json",
+      "graph_sha256": "898f0fd80f831cccb10fec496f1dfbefac4c51abd860619b57c40c9819791ec0",
+      "truth_path": "inputs/local_hfd/graphs/lfr_n1000_o00_m50_s12.truth.json",
+      "truth_sha256": "bb5ae47c3dd9e556dee86a02f27b67b5e99dc8b45d3ec7e19c604a717a810664",
+      "queries_path": "data/dev/attached_queries/lfr_n1000_o00_m50_s12.queries.json",
+      "queries_sha256": "ae30d88706a95de0626a459f18d31d16755eba72d436d54a50d71880617b271c",
+      "query_count": 12,
+      "source": "attached"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r0_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r0_rep0.graph.json",
+      "graph_sha256": "29a3095b945288fc125f92653c0794214076eb06952f46857b36520698ac9a56",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r0_rep0.queries.json",
+      "queries_sha256": "ba9dc4dc3c122ff063c2e4436c7166d7edc769a2e4c2bc7c3b84dad95b95bad5",
+      "query_count": 8,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 88771303135585022394788579364861375095
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 20415878676138048196895822701363245039
+        },
+        "uinteger": 2898008639
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 27006474591755866109983108143581646711
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 241964028283057155667450617342196549737
+        },
+        "uinteger": 0
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 12882,
+        "external_edge_fraction": 0.23699736065828286,
+        "isolated_nodes": 0,
+        "max_degree": 82,
+        "mean_degree": 64.41,
+        "min_degree": 47,
+        "n": 400,
+        "total_volume": 25764,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.24316856002456247,
+          0.23214285714285715,
+          0.2385707598689343,
+          0.23404255319148937
+        ],
+        "truth_conductance_quantiles": [
+          0.23214285714285715,
+          0.23356762917933133,
+          0.23630665653021182,
+          0.23972020990784135,
+          0.24316856002456247
+        ],
+        "truth_cuts": [
+          1584,
+          1508,
+          1529,
+          1485
+        ],
+        "truth_volumes": [
+          6514,
+          6496,
+          6409,
+          6345
+        ],
+        "weighted_truth_conductance": 0.23699736065828286
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r0_rep0.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r0_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r0_rep1.graph.json",
+      "graph_sha256": "c96113dc8a01124443e5ebc18babbce16618e81f23d82cf62753d688a99c8de3",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r0_rep1.queries.json",
+      "queries_sha256": "4cf8a797fa4f90c13393ae21412ef6998e2465875d3c2ea40686f2576ef2071d",
+      "query_count": 8,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 321702677345279708515500382026823734647
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 339854596709777280609060148172795098789
+        },
+        "uinteger": 2992291006
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 88771303135585022394788579364861375095
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 20415878676138048196895822701363245039
+        },
+        "uinteger": 2898008639
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 13024,
+        "external_edge_fraction": 0.2379453316953317,
+        "isolated_nodes": 0,
+        "max_degree": 86,
+        "mean_degree": 65.12,
+        "min_degree": 50,
+        "n": 400,
+        "total_volume": 26048,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.23534798534798534,
+          0.23799327011318447,
+          0.23712948517940718,
+          0.24129505192425169
+        ],
+        "truth_conductance_quantiles": [
+          0.23534798534798534,
+          0.23668411022155172,
+          0.2375613776462958,
+          0.23881871556595127,
+          0.24129505192425169
+        ],
+        "truth_cuts": [
+          1542,
+          1556,
+          1520,
+          1580
+        ],
+        "truth_volumes": [
+          6552,
+          6538,
+          6410,
+          6548
+        ],
+        "weighted_truth_conductance": 0.2379453316953317
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r0_rep1.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r0_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r0_rep2.graph.json",
+      "graph_sha256": "3efb479c5ac5545e2b3c577104a0f1c2eb162bcdc3faae6e30a29927d5ce3d1f",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r0_rep2.queries.json",
+      "queries_sha256": "b81edfcd306366282c547f02e2f057a0ae34a1082fd29175b6844c36fc387e4a",
+      "query_count": 8,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 195720645434776411099553426119386675319
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 194381391184570595453355929420664581643
+        },
+        "uinteger": 1044661800
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 321702677345279708515500382026823734647
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 339854596709777280609060148172795098789
+        },
+        "uinteger": 2992291006
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 12881,
+        "external_edge_fraction": 0.2388789690241441,
+        "isolated_nodes": 0,
+        "max_degree": 85,
+        "mean_degree": 64.405,
+        "min_degree": 46,
+        "n": 400,
+        "total_volume": 25762,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.24076995897759546,
+          0.23954609047100886,
+          0.23664596273291927,
+          0.2385895283162876
+        ],
+        "truth_conductance_quantiles": [
+          0.23664596273291927,
+          0.2381036369204455,
+          0.23906780939364825,
+          0.23985205759765552,
+          0.24076995897759546
+        ],
+        "truth_cuts": [
+          1526,
+          1541,
+          1524,
+          1563
+        ],
+        "truth_volumes": [
+          6338,
+          6433,
+          6440,
+          6551
+        ],
+        "weighted_truth_conductance": 0.2388789690241441
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r0_rep2.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r1_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r1_rep0.graph.json",
+      "graph_sha256": "8bdc5ef467a1a945fa2c060efeb6b546a86d1c14df9128c1b88321bc696b70b4",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r1_rep0.queries.json",
+      "queries_sha256": "f8106190e67795e3f5110bc9abd3c71b6b6bc772d7223c5c890592d52fac8263",
+      "query_count": 8,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 247037419360512635655656027637017271159
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 202852565257037823026628723207297430433
+        },
+        "uinteger": 754528653
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 195720645434776411099553426119386675319
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 194381391184570595453355929420664581643
+        },
+        "uinteger": 1044661800
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 7050,
+        "external_edge_fraction": 0.16836879432624113,
+        "isolated_nodes": 0,
+        "max_degree": 50,
+        "mean_degree": 35.25,
+        "min_degree": 20,
+        "n": 400,
+        "total_volume": 14100,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.1688385269121813,
+          0.1699421965317919,
+          0.1671436748712078,
+          0.16758849557522124
+        ],
+        "truth_conductance_quantiles": [
+          0.1671436748712078,
+          0.16747729039921788,
+          0.16821351124370126,
+          0.16911444431708395,
+          0.1699421965317919
+        ],
+        "truth_cuts": [
+          596,
+          588,
+          584,
+          606
+        ],
+        "truth_volumes": [
+          3530,
+          3460,
+          3494,
+          3616
+        ],
+        "weighted_truth_conductance": 0.16836879432624113
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r1_rep0.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r1_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r1_rep1.graph.json",
+      "graph_sha256": "73c7004547080e9fb774ba4dd44f26823d278a6f974ad7df4f9796dc4c45b52c",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r1_rep1.queries.json",
+      "queries_sha256": "da0f218d88c5db7efd397faaa74bf0c5d03eb66cb4cf5ceedcdc8ae59d6921ea",
+      "query_count": 8,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 49060247980199414099992721870266465911
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 205618096731695117311215166091157147879
+        },
+        "uinteger": 3190246220
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 247037419360512635655656027637017271159
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 202852565257037823026628723207297430433
+        },
+        "uinteger": 754528653
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 7142,
+        "external_edge_fraction": 0.16381965835900308,
+        "isolated_nodes": 0,
+        "max_degree": 50,
+        "mean_degree": 35.71,
+        "min_degree": 20,
+        "n": 400,
+        "total_volume": 14284,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.16860787576261785,
+          0.15514848737163475,
+          0.16293222683264177,
+          0.16878612716763006
+        ],
+        "truth_conductance_quantiles": [
+          0.15514848737163475,
+          0.16098629196739,
+          0.1657700512976298,
+          0.16865243861387091,
+          0.16878612716763006
+        ],
+        "truth_cuts": [
+          608,
+          559,
+          589,
+          584
+        ],
+        "truth_volumes": [
+          3606,
+          3603,
+          3615,
+          3460
+        ],
+        "weighted_truth_conductance": 0.16381965835900308
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r1_rep1.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 100,
+      "case_id": "sbm_k4_r1_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r1_rep2.graph.json",
+      "graph_sha256": "1be4af900fb0f92a1fb8d81c864182fd34eba59a0f79d5028f9142374c535606",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r1_rep2.queries.json",
+      "queries_sha256": "dd443bfdd61dcac990ef5e007cd207bca5eddfb3547089cde73c26175e5d01ec",
+      "query_count": 8,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 290986144112247974949056469045164646775
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 39205014491427914781405932989871496029
+        },
+        "uinteger": 368007933
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 49060247980199414099992721870266465911
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 205618096731695117311215166091157147879
+        },
+        "uinteger": 3190246220
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 7183,
+        "external_edge_fraction": 0.17054155645273564,
+        "isolated_nodes": 0,
+        "max_degree": 52,
+        "mean_degree": 35.915,
+        "min_degree": 19,
+        "n": 400,
+        "total_volume": 14366,
+        "truth_block_labels_sha256": "e34f9d9cc66925494196af0caec649f12b78d6bd897ae1cacf7858f0cdfbccb5",
+        "truth_conductance": [
+          0.1675946547884187,
+          0.1745152354570637,
+          0.16860143725815369,
+          0.17146080090242527
+        ],
+        "truth_conductance_quantiles": [
+          0.1675946547884187,
+          0.16834974164071995,
+          0.17003111908028948,
+          0.17222440954108487,
+          0.1745152354570637
+        ],
+        "truth_cuts": [
+          602,
+          630,
+          610,
+          608
+        ],
+        "truth_volumes": [
+          3592,
+          3610,
+          3618,
+          3546
+        ],
+        "weighted_truth_conductance": 0.17054155645273564
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r1_rep2.truth.json",
+      "truth_sha256": "cde46c06f14667e63e6be648311492a9af24f5c7804d67820a18cf00b5049032"
+    },
+    {
+      "K": 4,
+      "block_size": 80,
+      "case_id": "sbm_k4_r2_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r2_rep0.graph.json",
+      "graph_sha256": "1229eee2014e71d23bab91c8fddf54ee4fa0e89e62884b7042dec01a5ebf7b3f",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r2_rep0.queries.json",
+      "queries_sha256": "92164568dd4188abd348804bbd7004078be3bdc7112bbac91b73f20303b02d35",
+      "query_count": 8,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 278944323460264048383452966037235814775
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 107416681378735607447688147932631766147
+        },
+        "uinteger": 133490277
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 290986144112247974949056469045164646775
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 39205014491427914781405932989871496029
+        },
+        "uinteger": 368007933
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 9574,
+        "external_edge_fraction": 0.19824524754543554,
+        "isolated_nodes": 0,
+        "max_degree": 79,
+        "mean_degree": 59.8375,
+        "min_degree": 46,
+        "n": 320,
+        "total_volume": 19148,
+        "truth_block_labels_sha256": "120ca555325ed877027526bf7fe174b6b4cb857942de8f83b73a7121c4590d99",
+        "truth_conductance": [
+          0.1908748430305567,
+          0.1970260223048327,
+          0.2061164641809803,
+          0.19899032393773664
+        ],
+        "truth_conductance_quantiles": [
+          0.1908748430305567,
+          0.1954882274862637,
+          0.19800817312128466,
+          0.20077185899854755,
+          0.2061164641809803
+        ],
+        "truth_cuts": [
+          912,
+          954,
+          984,
+          946
+        ],
+        "truth_volumes": [
+          4778,
+          4842,
+          4774,
+          4754
+        ],
+        "weighted_truth_conductance": 0.19824524754543554
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r2_rep0.truth.json",
+      "truth_sha256": "3c2bb97890f4597364d3ca7eaf72e389c24a639ca3fa6028dacd66043a2645b5"
+    },
+    {
+      "K": 4,
+      "block_size": 80,
+      "case_id": "sbm_k4_r2_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r2_rep1.graph.json",
+      "graph_sha256": "f4396a17af2956298c1f5515d9a3133d1ed6b5c6df46bc820cfd6289d4478180",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r2_rep1.queries.json",
+      "queries_sha256": "fdd1d8faad9b0f9bfe81fc56032279ba9b42800f27c6da7c143b3bb10521cea2",
+      "query_count": 8,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 318073295635912764139073629168920920439
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 267083068827108675040275351786718022105
+        },
+        "uinteger": 1086412567
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 278944323460264048383452966037235814775
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 107416681378735607447688147932631766147
+        },
+        "uinteger": 133490277
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 9450,
+        "external_edge_fraction": 0.20412698412698413,
+        "isolated_nodes": 0,
+        "max_degree": 79,
+        "mean_degree": 59.0625,
+        "min_degree": 43,
+        "n": 320,
+        "total_volume": 18900,
+        "truth_block_labels_sha256": "120ca555325ed877027526bf7fe174b6b4cb857942de8f83b73a7121c4590d99",
+        "truth_conductance": [
+          0.20672769853097722,
+          0.20982426423883124,
+          0.1989774179804005,
+          0.2010029251984956
+        ],
+        "truth_conductance_quantiles": [
+          0.1989774179804005,
+          0.20049654839397182,
+          0.20386531186473641,
+          0.20750183995794072,
+          0.20982426423883124
+        ],
+        "truth_cuts": [
+          971,
+          991,
+          934,
+          962
+        ],
+        "truth_volumes": [
+          4697,
+          4723,
+          4694,
+          4786
+        ],
+        "weighted_truth_conductance": 0.20412698412698413
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r2_rep1.truth.json",
+      "truth_sha256": "3c2bb97890f4597364d3ca7eaf72e389c24a639ca3fa6028dacd66043a2645b5"
+    },
+    {
+      "K": 4,
+      "block_size": 80,
+      "case_id": "sbm_k4_r2_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r2_rep2.graph.json",
+      "graph_sha256": "0ee7c33507a192f93ea055e58ff70335cfdb99fa69af4e2110df8bd352c65913",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r2_rep2.queries.json",
+      "queries_sha256": "8b81866580adf76b3d5f88991eaab8d2016abf798993a57801dbaab1d0891925",
+      "query_count": 8,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 264147964750734379249677349254382825847
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 254827900022211024101262349987154080991
+        },
+        "uinteger": 1085125695
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 318073295635912764139073629168920920439
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 267083068827108675040275351786718022105
+        },
+        "uinteger": 1086412567
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 9522,
+        "external_edge_fraction": 0.19785759294265912,
+        "isolated_nodes": 0,
+        "max_degree": 76,
+        "mean_degree": 59.5125,
+        "min_degree": 44,
+        "n": 320,
+        "total_volume": 19044,
+        "truth_block_labels_sha256": "120ca555325ed877027526bf7fe174b6b4cb857942de8f83b73a7121c4590d99",
+        "truth_conductance": [
+          0.1935483870967742,
+          0.19807571637732693,
+          0.20050282840980516,
+          0.1992465466722478
+        ],
+        "truth_conductance_quantiles": [
+          0.1935483870967742,
+          0.19694388405718874,
+          0.19866113152478737,
+          0.19956061710663714,
+          0.20050282840980516
+        ],
+        "truth_cuts": [
+          912,
+          947,
+          957,
+          952
+        ],
+        "truth_volumes": [
+          4712,
+          4781,
+          4773,
+          4778
+        ],
+        "weighted_truth_conductance": 0.19785759294265912
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r2_rep2.truth.json",
+      "truth_sha256": "3c2bb97890f4597364d3ca7eaf72e389c24a639ca3fa6028dacd66043a2645b5"
+    },
+    {
+      "K": 4,
+      "block_size": 250,
+      "case_id": "sbm_k4_r3_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r3_rep0.graph.json",
+      "graph_sha256": "9beacb1d3a891e1f194d932a9edec59ea6e4d341a352ec878fb6b10cbe1eb623",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r3_rep0.queries.json",
+      "queries_sha256": "790e647ad4461be7feaf4493f978f2436868862e95a2a243cf7c9f64b9813101",
+      "query_count": 8,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 121692251268557394028856241455587363895
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 48682935332688152272224024182354205461
+        },
+        "uinteger": 1257856313
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 264147964750734379249677349254382825847
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 254827900022211024101262349987154080991
+        },
+        "uinteger": 1085125695
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 16132,
+        "external_edge_fraction": 0.22582444830151252,
+        "isolated_nodes": 0,
+        "max_degree": 56,
+        "mean_degree": 32.264,
+        "min_degree": 16,
+        "n": 1000,
+        "total_volume": 32264,
+        "truth_block_labels_sha256": "b294388e05cdc16f453ade67d196377df854d30e989eab7e0b1b9d6aebf7b8ab",
+        "truth_conductance": [
+          0.22307595415039677,
+          0.22001471670345843,
+          0.23159203980099502,
+          0.22863116467839134
+        ],
+        "truth_conductance_quantiles": [
+          0.22001471670345843,
+          0.2223106447886622,
+          0.22585355941439406,
+          0.22937138345904226,
+          0.23159203980099502
+        ],
+        "truth_cuts": [
+          1771,
+          1794,
+          1862,
+          1859
+        ],
+        "truth_volumes": [
+          7939,
+          8154,
+          8040,
+          8131
+        ],
+        "weighted_truth_conductance": 0.22582444830151252
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r3_rep0.truth.json",
+      "truth_sha256": "1df8804124c84792f7648901855a94b7f7451b212cf65325734538edb80ae6d3"
+    },
+    {
+      "K": 4,
+      "block_size": 250,
+      "case_id": "sbm_k4_r3_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r3_rep1.graph.json",
+      "graph_sha256": "307743e1b08f8614e81fdc5dd6833a73764dfed60ba3c362735bed10ff7398cd",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r3_rep1.queries.json",
+      "queries_sha256": "e7ced03c403f3e18f727b07de7689723df8ec0b6469e7a53c790a7c08f4eb7c9",
+      "query_count": 8,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 337300184345625302306567114663728850679
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 300704887800337122458018738839622495739
+        },
+        "uinteger": 2524643504
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 121692251268557394028856241455587363895
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 48682935332688152272224024182354205461
+        },
+        "uinteger": 1257856313
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 16084,
+        "external_edge_fraction": 0.2289231534444168,
+        "isolated_nodes": 0,
+        "max_degree": 49,
+        "mean_degree": 32.168,
+        "min_degree": 17,
+        "n": 1000,
+        "total_volume": 32168,
+        "truth_block_labels_sha256": "b294388e05cdc16f453ade67d196377df854d30e989eab7e0b1b9d6aebf7b8ab",
+        "truth_conductance": [
+          0.22509225092250923,
+          0.226124460874923,
+          0.2357295195082173,
+          0.22874863188617292
+        ],
+        "truth_conductance_quantiles": [
+          0.22509225092250923,
+          0.22586640838681954,
+          0.22743654638054794,
+          0.23049385379168402,
+          0.2357295195082173
+        ],
+        "truth_cuts": [
+          1769,
+          1835,
+          1879,
+          1881
+        ],
+        "truth_volumes": [
+          7859,
+          8115,
+          7971,
+          8223
+        ],
+        "weighted_truth_conductance": 0.2289231534444168
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r3_rep1.truth.json",
+      "truth_sha256": "1df8804124c84792f7648901855a94b7f7451b212cf65325734538edb80ae6d3"
+    },
+    {
+      "K": 4,
+      "block_size": 250,
+      "case_id": "sbm_k4_r3_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k4_r3_rep2.graph.json",
+      "graph_sha256": "87332fef79213886427e81909c9e4de4662742df759e1b9dfb033af3fd822638",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k4_r3_rep2.queries.json",
+      "queries_sha256": "a639eb7c827b8082076103e97cde6874af49cce066e4eacffac5a32896cdd634",
+      "query_count": 8,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 211342838393453775422089558794454827447
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 313122320375552593512178428528320441105
+        },
+        "uinteger": 1870534790
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 337300184345625302306567114663728850679
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 300704887800337122458018738839622495739
+        },
+        "uinteger": 2524643504
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 4,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 16398,
+        "external_edge_fraction": 0.2291742895475058,
+        "isolated_nodes": 0,
+        "max_degree": 50,
+        "mean_degree": 32.796,
+        "min_degree": 19,
+        "n": 1000,
+        "total_volume": 32796,
+        "truth_block_labels_sha256": "b294388e05cdc16f453ade67d196377df854d30e989eab7e0b1b9d6aebf7b8ab",
+        "truth_conductance": [
+          0.22254830031792613,
+          0.23772930094199307,
+          0.23095643708931612,
+          0.2256361017762842
+        ],
+        "truth_conductance_quantiles": [
+          0.22254830031792613,
+          0.2248641514116947,
+          0.22829626943280018,
+          0.23264965305248536,
+          0.23772930094199307
+        ],
+        "truth_cuts": [
+          1820,
+          1918,
+          1898,
+          1880
+        ],
+        "truth_volumes": [
+          8178,
+          8068,
+          8218,
+          8332
+        ],
+        "weighted_truth_conductance": 0.2291742895475058
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k4_r3_rep2.truth.json",
+      "truth_sha256": "1df8804124c84792f7648901855a94b7f7451b212cf65325734538edb80ae6d3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r0_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r0_rep0.graph.json",
+      "graph_sha256": "c8224701a62f6f1943746fe6c13362d5c41ae2cb58db7af569f72e26d04c9e12",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r0_rep0.queries.json",
+      "queries_sha256": "0eb4eaaafed2b8cc71681bbaee20ade4d05521d7253f826ccb2cf70f9cbc87f8",
+      "query_count": 16,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 259525679149800754998638494746283118007
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 37166497629841765855286387164971095501
+        },
+        "uinteger": 840127632
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 211342838393453775422089558794454827447
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 313122320375552593512178428528320441105
+        },
+        "uinteger": 1870534790
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 33616,
+        "external_edge_fraction": 0.41319609709662064,
+        "isolated_nodes": 0,
+        "max_degree": 110,
+        "mean_degree": 84.04,
+        "min_degree": 62,
+        "n": 800,
+        "total_volume": 67232,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.41152703505644683,
+          0.419446752938383,
+          0.41422793242921724,
+          0.4092696294531157,
+          0.42001184132622854,
+          0.4097659498633717,
+          0.41192084942084944,
+          0.4093546477205447
+        ],
+        "truth_conductance_quantiles": [
+          0.4092696294531157,
+          0.40966312432766494,
+          0.41172394223864817,
+          0.4155326375565087,
+          0.42001184132622854
+        ],
+        "truth_cuts": [
+          3463,
+          3533,
+          3482,
+          3435,
+          3547,
+          3449,
+          3414,
+          3457
+        ],
+        "truth_volumes": [
+          8415,
+          8423,
+          8406,
+          8393,
+          8445,
+          8417,
+          8288,
+          8445
+        ],
+        "weighted_truth_conductance": 0.41319609709662064
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r0_rep0.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r0_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r0_rep1.graph.json",
+      "graph_sha256": "18d05dbe6e2f67641a24ad6fbfb27d9f41835f7c18eb7baf14ed8391bdce7997",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r0_rep1.queries.json",
+      "queries_sha256": "5b280f81f1fc5acc98a58eca182e8a2e3bfd0b7f39b321a92de18666936c0377",
+      "query_count": 16,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 45028483580289457508868201315576781239
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 42338258428651921035806204002130540361
+        },
+        "uinteger": 592660977
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 259525679149800754998638494746283118007
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 37166497629841765855286387164971095501
+        },
+        "uinteger": 840127632
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 33638,
+        "external_edge_fraction": 0.4135501516142458,
+        "isolated_nodes": 0,
+        "max_degree": 109,
+        "mean_degree": 84.095,
+        "min_degree": 61,
+        "n": 800,
+        "total_volume": 67276,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.4187074423605304,
+          0.40705052878965925,
+          0.4096158378505774,
+          0.4230542799952902,
+          0.413051230238916,
+          0.4158249158249158,
+          0.41146589259796806,
+          0.4096686067228887
+        ],
+        "truth_conductance_quantiles": [
+          0.40705052878965925,
+          0.40965541450481086,
+          0.412258561418442,
+          0.41654554745881944,
+          0.4230542799952902
+        ],
+        "truth_cuts": [
+          3505,
+          3464,
+          3476,
+          3593,
+          3475,
+          3458,
+          3402,
+          3449
+        ],
+        "truth_volumes": [
+          8371,
+          8510,
+          8486,
+          8493,
+          8413,
+          8316,
+          8268,
+          8419
+        ],
+        "weighted_truth_conductance": 0.4135501516142458
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r0_rep1.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r0_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r0_rep2.graph.json",
+      "graph_sha256": "ebe8b8bfdccd937bb83189aed22db7709f35a05d151792f83e5341a744a7d9d4",
+      "p": 0.5,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r0_rep2.queries.json",
+      "queries_sha256": "d048348df6172632ae2092061001a398fcc8c40b7507e976e41c6b12b3b79921",
+      "query_count": 16,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 80425403876652104291652633138021377463
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 278463535522165133349887796428630616965
+        },
+        "uinteger": 4220986966
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 45028483580289457508868201315576781239
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 42338258428651921035806204002130540361
+        },
+        "uinteger": 592660977
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 33806,
+        "external_edge_fraction": 0.4093947819913625,
+        "isolated_nodes": 0,
+        "max_degree": 112,
+        "mean_degree": 84.515,
+        "min_degree": 61,
+        "n": 800,
+        "total_volume": 67612,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.4037735849056604,
+          0.41190335886859164,
+          0.40667606958157027,
+          0.41797806390081066,
+          0.4125285559697006,
+          0.4103801341649994,
+          0.40393914376695367,
+          0.4081343107117522
+        ],
+        "truth_conductance_quantiles": [
+          0.4037735849056604,
+          0.4059918381279161,
+          0.4092572224383758,
+          0.4120596581438689,
+          0.41797806390081066
+        ],
+        "truth_cuts": [
+          3424,
+          3495,
+          3460,
+          3506,
+          3431,
+          3487,
+          3425,
+          3452
+        ],
+        "truth_volumes": [
+          8480,
+          8485,
+          8508,
+          8388,
+          8317,
+          8497,
+          8479,
+          8458
+        ],
+        "weighted_truth_conductance": 0.4093947819913625
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r0_rep2.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r1_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r1_rep0.graph.json",
+      "graph_sha256": "33644c565e8aa281b2721a53286e8d14d1af5c1377b0efb71ae7f978be3a8b31",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r1_rep0.queries.json",
+      "queries_sha256": "e26a91e3104711c0e7a8719d47d9dff722229af26853d2776bf320780d88f033",
+      "query_count": 16,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 178989692198367577698953020012478083511
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 184947213679251488753703125526468005505
+        },
+        "uinteger": 521084710
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 80425403876652104291652633138021377463
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 278463535522165133349887796428630616965
+        },
+        "uinteger": 4220986966
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 17292,
+        "external_edge_fraction": 0.32205644228544994,
+        "isolated_nodes": 0,
+        "max_degree": 62,
+        "mean_degree": 43.23,
+        "min_degree": 26,
+        "n": 800,
+        "total_volume": 34584,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.3271577044735653,
+          0.32681764004767583,
+          0.33287260999769636,
+          0.32040164308534913,
+          0.32071061243571763,
+          0.3144449605202044,
+          0.31431244153414406,
+          0.319634703196347
+        ],
+        "truth_conductance_quantiles": [
+          0.31431244153414406,
+          0.31833726752731134,
+          0.3205561277605334,
+          0.3269026561541482,
+          0.33287260999769636
+        ],
+        "truth_cuts": [
+          1448,
+          1371,
+          1445,
+          1404,
+          1372,
+          1354,
+          1344,
+          1400
+        ],
+        "truth_volumes": [
+          4426,
+          4195,
+          4341,
+          4382,
+          4278,
+          4306,
+          4276,
+          4380
+        ],
+        "weighted_truth_conductance": 0.32205644228544994
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r1_rep0.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r1_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r1_rep1.graph.json",
+      "graph_sha256": "46347549651dad0231efdad55062d7aa80d407220e7c4954572b160f802c0035",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r1_rep1.queries.json",
+      "queries_sha256": "a534b5b2e8343938d1d737c2434eaf4796e6bb62c4c5c53ff875d092b6eb177b",
+      "query_count": 16,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 180976965845982781518142640160653360567
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 239528402607526531045945089022036409405
+        },
+        "uinteger": 2349836639
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 178989692198367577698953020012478083511
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 184947213679251488753703125526468005505
+        },
+        "uinteger": 521084710
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 17343,
+        "external_edge_fraction": 0.32185896327048374,
+        "isolated_nodes": 0,
+        "max_degree": 62,
+        "mean_degree": 43.3575,
+        "min_degree": 28,
+        "n": 800,
+        "total_volume": 34686,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.3162236480293309,
+          0.3140096618357488,
+          0.31377079482439924,
+          0.3257247203834741,
+          0.3262964662689307,
+          0.3273015154942321,
+          0.31508099475245266,
+          0.33611691022964507
+        ],
+        "truth_conductance_quantiles": [
+          0.31377079482439924,
+          0.3148131615232767,
+          0.3209741842064025,
+          0.32654772857525605,
+          0.33611691022964507
+        ],
+        "truth_cuts": [
+          1380,
+          1300,
+          1358,
+          1427,
+          1422,
+          1447,
+          1381,
+          1449
+        ],
+        "truth_volumes": [
+          4364,
+          4140,
+          4328,
+          4381,
+          4358,
+          4421,
+          4383,
+          4311
+        ],
+        "weighted_truth_conductance": 0.32185896327048374
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r1_rep1.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 100,
+      "case_id": "sbm_k8_r1_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r1_rep2.graph.json",
+      "graph_sha256": "ca0c67ef88287f2aa8daf538aba8eef337fad25aaac849e4bce9fa0b34b9a718",
+      "p": 0.3,
+      "q": 0.02,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r1_rep2.queries.json",
+      "queries_sha256": "763067dbdcb97037f340b1cb33d15225412b96f44b16463afac4d7719d9e0c85",
+      "query_count": 16,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 320878278695945301265248178324412647863
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 129881741233099458865071775692450812089
+        },
+        "uinteger": 2765775761
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 180976965845982781518142640160653360567
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 239528402607526531045945089022036409405
+        },
+        "uinteger": 2349836639
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "edge_count": 17522,
+        "external_edge_fraction": 0.3171441616253852,
+        "isolated_nodes": 0,
+        "max_degree": 65,
+        "mean_degree": 43.805,
+        "min_degree": 26,
+        "n": 800,
+        "total_volume": 35044,
+        "truth_block_labels_sha256": "8a5d1177ad4e59015ce2efc33bb49aee2676b896971c497099404465120584a8",
+        "truth_conductance": [
+          0.3035913450814187,
+          0.3153651232434923,
+          0.31798296108680635,
+          0.3289233576642336,
+          0.3187061750735128,
+          0.32794830371567046,
+          0.321345165810369,
+          0.30401615436392193
+        ],
+        "truth_conductance_quantiles": [
+          0.3035913450814187,
+          0.31252788102359974,
+          0.31834456808015954,
+          0.32299595028669437,
+          0.3289233576642336
+        ],
+        "truth_cuts": [
+          1361,
+          1369,
+          1381,
+          1442,
+          1409,
+          1421,
+          1376,
+          1355
+        ],
+        "truth_volumes": [
+          4483,
+          4341,
+          4343,
+          4384,
+          4421,
+          4333,
+          4282,
+          4457
+        ],
+        "weighted_truth_conductance": 0.3171441616253852
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r1_rep2.truth.json",
+      "truth_sha256": "4816002e2423d34526da48e98f8c836b3ed48271e6009a979ab46791d1e3d8c3"
+    },
+    {
+      "K": 8,
+      "block_size": 80,
+      "case_id": "sbm_k8_r2_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r2_rep0.graph.json",
+      "graph_sha256": "b11714cb8ae08db25747ba0f54a7aa0d9bd6113c65d7ba8f6d8ad16494a8f22c",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r2_rep0.queries.json",
+      "queries_sha256": "715e1cbd540666fa93c9d7a7aee0e943706bd9eee74a69fa13d608d0d3357588",
+      "query_count": 16,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 253478746990864906524918635178158197175
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 204487168139103120683639026752326133749
+        },
+        "uinteger": 2602421949
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 320878278695945301265248178324412647863
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 129881741233099458865071775692450812089
+        },
+        "uinteger": 2765775761
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 24123,
+        "external_edge_fraction": 0.3689010487916097,
+        "isolated_nodes": 0,
+        "max_degree": 93,
+        "mean_degree": 75.384375,
+        "min_degree": 54,
+        "n": 640,
+        "total_volume": 48246,
+        "truth_block_labels_sha256": "f2040bc34582f9ecf1ccd2faf8cdcdb9227b27bfdbe0625cea9e8f1ce0e65f6b",
+        "truth_conductance": [
+          0.36554269417882906,
+          0.36494300346935404,
+          0.3745006657789614,
+          0.37493808816245666,
+          0.36135839103198153,
+          0.371712158808933,
+          0.3677292145908643,
+          0.37051926298157456
+        ],
+        "truth_conductance_quantiles": [
+          0.36135839103198153,
+          0.3653927715014603,
+          0.3691242387862194,
+          0.3724092855514401,
+          0.37493808816245666
+        ],
+        "truth_cuts": [
+          2179,
+          2209,
+          2250,
+          2271,
+          2192,
+          2247,
+          2238,
+          2212
+        ],
+        "truth_volumes": [
+          5961,
+          6053,
+          6008,
+          6057,
+          6066,
+          6045,
+          6086,
+          5970
+        ],
+        "weighted_truth_conductance": 0.3689010487916097
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r2_rep0.truth.json",
+      "truth_sha256": "58e42b706da808593bcd697f5c1087275cc525e9bbd0f100a40df5faeec8d50d"
+    },
+    {
+      "K": 8,
+      "block_size": 80,
+      "case_id": "sbm_k8_r2_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r2_rep1.graph.json",
+      "graph_sha256": "34618c93b09541e8f7a5a3e9e0ce2779c1a0a970d96dda00c800913b827f7dca",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r2_rep1.queries.json",
+      "queries_sha256": "f6e27d68f841fe680f4c32e23d2f9ff813ad77257b9909d02879141a2f3177c3",
+      "query_count": 16,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 286434498096741490852108914536269138359
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 42176693444333201393163890882605932017
+        },
+        "uinteger": 1579245085
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 253478746990864906524918635178158197175
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 204487168139103120683639026752326133749
+        },
+        "uinteger": 2602421949
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 24200,
+        "external_edge_fraction": 0.3677685950413223,
+        "isolated_nodes": 0,
+        "max_degree": 94,
+        "mean_degree": 75.625,
+        "min_degree": 53,
+        "n": 640,
+        "total_volume": 48400,
+        "truth_block_labels_sha256": "f2040bc34582f9ecf1ccd2faf8cdcdb9227b27bfdbe0625cea9e8f1ce0e65f6b",
+        "truth_conductance": [
+          0.3623043623043623,
+          0.37012113055181695,
+          0.3674131775397598,
+          0.3666722604463836,
+          0.37073170731707317,
+          0.3691696989745286,
+          0.3703520079325731,
+          0.3653403485695495
+        ],
+        "truth_conductance_quantiles": [
+          0.3623043623043623,
+          0.36633928247717507,
+          0.3682914382571442,
+          0.370178849897006,
+          0.37073170731707317
+        ],
+        "truth_cuts": [
+          2176,
+          2200,
+          2264,
+          2185,
+          2280,
+          2232,
+          2241,
+          2222
+        ],
+        "truth_volumes": [
+          6006,
+          5944,
+          6162,
+          5959,
+          6150,
+          6046,
+          6051,
+          6082
+        ],
+        "weighted_truth_conductance": 0.3677685950413223
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r2_rep1.truth.json",
+      "truth_sha256": "58e42b706da808593bcd697f5c1087275cc525e9bbd0f100a40df5faeec8d50d"
+    },
+    {
+      "K": 8,
+      "block_size": 80,
+      "case_id": "sbm_k8_r2_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r2_rep2.graph.json",
+      "graph_sha256": "015096a9027dc40e7bbde1e06f273a58115a5d2d913f600a724705b925d5eed6",
+      "p": 0.6,
+      "q": 0.05,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r2_rep2.queries.json",
+      "queries_sha256": "a6c8f7ff3fe51db41a8f513797c27e501758c0ed18ab88bc5a655c239112f52c",
+      "query_count": 16,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 3716474162299538572458599867235273143
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 248648598101349999480309251067868090029
+        },
+        "uinteger": 1767555481
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 286434498096741490852108914536269138359
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 42176693444333201393163890882605932017
+        },
+        "uinteger": 1579245085
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "edge_count": 24169,
+        "external_edge_fraction": 0.3775083785013861,
+        "isolated_nodes": 0,
+        "max_degree": 98,
+        "mean_degree": 75.528125,
+        "min_degree": 53,
+        "n": 640,
+        "total_volume": 48338,
+        "truth_block_labels_sha256": "f2040bc34582f9ecf1ccd2faf8cdcdb9227b27bfdbe0625cea9e8f1ce0e65f6b",
+        "truth_conductance": [
+          0.37325217963480833,
+          0.37262671289417204,
+          0.3745863666446062,
+          0.36868104725835665,
+          0.38272021599730005,
+          0.3836978131212724,
+          0.38205212801055755,
+          0.3826101303415278
+        ],
+        "truth_conductance_quantiles": [
+          0.36868104725835665,
+          0.3730958129496493,
+          0.3783192473275819,
+          0.3826376517554709,
+          0.3836978131212724
+        ],
+        "truth_cuts": [
+          2269,
+          2257,
+          2264,
+          2239,
+          2268,
+          2316,
+          2316,
+          2319
+        ],
+        "truth_volumes": [
+          6079,
+          6057,
+          6044,
+          6073,
+          5926,
+          6036,
+          6062,
+          6061
+        ],
+        "weighted_truth_conductance": 0.3775083785013861
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r2_rep2.truth.json",
+      "truth_sha256": "58e42b706da808593bcd697f5c1087275cc525e9bbd0f100a40df5faeec8d50d"
+    },
+    {
+      "K": 8,
+      "block_size": 250,
+      "case_id": "sbm_k8_r3_rep0",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r3_rep0.graph.json",
+      "graph_sha256": "d7e210b099140dd7d0360e2babb7a6777705c357c8262f3dd1b634f2d4077f5c",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r3_rep0.queries.json",
+      "queries_sha256": "bb5c1aea652f4c5cee384197d6f1ca66d299ef9ff9f08d72094f2ff1c94fccae",
+      "query_count": 16,
+      "rep": 0,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 118662405084032867967983072406195238071
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 302420468101006255389438323629116200489
+        },
+        "uinteger": 945519247
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 3716474162299538572458599867235273143
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 248648598101349999480309251067868090029
+        },
+        "uinteger": 1767555481
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 42421,
+        "external_edge_fraction": 0.41437024115414534,
+        "isolated_nodes": 0,
+        "max_degree": 64,
+        "mean_degree": 42.421,
+        "min_degree": 23,
+        "n": 2000,
+        "total_volume": 84842,
+        "truth_block_labels_sha256": "1d68947837deb6f43e4d2ec80d28e952a179ac3044af8d4ba408decd673e4955",
+        "truth_conductance": [
+          0.4146017279027817,
+          0.42423098697867523,
+          0.411877947829435,
+          0.4104787033546928,
+          0.41514018691588783,
+          0.4168241965973535,
+          0.4044912669808705,
+          0.4174757281553398
+        ],
+        "truth_conductance_quantiles": [
+          0.4044912669808705,
+          0.41152813671074945,
+          0.4148709574093348,
+          0.41698707948685004,
+          0.42423098697867523
+        ],
+        "truth_cuts": [
+          4367,
+          4496,
+          4279,
+          4356,
+          4442,
+          4410,
+          4377,
+          4429
+        ],
+        "truth_volumes": [
+          10533,
+          10598,
+          10389,
+          10612,
+          10700,
+          10580,
+          10821,
+          10609
+        ],
+        "weighted_truth_conductance": 0.41437024115414534
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r3_rep0.truth.json",
+      "truth_sha256": "5639f0807253bed3fd4d7cb368113abe4c03c0bd0fd43233f2f176f6bb18433a"
+    },
+    {
+      "K": 8,
+      "block_size": 250,
+      "case_id": "sbm_k8_r3_rep1",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r3_rep1.graph.json",
+      "graph_sha256": "5f84f8428c71e78b317cf5ea8dc67d235f3fd4c9ad28fd866bddc0d7f62dd1e6",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r3_rep1.queries.json",
+      "queries_sha256": "ba7a34c7cabbfc42b5eff6aa06dfddbd9e0c5666573692bb4da479fb459b7434",
+      "query_count": 16,
+      "rep": 1,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 260423508256061345866185158345466666935
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 94213026598962302975869610087722733669
+        },
+        "uinteger": 2178225073
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 118662405084032867967983072406195238071
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 302420468101006255389438323629116200489
+        },
+        "uinteger": 945519247
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 42184,
+        "external_edge_fraction": 0.41065332827612366,
+        "isolated_nodes": 0,
+        "max_degree": 71,
+        "mean_degree": 42.184,
+        "min_degree": 22,
+        "n": 2000,
+        "total_volume": 84368,
+        "truth_block_labels_sha256": "1d68947837deb6f43e4d2ec80d28e952a179ac3044af8d4ba408decd673e4955",
+        "truth_conductance": [
+          0.4067049808429119,
+          0.4211930627024967,
+          0.42133131618759456,
+          0.4134014764338444,
+          0.4027579648121731,
+          0.40767654182970003,
+          0.40778825097591165,
+          0.40436432637571157
+        ],
+        "truth_conductance_quantiles": [
+          0.4027579648121731,
+          0.4061198172261118,
+          0.40773239640280584,
+          0.4153493730010075,
+          0.42133131618759456
+        ],
+        "truth_cuts": [
+          4246,
+          4420,
+          4456,
+          4368,
+          4235,
+          4376,
+          4283,
+          4262
+        ],
+        "truth_volumes": [
+          10440,
+          10494,
+          10576,
+          10566,
+          10515,
+          10734,
+          10503,
+          10540
+        ],
+        "weighted_truth_conductance": 0.41065332827612366
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r3_rep1.truth.json",
+      "truth_sha256": "5639f0807253bed3fd4d7cb368113abe4c03c0bd0fd43233f2f176f6bb18433a"
+    },
+    {
+      "K": 8,
+      "block_size": 250,
+      "case_id": "sbm_k8_r3_rep2",
+      "generator": "SBM full-matrix rng upper triangle",
+      "graph_path": "data/dev/sbm_v12/sbm_k8_r3_rep2.graph.json",
+      "graph_sha256": "20235a315063e8ec2895ef4ec140446fdad17b1a4b4daa44ac0974cb2038f2e0",
+      "p": 0.1,
+      "q": 0.01,
+      "queries_path": "data/dev/sbm_v12/sbm_k8_r3_rep2.queries.json",
+      "queries_sha256": "fe409100804ac81b2e24c9b7756ecfeb544317a4c3fa3649534512f0669e7de9",
+      "query_count": 16,
+      "rep": 2,
+      "rng_after_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 287769343065277549447101638619611351735
+        },
+        "uinteger": 0
+      },
+      "rng_after_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 292322016666055234231782535038936144225
+        },
+        "uinteger": 3316450891
+      },
+      "rng_before_graph": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 210460154116169540440762412809644657809,
+          "state": 260423508256061345866185158345466666935
+        },
+        "uinteger": 0
+      },
+      "rng_before_queries": {
+        "bit_generator": "PCG64",
+        "has_uint32": 0,
+        "state": {
+          "inc": 160544239301810032799105021982373903455,
+          "state": 94213026598962302975869610087722733669
+        },
+        "uinteger": 2178225073
+      },
+      "split": "dev",
+      "statistics": {
+        "community_count": 8,
+        "community_sizes": [
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250,
+          250
+        ],
+        "edge_count": 42776,
+        "external_edge_fraction": 0.4121236207219001,
+        "isolated_nodes": 0,
+        "max_degree": 62,
+        "mean_degree": 42.776,
+        "min_degree": 20,
+        "n": 2000,
+        "total_volume": 85552,
+        "truth_block_labels_sha256": "1d68947837deb6f43e4d2ec80d28e952a179ac3044af8d4ba408decd673e4955",
+        "truth_conductance": [
+          0.40880737361511965,
+          0.4214305698032267,
+          0.41188679245283016,
+          0.4113674732695554,
+          0.41839985010305414,
+          0.406412157153447,
+          0.4105440269209198,
+          0.40817857812793096
+        ],
+        "truth_conductance_quantiles": [
+          0.406412157153447,
+          0.4086501747433225,
+          0.4109557500952376,
+          0.41351505686538614,
+          0.4214305698032267
+        ],
+        "truth_cuts": [
+          4391,
+          4519,
+          4366,
+          4386,
+          4466,
+          4386,
+          4392,
+          4352
+        ],
+        "truth_volumes": [
+          10741,
+          10723,
+          10600,
+          10662,
+          10674,
+          10792,
+          10698,
+          10662
+        ],
+        "weighted_truth_conductance": 0.4121236207219001
+      },
+      "truth_path": "data/dev/sbm_v12/sbm_k8_r3_rep2.truth.json",
+      "truth_sha256": "5639f0807253bed3fd4d7cb368113abe4c03c0bd0fd43233f2f176f6bb18433a"
+    }
+  ],
+  "scope": "four attached graphs and 24 new SBM; missing historical12 not substituted"
+}

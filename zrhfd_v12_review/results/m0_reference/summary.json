@@ -1,0 +1,102 @@
+{
+ "comparisons": {
+  "checks_g2": {
+   "parsed_json_identical": true,
+   "historical_sha256": "558e65dbd54d224dae68a5bc58ed1ced8cd8c3d0fcbcc3037b450ac71948f347",
+   "new_run_sha256": "558e65dbd54d224dae68a5bc58ed1ced8cd8c3d0fcbcc3037b450ac71948f347",
+   "new_run": "results/m0_reference/checks_g2/checks_g2.json"
+  },
+  "checks_g3b": {
+   "parsed_json_identical": true,
+   "historical_sha256": "fdcb145e2693452cba98f4fd5845fe153be8863d2ee3e84faecb6c8592d03a54",
+   "new_run_sha256": "fdcb145e2693452cba98f4fd5845fe153be8863d2ee3e84faecb6c8592d03a54",
+   "new_run": "results/m0_reference/checks_g3b/checks_g3b.json"
+  },
+  "attractor": {
+   "all_24_rows_all_7_fields_identical": true,
+   "differences": [],
+   "historical_sha256": "b9afe1b1c1336a75f4424e9af7e569973a6a5305f924bf69c4a6ac53aa21c9e9",
+   "new_run": "results/m0_reference/legacy_reconstruction/raw.json"
+  }
+ },
+ "source_status": "historical core and hfd_gate per-query files missing; reference substitute explicitly documented",
+ "same12_summary": {
+  "pat2-theta0.5": {
+   "out==C /12": 6,
+   "C in R /12": 6,
+   "mean F1": 0.828,
+   "min F1": 0.099,
+   "median vol(R\\C)/vol(C)": 0.203,
+   "max MM steps": 2
+  },
+  "pat2-theta1.0": {
+   "out==C /12": 7,
+   "C in R /12": 7,
+   "mean F1": 0.887,
+   "min F1": 0.099,
+   "median vol(R\\C)/vol(C)": 0.422,
+   "max MM steps": 2
+  },
+  "pat2-thetainf": {
+   "out==C /12": 10,
+   "C in R /12": 11,
+   "mean F1": 0.925,
+   "min F1": 0.099,
+   "median vol(R\\C)/vol(C)": 0.726,
+   "max MM steps": 2
+  },
+  "pat3-theta0.5": {
+   "out==C /12": 6,
+   "C in R /12": 6,
+   "mean F1": 0.86,
+   "min F1": 0.48,
+   "median vol(R\\C)/vol(C)": 0.203,
+   "max MM steps": 2
+  },
+  "pat3-theta1.0": {
+   "out==C /12": 7,
+   "C in R /12": 7,
+   "mean F1": 0.929,
+   "min F1": 0.604,
+   "median vol(R\\C)/vol(C)": 0.422,
+   "max MM steps": 2
+  },
+  "pat3-thetainf": {
+   "out==C /12": 10,
+   "C in R /12": 11,
+   "mean F1": 0.994,
+   "min F1": 0.934,
+   "median vol(R\\C)/vol(C)": 0.726,
+   "max MM steps": 3
+  }
+ },
+ "legacy_diagnostic_summary": {
+  "base": {
+   "lfr_n1000_o00_m50_s11": {
+    "median_F1": 1.0,
+    "mean_F1": 0.9727734251722571,
+    "median_Leiden_F1": 1.0
+   },
+   "lfr_n1000_o00_m50_s12": {
+    "median_F1": 0.9936708860759493,
+    "mean_F1": 0.9479439291914091,
+    "median_Leiden_F1": 1.0
+   }
+  },
+  "attractor": {
+   "clique_low_ids": {
+    "far_clique_count": 2,
+    "median_F1": 0.9731636784268363
+   },
+   "clique_high_ids": {
+    "far_clique_count": 0,
+    "median_F1": 1.0
+   }
+  }
+ },
+ "claim_boundary": {
+  "same12": "full measured numerical reproduction through verified kernel-derived shim; originalcore unavailable",
+  "attractor": "all24 historical query rows exactly reproduced through documented reconstruction; originalcore unavailable",
+  "two_mu50_historical_baselines": "NOT RUN as exact per-query reproduction; originalquery/results unavailable. New diagnostic rows do not establish oldmedian reproduction."
+ }
+}

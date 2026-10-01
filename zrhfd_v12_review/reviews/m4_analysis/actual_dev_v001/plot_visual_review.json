@@ -1,0 +1,79 @@
+{
+  "status": "PASS_VISUAL_QA",
+  "created_utc": "2026-10-01T12:02:52.785559+00:00",
+  "actual_command": [
+    ".venv/bin/python",
+    "experiments/plot_m4.py",
+    "--run",
+    "results/m4/dev_main_v12_002",
+    "--output",
+    "figures/m4/dev_main_v12_002"
+  ],
+  "thread_environment": "Seven CPU library thread vars each1; PYTHONDONTWRITEBYTECODE1",
+  "audited_before_plot": {
+    "path": "reviews/m4_analysis/actual_dev_v001/receipt.json",
+    "sha256": "9a8142ffeca08caf84db0c53fbfb5196db379a73dd468c0b49570fd10b331a9a",
+    "status": "PASS"
+  },
+  "pngs_actually_viewed": [
+    "quality_cost.png",
+    "truth_phi.png",
+    "completion_denominators.png"
+  ],
+  "observations": [
+    "Axis labels, CI markers and legends readable",
+    "No clipped labels observed",
+    "Oracle references separate",
+    "All planned denominators shown336/336 per setting"
+  ],
+  "artifacts": [
+    {
+      "path": "figures/m4/dev_main_v12_002/completion_denominators.pdf",
+      "sha256": "08aee0bc68c22d8572f67800890eec6e096c78f76b43140e55d0410c8c4afd42",
+      "bytes": 13482
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/completion_denominators.png",
+      "sha256": "f9d2d4a3566f9be237c823dd2372b4d7fcc9a3dfb4d456c34165fe3ce98d1726",
+      "bytes": 81238
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/completion_denominators.svg",
+      "sha256": "72358f4c60dd4fe2cfc569bcd6269372e88ae2c0b13f9df6a4f06df018199d4b",
+      "bytes": 50449
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/quality_cost.pdf",
+      "sha256": "bd181096e67b1970ed965c6a271ae4ac05720c405bb80ad4fabb829272620973",
+      "bytes": 18228
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/quality_cost.png",
+      "sha256": "f92b0e2b38ede6ee85e5d7954cb323371fc3de90e01ba35174c6c8051a80b9da",
+      "bytes": 87384
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/quality_cost.svg",
+      "sha256": "984690a7d3ca40aebe7a5980f95b0f87cb0e5aaa15e5906bfb71f5d0a465b6c8",
+      "bytes": 81189
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/truth_phi.pdf",
+      "sha256": "73a8e28b4a5cb47503798d1792a6d7dbf5990f5f1ae7c1a2c8c7df048be68658",
+      "bytes": 19661
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/truth_phi.png",
+      "sha256": "eabd8011c385938b2eafaccba8a563061d51265bdd592a913d029e1586de847d",
+      "bytes": 131587
+    },
+    {
+      "path": "figures/m4/dev_main_v12_002/truth_phi.svg",
+      "sha256": "991331373e714e066d458ea9b6a767212785e8e25f8b2fd7fa2ffa268cadefdf",
+      "bytes": 84552
+    }
+  ],
+  "source_sha256": "ffc96e038ebdb2c09074f1e41207d094ee486b5ff3192a51e1902cd8426fba9b",
+  "measurements_modified": false,
+  "G_E2": "NOT RUN"
+}

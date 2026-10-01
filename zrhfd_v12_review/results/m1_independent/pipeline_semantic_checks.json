@@ -1,0 +1,438 @@
+{
+  "scope": "Control-flow audit with explicitly stubbed diffusion/sweep. Actual numerical diffusion and MM tested separately; stubs are not claimed to solve frozen objectives.",
+  "checks": {
+    "no_patience_before_activation": true,
+    "activation_index": true,
+    "patience_counts_from_activation_inclusive_reference_semantics": true,
+    "region_next_mass_beyond_budget": true,
+    "region_contains_seed_initial": true
+  },
+  "failures": 0,
+  "actual_issues": [],
+  "notes": [
+    "Patience starts inclusively at j_act, matching supplied checks_g3b.py lines9-14. Frozen text interpretation remains theory-owned.",
+    "R-supp supplements j_star+1 even above M/2.",
+    "Core tie blocks and exact Fraction acceptance were separately crosschecked.",
+    "Approximate score ties are literal equal stored float values; root solver metadata explicitly records approximate precision."
+  ],
+  "raw": [
+    {
+      "calls": [
+        3.0,
+        6.0,
+        12.0,
+        24.0,
+        48.0,
+        96.0,
+        192.0
+      ],
+      "output": {
+        "vertices": [
+          0
+        ],
+        "S0": [
+          0
+        ],
+        "region_vertices": [
+          0
+        ],
+        "status": "completed",
+        "stop_reason": "post_activation_patience",
+        "j_act": 4,
+        "j_star": 0,
+        "m_act": 3.0002,
+        "mass_sequence": [
+          3.0,
+          6.0,
+          12.0,
+          24.0,
+          48.0,
+          96.0,
+          192.0
+        ],
+        "mass_grid_start": 3.0,
+        "region_volume": 1.0,
+        "touched_vertices": [
+          0,
+          1
+        ],
+        "touched_volume": 3.0,
+        "runtime_seconds": 0.00018404191359877586,
+        "stats": {
+          "volume": 1,
+          "cut": 1,
+          "Z": 1.002008032128514,
+          "Z_exact": "499/498",
+          "phi": 1.0,
+          "phi_v": 1.0,
+          "size": 1
+        },
+        "components": 1,
+        "certificate": {
+          "LB_R": 1.002008032128514,
+          "LB_evaluation": "float64 analytic stationary points over exact rational hull; no directed-rounding interval claim",
+          "LB_minimizer": {
+            "volume": 1.0,
+            "value": 1.002008032128514,
+            "kind": "vertex",
+            "vertex_index": 0
+          },
+          "hull_vertices": [
+            {
+              "volume": 1,
+              "cut": 1,
+              "vertices": [
+                0
+              ]
+            }
+          ],
+          "hull_best": [
+            0
+          ],
+          "hull_best_Z_exact": "499/498",
+          "gap_bound_telemetry": 0.0,
+          "gap_bound_exact": "0",
+          "mincut_calls": 0,
+          "oracle_trace": [],
+          "certificate_status": "EXACT_HULL_WITH_NUMERIC_LB_EVALUATION",
+          "gap": 0.0
+        },
+        "diffusion_trace": [
+          {
+            "mass": 3.0,
+            "queue_pending": 0,
+            "support_size": 1,
+            "j": 0,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 3.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 6.0,
+            "queue_pending": 0,
+            "support_size": 1,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 1,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 6.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 12.0,
+            "queue_pending": 0,
+            "support_size": 1,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 2,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 12.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 24.0,
+            "queue_pending": 0,
+            "support_size": 1,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 3,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 24.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 48.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 4,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 48.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 96.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 5,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 96.0,
+                "value": 2.0
+              }
+            ]
+          },
+          {
+            "mass": 192.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 6,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "2",
+            "sweep_blocks": [
+              {
+                "score": 192.0,
+                "value": 2.0
+              }
+            ]
+          }
+        ],
+        "mm_trace": [],
+        "config": {
+          "sigma": 0.0001,
+          "patience": 3,
+          "improvement_epsilon": 1e-06,
+          "region": "R-supp",
+          "theta": 0.5,
+          "schedule_ratio": 2.0,
+          "start": "3ds",
+          "mass_budget_fraction": 0.5,
+          "ordering": "diffusion",
+          "refine": false,
+          "sweep_objective": "Z",
+          "return_hull_best": false,
+          "diffusion_tolerance": 1e-12,
+          "max_updates": 20000000,
+          "fixed_grid": [],
+          "random_seed": 1907
+        },
+        "numeric_solver_status": "APPROXIMATE_DIFFUSION_EXACT_INTEGRAL_CUTS",
+        "method_semantics": "explicit_configured_ablation"
+      }
+    },
+    {
+      "calls": [
+        3.0,
+        6.0,
+        12.0,
+        24.0
+      ],
+      "output": {
+        "vertices": [
+          0
+        ],
+        "S0": [
+          0
+        ],
+        "region_vertices": [
+          0,
+          1
+        ],
+        "status": "completed",
+        "stop_reason": "mass_budget",
+        "j_act": 1,
+        "j_star": 2,
+        "m_act": 3.0002,
+        "mass_sequence": [
+          3.0,
+          6.0,
+          12.0,
+          24.0
+        ],
+        "mass_grid_start": 3.0,
+        "region_volume": 3.0,
+        "touched_vertices": [
+          0,
+          1
+        ],
+        "touched_volume": 3.0,
+        "runtime_seconds": 0.0032263328321278095,
+        "stats": {
+          "volume": 1,
+          "cut": 1,
+          "Z": 1.0263157894736843,
+          "Z_exact": "39/38",
+          "phi": 1.0,
+          "phi_v": 1.0,
+          "size": 1
+        },
+        "components": 1,
+        "certificate": {
+          "LB_R": 0.41228070175438597,
+          "LB_evaluation": "float64 analytic stationary points over exact rational hull; no directed-rounding interval claim",
+          "LB_minimizer": {
+            "volume": 3.0,
+            "value": 0.41228070175438597,
+            "kind": "vertex",
+            "vertex_index": 1
+          },
+          "hull_vertices": [
+            {
+              "volume": 1,
+              "cut": 1,
+              "vertices": [
+                0
+              ]
+            },
+            {
+              "volume": 3,
+              "cut": 1,
+              "vertices": [
+                0,
+                1
+              ]
+            }
+          ],
+          "hull_best": [
+            0,
+            1
+          ],
+          "hull_best_Z_exact": "47/114",
+          "gap_bound_telemetry": 0.02631578947368421,
+          "gap_bound_exact": "1/38",
+          "mincut_calls": 1,
+          "oracle_trace": [
+            {
+              "slope_exact": "0",
+              "objective_exact": "1",
+              "point": {
+                "volume": 1,
+                "cut": 1,
+                "vertices": [
+                  0
+                ]
+              },
+              "telemetry": {
+                "flow_integer": "1",
+                "constant_integer": "0",
+                "capacity_denominator": "1",
+                "arcs": 5,
+                "vertices": 2,
+                "runtime_seconds": 0.0030732499435544014,
+                "backend": "Dinic_exact_int128"
+              }
+            }
+          ],
+          "certificate_status": "EXACT_HULL_WITH_NUMERIC_LB_EVALUATION",
+          "gap": 0.6140350877192984
+        },
+        "diffusion_trace": [
+          {
+            "mass": 3.0,
+            "queue_pending": 0,
+            "support_size": 1,
+            "j": 0,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "19/10",
+            "sweep_blocks": [
+              {
+                "score": 3.0,
+                "value": 1.9
+              }
+            ]
+          },
+          {
+            "mass": 6.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 1,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "9/5",
+            "sweep_blocks": [
+              {
+                "score": 6.0,
+                "value": 1.8
+              }
+            ]
+          },
+          {
+            "mass": 12.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "mass_monotonicity_min_delta": 0.0,
+            "j": 2,
+            "sweep_vertices": [
+              0
+            ],
+            "sweep_value_exact": "17/10",
+            "sweep_blocks": [
+              {
+                "score": 12.0,
+                "value": 1.7
+              }
+            ]
+          },
+          {
+            "mass": 24.0,
+            "queue_pending": 0,
+            "support_size": 2,
+            "j": 3,
+            "supplement_for_region": true
+          }
+        ],
+        "mm_trace": [],
+        "config": {
+          "sigma": 0.0001,
+          "patience": 3,
+          "improvement_epsilon": 1e-06,
+          "region": "R-supp",
+          "theta": 0.5,
+          "schedule_ratio": 2.0,
+          "start": "3ds",
+          "mass_budget_fraction": 0.5,
+          "ordering": "diffusion",
+          "refine": false,
+          "sweep_objective": "Z",
+          "return_hull_best": false,
+          "diffusion_tolerance": 1e-12,
+          "max_updates": 20000000,
+          "fixed_grid": [],
+          "random_seed": 1907
+        },
+        "numeric_solver_status": "APPROXIMATE_DIFFUSION_EXACT_INTEGRAL_CUTS",
+        "method_semantics": "explicit_configured_ablation"
+      }
+    }
+  ],
+  "metadata": {
+    "elapsed_seconds": 0.004165250342339277,
+    "platform": "macOS-15.6-arm64-arm-64bit",
+    "python": "3.12.13",
+    "pipeline_SHA256": "448966f75fc8a336f283d5412c60ec7339bd0060599f1aaa8fb3251623576da5"
+  }
+}

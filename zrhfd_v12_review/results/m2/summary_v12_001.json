@@ -1,0 +1,130 @@
+{
+  "task_count": 144,
+  "status_counts": {
+    "COMPLETED": 134,
+    "ERROR": 10
+  },
+  "same12": {
+    "main": {
+      "expected": 12,
+      "completed": 12,
+      "exact_recovery": 10,
+      "mean_F1": 0.9943248259133761,
+      "min_F1": 0.9339019189765458,
+      "errors": []
+    },
+    "cap05": {
+      "expected": 12,
+      "completed": 12,
+      "exact_recovery": 6,
+      "mean_F1": 0.8598776291083983,
+      "min_F1": 0.4804804804804805,
+      "errors": []
+    },
+    "P2": {
+      "expected": 12,
+      "completed": 12,
+      "exact_recovery": 10,
+      "mean_F1": 0.9247379422977767,
+      "min_F1": 0.09885931558935361,
+      "errors": []
+    },
+    "budgetM": {
+      "expected": 12,
+      "completed": 2,
+      "exact_recovery": 2,
+      "mean_F1": 1.0,
+      "min_F1": 1.0,
+      "errors": [
+        "same12_01_budgetM",
+        "same12_02_budgetM",
+        "same12_04_budgetM",
+        "same12_05_budgetM",
+        "same12_06_budgetM",
+        "same12_07_budgetM",
+        "same12_08_budgetM",
+        "same12_09_budgetM",
+        "same12_10_budgetM",
+        "same12_11_budgetM"
+      ]
+    }
+  },
+  "lfr": {
+    "lfr_n1000_o00_m50_s11_main": {
+      "completed": 12,
+      "median_F1": 0.9924238076106295
+    },
+    "lfr_n1000_o00_m50_s11_cap05": {
+      "completed": 12,
+      "median_F1": 0.8543778801843318
+    },
+    "lfr_n1000_o00_m50_s12_main": {
+      "completed": 12,
+      "median_F1": 0.9891304347826086
+    },
+    "lfr_n1000_o00_m50_s12_cap05": {
+      "completed": 12,
+      "median_F1": 0.773773987206823
+    }
+  },
+  "remote": {
+    "low_main": {
+      "completed": 12,
+      "far_clique_incorporated": 0,
+      "worst_paired_F1_difference": -0.5371794871794873,
+      "failures": [
+        {
+          "task": "lfr_n1000_o00_m50_s11_low_q03_main",
+          "F1_difference": -0.5371794871794873,
+          "j_star_before": 8,
+          "j_star_after": 7
+        },
+        {
+          "task": "lfr_n1000_o00_m50_s11_low_q09_main",
+          "F1_difference": -0.16981132075471694,
+          "j_star_before": 8,
+          "j_star_after": 8
+        }
+      ],
+      "gate": "FAIL"
+    },
+    "low_cap05": {
+      "completed": 12,
+      "far_clique_incorporated": 0,
+      "worst_paired_F1_difference": 0.0,
+      "failures": [],
+      "gate": "PASS"
+    },
+    "high_main": {
+      "completed": 12,
+      "far_clique_incorporated": 0,
+      "worst_paired_F1_difference": -0.5371794871794873,
+      "failures": [
+        {
+          "task": "lfr_n1000_o00_m50_s11_high_q03_main",
+          "F1_difference": -0.5371794871794873,
+          "j_star_before": 8,
+          "j_star_after": 7
+        },
+        {
+          "task": "lfr_n1000_o00_m50_s11_high_q09_main",
+          "F1_difference": -0.16981132075471694,
+          "j_star_before": 8,
+          "j_star_after": 8
+        }
+      ],
+      "gate": "FAIL"
+    },
+    "high_cap05": {
+      "completed": 12,
+      "far_clique_incorporated": 0,
+      "worst_paired_F1_difference": 0.0,
+      "failures": [],
+      "gate": "PASS"
+    }
+  },
+  "singletons": [],
+  "G-E1": "FAIL",
+  "M2": "FAIL",
+  "measurement_scope": "engineering regression; formal time main experiments separate"
+}

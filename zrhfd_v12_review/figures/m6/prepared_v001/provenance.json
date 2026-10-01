@@ -1,0 +1,39 @@
+{
+  "plot_source_sha256": "0349349e38f2899fdca688c143686b7c65ee089779c166ed44277844d09f8b60",
+  "summary_sha256": "a520abeb555b0d44a8c6e36814c618d76fbde3eee460f640a0db1b9d25ac9777",
+  "query_csv_sha256": "4ae34840c48f85d471c72d1790f9b87678aed8b0c50d4751fe6d1e2860c2f855",
+  "manifest_sha256": "b3fde21e1ac70c1d7aa9d5b62d8ae46ddd9056367fb8d286e3a3392482ddcc7c",
+  "integrity_audit": {
+    "path": "results/m6_analysis/prepared_audit/receipt.json",
+    "receipt_sha256": "c99f8e4e95c38f8e2f6465fbef77bb82ec42647da0859c03fe1c9433aa1e0bdb",
+    "status": "PASS",
+    "cohort_origin": "ORIGINAL_FROZEN_COHORT",
+    "scheduled_queries": 108,
+    "completed_queries": 99
+  },
+  "status_counts": {
+    "completed": 99,
+    "error": 1,
+    "timeout": 8
+  },
+  "planned_queries": 108,
+  "legacy_measurements_imported": false,
+  "scope": "Completed-only hot costs and support volumes; timeout clocks never become completed hot cost; all statuses displayed",
+  "status": "COMPLETED",
+  "figure_sha256": {
+    "scale_hot_cost_and_touched_ratio.pdf": "9fcf0e37f719635745ddac80dec3bc460159f5ca05b6e5b850f26984f481e136",
+    "scale_hot_cost_and_touched_ratio.svg": "c66c99b00b156ec9a5d51fe440d1cf30127ee891128e78eebd02f0c38ef6e87c",
+    "scale_hot_cost_and_touched_ratio.png": "c89350dccfcccf98f443c9b9bdff8f25399c008bf879fd8b41353d267fe0f55b",
+    "quality_vs_hot_cost.pdf": "4e39c75a3048b27f36351e97c5f096588c29564d4bfe5d09e96904b5e769d0b7",
+    "quality_vs_hot_cost.svg": "86e48aba830be0deeef67de2ab264d68414a5399ae545871ed2f35cd093299ca",
+    "quality_vs_hot_cost.png": "967d041e3e76777a8a1284a79e72756981e4802baedf98aedaaa5731fb7827c3",
+    "process_clock_censoring.pdf": "625799d3a7dc334bafa72aca2997fb038df5d3c1d73e881247777636a024c0f8",
+    "process_clock_censoring.svg": "dd0a8b571be35f6e7ffa9b9babe8925f73682b90853a71481e0e5ac801121d34",
+    "process_clock_censoring.png": "f4ffbdb795cbde22a1527af4882a5056d6ae25abe517dbd29b759b3aa0a5c856",
+    "completion_denominators.pdf": "54c7ead0e9809ccd7d22b8a46e246dc49c1a837cc80bf3db28f33991bfb3add7",
+    "completion_denominators.svg": "c471258ebe9f784312788666320d98ef6e7d0609a50c371d368285dcbc881b0c",
+    "completion_denominators.png": "eb347a99f4a6e02b9665b63f454311f7f8e627ecf37199915169d73d7881c756"
+  },
+  "matplotlib_version": "3.11.2",
+  "full_cohort_completed": false
+}

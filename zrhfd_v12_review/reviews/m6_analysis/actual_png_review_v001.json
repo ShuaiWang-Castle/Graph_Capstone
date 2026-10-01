@@ -1,0 +1,33 @@
+{
+  "status": "PASS_VISUAL_REVIEW",
+  "reviewer": "root",
+  "generated_utc": "2026-10-01T09:48:28.057020+00:00",
+  "inspected_pngs": [
+    "figures/m6/prepared_v001/completion_denominators.png",
+    "figures/m6/prepared_v001/process_clock_censoring.png",
+    "figures/m6/prepared_v001/quality_vs_hot_cost.png",
+    "figures/m6/prepared_v001/scale_hot_cost_and_touched_ratio.png"
+  ],
+  "figure_sha256": {
+    "figures/m6/prepared_v001/completion_denominators.pdf": "54c7ead0e9809ccd7d22b8a46e246dc49c1a837cc80bf3db28f33991bfb3add7",
+    "figures/m6/prepared_v001/completion_denominators.png": "eb347a99f4a6e02b9665b63f454311f7f8e627ecf37199915169d73d7881c756",
+    "figures/m6/prepared_v001/completion_denominators.svg": "c471258ebe9f784312788666320d98ef6e7d0609a50c371d368285dcbc881b0c",
+    "figures/m6/prepared_v001/process_clock_censoring.pdf": "625799d3a7dc334bafa72aca2997fb038df5d3c1d73e881247777636a024c0f8",
+    "figures/m6/prepared_v001/process_clock_censoring.png": "f4ffbdb795cbde22a1527af4882a5056d6ae25abe517dbd29b759b3aa0a5c856",
+    "figures/m6/prepared_v001/process_clock_censoring.svg": "dd0a8b571be35f6e7ffa9b9babe8925f73682b90853a71481e0e5ac801121d34",
+    "figures/m6/prepared_v001/quality_vs_hot_cost.pdf": "4e39c75a3048b27f36351e97c5f096588c29564d4bfe5d09e96904b5e769d0b7",
+    "figures/m6/prepared_v001/quality_vs_hot_cost.png": "967d041e3e76777a8a1284a79e72756981e4802baedf98aedaaa5731fb7827c3",
+    "figures/m6/prepared_v001/quality_vs_hot_cost.svg": "86e48aba830be0deeef67de2ab264d68414a5399ae545871ed2f35cd093299ca",
+    "figures/m6/prepared_v001/scale_hot_cost_and_touched_ratio.pdf": "9fcf0e37f719635745ddac80dec3bc460159f5ca05b6e5b850f26984f481e136",
+    "figures/m6/prepared_v001/scale_hot_cost_and_touched_ratio.png": "c89350dccfcccf98f443c9b9bdff8f25399c008bf879fd8b41353d267fe0f55b",
+    "figures/m6/prepared_v001/scale_hot_cost_and_touched_ratio.svg": "c66c99b00b156ec9a5d51fe440d1cf30127ee891128e78eebd02f0c38ef6e87c"
+  },
+  "notes": [
+    "Four actual PNGs inspected via view_image",
+    "Labels/axes/legend readable with no clipping",
+    "Completion denominators 36/36,32/36,31/36 match verified cohort",
+    "Timeout triangles are observed censored parent clocks, not completed hot times",
+    "Hot slope and quality scatter explicitly completed-only; failed quality omitted without imputation"
+  ],
+  "scientific_gate_pass_claim": false
+}

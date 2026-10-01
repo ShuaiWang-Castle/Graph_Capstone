@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-10-01T16:26:04.935063+00:00",
+  "actual_argv": [
+    "/Users/shuaiwang/Desktop/Xiaobai/zrhfd_project/.venv/bin/python",
+    "reviews/m4_analysis/audit_actual_ordinary_v001.py",
+    "--run",
+    "results/m4/test_main_v12_002",
+    "--output",
+    "reviews/m4_analysis/actual_test_v001/receipt.json"
+  ],
+  "cwd": "/Users/shuaiwang/Desktop/Xiaobai/zrhfd_project",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "reviews/m4_analysis/audit_actual_ordinary_v001.py": "d987e0f7d9f655adf80ce96f197022838025e94fc9cbf9f99d3d1f6882a7f80c",
+    "results/m4/test_main_v12_002/manifest.json": "caaf1ed4f65d2d51b1269856d1f944a59941e401a00cf99757775736b515150f",
+    "results/m4/test_main_v12_002/summary.json": "9e7c03611732ccf5f17e7592cdfd286f1e58d1c268b618113cff824383476872",
+    "experiments/reproduction/lock.json": "5e90b2ec6fe726b7dbab8e738bf01060a56a96a1a1a815f6ce6d05548a7ea61e"
+  },
+  "launcher_sha256": "549db6a877a6bb958a8526443a07e788f9f1b27896048b12dc5bedaae9550d3f",
+  "scientific_measurement": false
+}

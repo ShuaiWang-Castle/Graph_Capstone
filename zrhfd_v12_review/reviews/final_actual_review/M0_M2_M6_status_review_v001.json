@@ -1,0 +1,208 @@
+{
+  "affected_scope_stops": [
+    {
+      "affected": "nonunit small-edge ZH/ZHprov equality",
+      "id": "TR001",
+      "unaffected": "unit finite equality and exact G objective in declared subdomains"
+    },
+    {
+      "affected": "generic nonconcave convexity and dependent MM/LB certificates",
+      "id": "TR002",
+      "unaffected": "explicit unit/concave tests, with no generic clearance"
+    },
+    {
+      "affected": "literal empty-support V(c) at m=ds",
+      "id": "TR003",
+      "unaffected": "positive-degree main starts m0=3ds"
+    },
+    {
+      "affected": "M-prime domain outside inherited P8 separation unresolved",
+      "id": "TR005",
+      "unaffected": "2112 separated-domain tested superset cases pass; not a proof"
+    }
+  ],
+  "generated_utc": "2026-10-01T11:41:49.915366+00:00",
+  "known_final_acceptance_blockers": [
+    {
+      "id": "FINAL_SCIENTIFIC_PASS_BLOCKED",
+      "reason": "M4/G-E2 and M5/G-E4 complete comparisons, uncertainty, audit and plots pending"
+    },
+    {
+      "id": "FULL_M0_SCOPE_OPEN",
+      "reason": "missing original historical core/input/query evidence requires explicit bounded written limitation/stop if unavailable"
+    },
+    {
+      "id": "FROZEN_GATES_FAIL",
+      "reason": "G-E0/G-E1/G-E3 failure cannot be relabelled; honest FAIL delivery is allowed under written conclusion"
+    },
+    {
+      "id": "FRESH_DELIVERY_CLOSURE_PENDING",
+      "reason": "full fresh scientific reproduction or documented scope stop, root measurement closure and actual deep package audit/independent review pending"
+    }
+  ],
+  "limits": [
+    "Only existing small primary summaries/report/source hashes; no numerical tests, Graph/NumPy, bootstrap, ZIP or large raw scan.",
+    "Existing full M6 audit and fixed q00 actual review reused; no new99cover evaluation.",
+    "M0/M2 per-query large runs not revalidated in this review; small primary summary bindings and documented scope checked.",
+    "Ongoing M4 inventory is a dated active snapshot, not quality acceptance.",
+    "Reviewer authored some M1/diagnostic checks; this is integrated evidence/status review, not independent mathematical proof."
+  ],
+  "main_definition_review": {
+    "certificate_cost": "MM stationarity/regionalLB/smallgap not global seeded optimum or truth recovery; support-union touched not totalCSR/conversion costs",
+    "engineering": "same-objective active-set finish and matched exact capacity/arc prepared cache are documented versioned changes; no silent localM/R-cap/hull-best/objective replacement",
+    "hypergraph": "exact expectation G primary separate from ZHprov; author finite iterations approximate; interval numeric enclosure bounded and scoped, generic T-b uncleared",
+    "ordinary": "3ds/P3 after activation/R-supp allowed jstar+1 supplement/seed-first S-first diffusion/Fraction strict MM/default MM output"
+  },
+  "new_blocking_misrepresentation_findings": [],
+  "nonblocking_findings": [
+    {
+      "issue": "v002 engineering wall prose 1.203356 differs from canonical terminal+diagnosis1.202627541963011; refresh prose without method/gate changes",
+      "location": "REPORT.md:160",
+      "severity": "LOW_NONBLOCKING"
+    }
+  ],
+  "review_cpu_seconds": 0.004244999999999999,
+  "review_wall_seconds": 0.005485874999999998,
+  "reviewed_file_sha256": {
+    "REPORT.md": "7df11cc2d4861c84b19feb2905390f660bbd738e81ba704866b15cbe8058c731",
+    "THEORY_REQUESTS.md": "4eb3398198cccf274afeda6e6ef05a7a186b1738137acadeaca1ac21bea0c9c9",
+    "experiments/m5/config_v12_001.json": "a8fa1dee05c0e110a2f882c75d4db54d940ffb9b689d5f6333bc0ace9cf12fa9",
+    "experiments/m5/worker.py": "44949fb732c5a8bb7ed9eb45eba3d5fe99178c13b4ebe1dd4e969e8de28ea552",
+    "experiments/protocol_v12.yaml": "32019fa95a331643b8c98bbb38b0eb65bc2fab874e8b4908534541883fa0a225",
+    "inputs/local_hfd/codex/CODEX_GOAL_PROMPT_v1.2.md": "4ba201eb6ec56cff31ff7d4822b84f7d56dc67bc3a00ab29bc29f346c207e383",
+    "provenance/goal-objective.md": "89fa33f447a99fd61204dd35ea1b2c7152f735c398344507f9563feba34c122c",
+    "results/m0_reference/input_availability_audit.json": "794e13768e6a7d6a407dcecccfdcf842e2976f9ae4e2d3ecf6630122542141ab",
+    "results/m0_reference/summary.json": "b4145b75bfdde032cf16953c928862a71128016533827a4315a7e0cccde6eed9",
+    "results/m1_independent/additional_scope_checks.json": "d8f750d2ba599b1ddd0876d93e1773dbc6b4c3ebe3a3eec4e3e03454b91b44d0",
+    "results/m1_independent/core_cross_checks_corrected_fixture.json": "b55cdc09cbf065155eec9bbbd63fa6f0c6a79b4db58d7d59f695e530c5a43b89",
+    "results/m1_independent/exact_claim_checks.json": "7d8a08631b06430d30d01f87f990aba224b38795fbae2bf0d44c5aeaac6e0e64",
+    "results/m1_independent/forced_active_set_checks.json": "9bc3d77dc52e67b81412ac11d9b64de34fed1a589ec6a015c0d3986b8c7261ae",
+    "results/m1_independent/hyper_diffusion_checks.json": "b44e6c92ddf952afcb917669c40534c21311e812e6ecbd2ce80b8e1d60d1637d",
+    "results/m1_independent/pipeline_semantic_checks.json": "5cbe0bf8383ef37dd0a40421aad3fb11fd6681b7619fd1a74f618dc594653e34",
+    "results/m1_independent/scope_counterexamples.json": "d9e89f52ec2379b942b5896388d9897e8b7bc617431376d7c77b834eb7d64725",
+    "results/m2/summary_v12_001.json": "7697bafac18a8c23300d3de8b493655341782a4bb17a2583e7df4500db69df88",
+    "results/m6_analysis/prepared_audit/receipt.json": "c99f8e4e95c38f8e2f6465fbef77bb82ec42647da0859c03fe1c9433aa1e0bdb",
+    "results/m6_prepared/summary.json": "a520abeb555b0d44a8c6e36814c618d76fbde3eee460f640a0db1b9d25ac9777",
+    "results/solver_finish/budgetM_repairs_summary.json": "ba3948c9f89b1acda97aa4243f61d86aaf2f370414f53e442e7e4049a590f50a",
+    "reviews/m0_reference/REVIEW.md": "38856fa7c5df11cb4cd70f53d1ba10982b4b3279634f9834f7352a46a404d548",
+    "reviews/m1_independent/INDEPENDENT_M1_REVIEW.md": "4a493ab998d0e3dd8a78cafe9fa6a61d60274363dc7c24de581cae221cfb6598",
+    "reviews/m1_independent/status.json": "ceda261c2375f0827db0c32fde1ad42c49960ea8c63bfdc5ac0445d36cc50608",
+    "reviews/m6_analysis/ACTUAL_M6_REVIEW.json": "22812af8c60132ab5064ff77a908f0cece247f5e71f6bf7c454c63edd00f35d5",
+    "reviews/m6_analysis/ACTUAL_M6_REVIEW.md": "42e34608ac82fa7e231469b186b2f5dc9c5e7007e8287c25c652720c5d9676ec",
+    "reviews/prepared_backend_adoption/ordinary_first12/actual_integration_checks.json": "2928c3a8aced330fc7f45178f0cacd861074699d637ffe3c86789e3854c2f921",
+    "reviews/prepared_backend_adoption/review.md": "d6fcc9b6ae1c0b33c427511b4fe0cc352b9b2537c8c1159346a7bf95e5eaccff",
+    "reviews/reproduction/actual_recovery_only_v002/diagnosis_receipt.json": "70cff5ef531e878570a31a15f91c355b1cf2629ab48dc98d0af98ad1299aefea",
+    "reviews/reproduction/actual_recovery_only_v002/terminal.json": "49945e1f9cb413e375f7c9a22d7d48e698347348857455f6c15578d77bb5c514",
+    "reviews/reproduction/controller_recovery_actual_v003_review.json": "a5268b3a5565b90ada3eb970e6d20360703c229688e56f80592593ab9121f031",
+    "reviews/solver_failure_probe/independent_actual_review.json": "fca60484fb1143dff16ab1f5b593d34c5932269711880e002b68e476cd99303e",
+    "reviews/solver_failure_probe/independent_actual_review.md": "c5620567f444f818e0c417da080ee1ace7f342aa4d623248b34c9f8ee4d4e1b4",
+    "zrhfd/hyper/pipeline.py": "c09baa2e367daaafd0459a8699e890950692e6fa59ac42c81a7ed6039d94251e",
+    "zrhfd/mincut.py": "41c50c7495c3e438dbf583b95f323e2181f5ecbb9eb4edaa9539ecfabae20402",
+    "zrhfd/pipeline.py": "4b4ae75411556f2e9f48b236a3d3c45464ff9647aa6d83c34c9c4d59df1442ab"
+  },
+  "schema_version": 1,
+  "scientific_final_acceptance": "NOT_GRANTED",
+  "small_existing_evidence_checks": {
+    "M0_remote24_summary_scope": true,
+    "M0_two_small_historical_JSON_hash_matches": true,
+    "M1_FAIL_separate_from_reproductionPASS": true,
+    "M2_144_134_10_FAIL": true,
+    "M2_all4_panels0of12_clique": true,
+    "M2_no_singletons_completed_initial": true,
+    "M6_108_99_8_1_match": true,
+    "M6_audit_noalgorithm_no_changes": true,
+    "M6_auto_incomplete_preserved": true,
+    "M6_summarySHA_bound": true
+  },
+  "status": "ACCEPT_CURRENT_STATUS_PRESENTATION_WITH_OPEN_COMPLETION_PREREQUISITES",
+  "status_matrix": [
+    {
+      "boundary": "same12 and reconstructed remote subitems PASS; original core/input/query absence remains explicit; no new-query substitution",
+      "evidence": [
+        "REPORT.md:11",
+        "results/m0_reference/summary.json",
+        "reviews/m0_reference/REVIEW.md:7"
+      ],
+      "item": "M0",
+      "status": "NOT_RUN_FULL_HISTORICAL_SCOPE"
+    },
+    {
+      "boundary": "Finite unaffected PASS and successful replay are not proof or generic gate clearance",
+      "evidence": [
+        "REPORT.md:12",
+        "THEORY_REQUESTS.md:5",
+        "reviews/m1_independent/status.json"
+      ],
+      "item": "M1 / G-E0",
+      "status": "FAIL_LITERAL_FROZEN_SCOPE"
+    },
+    {
+      "boundary": "four0of12 inclusion panels; R-supp quality drops .537179/.169811 fail both-numbering joint requirement",
+      "evidence": [
+        "REPORT.md:13",
+        "results/m2/summary_v12_001.json",
+        "THEORY_REQUESTS.md:39"
+      ],
+      "item": "M2 / G-E1",
+      "status": "FAIL"
+    },
+    {
+      "boundary": "data/interface/authentic smoke are scoped preparation",
+      "evidence": [
+        "REPORT.md:14",
+        "experiments/protocol_v12.yaml"
+      ],
+      "item": "M3",
+      "status": "NOT_RUN_FULL_BASELINE_COMPARISON"
+    },
+    {
+      "boundary": "ongoing dev prefixes not complete432test gate; dev region comparison retains R-supp; test detailed diagnosis requires same-cohort gate PASS",
+      "evidence": [
+        "REPORT.md:15",
+        "REPORT.md:147",
+        "inputs/local_hfd/codex/CODEX_GOAL_PROMPT_v1.2.md:166"
+      ],
+      "item": "M4 / G-E2",
+      "status": "NOT_RUN_FINAL_SCIENTIFIC_COMPARISON"
+    },
+    {
+      "boundary": "unit toy/core PASS not real-data quality; generic cardinality stop remains; require complete at least-one real planned panel plus oracle gap",
+      "evidence": [
+        "REPORT.md:16",
+        "experiments/m5/config_v12_001.json:5",
+        "inputs/local_hfd/codex/CODEX_GOAL_PROMPT_v1.2.md:168"
+      ],
+      "item": "M5 / G-E4",
+      "status": "NOT_RUN_REAL_SCIENTIFIC_PANEL"
+    },
+    {
+      "boundary": "all108 terminated; 99completed,8timeout,1error; integrity PASS not method recovery/convergence",
+      "evidence": [
+        "REPORT.md:17",
+        "results/m6_analysis/prepared_audit/receipt.json",
+        "reviews/m6_analysis/ACTUAL_M6_REVIEW.md"
+      ],
+      "item": "M6",
+      "status": "PASS_EXECUTION_AND_NEGATIVE_REPORTING_ONLY"
+    },
+    {
+      "boundary": "58 observed ratios>20 in108 already excludes median<=20; no imputation; completed-only slopes descriptive under censoring",
+      "evidence": [
+        "REPORT.md:21",
+        "REPORT.md:141",
+        "reviews/m6_analysis/ACTUAL_M6_REVIEW.md:3"
+      ],
+      "item": "G-E3",
+      "status": "FAIL_LOCALITY_RUNTIME_NOT_ESTABLISHED"
+    },
+    {
+      "boundary": "new recovery PASS preserves old v001/v002 FAIL; full fresh scientific reproduction not completed",
+      "evidence": [
+        "REPORT.md:164",
+        "reviews/reproduction/controller_recovery_actual_v003_review.json"
+      ],
+      "item": "fresh controller v003",
+      "status": "PASS_ENGINEERING_ONLY"
+    }
+  ]
+}

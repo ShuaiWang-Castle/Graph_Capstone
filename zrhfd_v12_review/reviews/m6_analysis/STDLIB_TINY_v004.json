@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STDLIB_TINY_ARITHMETIC_AND_SCHEMA",
+  "checks": 43,
+  "actual_truth_graph_raw_or_summary_read": false,
+  "algorithm_or_numpy_or_matplotlib_imported": false,
+  "full108_cohort_audit": "NOT_RUN",
+  "source_sha256": {
+    "experiments/m6_analysis/audit.py": "e0ad27382c12ae2493491b717c618e23381832e43e9a465eca4f8fe6da45a461",
+    "experiments/m6_analysis/check_static.py": "4460a9d633315c7054dcb4885c951be82b0089310025765903904a8adf38d493"
+  }
+}

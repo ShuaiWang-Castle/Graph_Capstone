@@ -1,0 +1,133 @@
+protocol_id: zrhfd-v12-operational-20261001
+specification: provenance/goal-objective.md
+hardware: CPU_ONLY
+threads: 1
+measurement_order: SERIAL
+random_seed: 20261004
+implementation:
+  exact_cut_backend: prepared_region_workspace
+  version: formal-ordinary-v12-002
+  predecessor: formal-ordinary-v12-001
+  rationale: exact_capacity_equivalent_region_topology_cache_validated_before_test_quality
+bootstrap:
+  replicates: 10000
+  random_seed: 20261005
+  confidence: 0.95
+  unit: graph_then_queries_nested
+  paired: true
+main:
+  sigma: 0.0001
+  patience: 3
+  improvement_epsilon: 0.000001
+  region: R-supp
+  theta: 0.5
+  mass_budget_fraction: 0.5
+  schedule_ratio: 2
+  start: 3ds
+  ordering: diffusion
+  diffusion_tolerance: 0.000000000001
+  max_updates: 20000000
+resources:
+  local_method_query_seconds: 600
+  main_query_seconds: 600
+  memory_limit_bytes: 12000000000
+  retries: 0
+  timeout_policy: retain_partial_never_as_converged
+  max_repeats_on_infrastructure_repair: 1
+mass_grid:
+  mass_start_factor: 3
+  mass_ratio: 2
+  mass_limit_fraction: 0.5
+  oracle_mass_factor: 3
+  max_mass_steps: 128
+baseline_configs:
+  hfd:
+    sigma: 0.0001
+    p: 2
+    iterations: 50
+    random_seed: 73
+  hfd_cd:
+    sigma: 0.0001
+    diffusion_tolerance: 0.000000000001
+    max_updates: 20000000
+    identity: high_accuracy_same_objective_control_not_author_execution_algorithm
+  pnorm:
+    p: 4
+    iterations: 50
+    epsilon: 0.001
+    cm_tol: 0.01
+    random_seed: 73
+  tlhfd:
+    backend: numba
+    sigma: 0.0001
+    gamma: 1
+    iterations: 1000
+    step_schedule: constant
+    step_size: 0.25
+    return_policy: best_dual
+    fraction_grid: [0.01, 0.02, 0.03, 0.05]
+    injection_factor: 3
+    require_seed: true
+    keep_ties: false
+  acl:
+    alpha_grid: [0.01, 0.05, 0.15]
+    use_scale_grid: true
+    rho_volume_factor: 1
+    max_updates: 20000000
+    require_seed: true
+    keep_ties: false
+  leiden:
+    resolution: 1
+    iterations: -1
+    random_seed: 73
+test:
+  catalog: data/test/calibrated_lfr/catalog.json
+  catalog_sha256: c7e97bfbb7bea8fa7708b3e9061309f170cd345ac40116f67b4a97891a7481d4
+  graph_count: 36
+  query_count: 432
+  permit_tuning: false
+dev:
+  sbm_catalog: data/dev/sbm_v12/catalog.json
+  sbm_catalog_sha256: 6ecccc83df39ecb0e0bf0972c9382d6c7566972c1a13d5ae1841e2768927a987
+  attached_graphs: inputs/local_hfd/graphs
+  historical_same12: data/dev/same12/catalog.json
+  unavailable_historical_lfr_count: 12
+  region_comparison: all_attached_48_and_new_sbm_288_queries
+  ablation_queries: first_two_in_preexisting_fixed_query_list_each_graph
+ablations:
+  - R-cap-0.25
+  - R-cap-0.5
+  - R-cap-1
+  - supp-jstar
+  - supp-jstar+2
+  - full
+  - patience-2
+  - ZR-mact
+  - sqrt2-grid
+  - fixed-grid
+  - ZR-budgetM
+  - ordering-bfs
+  - ordering-random
+  - multi-start
+  - diffusion-TL-star
+  - no-refinement
+  - hull-best
+  - conductance-sweep
+ablations_detail:
+  fixed_grid: target_volume_guesses_50_100_200_400_800_1600_3200_6400_times_3_then_cap_by_M_over_2
+  multi_start: S0_and_singleton_and_seeded_hull_best_choose_min_exact_Z
+  diffusion_TL_star: best_dual_at_same_ZR_masses_sigma_gamma_stepsize_and_full_fraction_grid_select_min_Z_sweep_without_truth
+diagnostics:
+  truth_allowed: OFFLINE_ONLY
+  coverage_mass_relative_tolerance: 0.0001
+  coverage_mass_max_bisections: 20
+  cardinality_monotonicity: OBSERVATIONAL_NO_ASSERTION
+reporting:
+  truth_conductance: per_query_measured_value_not_nominal_mu
+  implementation_times: outer_wall_and_native_kernel_separate
+  failures: keep_all_missing_and_timeouts_with_denominators
+  partial_quality: separate_from_completed_tables
+  touched_volume_primary: diffusion_support_union_region_as_frozen_spec
+  actual_frontier_reads: separate_telemetry
+  objective_novelty_claim: FORBIDDEN
+  proof_claim: FORBIDDEN

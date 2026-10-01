@@ -1,0 +1,1937 @@
+{
+  "inspected_at": "2026-10-01T04:28:33.755186+00:00",
+  "datasets": [
+    {
+      "dataset": "contact-high-school",
+      "source": {
+        "kind": "author-repository",
+        "url": "https://github.com/s-h-yang/HFD.git",
+        "commit": "f4111f7fa2ceb44a99acdf8057a609b7322e1ebf"
+      },
+      "retrieved_at": "2026-10-01T03:58:49.335306+00:00",
+      "n": 327,
+      "hyperedges": 7818,
+      "valid_set_hyperedges": true,
+      "within_edge_duplicate_rows": 0,
+      "last_token_duplicated_once_rows": 0,
+      "out_of_bounds_rows": 0,
+      "unique_raw_hyperedges": 7818,
+      "retained_repeated_hyperedges": 0,
+      "raw_incidence_total": 18192,
+      "total_volume": 18192,
+      "isolated_vertices": 0,
+      "rank": 5,
+      "edge_size_histogram": {
+        "2": 5498,
+        "3": 2091,
+        "4": 222,
+        "5": 7
+      },
+      "classes": 9,
+      "clusters": [
+        {
+          "source_label_id": 1,
+          "name": "2BIO1",
+          "nodes": 36,
+          "volume": 1773,
+          "all_or_none_cut": 444,
+          "conductance": 0.25042301184433163,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 2,
+          "name": "2BIO2",
+          "nodes": 34,
+          "volume": 1947,
+          "all_or_none_cut": 563,
+          "conductance": 0.2891628145865434,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 3,
+          "name": "2BIO3",
+          "nodes": 40,
+          "volume": 2987,
+          "all_or_none_cut": 594,
+          "conductance": 0.19886173418145298,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 4,
+          "name": "MP*1",
+          "nodes": 29,
+          "volume": 913,
+          "all_or_none_cut": 375,
+          "conductance": 0.41073384446878425,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 5,
+          "name": "MP*2",
+          "nodes": 38,
+          "volume": 2271,
+          "all_or_none_cut": 599,
+          "conductance": 0.2637604579480405,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 6,
+          "name": "PSI*",
+          "nodes": 34,
+          "volume": 1320,
+          "all_or_none_cut": 348,
+          "conductance": 0.2636363636363636,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 7,
+          "name": "PC",
+          "nodes": 44,
+          "volume": 2951,
+          "all_or_none_cut": 466,
+          "conductance": 0.1579125720094883,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 8,
+          "name": "PC*",
+          "nodes": 39,
+          "volume": 2204,
+          "all_or_none_cut": 419,
+          "conductance": 0.19010889292196007,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 9,
+          "name": "MP",
+          "nodes": 33,
+          "volume": 1826,
+          "all_or_none_cut": 455,
+          "conductance": 0.24917853231106243,
+          "hfd_trivago_eligible": false
+        }
+      ],
+      "files": [
+        {
+          "path": "external/hfd/datasets/contact-high-school/README.txt",
+          "bytes": 390,
+          "sha256": "a7a70a00b051fe65784f2ac032f7f3e73d07fd7274b71eea43daad29f9880fd8"
+        },
+        {
+          "path": "external/hfd/datasets/contact-high-school/hyperedges-contact-high-school.txt",
+          "bytes": 66118,
+          "sha256": "487d6f265f69706fd926cfbcfaea9eebafab8abc35e4fac574a72544118563b6"
+        },
+        {
+          "path": "external/hfd/datasets/contact-high-school/label-names-contact-high-school.txt",
+          "bytes": 43,
+          "sha256": "c5f5d58c6b37e8b61d909820db374da5473889b0d268734e8ce6f202c1dcd60a"
+        },
+        {
+          "path": "external/hfd/datasets/contact-high-school/node-labels-contact-high-school.txt",
+          "bytes": 654,
+          "sha256": "a429e9a9f7fd12f9d586dd06fd9803a821b7a09afdd55536543a5a3c3382741b"
+        }
+      ],
+      "format": "one-based raw node and label IDs; within-edge uniqueness required; duplicate edge multiplicity retained",
+      "preprocessing_performed_here": "none"
+    },
+    {
+      "dataset": "contact-high-school",
+      "source": {
+        "kind": "official-Benson-archive",
+        "source_page": "https://www.cs.cornell.edu/~arb/data/contact-high-school-labeled/",
+        "archive_path": "data/external/benson-downloads/contact-high-school.zip",
+        "archive_sha256": "0b0b77953105b110d84e257422da3746117d16030a72aac13b40227a03dbcb1e"
+      },
+      "retrieved_at": "2026-10-01T04:24:48.680551+00:00",
+      "n": 327,
+      "hyperedges": 7818,
+      "valid_set_hyperedges": true,
+      "within_edge_duplicate_rows": 0,
+      "last_token_duplicated_once_rows": 0,
+      "out_of_bounds_rows": 0,
+      "unique_raw_hyperedges": 7818,
+      "retained_repeated_hyperedges": 0,
+      "raw_incidence_total": 18192,
+      "total_volume": 18192,
+      "isolated_vertices": 0,
+      "rank": 5,
+      "edge_size_histogram": {
+        "2": 5498,
+        "3": 2091,
+        "4": 222,
+        "5": 7
+      },
+      "classes": 9,
+      "clusters": [
+        {
+          "source_label_id": 1,
+          "name": "2BIO1",
+          "nodes": 36,
+          "volume": 1773,
+          "all_or_none_cut": 444,
+          "conductance": 0.25042301184433163,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 2,
+          "name": "2BIO2",
+          "nodes": 34,
+          "volume": 1947,
+          "all_or_none_cut": 563,
+          "conductance": 0.2891628145865434,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 3,
+          "name": "2BIO3",
+          "nodes": 40,
+          "volume": 2987,
+          "all_or_none_cut": 594,
+          "conductance": 0.19886173418145298,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 4,
+          "name": "MP*1",
+          "nodes": 29,
+          "volume": 913,
+          "all_or_none_cut": 375,
+          "conductance": 0.41073384446878425,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 5,
+          "name": "MP*2",
+          "nodes": 38,
+          "volume": 2271,
+          "all_or_none_cut": 599,
+          "conductance": 0.2637604579480405,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 6,
+          "name": "PSI*",
+          "nodes": 34,
+          "volume": 1320,
+          "all_or_none_cut": 348,
+          "conductance": 0.2636363636363636,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 7,
+          "name": "PC",
+          "nodes": 44,
+          "volume": 2951,
+          "all_or_none_cut": 466,
+          "conductance": 0.1579125720094883,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 8,
+          "name": "PC*",
+          "nodes": 39,
+          "volume": 2204,
+          "all_or_none_cut": 419,
+          "conductance": 0.19010889292196007,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 9,
+          "name": "MP",
+          "nodes": 33,
+          "volume": 1826,
+          "all_or_none_cut": 455,
+          "conductance": 0.24917853231106243,
+          "hfd_trivago_eligible": false
+        }
+      ],
+      "files": [
+        {
+          "path": "data/external/benson-downloads/contact-high-school/README.txt",
+          "bytes": 390,
+          "sha256": "a7a70a00b051fe65784f2ac032f7f3e73d07fd7274b71eea43daad29f9880fd8"
+        },
+        {
+          "path": "data/external/benson-downloads/contact-high-school/hyperedges-contact-high-school.txt",
+          "bytes": 66118,
+          "sha256": "487d6f265f69706fd926cfbcfaea9eebafab8abc35e4fac574a72544118563b6"
+        },
+        {
+          "path": "data/external/benson-downloads/contact-high-school/label-names-contact-high-school.txt",
+          "bytes": 43,
+          "sha256": "c5f5d58c6b37e8b61d909820db374da5473889b0d268734e8ce6f202c1dcd60a"
+        },
+        {
+          "path": "data/external/benson-downloads/contact-high-school/node-labels-contact-high-school.txt",
+          "bytes": 654,
+          "sha256": "a429e9a9f7fd12f9d586dd06fd9803a821b7a09afdd55536543a5a3c3382741b"
+        }
+      ],
+      "format": "one-based raw node and label IDs; within-edge uniqueness required; duplicate edge multiplicity retained",
+      "preprocessing_performed_here": "none"
+    },
+    {
+      "dataset": "trivago-clicks",
+      "source": {
+        "kind": "author-repository",
+        "url": "https://github.com/s-h-yang/HFD.git",
+        "commit": "f4111f7fa2ceb44a99acdf8057a609b7322e1ebf"
+      },
+      "retrieved_at": "2026-10-01T03:58:49.335306+00:00",
+      "n": 172738,
+      "hyperedges": 233202,
+      "valid_set_hyperedges": false,
+      "within_edge_duplicate_rows": 233202,
+      "last_token_duplicated_once_rows": 233202,
+      "out_of_bounds_rows": 0,
+      "unique_raw_hyperedges": 220971,
+      "retained_repeated_hyperedges": 12231,
+      "raw_incidence_total": 960063,
+      "total_volume": null,
+      "isolated_vertices": 0,
+      "rank": 86,
+      "edge_size_histogram": {
+        "3": 128075,
+        "4": 50279,
+        "5": 23325,
+        "6": 11871,
+        "7": 6756,
+        "8": 4152,
+        "9": 2642,
+        "10": 1665,
+        "11": 1131,
+        "12": 785,
+        "13": 565,
+        "14": 467,
+        "15": 286,
+        "16": 222,
+        "17": 161,
+        "18": 134,
+        "19": 109,
+        "20": 90,
+        "21": 85,
+        "22": 67,
+        "23": 49,
+        "24": 41,
+        "25": 32,
+        "26": 28,
+        "27": 22,
+        "28": 24,
+        "29": 17,
+        "30": 13,
+        "31": 14,
+        "32": 17,
+        "33": 9,
+        "34": 5,
+        "35": 3,
+        "36": 12,
+        "37": 8,
+        "38": 5,
+        "39": 3,
+        "40": 1,
+        "41": 4,
+        "42": 2,
+        "43": 3,
+        "44": 2,
+        "45": 2,
+        "47": 2,
+        "48": 1,
+        "49": 1,
+        "50": 2,
+        "51": 1,
+        "52": 2,
+        "53": 2,
+        "56": 2,
+        "59": 1,
+        "60": 1,
+        "68": 1,
+        "82": 1,
+        "83": 1,
+        "86": 1
+      },
+      "classes": 160,
+      "clusters": [],
+      "files": [
+        {
+          "path": "external/hfd/datasets/trivago-clicks/README.txt",
+          "bytes": 1649,
+          "sha256": "6289f5a74649d9d954d251a39d75039f85bcac6c696465e42ac61501cf5e5481"
+        },
+        {
+          "path": "external/hfd/datasets/trivago-clicks/hyperedges-trivago-clicks.txt",
+          "bytes": 6196816,
+          "sha256": "24485edb4f9f1ac1be5861760cae865f71e3cac706b06abea04538553be9ab30"
+        },
+        {
+          "path": "external/hfd/datasets/trivago-clicks/label-names-trivago-clicks.txt",
+          "bytes": 1530,
+          "sha256": "762afaf152bf7e932f956a04daaa00a15ab080f47c5a1d42b83f4a32edf0f03b"
+        },
+        {
+          "path": "external/hfd/datasets/trivago-clicks/node-labels-trivago-clicks.txt",
+          "bytes": 470137,
+          "sha256": "70e008441699a0ad35a03a9826a9478cd0e4c1ae5c2e6c85099fba3a2f869c01"
+        }
+      ],
+      "format": "one-based raw node and label IDs; within-edge uniqueness required; duplicate edge multiplicity retained",
+      "preprocessing_performed_here": "none"
+    },
+    {
+      "dataset": "trivago-clicks",
+      "source": {
+        "kind": "official-Benson-archive",
+        "source_page": "https://www.cs.cornell.edu/~arb/data/trivago-clicks/",
+        "archive_path": "data/external/benson-downloads/trivago-clicks.zip",
+        "archive_sha256": "d1979945b85192ded96d51de56dd2fb613e7220d5f3edfbe0e11d6c742f89200"
+      },
+      "retrieved_at": "2026-10-01T04:15:32.596331+00:00",
+      "n": 172738,
+      "hyperedges": 233202,
+      "valid_set_hyperedges": true,
+      "within_edge_duplicate_rows": 0,
+      "last_token_duplicated_once_rows": 0,
+      "out_of_bounds_rows": 0,
+      "unique_raw_hyperedges": 220971,
+      "retained_repeated_hyperedges": 12231,
+      "raw_incidence_total": 726861,
+      "total_volume": 726861,
+      "isolated_vertices": 0,
+      "rank": 85,
+      "edge_size_histogram": {
+        "2": 128075,
+        "3": 50279,
+        "4": 23325,
+        "5": 11871,
+        "6": 6756,
+        "7": 4152,
+        "8": 2642,
+        "9": 1665,
+        "10": 1131,
+        "11": 785,
+        "12": 565,
+        "13": 467,
+        "14": 286,
+        "15": 222,
+        "16": 161,
+        "17": 134,
+        "18": 109,
+        "19": 90,
+        "20": 85,
+        "21": 67,
+        "22": 49,
+        "23": 41,
+        "24": 32,
+        "25": 28,
+        "26": 22,
+        "27": 24,
+        "28": 17,
+        "29": 13,
+        "30": 14,
+        "31": 17,
+        "32": 9,
+        "33": 5,
+        "34": 3,
+        "35": 12,
+        "36": 8,
+        "37": 5,
+        "38": 3,
+        "39": 1,
+        "40": 4,
+        "41": 2,
+        "42": 3,
+        "43": 2,
+        "44": 2,
+        "46": 2,
+        "47": 1,
+        "48": 1,
+        "49": 2,
+        "50": 1,
+        "51": 2,
+        "52": 2,
+        "55": 2,
+        "58": 1,
+        "59": 1,
+        "67": 1,
+        "81": 1,
+        "82": 1,
+        "85": 1
+      },
+      "classes": 160,
+      "clusters": [
+        {
+          "source_label_id": 1,
+          "name": "India",
+          "nodes": 9963,
+          "volume": 28456,
+          "all_or_none_cut": 97,
+          "conductance": 0.0034087714366038795,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 2,
+          "name": "El Salvador",
+          "nodes": 51,
+          "volume": 93,
+          "all_or_none_cut": 3,
+          "conductance": 0.03225806451612903,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 3,
+          "name": "France",
+          "nodes": 5380,
+          "volume": 21566,
+          "all_or_none_cut": 727,
+          "conductance": 0.03371047018454976,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 4,
+          "name": "Czech Republic",
+          "nodes": 1293,
+          "volume": 6080,
+          "all_or_none_cut": 361,
+          "conductance": 0.059375,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 5,
+          "name": "USA",
+          "nodes": 15519,
+          "volume": 63602,
+          "all_or_none_cut": 733,
+          "conductance": 0.011524794817773026,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 6,
+          "name": "Australia",
+          "nodes": 5618,
+          "volume": 22268,
+          "all_or_none_cut": 137,
+          "conductance": 0.0061523262080114965,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 7,
+          "name": "Romania",
+          "nodes": 975,
+          "volume": 2282,
+          "all_or_none_cut": 33,
+          "conductance": 0.014460999123575811,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 8,
+          "name": "Spain",
+          "nodes": 8654,
+          "volume": 32963,
+          "all_or_none_cut": 691,
+          "conductance": 0.020962897794496862,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 9,
+          "name": "Greece",
+          "nodes": 1669,
+          "volume": 4779,
+          "all_or_none_cut": 134,
+          "conductance": 0.02803933877380205,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 10,
+          "name": "United Kingdom",
+          "nodes": 8430,
+          "volume": 43365,
+          "all_or_none_cut": 570,
+          "conductance": 0.013144240747146317,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 11,
+          "name": "Chile",
+          "nodes": 1083,
+          "volume": 2417,
+          "all_or_none_cut": 94,
+          "conductance": 0.03889118742242449,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 12,
+          "name": "Sweden",
+          "nodes": 776,
+          "volume": 3978,
+          "all_or_none_cut": 119,
+          "conductance": 0.029914529914529916,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 13,
+          "name": "Netherlands",
+          "nodes": 2025,
+          "volume": 12736,
+          "all_or_none_cut": 449,
+          "conductance": 0.03525439698492462,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 14,
+          "name": "Italy",
+          "nodes": 9699,
+          "volume": 30516,
+          "all_or_none_cut": 726,
+          "conductance": 0.023790798269760126,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 15,
+          "name": "Argentina",
+          "nodes": 3716,
+          "volume": 12896,
+          "all_or_none_cut": 463,
+          "conductance": 0.035902605459057074,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 16,
+          "name": "South Africa",
+          "nodes": 1588,
+          "volume": 4900,
+          "all_or_none_cut": 62,
+          "conductance": 0.012653061224489797,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 17,
+          "name": "Brazil",
+          "nodes": 14921,
+          "volume": 85897,
+          "all_or_none_cut": 623,
+          "conductance": 0.007252872626517806,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 18,
+          "name": "Taiwan",
+          "nodes": 2028,
+          "volume": 6493,
+          "all_or_none_cut": 45,
+          "conductance": 0.0069305405821654086,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 19,
+          "name": "Thailand",
+          "nodes": 3741,
+          "volume": 10092,
+          "all_or_none_cut": 176,
+          "conductance": 0.01743955608402695,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 20,
+          "name": "China",
+          "nodes": 801,
+          "volume": 1958,
+          "all_or_none_cut": 109,
+          "conductance": 0.055669050051072526,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 21,
+          "name": "Singapore",
+          "nodes": 431,
+          "volume": 3110,
+          "all_or_none_cut": 143,
+          "conductance": 0.045980707395498394,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 22,
+          "name": "South Korea",
+          "nodes": 945,
+          "volume": 2830,
+          "all_or_none_cut": 34,
+          "conductance": 0.012014134275618375,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 23,
+          "name": "Germany",
+          "nodes": 8269,
+          "volume": 35926,
+          "all_or_none_cut": 748,
+          "conductance": 0.020820575627679118,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 24,
+          "name": "Portugal",
+          "nodes": 2503,
+          "volume": 7925,
+          "all_or_none_cut": 293,
+          "conductance": 0.03697160883280757,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 25,
+          "name": "Malaysia",
+          "nodes": 3258,
+          "volume": 17017,
+          "all_or_none_cut": 178,
+          "conductance": 0.01046012810718693,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 26,
+          "name": "Japan",
+          "nodes": 10065,
+          "volume": 68197,
+          "all_or_none_cut": 134,
+          "conductance": 0.001964895816531519,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 27,
+          "name": "Turkey",
+          "nodes": 6186,
+          "volume": 34393,
+          "all_or_none_cut": 225,
+          "conductance": 0.0065420289012299015,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 28,
+          "name": "Mexico",
+          "nodes": 5749,
+          "volume": 31462,
+          "all_or_none_cut": 340,
+          "conductance": 0.010806687432458204,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 29,
+          "name": "Hungary",
+          "nodes": 961,
+          "volume": 3141,
+          "all_or_none_cut": 154,
+          "conductance": 0.04902897166507482,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 30,
+          "name": "Canada",
+          "nodes": 2798,
+          "volume": 12115,
+          "all_or_none_cut": 216,
+          "conductance": 0.017829137432934378,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 31,
+          "name": "Poland",
+          "nodes": 3403,
+          "volume": 11203,
+          "all_or_none_cut": 239,
+          "conductance": 0.021333571364812995,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 32,
+          "name": "Austria",
+          "nodes": 1926,
+          "volume": 7630,
+          "all_or_none_cut": 403,
+          "conductance": 0.052817824377457405,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 33,
+          "name": "Russia",
+          "nodes": 2783,
+          "volume": 8708,
+          "all_or_none_cut": 73,
+          "conductance": 0.008383096003674782,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 34,
+          "name": "Switzerland",
+          "nodes": 1029,
+          "volume": 2661,
+          "all_or_none_cut": 188,
+          "conductance": 0.07065013152950018,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 35,
+          "name": "Colombia",
+          "nodes": 2281,
+          "volume": 7769,
+          "all_or_none_cut": 120,
+          "conductance": 0.015446003346634058,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 36,
+          "name": "Andorra",
+          "nodes": 118,
+          "volume": 539,
+          "all_or_none_cut": 24,
+          "conductance": 0.04452690166975881,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 37,
+          "name": "Ireland",
+          "nodes": 863,
+          "volume": 4661,
+          "all_or_none_cut": 125,
+          "conductance": 0.026818279339197598,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 38,
+          "name": "Uruguay",
+          "nodes": 494,
+          "volume": 1527,
+          "all_or_none_cut": 123,
+          "conductance": 0.08055009823182711,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 39,
+          "name": "Israel",
+          "nodes": 695,
+          "volume": 2963,
+          "all_or_none_cut": 79,
+          "conductance": 0.026662166722915964,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 40,
+          "name": "Peru",
+          "nodes": 772,
+          "volume": 1901,
+          "all_or_none_cut": 44,
+          "conductance": 0.023145712782745922,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 41,
+          "name": "Bulgaria",
+          "nodes": 889,
+          "volume": 2229,
+          "all_or_none_cut": 44,
+          "conductance": 0.01973979362943024,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 42,
+          "name": "Denmark",
+          "nodes": 293,
+          "volume": 2252,
+          "all_or_none_cut": 97,
+          "conductance": 0.043072824156305506,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 43,
+          "name": "Iceland",
+          "nodes": 202,
+          "volume": 671,
+          "all_or_none_cut": 19,
+          "conductance": 0.028315946348733235,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 44,
+          "name": "Puerto Rico",
+          "nodes": 144,
+          "volume": 361,
+          "all_or_none_cut": 9,
+          "conductance": 0.024930747922437674,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 45,
+          "name": "Indonesia",
+          "nodes": 1183,
+          "volume": 2689,
+          "all_or_none_cut": 101,
+          "conductance": 0.03756043138713276,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 46,
+          "name": "Crimea",
+          "nodes": 200,
+          "volume": 833,
+          "all_or_none_cut": 14,
+          "conductance": 0.01680672268907563,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 47,
+          "name": "New Zealand",
+          "nodes": 1855,
+          "volume": 6739,
+          "all_or_none_cut": 62,
+          "conductance": 0.009200178067962606,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 48,
+          "name": "Philippines",
+          "nodes": 2110,
+          "volume": 7659,
+          "all_or_none_cut": 42,
+          "conductance": 0.005483744614179397,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 49,
+          "name": "Morocco",
+          "nodes": 729,
+          "volume": 1951,
+          "all_or_none_cut": 73,
+          "conductance": 0.03741670937980523,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 50,
+          "name": "Laos",
+          "nodes": 21,
+          "volume": 29,
+          "all_or_none_cut": 3,
+          "conductance": 0.10344827586206896,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 51,
+          "name": "Panama",
+          "nodes": 153,
+          "volume": 615,
+          "all_or_none_cut": 28,
+          "conductance": 0.04552845528455285,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 52,
+          "name": "Vietnam",
+          "nodes": 832,
+          "volume": 1781,
+          "all_or_none_cut": 45,
+          "conductance": 0.025266704098820886,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 53,
+          "name": "Cyprus",
+          "nodes": 295,
+          "volume": 699,
+          "all_or_none_cut": 43,
+          "conductance": 0.06151645207439199,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 54,
+          "name": "Norway",
+          "nodes": 292,
+          "volume": 1074,
+          "all_or_none_cut": 39,
+          "conductance": 0.036312849162011177,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 55,
+          "name": "Georgia",
+          "nodes": 150,
+          "volume": 262,
+          "all_or_none_cut": 11,
+          "conductance": 0.04198473282442748,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 56,
+          "name": "Costa Rica",
+          "nodes": 389,
+          "volume": 788,
+          "all_or_none_cut": 23,
+          "conductance": 0.02918781725888325,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 57,
+          "name": "Hong Kong",
+          "nodes": 536,
+          "volume": 3550,
+          "all_or_none_cut": 138,
+          "conductance": 0.038873239436619716,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 58,
+          "name": "Egypt",
+          "nodes": 531,
+          "volume": 1836,
+          "all_or_none_cut": 94,
+          "conductance": 0.05119825708061002,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 59,
+          "name": "Malta",
+          "nodes": 157,
+          "volume": 379,
+          "all_or_none_cut": 9,
+          "conductance": 0.023746701846965697,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 60,
+          "name": "Belgium",
+          "nodes": 984,
+          "volume": 4375,
+          "all_or_none_cut": 263,
+          "conductance": 0.06011428571428572,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 61,
+          "name": "Kenya",
+          "nodes": 110,
+          "volume": 219,
+          "all_or_none_cut": 4,
+          "conductance": 0.0182648401826484,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 62,
+          "name": "Serbia",
+          "nodes": 340,
+          "volume": 769,
+          "all_or_none_cut": 30,
+          "conductance": 0.03901170351105332,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 63,
+          "name": "Lebanon",
+          "nodes": 63,
+          "volume": 137,
+          "all_or_none_cut": 6,
+          "conductance": 0.043795620437956206,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 64,
+          "name": "French Polynesia",
+          "nodes": 45,
+          "volume": 482,
+          "all_or_none_cut": 25,
+          "conductance": 0.05186721991701245,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 65,
+          "name": "Maldives",
+          "nodes": 110,
+          "volume": 250,
+          "all_or_none_cut": 27,
+          "conductance": 0.108,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 66,
+          "name": "Guatemala",
+          "nodes": 199,
+          "volume": 502,
+          "all_or_none_cut": 8,
+          "conductance": 0.01593625498007968,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 67,
+          "name": "Sri Lanka",
+          "nodes": 137,
+          "volume": 225,
+          "all_or_none_cut": 19,
+          "conductance": 0.08444444444444445,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 68,
+          "name": "Ukraine",
+          "nodes": 264,
+          "volume": 498,
+          "all_or_none_cut": 19,
+          "conductance": 0.03815261044176707,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 69,
+          "name": "Venezuela",
+          "nodes": 75,
+          "volume": 201,
+          "all_or_none_cut": 7,
+          "conductance": 0.03482587064676617,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 70,
+          "name": "Myanmar",
+          "nodes": 22,
+          "volume": 31,
+          "all_or_none_cut": 3,
+          "conductance": 0.0967741935483871,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 71,
+          "name": "Slovakia",
+          "nodes": 266,
+          "volume": 645,
+          "all_or_none_cut": 52,
+          "conductance": 0.08062015503875969,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 72,
+          "name": "Estonia",
+          "nodes": 158,
+          "volume": 667,
+          "all_or_none_cut": 14,
+          "conductance": 0.020989505247376312,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 73,
+          "name": "Saudi Arabia",
+          "nodes": 196,
+          "volume": 586,
+          "all_or_none_cut": 12,
+          "conductance": 0.020477815699658702,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 74,
+          "name": "Senegal",
+          "nodes": 17,
+          "volume": 23,
+          "all_or_none_cut": 1,
+          "conductance": 0.043478260869565216,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 75,
+          "name": "Tunisia",
+          "nodes": 193,
+          "volume": 600,
+          "all_or_none_cut": 11,
+          "conductance": 0.018333333333333333,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 76,
+          "name": "Pakistan",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 77,
+          "name": "Ecuador",
+          "nodes": 487,
+          "volume": 1394,
+          "all_or_none_cut": 34,
+          "conductance": 0.024390243902439025,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 78,
+          "name": "Qatar",
+          "nodes": 55,
+          "volume": 139,
+          "all_or_none_cut": 8,
+          "conductance": 0.05755395683453238,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 79,
+          "name": "Armenia",
+          "nodes": 40,
+          "volume": 81,
+          "all_or_none_cut": 4,
+          "conductance": 0.04938271604938271,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 80,
+          "name": "United Arab Emirates",
+          "nodes": 756,
+          "volume": 4801,
+          "all_or_none_cut": 136,
+          "conductance": 0.028327431785044783,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 81,
+          "name": "Dominican Republic",
+          "nodes": 375,
+          "volume": 1429,
+          "all_or_none_cut": 68,
+          "conductance": 0.04758572428271519,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 82,
+          "name": "Jamaica",
+          "nodes": 134,
+          "volume": 366,
+          "all_or_none_cut": 14,
+          "conductance": 0.03825136612021858,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 83,
+          "name": "Slovenia",
+          "nodes": 213,
+          "volume": 461,
+          "all_or_none_cut": 64,
+          "conductance": 0.13882863340563992,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 84,
+          "name": "Azerbaijan",
+          "nodes": 51,
+          "volume": 81,
+          "all_or_none_cut": 5,
+          "conductance": 0.06172839506172839,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 85,
+          "name": "Cuba",
+          "nodes": 348,
+          "volume": 2011,
+          "all_or_none_cut": 57,
+          "conductance": 0.02834410740924913,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 86,
+          "name": "Bosnia and Herzegovina",
+          "nodes": 38,
+          "volume": 59,
+          "all_or_none_cut": 9,
+          "conductance": 0.15254237288135594,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 87,
+          "name": "Cambodia",
+          "nodes": 107,
+          "volume": 168,
+          "all_or_none_cut": 23,
+          "conductance": 0.13690476190476192,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 88,
+          "name": "Montenegro",
+          "nodes": 10,
+          "volume": 18,
+          "all_or_none_cut": 7,
+          "conductance": 0.3888888888888889,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 89,
+          "name": "Luxembourg",
+          "nodes": 66,
+          "volume": 181,
+          "all_or_none_cut": 22,
+          "conductance": 0.12154696132596685,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 90,
+          "name": "Monaco",
+          "nodes": 23,
+          "volume": 113,
+          "all_or_none_cut": 21,
+          "conductance": 0.18584070796460178,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 91,
+          "name": "Oman",
+          "nodes": 70,
+          "volume": 153,
+          "all_or_none_cut": 15,
+          "conductance": 0.09803921568627451,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 92,
+          "name": "Finland",
+          "nodes": 416,
+          "volume": 1913,
+          "all_or_none_cut": 47,
+          "conductance": 0.024568740198640877,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 93,
+          "name": "Croatia",
+          "nodes": 566,
+          "volume": 1043,
+          "all_or_none_cut": 66,
+          "conductance": 0.06327900287631831,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 94,
+          "name": "Turks and Caicos Islands",
+          "nodes": 29,
+          "volume": 55,
+          "all_or_none_cut": 4,
+          "conductance": 0.07272727272727272,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 95,
+          "name": "Seychelles",
+          "nodes": 8,
+          "volume": 11,
+          "all_or_none_cut": 3,
+          "conductance": 0.2727272727272727,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 96,
+          "name": "Latvia",
+          "nodes": 112,
+          "volume": 284,
+          "all_or_none_cut": 20,
+          "conductance": 0.07042253521126761,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 97,
+          "name": "Algeria",
+          "nodes": 44,
+          "volume": 78,
+          "all_or_none_cut": 6,
+          "conductance": 0.07692307692307693,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 98,
+          "name": "Jordan",
+          "nodes": 100,
+          "volume": 182,
+          "all_or_none_cut": 24,
+          "conductance": 0.13186813186813187,
+          "hfd_trivago_eligible": true
+        },
+        {
+          "source_label_id": 99,
+          "name": "Réunion",
+          "nodes": 44,
+          "volume": 105,
+          "all_or_none_cut": 2,
+          "conductance": 0.01904761904761905,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 100,
+          "name": "Tanzania",
+          "nodes": 10,
+          "volume": 14,
+          "all_or_none_cut": 5,
+          "conductance": 0.35714285714285715,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 101,
+          "name": "Bahamas",
+          "nodes": 61,
+          "volume": 177,
+          "all_or_none_cut": 18,
+          "conductance": 0.1016949152542373,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 102,
+          "name": "Honduras",
+          "nodes": 63,
+          "volume": 138,
+          "all_or_none_cut": 4,
+          "conductance": 0.028985507246376812,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 103,
+          "name": "Albania",
+          "nodes": 22,
+          "volume": 28,
+          "all_or_none_cut": 9,
+          "conductance": 0.32142857142857145,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 104,
+          "name": "Botswana",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 105,
+          "name": "Fiji",
+          "nodes": 74,
+          "volume": 206,
+          "all_or_none_cut": 12,
+          "conductance": 0.05825242718446602,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 106,
+          "name": "Mauritius",
+          "nodes": 49,
+          "volume": 69,
+          "all_or_none_cut": 11,
+          "conductance": 0.15942028985507245,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 107,
+          "name": "Ghana",
+          "nodes": 28,
+          "volume": 43,
+          "all_or_none_cut": 1,
+          "conductance": 0.023255813953488372,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 108,
+          "name": "Aruba",
+          "nodes": 55,
+          "volume": 141,
+          "all_or_none_cut": 5,
+          "conductance": 0.03546099290780142,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 109,
+          "name": "Cayman Islands",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 110,
+          "name": "Nepal",
+          "nodes": 34,
+          "volume": 55,
+          "all_or_none_cut": 7,
+          "conductance": 0.12727272727272726,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 111,
+          "name": "Gibraltar",
+          "nodes": 19,
+          "volume": 50,
+          "all_or_none_cut": 21,
+          "conductance": 0.42,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 112,
+          "name": "Lithuania",
+          "nodes": 68,
+          "volume": 138,
+          "all_or_none_cut": 12,
+          "conductance": 0.08695652173913043,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 113,
+          "name": "Kazakhstan",
+          "nodes": 17,
+          "volume": 24,
+          "all_or_none_cut": 3,
+          "conductance": 0.125,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 114,
+          "name": "Nigeria",
+          "nodes": 13,
+          "volume": 20,
+          "all_or_none_cut": 3,
+          "conductance": 0.15,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 115,
+          "name": "Republic of Macedonia",
+          "nodes": 31,
+          "volume": 42,
+          "all_or_none_cut": 6,
+          "conductance": 0.14285714285714285,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 116,
+          "name": "New Caledonia",
+          "nodes": 20,
+          "volume": 59,
+          "all_or_none_cut": 2,
+          "conductance": 0.03389830508474576,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 117,
+          "name": "Curacao",
+          "nodes": 27,
+          "volume": 49,
+          "all_or_none_cut": 4,
+          "conductance": 0.08163265306122448,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 118,
+          "name": "Belarus",
+          "nodes": 72,
+          "volume": 178,
+          "all_or_none_cut": 5,
+          "conductance": 0.028089887640449437,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 119,
+          "name": "Kyrgyzstan",
+          "nodes": 8,
+          "volume": 9,
+          "all_or_none_cut": 4,
+          "conductance": 0.4444444444444444,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 120,
+          "name": "Guam",
+          "nodes": 12,
+          "volume": 22,
+          "all_or_none_cut": 1,
+          "conductance": 0.045454545454545456,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 121,
+          "name": "Bolivia",
+          "nodes": 63,
+          "volume": 107,
+          "all_or_none_cut": 5,
+          "conductance": 0.04672897196261682,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 122,
+          "name": "Cape Verde",
+          "nodes": 26,
+          "volume": 50,
+          "all_or_none_cut": 9,
+          "conductance": 0.18,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 123,
+          "name": "Vatican City",
+          "nodes": 23,
+          "volume": 78,
+          "all_or_none_cut": 60,
+          "conductance": 0.7692307692307693,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 124,
+          "name": "Nicaragua",
+          "nodes": 30,
+          "volume": 52,
+          "all_or_none_cut": 5,
+          "conductance": 0.09615384615384616,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 125,
+          "name": "Brunei",
+          "nodes": 9,
+          "volume": 11,
+          "all_or_none_cut": 1,
+          "conductance": 0.09090909090909091,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 126,
+          "name": "Paraguay",
+          "nodes": 38,
+          "volume": 90,
+          "all_or_none_cut": 36,
+          "conductance": 0.4,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 127,
+          "name": "Namibia",
+          "nodes": 5,
+          "volume": 7,
+          "all_or_none_cut": 2,
+          "conductance": 0.2857142857142857,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 128,
+          "name": "Saint Lucia",
+          "nodes": 3,
+          "volume": 3,
+          "all_or_none_cut": 3,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 129,
+          "name": "Ethiopia",
+          "nodes": 21,
+          "volume": 32,
+          "all_or_none_cut": 3,
+          "conductance": 0.09375,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 130,
+          "name": "Barbados",
+          "nodes": 11,
+          "volume": 15,
+          "all_or_none_cut": 3,
+          "conductance": 0.2,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 131,
+          "name": "Bermudas",
+          "nodes": 6,
+          "volume": 7,
+          "all_or_none_cut": 2,
+          "conductance": 0.2857142857142857,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 132,
+          "name": "Iran",
+          "nodes": 23,
+          "volume": 58,
+          "all_or_none_cut": 1,
+          "conductance": 0.017241379310344827,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 133,
+          "name": "Uganda",
+          "nodes": 6,
+          "volume": 6,
+          "all_or_none_cut": 2,
+          "conductance": 0.3333333333333333,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 134,
+          "name": "San Marino",
+          "nodes": 10,
+          "volume": 18,
+          "all_or_none_cut": 6,
+          "conductance": 0.3333333333333333,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 135,
+          "name": "Palestinian Territories",
+          "nodes": 14,
+          "volume": 16,
+          "all_or_none_cut": 5,
+          "conductance": 0.3125,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 136,
+          "name": "Bahrain",
+          "nodes": 22,
+          "volume": 30,
+          "all_or_none_cut": 2,
+          "conductance": 0.06666666666666667,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 137,
+          "name": "Bangladesh",
+          "nodes": 9,
+          "volume": 13,
+          "all_or_none_cut": 4,
+          "conductance": 0.3076923076923077,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 138,
+          "name": "Madagascar",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 139,
+          "name": "Vanuatu",
+          "nodes": 5,
+          "volume": 13,
+          "all_or_none_cut": 3,
+          "conductance": 0.23076923076923078,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 140,
+          "name": "Belize",
+          "nodes": 7,
+          "volume": 7,
+          "all_or_none_cut": 3,
+          "conductance": 0.42857142857142855,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 141,
+          "name": "Zimbabwe",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 142,
+          "name": "Mongolia",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 143,
+          "name": "Liechtenstein",
+          "nodes": 1,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 144,
+          "name": "French Antilles",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 145,
+          "name": "Democratic Republic of Congo",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 1,
+          "conductance": 0.5,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 146,
+          "name": "Dominica",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 1,
+          "conductance": 0.5,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 147,
+          "name": "Guyana",
+          "nodes": 2,
+          "volume": 3,
+          "all_or_none_cut": 1,
+          "conductance": 0.3333333333333333,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 148,
+          "name": "Uzbekistan",
+          "nodes": 2,
+          "volume": 3,
+          "all_or_none_cut": 2,
+          "conductance": 0.6666666666666666,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 149,
+          "name": "Iraq",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 150,
+          "name": "Trinidad and Tobago",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 151,
+          "name": "Swaziland",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 152,
+          "name": "Moldova",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 153,
+          "name": "Mozambique",
+          "nodes": 2,
+          "volume": 2,
+          "all_or_none_cut": 2,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 154,
+          "name": "Kuwait",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 155,
+          "name": "Syria",
+          "nodes": 1,
+          "volume": 3,
+          "all_or_none_cut": 3,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 156,
+          "name": "The Gambia",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 157,
+          "name": "Sint Maarten",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 158,
+          "name": "Cook Islands",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 159,
+          "name": "Papua New Guinea",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        },
+        {
+          "source_label_id": 160,
+          "name": "French Guiana",
+          "nodes": 1,
+          "volume": 1,
+          "all_or_none_cut": 1,
+          "conductance": 1.0,
+          "hfd_trivago_eligible": false
+        }
+      ],
+      "files": [
+        {
+          "path": "data/external/benson-downloads/trivago-clicks/README.txt",
+          "bytes": 1763,
+          "sha256": "bbbd0271d9b085dfdc92c751d8bab84c7122d664d2cbee3935f4704e5604db09"
+        },
+        {
+          "path": "data/external/benson-downloads/trivago-clicks/hyperedges-trivago-clicks.txt",
+          "bytes": 4621011,
+          "sha256": "fd8240ee24b2896085e0e22439e2b70981c847e93e8f1d2332f9ebc15a1b15f8"
+        },
+        {
+          "path": "data/external/benson-downloads/trivago-clicks/label-names-trivago-clicks.txt",
+          "bytes": 1530,
+          "sha256": "762afaf152bf7e932f956a04daaa00a15ab080f47c5a1d42b83f4a32edf0f03b"
+        },
+        {
+          "path": "data/external/benson-downloads/trivago-clicks/node-labels-trivago-clicks.txt",
+          "bytes": 470137,
+          "sha256": "70e008441699a0ad35a03a9826a9478cd0e4c1ae5c2e6c85099fba3a2f869c01"
+        }
+      ],
+      "format": "one-based raw node and label IDs; within-edge uniqueness required; duplicate edge multiplicity retained",
+      "preprocessing_performed_here": "none"
+    }
+  ],
+  "trivago_version_comparison": {
+    "ordered_row_dedup_mismatches": 0,
+    "labels_byte_identical": true,
+    "label_names_byte_identical": true,
+    "official_readme_note": "November 21, 2021: An earlier version erroneously listed the last node in a hyperedge twice.",
+    "derived_dataset_written": false
+  }
+}

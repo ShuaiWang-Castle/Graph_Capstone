@@ -1,0 +1,13 @@
+completed_budget,completed_without_valid_claim,label,method_setting,planned,role,status_counts
+432,0,ACL,acl_no_volume,432,primary,"{""COMPLETED"": 432}"
+432,0,ACL oracle,acl_oracle,432,oracle_reference,"{""COMPLETED"": 432}"
+432,0,HFD-CD,hfd_cd_no_volume,432,primary,"{""COMPLETED"": 432}"
+432,0,HFD-CD oracle,hfd_cd_oracle,432,oracle_reference,"{""COMPLETED"": 432}"
+432,0,HFD,hfd_no_volume,432,primary,"{""COMPLETED"": 432}"
+432,0,HFD oracle,hfd_oracle,432,oracle_reference,"{""COMPLETED"": 432}"
+432,0,Leiden,leiden_global,432,primary,"{""COMPLETED"": 432}"
+432,0,p-norm,pnorm_no_volume,432,primary,"{""COMPLETED"": 432}"
+432,0,p-norm oracle,pnorm_oracle,432,oracle_reference,"{""COMPLETED"": 432}"
+432,0,TL*,tlhfd_no_volume,432,primary,"{""COMPLETED"": 432}"
+432,0,TL* oracle,tlhfd_oracle,432,oracle_reference,"{""COMPLETED"": 432}"
+432,0,ZR-HFD,zrhfd_no_volume,432,primary,"{""COMPLETED"": 432}"

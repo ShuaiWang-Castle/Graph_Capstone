@@ -1,0 +1,4761 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "random_seed": 290930,
+    "arithmetic": "fractions.Fraction for objective, algebra, MM, graph diffusion and SBM",
+    "certificate_minimum": "floating evaluation of exact hull; 1e-12 ordinary graph comparison tolerance",
+    "P1_P2_P6": "Disjoint nonempty positive-volume A,B. All seeded A; all disjoint B for n<=7, deterministic sampled B beyond.",
+    "FP": "All seeded C for every reached graph MM fixedpoint; S-first ordering.",
+    "MM-exact": "All seeded C hypotheses; all seeded T until first failed inequality. Fixedpoints from all starts n<=6; four selected starts beyond.",
+    "V": "Exact graph KKT solutions; empty-support literal domain tested separately.",
+    "P8_M_prime": "Mean SBM in the explicitly stated separation regime (s-1)p>sq.",
+    "hypergraph": "Symmetric concave normalized cuts; P5,P7,T-b,T-c tested; general T-b contradictions separate."
+  },
+  "claims": {
+    "P3-add": {
+      "checks": 55873,
+      "violations": 0,
+      "examples": []
+    },
+    "P3-delete": {
+      "checks": 55873,
+      "violations": 0,
+      "examples": []
+    },
+    "P2": {
+      "checks": 13975,
+      "violations": 0,
+      "examples": []
+    },
+    "P4-sweep": {
+      "checks": 406,
+      "violations": 0,
+      "examples": []
+    },
+    "P4-global-lower": {
+      "checks": 406,
+      "violations": 0,
+      "examples": []
+    },
+    "P4-indicator-witness": {
+      "checks": 8830,
+      "violations": 0,
+      "examples": []
+    },
+    "P5-zero": {
+      "checks": 393,
+      "violations": 0,
+      "examples": []
+    },
+    "P5-negative-implies-decrease": {
+      "checks": 393,
+      "violations": 0,
+      "examples": []
+    },
+    "P5-descent": {
+      "checks": 223,
+      "violations": 0,
+      "examples": []
+    },
+    "P7-stationary": {
+      "checks": 170,
+      "violations": 0,
+      "examples": []
+    },
+    "P7-region": {
+      "checks": 170,
+      "violations": 0,
+      "examples": []
+    },
+    "FP-first": {
+      "checks": 9438,
+      "violations": 0,
+      "examples": []
+    },
+    "FP-second": {
+      "checks": 9438,
+      "violations": 0,
+      "examples": []
+    },
+    "FP-third": {
+      "checks": 9438,
+      "violations": 0,
+      "examples": []
+    },
+    "MM-exact-hypothesis-enumerated": {
+      "checks": 8830,
+      "violations": 0,
+      "examples": []
+    },
+    "MM-exact": {
+      "checks": 3,
+      "violations": 0,
+      "examples": []
+    },
+    "T-c": {
+      "checks": 8,
+      "violations": 0,
+      "examples": []
+    },
+    "T-c-prime": {
+      "checks": 8,
+      "violations": 0,
+      "examples": []
+    },
+    "V-a-graph": {
+      "checks": 86,
+      "violations": 0,
+      "examples": []
+    },
+    "V-b-graph": {
+      "checks": 86,
+      "violations": 0,
+      "examples": []
+    },
+    "V-c-volume-graph": {
+      "checks": 86,
+      "violations": 0,
+      "examples": []
+    },
+    "V-c-balance-literal-empty": {
+      "checks": 16,
+      "violations": 8,
+      "examples": [
+        {
+          "graph": "single_edge",
+          "m": "1",
+          "U": 0,
+          "rhs": "0",
+          "lhs": "1"
+        },
+        {
+          "graph": "path3",
+          "m": "1",
+          "U": 0,
+          "rhs": "0",
+          "lhs": "1"
+        },
+        {
+          "graph": "K4",
+          "m": "3",
+          "U": 0,
+          "rhs": "0",
+          "lhs": "3"
+        }
+      ]
+    },
+    "A": {
+      "checks": 86,
+      "violations": 0,
+      "examples": []
+    },
+    "Leak-seed": {
+      "checks": 86,
+      "violations": 0,
+      "examples": []
+    },
+    "Leak-neighbor": {
+      "checks": 199,
+      "violations": 0,
+      "examples": []
+    },
+    "Mono-graph": {
+      "checks": 78,
+      "violations": 0,
+      "examples": []
+    },
+    "V-c-balance-graph": {
+      "checks": 70,
+      "violations": 0,
+      "examples": []
+    },
+    "P1": {
+      "checks": 1150,
+      "violations": 0,
+      "examples": []
+    },
+    "P6": {
+      "checks": 499,
+      "violations": 0,
+      "examples": []
+    },
+    "T-b-convexity-concave": {
+      "checks": 60,
+      "violations": 0,
+      "examples": []
+    },
+    "T-b-merge": {
+      "checks": 633,
+      "violations": 0,
+      "examples": []
+    },
+    "T-c-hypergraph-numeric": {
+      "checks": 3,
+      "violations": 0,
+      "examples": []
+    },
+    "P8-formula": {
+      "checks": 6272,
+      "violations": 0,
+      "examples": []
+    },
+    "M-prime": {
+      "checks": 2112,
+      "violations": 0,
+      "examples": []
+    },
+    "M-prime-small-b": {
+      "checks": 38,
+      "violations": 0,
+      "examples": []
+    },
+    "P8-unique-Z-minimum": {
+      "checks": 4,
+      "violations": 0,
+      "examples": []
+    },
+    "P8-conductance-minimum": {
+      "checks": 4,
+      "violations": 0,
+      "examples": []
+    }
+  },
+  "graphs": [
+    {
+      "graph": {
+        "name": "single_edge",
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ]
+        ],
+        "M": "2"
+      },
+      "all_seeded_subsets_enumerated": 2,
+      "MM": {
+        "graph": "single_edge",
+        "seeded_subsets": 2,
+        "starts": 2,
+        "fixedpoints": [
+          3
+        ],
+        "qualifying_MM_exact_targets": [
+          3
+        ],
+        "runs": [
+          {
+            "start": 1,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 3,
+            "steps": 0,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "1",
+            "1",
+            1
+          ],
+          [
+            "2",
+            "0",
+            3
+          ]
+        ],
+        "LB_numeric": 1.0,
+        "optimum": "1",
+        "hull_best": "1",
+        "bound": "1/8"
+      },
+      "diffusion": {
+        "graph": "single_edge",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "1",
+            "x": [
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "10001/10000",
+            "x": [
+              "1/10001",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "2",
+            "x": [
+              "10000/10001",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "20001/10000",
+            "x": [
+              "1",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "10001/5000",
+            "x": [
+              "30002/20001",
+              "10000/20001"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "3",
+            "x": [
+              "33340000/6667",
+              "33330000/6667"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "4",
+            "x": [
+              "200030000/20001",
+              "199990000/20001"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          },
+          {
+            "m": "8",
+            "x": [
+              "600070000/20001",
+              "599990000/20001"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "20001/10000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.0008363750000000003
+    },
+    {
+      "graph": {
+        "name": "path3",
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            1,
+            2,
+            "1"
+          ]
+        ],
+        "M": "4"
+      },
+      "all_seeded_subsets_enumerated": 4,
+      "MM": {
+        "graph": "path3",
+        "seeded_subsets": 4,
+        "starts": 4,
+        "fixedpoints": [
+          7
+        ],
+        "qualifying_MM_exact_targets": [
+          7
+        ],
+        "runs": [
+          {
+            "start": 1,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 7,
+            "steps": 0,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "1",
+            "1",
+            1
+          ],
+          [
+            "4",
+            "0",
+            7
+          ]
+        ],
+        "LB_numeric": 0.8213672050459182,
+        "optimum": "1",
+        "hull_best": "1",
+        "bound": "9/16"
+      },
+      "diffusion": {
+        "graph": "path3",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "1",
+            "x": [
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "10001/10000",
+            "x": [
+              "1/10001",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "2",
+            "x": [
+              "10000/10001",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "3",
+            "x": [
+              "20000/10001",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "15001/5000",
+            "x": [
+              "2",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "30003/10000",
+            "x": [
+              "100050003/50020001",
+              "5000/50020001",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "4",
+            "x": [
+              "200030000/50020001",
+              "49990000/50020001",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          },
+          {
+            "m": "8",
+            "x": [
+              "2001300070000/200030001",
+              "199990000/20001",
+              "1999699990000/200030001"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/5000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.0015555839999999987
+    },
+    {
+      "graph": {
+        "name": "K4",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            0,
+            2,
+            "1"
+          ],
+          [
+            0,
+            3,
+            "1"
+          ],
+          [
+            1,
+            2,
+            "1"
+          ],
+          [
+            1,
+            3,
+            "1"
+          ],
+          [
+            2,
+            3,
+            "1"
+          ]
+        ],
+        "M": "12"
+      },
+      "all_seeded_subsets_enumerated": 8,
+      "MM": {
+        "graph": "K4",
+        "seeded_subsets": 8,
+        "starts": 8,
+        "fixedpoints": [
+          15
+        ],
+        "qualifying_MM_exact_targets": [
+          15
+        ],
+        "runs": [
+          {
+            "start": 1,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 15,
+            "steps": 0,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "3",
+            "3",
+            1
+          ],
+          [
+            "12",
+            "0",
+            15
+          ]
+        ],
+        "LB_numeric": 0.8213672050459182,
+        "optimum": "1",
+        "hull_best": "1",
+        "bound": "9/16"
+      },
+      "diffusion": {
+        "graph": "K4",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "3",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "30001/10000",
+            "x": [
+              "1/30003",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "6",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "9",
+            "x": [
+              "20000/10001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "12",
+            "x": [
+              "30000/10001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "120009/10000",
+            "x": [
+              "3",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "12001/1000",
+            "x": [
+              "370030/120009",
+              "10000/120009",
+              "10000/120009",
+              "10000/120009"
+            ],
+            "support": 15,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          },
+          {
+            "m": "24",
+            "x": [
+              "400210000/40003",
+              "399970000/40003",
+              "399970000/40003",
+              "399970000/40003"
+            ],
+            "support": 15,
+            "KKT_exact": true,
+            "m_act": "120009/10000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.004305417000000006
+    },
+    {
+      "graph": {
+        "name": "two_triangles",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            1,
+            2,
+            "1"
+          ],
+          [
+            2,
+            0,
+            "1"
+          ],
+          [
+            3,
+            4,
+            "1"
+          ],
+          [
+            4,
+            5,
+            "1"
+          ],
+          [
+            5,
+            3,
+            "1"
+          ]
+        ],
+        "M": "12"
+      },
+      "all_seeded_subsets_enumerated": 32,
+      "MM": {
+        "graph": "two_triangles",
+        "seeded_subsets": 32,
+        "starts": 32,
+        "fixedpoints": [
+          7,
+          57
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 7,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 17,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 19,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 21,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 23,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 25,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 27,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 29,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 31,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 33,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 35,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 37,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 39,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 41,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 43,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 45,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 47,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 49,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 51,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 53,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 55,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 57,
+            "final": 57,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 59,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 61,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 63,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "2",
+            "2",
+            1
+          ],
+          [
+            "6",
+            "0",
+            7
+          ],
+          [
+            "12",
+            "0",
+            63
+          ]
+        ],
+        "LB_numeric": 0.5,
+        "optimum": "1/2",
+        "hull_best": "1/2",
+        "bound": "1/6"
+      },
+      "diffusion": {
+        "graph": "two_triangles",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "2",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "20001/10000",
+            "x": [
+              "1/20002",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "4",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "6",
+            "x": [
+              "20000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "15001/2500",
+            "x": [
+              "2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "12001/2000",
+            "x": [
+              "65005/30002",
+              "2500/15001",
+              "2500/15001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "8",
+            "x": [
+              "50030000/15001",
+              "49990000/15001",
+              "49990000/15001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "12",
+            "x": [
+              "150050000/15001",
+              "149990000/15001",
+              "149990000/15001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "16",
+            "x": [
+              "250070000/15001",
+              "249990000/15001",
+              "249990000/15001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          },
+          {
+            "m": "24",
+            "x": [
+              "450110000/15001",
+              "449990000/15001",
+              "449990000/15001",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "15001/2500"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.0217165
+    },
+    {
+      "graph": {
+        "name": "random_weighted_n5",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1,
+            "3/2"
+          ],
+          [
+            1,
+            2,
+            "5/3"
+          ],
+          [
+            2,
+            3,
+            "3"
+          ],
+          [
+            3,
+            4,
+            "5/4"
+          ]
+        ],
+        "M": "89/6"
+      },
+      "all_seeded_subsets_enumerated": 16,
+      "MM": {
+        "graph": "random_weighted_n5",
+        "seeded_subsets": 16,
+        "starts": 16,
+        "fixedpoints": [
+          3
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 3,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 17,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 19,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 21,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 23,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 25,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 27,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 29,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 31,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "3/2",
+            "3/2",
+            1
+          ],
+          [
+            "89/6",
+            "0",
+            31
+          ]
+        ],
+        "LB_numeric": 0.558320393249937,
+        "optimum": "837/1246",
+        "hull_best": "1",
+        "bound": "1600/801"
+      },
+      "diffusion": {
+        "graph": "random_weighted_n5",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "3/2",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "15001/10000",
+            "x": [
+              "2/30003",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "3",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "9/2",
+            "x": [
+              "20000/10001",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "280019/60000",
+            "x": [
+              "19/9",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "11201/2400",
+            "x": [
+              "19008360475/9003420171",
+              "60000/1000380019",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "6",
+            "x": [
+              "3800570000/1000380019",
+              "799810000/1000380019",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "89/12",
+            "x": [
+              "50356745000/9003420171",
+              "1649810000/1000380019",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "12",
+            "x": [
+              "184390969770000/15010367996711",
+              "7932890000/1500886711",
+              "13322882890000/15010367996711",
+              "0",
+              "0"
+            ],
+            "support": 7,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "89/6",
+            "x": [
+              "120425068076969600000/6762003313471326783",
+              "20110138154677390000/2254001104490442261",
+              "6368165095577390000/2254001104490442261",
+              "746983387359130000/751333701496814087",
+              "0"
+            ],
+            "support": 15,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          },
+          {
+            "m": "89/3",
+            "x": [
+              "29757935968442129890000/2968116771379228029",
+              "2970220690419710000/296781998938029",
+              "29668977571207719710000/2968116771379228029",
+              "8896540031859130000/890345996814087",
+              "88956496858623159130000/8904350314137684087"
+            ],
+            "support": 31,
+            "KKT_exact": true,
+            "m_act": "280019/60000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.012206374999999992
+    },
+    {
+      "graph": {
+        "name": "random_weighted_n7",
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            1,
+            2,
+            "3/2"
+          ],
+          [
+            2,
+            3,
+            "7/2"
+          ],
+          [
+            3,
+            4,
+            "4"
+          ],
+          [
+            4,
+            5,
+            "6"
+          ],
+          [
+            5,
+            6,
+            "1/4"
+          ],
+          [
+            0,
+            3,
+            "1"
+          ],
+          [
+            0,
+            5,
+            "7/4"
+          ],
+          [
+            0,
+            6,
+            "4"
+          ],
+          [
+            1,
+            3,
+            "5/4"
+          ],
+          [
+            2,
+            4,
+            "2"
+          ]
+        ],
+        "M": "105/2"
+      },
+      "all_seeded_subsets_enumerated": 64,
+      "MM": {
+        "graph": "random_weighted_n7",
+        "seeded_subsets": 64,
+        "starts": 4,
+        "fixedpoints": [
+          15,
+          65
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 15,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 43,
+            "final": 15,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 65,
+            "final": 65,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 127,
+            "final": 15,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "31/4",
+            "31/4",
+            1
+          ],
+          [
+            "12",
+            "4",
+            65
+          ],
+          [
+            "105/2",
+            "0",
+            127
+          ]
+        ],
+        "LB_numeric": 0.5297739289559436,
+        "optimum": "59/105",
+        "hull_best": "59/105",
+        "bound": "729/1120"
+      },
+      "diffusion": {
+        "graph": "random_weighted_n7",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "31/4",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "77501/10000",
+            "x": [
+              "4/310031",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "31/2",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "10230527/640000",
+            "x": [
+              "17/16",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "10230591/640000",
+            "x": [
+              "460890070047/433768648432",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "640000/27110540527"
+            ],
+            "support": 65,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "93/4",
+            "x": [
+              "78210540000/27110540527",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "46494730000/27110540527"
+            ],
+            "support": 65,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "105/4",
+            "x": [
+              "98612580000/27110540527",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "65694730000/27110540527"
+            ],
+            "support": 65,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "31",
+            "x": [
+              "10998802803415810000/2190499019441080527",
+              "2227322452164190000/6571497058323241581",
+              "0",
+              "0",
+              "0",
+              "1413971649496690000/6571497058323241581",
+              "24564664487784190000/6571497058323241581"
+            ],
+            "support": 99,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "105/2",
+            "x": [
+              "102371632432767966415660310000/8422267644776701568427101659",
+              "62672097187546524001230230000/25266802934330104705281304977",
+              "0",
+              "6047861385381010226383410000/8422267644776701568427101659",
+              "859407848725642163740930000/2296982084939100427752845907",
+              "57346746467129512972856480000/25266802934330104705281304977",
+              "267129137283705754185450230000/25266802934330104705281304977"
+            ],
+            "support": 123,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "62",
+            "x": [
+              "2412316960937170818432005538730000/1325540899642716363123097524839",
+              "342452855236769006400751010230000/189362985663245194731871074977",
+              "2393284034112986725411424751610000/1325540899642716363123097524839",
+              "2394411323981753773179267951610000/1325540899642716363123097524839",
+              "341981979285005172128164250230000/189362985663245194731871074977",
+              "64779513672113299797428961530000/35825429720073415219543176347",
+              "2409840144548427451916212351610000/1325540899642716363123097524839"
+            ],
+            "support": 127,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          },
+          {
+            "m": "105",
+            "x": [
+              "1896949004020209613083623311630000/189362985663245194731871074977",
+              "1893284413468648054948119650230000/189362985663245194731871074977",
+              "1892344263659519913159289250230000/189362985663245194731871074977",
+              "1892616995079382908586993250230000/189362985663245194731871074977",
+              "1892486962260015754970351750230000/189362985663245194731871074977",
+              "51167704412911209730722596290000/5117918531439059317077596621",
+              "1896349774248739443765286250230000/189362985663245194731871074977"
+            ],
+            "support": 127,
+            "KKT_exact": true,
+            "m_act": "10230527/640000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.030545875000000028
+    },
+    {
+      "graph": {
+        "name": "random_weighted_n10",
+        "n": 10,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            1,
+            2,
+            "3/2"
+          ],
+          [
+            2,
+            3,
+            "1"
+          ],
+          [
+            3,
+            4,
+            "3/4"
+          ],
+          [
+            4,
+            5,
+            "3/2"
+          ],
+          [
+            5,
+            6,
+            "1/4"
+          ],
+          [
+            6,
+            7,
+            "2"
+          ],
+          [
+            7,
+            8,
+            "3/4"
+          ],
+          [
+            8,
+            9,
+            "1/3"
+          ],
+          [
+            0,
+            5,
+            "2/3"
+          ],
+          [
+            0,
+            6,
+            "2"
+          ],
+          [
+            2,
+            5,
+            "3/2"
+          ],
+          [
+            2,
+            8,
+            "3/4"
+          ],
+          [
+            3,
+            6,
+            "3/2"
+          ],
+          [
+            3,
+            8,
+            "5/2"
+          ],
+          [
+            3,
+            9,
+            "7"
+          ],
+          [
+            4,
+            9,
+            "1"
+          ],
+          [
+            5,
+            7,
+            "3"
+          ],
+          [
+            5,
+            8,
+            "2"
+          ]
+        ],
+        "M": "62"
+      },
+      "all_seeded_subsets_enumerated": 512,
+      "MM": {
+        "graph": "random_weighted_n10",
+        "seeded_subsets": 512,
+        "starts": 4,
+        "fixedpoints": [
+          7,
+          67
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 67,
+            "final": 67,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 341,
+            "final": 7,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 1023,
+            "final": 7,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "11/3",
+            "11/3",
+            1
+          ],
+          [
+            "62",
+            "0",
+            1023
+          ]
+        ],
+        "LB_numeric": 0.43856939356526414,
+        "optimum": "73273/106392",
+        "hull_best": "1",
+        "bound": "30625/8184"
+      },
+      "diffusion": {
+        "graph": "random_weighted_n10",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "11/3",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "110003/30000",
+            "x": [
+              "3/110011",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "22/3",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "11",
+            "x": [
+              "20000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "51337/4000",
+            "x": [
+              "5/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "256687/20000",
+            "x": [
+              "4901160061/1960440022",
+              "12000/980220011",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "44/3",
+            "x": [
+              "55207590000/17745060253",
+              "43379757470000/177468347590253",
+              "0",
+              "0",
+              "0",
+              "0",
+              "14575797470000/177468347590253",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 67,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "88/3",
+            "x": [
+              "156417710000/17745060253",
+              "448220237470000/177468347590253",
+              "0",
+              "0",
+              "0",
+              "0",
+              "366610997470000/177468347590253",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 67,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "31",
+            "x": [
+              "167918860000/17745060253",
+              "494224837470000/177468347590253",
+              "0",
+              "0",
+              "0",
+              "0",
+              "406614997470000/177468347590253",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 67,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "62",
+            "x": [
+              "136855872616546891034707325394011278509600250000/5410671278533168439531343015997003943547853373",
+              "64028152206736109771116112274873957857386270000/5410671278533168439531343015997003943547853373",
+              "24504795423118659012902727907489896321466270000/5410671278533168439531343015997003943547853373",
+              "220889093959474105624158533544142119385490000/235246577327529062588319261565087127980341451",
+              "266715213826285857043805651768234087385490000/235246577327529062588319261565087127980341451",
+              "977197122149857634993217536674674690985490000/235246577327529062588319261565087127980341451",
+              "53610357043247957586816231013487479422266270000/5410671278533168439531343015997003943547853373",
+              "26225218189242011056225924485596847521466270000/5410671278533168439531343015997003943547853373",
+              "9698837900440005691729527977621802118166270000/5410671278533168439531343015997003943547853373",
+              "0"
+            ],
+            "support": 511,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          },
+          {
+            "m": "124",
+            "x": [
+              "134611353499515985385877115450376832026040011410000/13405971243192840986364980135970445717036527791",
+              "134250464150311114094136731593314040077992002090000/13405971243192840986364980135970445717036527791",
+              "134054589613604906486969440110764348528834722090000/13405971243192840986364980135970445717036527791",
+              "133958253976806804833793673774309345261634722090000/13405971243192840986364980135970445717036527791",
+              "133963505605080172141013744887589750125634722090000/13405971243192840986364980135970445717036527791",
+              "134044538463261513731245266253124750633215522090000/13405971243192840986364980135970445717036527791",
+              "134198822664546053581265708277643935732901922090000/13405971243192840986364980135970445717036527791",
+              "134063128199381362226751295444497618093634722090000/13405971243192840986364980135970445717036527791",
+              "133981196081238916755339618829148795821634722090000/13405971243192840986364980135970445717036527791",
+              "133933002584875213025233031826777923629634722090000/13405971243192840986364980135970445717036527791"
+            ],
+            "support": 1023,
+            "KKT_exact": true,
+            "m_act": "51337/4000"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.12004833299999995
+    },
+    {
+      "graph": {
+        "name": "random_weighted_n14",
+        "n": 14,
+        "edges": [
+          [
+            0,
+            1,
+            "7"
+          ],
+          [
+            1,
+            2,
+            "7/4"
+          ],
+          [
+            2,
+            3,
+            "1"
+          ],
+          [
+            3,
+            4,
+            "1/2"
+          ],
+          [
+            4,
+            5,
+            "1"
+          ],
+          [
+            5,
+            6,
+            "5/3"
+          ],
+          [
+            6,
+            7,
+            "7"
+          ],
+          [
+            7,
+            8,
+            "3"
+          ],
+          [
+            8,
+            9,
+            "7/4"
+          ],
+          [
+            9,
+            10,
+            "1/3"
+          ],
+          [
+            10,
+            11,
+            "2"
+          ],
+          [
+            11,
+            12,
+            "2"
+          ],
+          [
+            12,
+            13,
+            "2"
+          ],
+          [
+            0,
+            5,
+            "4"
+          ],
+          [
+            0,
+            13,
+            "5/4"
+          ],
+          [
+            2,
+            6,
+            "7/4"
+          ],
+          [
+            2,
+            7,
+            "7/3"
+          ],
+          [
+            2,
+            11,
+            "5/3"
+          ],
+          [
+            2,
+            12,
+            "3"
+          ],
+          [
+            4,
+            9,
+            "5/3"
+          ],
+          [
+            4,
+            11,
+            "3"
+          ]
+        ],
+        "M": "298/3"
+      },
+      "all_seeded_subsets_enumerated": 8192,
+      "MM": {
+        "graph": "random_weighted_n14",
+        "seeded_subsets": 8192,
+        "starts": 4,
+        "fixedpoints": [
+          35
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 35,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 35,
+            "final": 35,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 5461,
+            "final": 35,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 16383,
+            "final": 35,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "49/4",
+            "49/4",
+            1
+          ],
+          [
+            "21",
+            "7",
+            3
+          ],
+          [
+            "83/3",
+            "17/3",
+            35
+          ],
+          [
+            "298/3",
+            "0",
+            16383
+          ]
+        ],
+        "LB_numeric": 0.4833171721001615,
+        "optimum": "11955/24734",
+        "hull_best": "11955/24734",
+        "bound": "46225/98936"
+      },
+      "diffusion": {
+        "graph": "random_weighted_n14",
+        "solves": [
+          {
+            "m": "0",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "49/4",
+            "x": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 0,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "122501/10000",
+            "x": [
+              "4/490049",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "49/2",
+            "x": [
+              "10000/10001",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "882049/32000",
+            "x": [
+              "5/4",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 1,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "4410261/160000",
+            "x": [
+              "13305060261/10643920196",
+              "32000/2660980049",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "support": 3,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "147/4",
+            "x": [
+              "1300260000/400260013",
+              "6399479870000/4003000390013",
+              "0",
+              "0",
+              "0",
+              "3798959870000/4003000390013",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "998399870000/4003000390013"
+            ],
+            "support": 8227,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "49",
+            "x": [
+              "2600390000/400260013",
+              "16800519870000/4003000390013",
+              "0",
+              "0",
+              "0",
+              "11599739870000/4003000390013",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "5998899870000/4003000390013"
+            ],
+            "support": 8227,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "149/3",
+            "x": [
+              "392658370000/58838221911",
+              "2552884740890000/588441057331911",
+              "0",
+              "0",
+              "0",
+              "589189333630000/196147019110637",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "921842280890000/588441057331911"
+            ],
+            "support": 8227,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "98",
+            "x": [
+              "1600622241572561414762244674041555747445566528254065070000/70467127767497885980548490233963494119128547500455069501",
+              "180463032386210132651477488440044766005647461018563570000/10066732538213983711506927176280499159875506785779295643",
+              "266684426677950149119756021614701447692057526249304990000/70467127767497885980548490233963494119128547500455069501",
+              "466919863371476690645965917623215606559779716347914970000/211401383302493657941645470701890482357385642501365208503",
+              "144999085304407198017163941687465515093706284322304990000/70467127767497885980548490233963494119128547500455069501",
+              "2873006321308528643407015120744897341154588626129354970000/211401383302493657941645470701890482357385642501365208503",
+              "553301528102237474132948423698809944207608594763914970000/211401383302493657941645470701890482357385642501365208503",
+              "12093840639348773931443291881383021778478162182143570000/10066732538213983711506927176280499159875506785779295643",
+              "0",
+              "0",
+              "13334104264341414977383644190384451931477282013604990000/70467127767497885980548490233963494119128547500455069501",
+              "13967094240377622516571645464794497415966496207043570000/10066732538213983711506927176280499159875506785779295643",
+              "827996074051691594311272188110052525381853626347914970000/211401383302493657941645470701890482357385642501365208503",
+              "2144792000266860731056314099080798085121665801271914970000/211401383302493657941645470701890482357385642501365208503"
+            ],
+            "support": 15615,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "298/3",
+            "x": [
+              "9853688403985719236918152946908734599416814037568801150000/419751361961126673358002001278551135784903066760655625509",
+              "78171917428168807671756937090330886532602956588631342764910000/4197933370973227860253378014786789908984815570673316910715509",
+              "1769961907947160254995866763923260547558737477843744910000/419751361961126673358002001278551135784903066760655625509",
+              "32933374439464204064566304025572878735638865620492678534730000/12593800112919683580760134044360369726954446712019950732146527",
+              "1012667713935479916538902878546420185801120806643744910000/419751361961126673358002001278551135784903066760655625509",
+              "178707747871807754561643078336712477534994072880943690854730000/12593800112919683580760134044360369726954446712019950732146527",
+              "3750757098475579549372528950901159193173387431051234730000/1259254085883380020074006003835653407354709200281966876527",
+              "6247089906053376139549377285530958421914448889762324144910000/4197933370973227860253378014786789908984815570673316910715509",
+              "0",
+              "506511657187101431043587074880552940705605889960083264910000/4197933370973227860253378014786789908984815570673316910715509",
+              "228689866720764602507043580892221406868362094043744910000/419751361961126673358002001278551135784903066760655625509",
+              "7481752404716002195865571676024245437870765260830892844910000/4197933370973227860253378014786789908984815570673316910715509",
+              "5515066748885595538843408589508977408828761100331234730000/1259254085883380020074006003835653407354709200281966876527",
+              "135042736103374317387351911438337956897131599817320250534730000/12593800112919683580760134044360369726954446712019950732146527"
+            ],
+            "support": 16127,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          },
+          {
+            "m": "596/3",
+            "x": [
+              "16684719988118341710429342172390552389480360016939002835591490410000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16668575420148952885441173757742519671187383432390435499593913290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16620647208534366949259842227460198811998839379068860196096953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "49845961274898769053194214238748978293891319299328663538690859870000/4989463531736932397172924858563252488661155893899293646130914013",
+              "16614640917489261963977022130111018820211690829014775306496953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "49961486375752113016819754354952379006446683121640035198759019870000/4989463531736932397172924858563252488661155893899293646130914013",
+              "49849550385752968791824533545573938906704320169196978015746859870000/4989463531736932397172924858563252488661155893899293646130914013",
+              "16611548011459137894832722095414056900200777485414030672896953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16606543634278952544184751955269235563081208954279154512896953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16606986468913796311885762127328481672780716465334770512896953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16608432455890939349200035467339694750262616720602354512896953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "16612551451102659272053166054479972270198276740167538512896953290000/1663154510578977465724308286187750829553718631299764548710304671",
+              "49863586672148116442152932275661738265575496384101412498690859870000/4989463531736932397172924858563252488661155893899293646130914013",
+              "49926901938502109563851333541106725457027895387405540346426859870000/4989463531736932397172924858563252488661155893899293646130914013"
+            ],
+            "support": 16383,
+            "KKT_exact": true,
+            "m_act": "882049/32000"
+          }
+        ]
+      },
+      "elapsed_seconds": 1.857722708
+    }
+  ],
+  "hypergraphs": [
+    {
+      "graph": {
+        "name": "all_or_nothing",
+        "n": 6,
+        "hyperedges": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            "1",
+            [
+              "0",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            "3/2",
+            [
+              "0",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              0,
+              4,
+              5
+            ],
+            "1/2",
+            [
+              "0",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              2,
+              5
+            ],
+            "1",
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        ],
+        "M": "25/2"
+      },
+      "all_seeded_subsets_enumerated": 32,
+      "MM": {
+        "graph": "all_or_nothing",
+        "seeded_subsets": 32,
+        "starts": 32,
+        "fixedpoints": [
+          63,
+          39,
+          53
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 17,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 19,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 21,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 23,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 25,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 27,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 29,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 31,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 33,
+            "final": 39,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 35,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 37,
+            "final": 39,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 39,
+            "final": 39,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 41,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 43,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 45,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 47,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 49,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 51,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 53,
+            "final": 53,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 55,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 57,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 59,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 61,
+            "final": 63,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 63,
+            "final": 63,
+            "steps": 0,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "3/2",
+            "3/2",
+            1
+          ],
+          [
+            "25/2",
+            "0",
+            63
+          ]
+        ],
+        "LB_numeric": 0.6374150274553526,
+        "optimum": "3360128/3515625",
+        "hull_best": "1"
+      },
+      "elapsed_seconds": 0.6863720839999998
+    },
+    {
+      "graph": {
+        "name": "cardinality_min",
+        "n": 6,
+        "hyperedges": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            "3/2",
+            [
+              "0",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            "1",
+            [
+              "0",
+              "1",
+              "2",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              0,
+              4,
+              5
+            ],
+            "1/2",
+            [
+              "0",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              2,
+              5
+            ],
+            "3/2",
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        ],
+        "M": "13"
+      },
+      "all_seeded_subsets_enumerated": 32,
+      "MM": {
+        "graph": "cardinality_min",
+        "seeded_subsets": 32,
+        "starts": 32,
+        "fixedpoints": [
+          3,
+          27,
+          37
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 3,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 17,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 19,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 21,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 23,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 25,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 27,
+            "final": 27,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 29,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 31,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 33,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 35,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 37,
+            "final": 37,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 39,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 41,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 43,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 45,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 47,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 49,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 51,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 53,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 55,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 57,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 59,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 61,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 63,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "2",
+            "2",
+            1
+          ],
+          [
+            "13",
+            "0",
+            63
+          ]
+        ],
+        "LB_numeric": 0.6275862394090008,
+        "optimum": "186280/199927",
+        "hull_best": "1"
+      },
+      "elapsed_seconds": 0.16540945799999962
+    },
+    {
+      "graph": {
+        "name": "concave_scaled",
+        "n": 6,
+        "hyperedges": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            "3/2",
+            [
+              "0",
+              "1/2",
+              "1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            "1",
+            [
+              "0",
+              "1/2",
+              "1",
+              "1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              0,
+              4,
+              5
+            ],
+            "1/2",
+            [
+              "0",
+              "1/2",
+              "1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              2,
+              5
+            ],
+            "3/2",
+            [
+              "0",
+              "1/2",
+              "0"
+            ]
+          ]
+        ],
+        "M": "13"
+      },
+      "all_seeded_subsets_enumerated": 32,
+      "MM": {
+        "graph": "concave_scaled",
+        "seeded_subsets": 32,
+        "starts": 32,
+        "fixedpoints": [
+          3,
+          27,
+          37
+        ],
+        "qualifying_MM_exact_targets": [],
+        "runs": [
+          {
+            "start": 1,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 3,
+            "final": 3,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 5,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 7,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 9,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 11,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 13,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 15,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 17,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 19,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 21,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 23,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 25,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 27,
+            "final": 27,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 29,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 31,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 33,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 35,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 37,
+            "final": 37,
+            "steps": 0,
+            "minimum": "0"
+          },
+          {
+            "start": 39,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 41,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 43,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 45,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 47,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 49,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 51,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 53,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 55,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          },
+          {
+            "start": 57,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 59,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 61,
+            "final": 3,
+            "steps": 2,
+            "minimum": "0"
+          },
+          {
+            "start": 63,
+            "final": 3,
+            "steps": 1,
+            "minimum": "0"
+          }
+        ]
+      },
+      "certificate": {
+        "hull": [
+          [
+            "2",
+            "1",
+            1
+          ],
+          [
+            "13",
+            "0",
+            63
+          ]
+        ],
+        "LB_numeric": 0.8137931197045005,
+        "optimum": "386207/399854",
+        "hull_best": "1"
+      },
+      "elapsed_seconds": 0.16587029100000006
+    }
+  ],
+  "SBM": [
+    {
+      "graph": {
+        "name": "mean_sbm_K4_s2_p1_q1/4",
+        "n": 8,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            0,
+            2,
+            "1/4"
+          ],
+          [
+            0,
+            3,
+            "1/4"
+          ],
+          [
+            0,
+            4,
+            "1/4"
+          ],
+          [
+            0,
+            5,
+            "1/4"
+          ],
+          [
+            0,
+            6,
+            "1/4"
+          ],
+          [
+            0,
+            7,
+            "1/4"
+          ],
+          [
+            1,
+            2,
+            "1/4"
+          ],
+          [
+            1,
+            3,
+            "1/4"
+          ],
+          [
+            1,
+            4,
+            "1/4"
+          ],
+          [
+            1,
+            5,
+            "1/4"
+          ],
+          [
+            1,
+            6,
+            "1/4"
+          ],
+          [
+            1,
+            7,
+            "1/4"
+          ],
+          [
+            2,
+            3,
+            "1"
+          ],
+          [
+            2,
+            4,
+            "1/4"
+          ],
+          [
+            2,
+            5,
+            "1/4"
+          ],
+          [
+            2,
+            6,
+            "1/4"
+          ],
+          [
+            2,
+            7,
+            "1/4"
+          ],
+          [
+            3,
+            4,
+            "1/4"
+          ],
+          [
+            3,
+            5,
+            "1/4"
+          ],
+          [
+            3,
+            6,
+            "1/4"
+          ],
+          [
+            3,
+            7,
+            "1/4"
+          ],
+          [
+            4,
+            5,
+            "1"
+          ],
+          [
+            4,
+            6,
+            "1/4"
+          ],
+          [
+            4,
+            7,
+            "1/4"
+          ],
+          [
+            5,
+            6,
+            "1/4"
+          ],
+          [
+            5,
+            7,
+            "1/4"
+          ],
+          [
+            6,
+            7,
+            "1"
+          ]
+        ],
+        "M": "20"
+      },
+      "seeded_subsets": 128,
+      "Z_minimizers": [
+        3
+      ],
+      "conductance_minimizers": [
+        15,
+        51,
+        195
+      ]
+    },
+    {
+      "graph": {
+        "name": "mean_sbm_K4_s3_p3/4_q1/8",
+        "n": 12,
+        "edges": [
+          [
+            0,
+            1,
+            "3/4"
+          ],
+          [
+            0,
+            2,
+            "3/4"
+          ],
+          [
+            0,
+            3,
+            "1/8"
+          ],
+          [
+            0,
+            4,
+            "1/8"
+          ],
+          [
+            0,
+            5,
+            "1/8"
+          ],
+          [
+            0,
+            6,
+            "1/8"
+          ],
+          [
+            0,
+            7,
+            "1/8"
+          ],
+          [
+            0,
+            8,
+            "1/8"
+          ],
+          [
+            0,
+            9,
+            "1/8"
+          ],
+          [
+            0,
+            10,
+            "1/8"
+          ],
+          [
+            0,
+            11,
+            "1/8"
+          ],
+          [
+            1,
+            2,
+            "3/4"
+          ],
+          [
+            1,
+            3,
+            "1/8"
+          ],
+          [
+            1,
+            4,
+            "1/8"
+          ],
+          [
+            1,
+            5,
+            "1/8"
+          ],
+          [
+            1,
+            6,
+            "1/8"
+          ],
+          [
+            1,
+            7,
+            "1/8"
+          ],
+          [
+            1,
+            8,
+            "1/8"
+          ],
+          [
+            1,
+            9,
+            "1/8"
+          ],
+          [
+            1,
+            10,
+            "1/8"
+          ],
+          [
+            1,
+            11,
+            "1/8"
+          ],
+          [
+            2,
+            3,
+            "1/8"
+          ],
+          [
+            2,
+            4,
+            "1/8"
+          ],
+          [
+            2,
+            5,
+            "1/8"
+          ],
+          [
+            2,
+            6,
+            "1/8"
+          ],
+          [
+            2,
+            7,
+            "1/8"
+          ],
+          [
+            2,
+            8,
+            "1/8"
+          ],
+          [
+            2,
+            9,
+            "1/8"
+          ],
+          [
+            2,
+            10,
+            "1/8"
+          ],
+          [
+            2,
+            11,
+            "1/8"
+          ],
+          [
+            3,
+            4,
+            "3/4"
+          ],
+          [
+            3,
+            5,
+            "3/4"
+          ],
+          [
+            3,
+            6,
+            "1/8"
+          ],
+          [
+            3,
+            7,
+            "1/8"
+          ],
+          [
+            3,
+            8,
+            "1/8"
+          ],
+          [
+            3,
+            9,
+            "1/8"
+          ],
+          [
+            3,
+            10,
+            "1/8"
+          ],
+          [
+            3,
+            11,
+            "1/8"
+          ],
+          [
+            4,
+            5,
+            "3/4"
+          ],
+          [
+            4,
+            6,
+            "1/8"
+          ],
+          [
+            4,
+            7,
+            "1/8"
+          ],
+          [
+            4,
+            8,
+            "1/8"
+          ],
+          [
+            4,
+            9,
+            "1/8"
+          ],
+          [
+            4,
+            10,
+            "1/8"
+          ],
+          [
+            4,
+            11,
+            "1/8"
+          ],
+          [
+            5,
+            6,
+            "1/8"
+          ],
+          [
+            5,
+            7,
+            "1/8"
+          ],
+          [
+            5,
+            8,
+            "1/8"
+          ],
+          [
+            5,
+            9,
+            "1/8"
+          ],
+          [
+            5,
+            10,
+            "1/8"
+          ],
+          [
+            5,
+            11,
+            "1/8"
+          ],
+          [
+            6,
+            7,
+            "3/4"
+          ],
+          [
+            6,
+            8,
+            "3/4"
+          ],
+          [
+            6,
+            9,
+            "1/8"
+          ],
+          [
+            6,
+            10,
+            "1/8"
+          ],
+          [
+            6,
+            11,
+            "1/8"
+          ],
+          [
+            7,
+            8,
+            "3/4"
+          ],
+          [
+            7,
+            9,
+            "1/8"
+          ],
+          [
+            7,
+            10,
+            "1/8"
+          ],
+          [
+            7,
+            11,
+            "1/8"
+          ],
+          [
+            8,
+            9,
+            "1/8"
+          ],
+          [
+            8,
+            10,
+            "1/8"
+          ],
+          [
+            8,
+            11,
+            "1/8"
+          ],
+          [
+            9,
+            10,
+            "3/4"
+          ],
+          [
+            9,
+            11,
+            "3/4"
+          ],
+          [
+            10,
+            11,
+            "3/4"
+          ]
+        ],
+        "M": "63/2"
+      },
+      "seeded_subsets": 2048,
+      "Z_minimizers": [
+        7
+      ],
+      "conductance_minimizers": [
+        63,
+        455,
+        3591
+      ]
+    },
+    {
+      "graph": {
+        "name": "mean_sbm_K6_s2_p1_q1/8",
+        "n": 12,
+        "edges": [
+          [
+            0,
+            1,
+            "1"
+          ],
+          [
+            0,
+            2,
+            "1/8"
+          ],
+          [
+            0,
+            3,
+            "1/8"
+          ],
+          [
+            0,
+            4,
+            "1/8"
+          ],
+          [
+            0,
+            5,
+            "1/8"
+          ],
+          [
+            0,
+            6,
+            "1/8"
+          ],
+          [
+            0,
+            7,
+            "1/8"
+          ],
+          [
+            0,
+            8,
+            "1/8"
+          ],
+          [
+            0,
+            9,
+            "1/8"
+          ],
+          [
+            0,
+            10,
+            "1/8"
+          ],
+          [
+            0,
+            11,
+            "1/8"
+          ],
+          [
+            1,
+            2,
+            "1/8"
+          ],
+          [
+            1,
+            3,
+            "1/8"
+          ],
+          [
+            1,
+            4,
+            "1/8"
+          ],
+          [
+            1,
+            5,
+            "1/8"
+          ],
+          [
+            1,
+            6,
+            "1/8"
+          ],
+          [
+            1,
+            7,
+            "1/8"
+          ],
+          [
+            1,
+            8,
+            "1/8"
+          ],
+          [
+            1,
+            9,
+            "1/8"
+          ],
+          [
+            1,
+            10,
+            "1/8"
+          ],
+          [
+            1,
+            11,
+            "1/8"
+          ],
+          [
+            2,
+            3,
+            "1"
+          ],
+          [
+            2,
+            4,
+            "1/8"
+          ],
+          [
+            2,
+            5,
+            "1/8"
+          ],
+          [
+            2,
+            6,
+            "1/8"
+          ],
+          [
+            2,
+            7,
+            "1/8"
+          ],
+          [
+            2,
+            8,
+            "1/8"
+          ],
+          [
+            2,
+            9,
+            "1/8"
+          ],
+          [
+            2,
+            10,
+            "1/8"
+          ],
+          [
+            2,
+            11,
+            "1/8"
+          ],
+          [
+            3,
+            4,
+            "1/8"
+          ],
+          [
+            3,
+            5,
+            "1/8"
+          ],
+          [
+            3,
+            6,
+            "1/8"
+          ],
+          [
+            3,
+            7,
+            "1/8"
+          ],
+          [
+            3,
+            8,
+            "1/8"
+          ],
+          [
+            3,
+            9,
+            "1/8"
+          ],
+          [
+            3,
+            10,
+            "1/8"
+          ],
+          [
+            3,
+            11,
+            "1/8"
+          ],
+          [
+            4,
+            5,
+            "1"
+          ],
+          [
+            4,
+            6,
+            "1/8"
+          ],
+          [
+            4,
+            7,
+            "1/8"
+          ],
+          [
+            4,
+            8,
+            "1/8"
+          ],
+          [
+            4,
+            9,
+            "1/8"
+          ],
+          [
+            4,
+            10,
+            "1/8"
+          ],
+          [
+            4,
+            11,
+            "1/8"
+          ],
+          [
+            5,
+            6,
+            "1/8"
+          ],
+          [
+            5,
+            7,
+            "1/8"
+          ],
+          [
+            5,
+            8,
+            "1/8"
+          ],
+          [
+            5,
+            9,
+            "1/8"
+          ],
+          [
+            5,
+            10,
+            "1/8"
+          ],
+          [
+            5,
+            11,
+            "1/8"
+          ],
+          [
+            6,
+            7,
+            "1"
+          ],
+          [
+            6,
+            8,
+            "1/8"
+          ],
+          [
+            6,
+            9,
+            "1/8"
+          ],
+          [
+            6,
+            10,
+            "1/8"
+          ],
+          [
+            6,
+            11,
+            "1/8"
+          ],
+          [
+            7,
+            8,
+            "1/8"
+          ],
+          [
+            7,
+            9,
+            "1/8"
+          ],
+          [
+            7,
+            10,
+            "1/8"
+          ],
+          [
+            7,
+            11,
+            "1/8"
+          ],
+          [
+            8,
+            9,
+            "1"
+          ],
+          [
+            8,
+            10,
+            "1/8"
+          ],
+          [
+            8,
+            11,
+            "1/8"
+          ],
+          [
+            9,
+            10,
+            "1/8"
+          ],
+          [
+            9,
+            11,
+            "1/8"
+          ],
+          [
+            10,
+            11,
+            "1"
+          ]
+        ],
+        "M": "27"
+      },
+      "seeded_subsets": 2048,
+      "Z_minimizers": [
+        3
+      ],
+      "conductance_minimizers": [
+        63,
+        207,
+        243,
+        783,
+        819,
+        963,
+        3087,
+        3123,
+        3267,
+        3843
+      ]
+    },
+    {
+      "graph": {
+        "name": "mean_sbm_K4_s3_p1/2_q1/5",
+        "n": 12,
+        "edges": [
+          [
+            0,
+            1,
+            "1/2"
+          ],
+          [
+            0,
+            2,
+            "1/2"
+          ],
+          [
+            0,
+            3,
+            "1/5"
+          ],
+          [
+            0,
+            4,
+            "1/5"
+          ],
+          [
+            0,
+            5,
+            "1/5"
+          ],
+          [
+            0,
+            6,
+            "1/5"
+          ],
+          [
+            0,
+            7,
+            "1/5"
+          ],
+          [
+            0,
+            8,
+            "1/5"
+          ],
+          [
+            0,
+            9,
+            "1/5"
+          ],
+          [
+            0,
+            10,
+            "1/5"
+          ],
+          [
+            0,
+            11,
+            "1/5"
+          ],
+          [
+            1,
+            2,
+            "1/2"
+          ],
+          [
+            1,
+            3,
+            "1/5"
+          ],
+          [
+            1,
+            4,
+            "1/5"
+          ],
+          [
+            1,
+            5,
+            "1/5"
+          ],
+          [
+            1,
+            6,
+            "1/5"
+          ],
+          [
+            1,
+            7,
+            "1/5"
+          ],
+          [
+            1,
+            8,
+            "1/5"
+          ],
+          [
+            1,
+            9,
+            "1/5"
+          ],
+          [
+            1,
+            10,
+            "1/5"
+          ],
+          [
+            1,
+            11,
+            "1/5"
+          ],
+          [
+            2,
+            3,
+            "1/5"
+          ],
+          [
+            2,
+            4,
+            "1/5"
+          ],
+          [
+            2,
+            5,
+            "1/5"
+          ],
+          [
+            2,
+            6,
+            "1/5"
+          ],
+          [
+            2,
+            7,
+            "1/5"
+          ],
+          [
+            2,
+            8,
+            "1/5"
+          ],
+          [
+            2,
+            9,
+            "1/5"
+          ],
+          [
+            2,
+            10,
+            "1/5"
+          ],
+          [
+            2,
+            11,
+            "1/5"
+          ],
+          [
+            3,
+            4,
+            "1/2"
+          ],
+          [
+            3,
+            5,
+            "1/2"
+          ],
+          [
+            3,
+            6,
+            "1/5"
+          ],
+          [
+            3,
+            7,
+            "1/5"
+          ],
+          [
+            3,
+            8,
+            "1/5"
+          ],
+          [
+            3,
+            9,
+            "1/5"
+          ],
+          [
+            3,
+            10,
+            "1/5"
+          ],
+          [
+            3,
+            11,
+            "1/5"
+          ],
+          [
+            4,
+            5,
+            "1/2"
+          ],
+          [
+            4,
+            6,
+            "1/5"
+          ],
+          [
+            4,
+            7,
+            "1/5"
+          ],
+          [
+            4,
+            8,
+            "1/5"
+          ],
+          [
+            4,
+            9,
+            "1/5"
+          ],
+          [
+            4,
+            10,
+            "1/5"
+          ],
+          [
+            4,
+            11,
+            "1/5"
+          ],
+          [
+            5,
+            6,
+            "1/5"
+          ],
+          [
+            5,
+            7,
+            "1/5"
+          ],
+          [
+            5,
+            8,
+            "1/5"
+          ],
+          [
+            5,
+            9,
+            "1/5"
+          ],
+          [
+            5,
+            10,
+            "1/5"
+          ],
+          [
+            5,
+            11,
+            "1/5"
+          ],
+          [
+            6,
+            7,
+            "1/2"
+          ],
+          [
+            6,
+            8,
+            "1/2"
+          ],
+          [
+            6,
+            9,
+            "1/5"
+          ],
+          [
+            6,
+            10,
+            "1/5"
+          ],
+          [
+            6,
+            11,
+            "1/5"
+          ],
+          [
+            7,
+            8,
+            "1/2"
+          ],
+          [
+            7,
+            9,
+            "1/5"
+          ],
+          [
+            7,
+            10,
+            "1/5"
+          ],
+          [
+            7,
+            11,
+            "1/5"
+          ],
+          [
+            8,
+            9,
+            "1/5"
+          ],
+          [
+            8,
+            10,
+            "1/5"
+          ],
+          [
+            8,
+            11,
+            "1/5"
+          ],
+          [
+            9,
+            10,
+            "1/2"
+          ],
+          [
+            9,
+            11,
+            "1/2"
+          ],
+          [
+            10,
+            11,
+            "1/2"
+          ]
+        ],
+        "M": "168/5"
+      },
+      "seeded_subsets": 2048,
+      "Z_minimizers": [
+        7
+      ],
+      "conductance_minimizers": [
+        63,
+        455,
+        3591
+      ]
+    }
+  ],
+  "metadata": {
+    "elapsed_seconds": 3.454452125,
+    "python": "3.9.6",
+    "platform": "macOS-15.6-arm64-arm-64bit",
+    "source_SHA256": "f0b8539bea55a638003086ca40382d22e9b4695140bf49d955c034bfb84465da"
+  }
+}

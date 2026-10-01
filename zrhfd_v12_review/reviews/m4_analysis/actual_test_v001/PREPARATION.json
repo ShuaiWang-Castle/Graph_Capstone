@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-01T16:25:46.806877+00:00",
+  "actual_audit": "NOT_RUN",
+  "source_sha256": "549db6a877a6bb958a8526443a07e788f9f1b27896048b12dc5bedaae9550d3f",
+  "template": "reviews/m4_analysis/actual_summary_test_v001/launch.py",
+  "template_sha256": "d84895931983aac22f6a0bf06d475640b87b29341c185eda0364a01561acf429",
+  "changed_scope": "Auditor command/source pins only; same exact ordinary barrier and one-thread observer",
+  "preconditions": "test summary finished successfully; actual measured child exited"
+}

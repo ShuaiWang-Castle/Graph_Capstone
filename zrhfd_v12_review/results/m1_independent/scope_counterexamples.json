@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "scope": "Literal frozen symmetric cardinality splitting functions; exact Fraction arithmetic",
+  "claims": {
+    "T-b-small-edge-equality": {
+      "status": "FAIL",
+      "cases": [
+        {
+          "n": 2,
+          "hyperedges": [
+            {
+              "vertices": [
+                0,
+                1
+              ],
+              "theta": "1",
+              "w": [
+                "0",
+                "1/2",
+                "0"
+              ]
+            }
+          ],
+          "M": "2",
+          "v": "1",
+          "G_actual": "3/4",
+          "G_claimed_v2_over_M": "1/2",
+          "normalized_bound_satisfied": true,
+          "symmetric": true,
+          "cardinality_concave": true,
+          "violation": true
+        },
+        {
+          "n": 3,
+          "hyperedges": [
+            {
+              "vertices": [
+                0,
+                1,
+                2
+              ],
+              "theta": "1",
+              "w": [
+                "0",
+                "1/2",
+                "1/2",
+                "0"
+              ]
+            }
+          ],
+          "M": "3",
+          "v": "1",
+          "G_actual": "2/3",
+          "G_claimed_v2_over_M": "1/3",
+          "normalized_bound_satisfied": true,
+          "symmetric": true,
+          "cardinality_concave": true,
+          "violation": true
+        }
+      ]
+    },
+    "T-b-convexity-without-concavity-assumption": {
+      "status": "FAIL",
+      "n": 4,
+      "hyperedges": [
+        {
+          "vertices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "theta": "1",
+          "w": [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "M": "4",
+      "v_left": "0",
+      "v_mid": "1/2",
+      "v_right": "1",
+      "G_mid": "877/2048",
+      "chord_mid": "101/256",
+      "excess": "69/2048",
+      "normalized_bound_satisfied": true,
+      "symmetric": true,
+      "cardinality_concave": false,
+      "scope_note": "Frozen v1.2 does not state discrete concavity. This case needs theoretical admissibility judgment."
+    }
+  },
+  "metadata": {
+    "python": "3.9.6",
+    "platform": "macOS-15.6-arm64-arm-64bit",
+    "elapsed_seconds": 0.017474459
+  }
+}

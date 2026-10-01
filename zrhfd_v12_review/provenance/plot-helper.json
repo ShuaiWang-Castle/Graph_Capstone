@@ -1,0 +1,8 @@
+{
+  "upstream_path": "ccf-visual-composer/resources/python/ccfa_plot_recipes.py",
+  "upstream_repo": "https://github.com/mikubaka88/CCFA-Skills",
+  "commit": "5969e6b20a3bbcef9118fa00796d1417d48fcbf3",
+  "sha256": "242d49c21cd31a6cdcad17e45a322d0cb30e3b57620259c193ef28993100ff66",
+  "license_copy": "provenance/skills/CCFA-Skills_LICENSE",
+  "usage": "paired slopegraph recipe; quantitative figures rendered from immutable M2 values"
+}

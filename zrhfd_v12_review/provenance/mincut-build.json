@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-01T04:16:40.647455+00:00",
+  "command": [
+    "clang++",
+    "-O3",
+    "-std=c++17",
+    "/Users/shuaiwang/Desktop/Xiaobai/zrhfd_project/zrhfd/mincut128.cpp",
+    "-o",
+    "/Users/shuaiwang/Desktop/Xiaobai/zrhfd_project/work/bin/mincut128"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "a542e187ff5eb97f25c23a5f0f9a405570cb043a0d1346181729e9eb92c553ec",
+  "binary_sha256": "c6cb5ae6625046af3a88de2fecd61ab873fdfb895bd867cf050cf8e709f290fd"
+}

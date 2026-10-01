@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 120,
+  "violations": [],
+  "scope": "Independent direct core Z_exact and full penalty versus analytic one-point diagnostic arithmetic on three sampled rows per actual query",
+  "source_SHA256": "f2a3500ea56cd5a7dd4ebdcbc9ce222f9e8370d561e11c5b71d93dfae7186969"
+}

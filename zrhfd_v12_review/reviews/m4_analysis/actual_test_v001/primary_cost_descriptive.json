@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-01T16:34:18.097601+00:00",
+  "run": "results/m4/test_main_v12_002",
+  "queries": 432,
+  "csv_sha256": "e266593734fd5ec6d809a10675ccc97307e43ce077d6f939ff639f9c83a80d18",
+  "summary_sha256": "9e7c03611732ccf5f17e7592cdfd286f1e58d1c268b618113cff824383476872",
+  "independent_audit_sha256": "e90eea4816d9f3d5273dfc712eb30d10f0b948e37d37ea0b00ccd9135da5690f",
+  "native_HFD_kernel_completed_descriptive": {
+    "observed": 432,
+    "mean": 0.3721932286458333,
+    "median": 0.22329333350000002
+  },
+  "main_phase_descriptive": {
+    "outer_wall_seconds": {
+      "observed": 432,
+      "mean": 2.734442286732331,
+      "median": 0.352864166488871
+    },
+    "input_load_seconds": {
+      "observed": 432,
+      "mean": 0.037044606388210215,
+      "median": 0.036801937501877546
+    },
+    "diffusion_seconds": {
+      "observed": 432,
+      "mean": 0.08387554073339777,
+      "median": 0.07290354184806347
+    },
+    "mm_seconds": {
+      "observed": 432,
+      "mean": 0.07419354867306538,
+      "median": 0.010447042528539896
+    },
+    "certificate_cut_execution_and_validation_seconds": {
+      "observed": 432,
+      "mean": 2.1230927506478987,
+      "median": 0.21306287846527994
+    },
+    "exact_cut_native_subprocess_seconds": {
+      "observed": 432,
+      "mean": 1.9918573950880845,
+      "median": 0.2128440593369305
+    },
+    "exact_cut_capacity_assembly_seconds": {
+      "observed": 432,
+      "mean": 0.13266435601744214,
+      "median": 0.009336808696389198
+    },
+    "exact_cut_return_validation_seconds": {
+      "observed": 432,
+      "mean": 0.2054289042328795,
+      "median": 0.01823576958850026
+    },
+    "exact_cut_calls": {
+      "observed": 432,
+      "mean": 61.291666666666664,
+      "median": 35.0
+    },
+    "mass_count": {
+      "observed": 432,
+      "mean": 8.805555555555555,
+      "median": 9.0
+    },
+    "mm_steps": {
+      "observed": 432,
+      "mean": 1.8263888888888888,
+      "median": 2.0
+    }
+  },
+  "singletons_primary_graph_only_regression": [],
+  "scope": "Already independently verified primary quality/cost and graph-only regression telemetry; phase clocks nested and not additive",
+  "test_truth_region_mechanism_diagnostics": false,
+  "no_test_tuning": true
+}

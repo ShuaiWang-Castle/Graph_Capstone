@@ -1,0 +1,25 @@
+{
+ "upstream_url": "https://github.com/andrealancichinetti/LFRbenchmarks.git",
+ "upstream_commit": "ec9a860282d8fc9d52e9e08fea9ce93ddeb473af",
+ "copied_at_utc": "2026-10-01T04:19:03.902534+00:00",
+ "license": "MIT; preserved verbatim",
+ "source_origin": "Read-only local existing checkout; no upstream modifications",
+ "binary_status": "Copied existing native CPU binary; its bytes pinned below",
+ "files_sha256": {
+  "external/generators/lfr_native/LICENSE": "a8b6e154af89470602cf49961ae333036085778cf75ce331ea1abe0d9e46826c",
+  "external/generators/lfr_native/unweighted_undirected/ReadMe.txt": "a9e6f00cc6ea9d9909750b8c2baae28554ab78d6e79b28884e5d8ad8b208ae59",
+  "external/generators/lfr_native/unweighted_undirected/Sources/benchm.cpp": "b248e838c97baa705edb92e1a2c875026f56abee1b5a207dbe493f0e83bd3499",
+  "external/generators/lfr_native/unweighted_undirected/Sources/cast.cpp": "913360a3bcb50dbf87b00a360ebde05e738cb69a6b5fedf343eaff622e741b64",
+  "external/generators/lfr_native/unweighted_undirected/Sources/cc.cpp": "65b0087903c7975394e801e1695265728725579cbee4220b4a914f66c7006e78",
+  "external/generators/lfr_native/unweighted_undirected/Sources/combinatorics.cpp": "fce9073dc0366a5772e6e4fad29976416a1ed46ce404902a72c12a0d72fa979c",
+  "external/generators/lfr_native/unweighted_undirected/Sources/histograms.cpp": "e0ac2f77abd2a920543acc8e6790162133c490b8b683586fa9ab431cfada1a83",
+  "external/generators/lfr_native/unweighted_undirected/Sources/print.cpp": "3a22e7ac7e012bc6975eaeb6038b7be006c0a3cc0e07f851909ca1ed81251c52",
+  "external/generators/lfr_native/unweighted_undirected/Sources/random.cpp": "a91574dc2a4635d62cac39b1ae3d877ca178eefebc0c3a80d473d6fd261f0557",
+  "external/generators/lfr_native/unweighted_undirected/Sources/set_parameters.cpp": "68dd8300b08d4f9b15971f4adfd45d6624457bd910b375aa4636821c6cd59342",
+  "external/generators/lfr_native/unweighted_undirected/Sources/standard_include.cpp": "3cd9726ecdc4c99be214d0d0386ca7d3e1bb00dd6b8ae9b8bd4e94904e86618a",
+  "external/generators/lfr_native/unweighted_undirected/Thanks.txt": "189f9a6c90e85f7526265bc5eea5128cf2d69d98016da3fd1d517b8a0e6bf852",
+  "external/generators/lfr_native/unweighted_undirected/benchmark": "7c0f4527e0374e41ecea54f465c5396fdeeefe3e06df73543de3f9cf989df0eb",
+  "external/generators/lfr_native/unweighted_undirected/flags.dat": "b9d51156db300b552fd18b0c55fcac7572acc0f33308b664c643a982eb8d36d6",
+  "external/generators/lfr_native/unweighted_undirected/makefile": "a1100cea9889deeafa318c5b0041d10019175a797b95f0fffc1f8135f58efeca"
+ }
+}

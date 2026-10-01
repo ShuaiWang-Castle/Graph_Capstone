@@ -1,5 +1,7 @@
 # Graph Capstone — COMPSCI 521
 
+The current research direction is **ZR-HFD v1.2 local seeded community retrieval**. Its [ordinary-graph review checkpoint](zrhfd_v12_review/README.md) includes code, all dev/test/ablation tables, failure evidence and a compact replay package for 10,224 final covers. Development gains **did not generalize to the independent test cohort** (mean F1 0.9833 → 0.6849; author HFD test 0.8990); G-E2 failed. The project remains in progress, and formal real-hypergraph results are not yet available. [Claude / GPT review prompt](zrhfd_v12_review/GPT_PRO_ANALYSIS_PROMPT_ZH.md) · [中文完整报告](zrhfd_v12_review/REPORT.md).
+
 The latest completed experiment is the [2026-09-30 full-graph overlapping-community lab](community_lab_20260930/README.md): 24 LFR development graphs, 576 formal tasks (564 completed, 12 timeouts), native baselines, a single NOCD pair-dot mechanism, and an honest **NO_REPRODUCIBLE_GAIN under the frozen admission rule** result. The public snapshot includes code, reports, all formal results and a compact package for reproducing the 564 core cover scores. [中文卡点说明与数据入口](community_lab_20260930/README.md) · [GPT Pro analysis prompt](community_lab_20260930/reports/GPT_PRO_ANALYSIS_PROMPT_ZH.md).
 
 The earlier contraction study below remains archived here as a separate research direction; it was not continued in the community lab.

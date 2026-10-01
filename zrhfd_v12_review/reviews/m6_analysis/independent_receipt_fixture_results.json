@@ -1,0 +1,43 @@
+{
+  "auditor_source_sha256": "e0ad27382c12ae2493491b717c618e23381832e43e9a465eca4f8fe6da45a461",
+  "fixtures": [
+    {
+      "label": "valid_tiny_contract",
+      "accepted": true,
+      "expected_accepted": true,
+      "pass": true,
+      "error": null
+    },
+    {
+      "label": "quality_record_bound_to_timeout_query",
+      "accepted": false,
+      "expected_accepted": false,
+      "pass": true,
+      "error": "ValueError('Completed quality/query identity set differs')"
+    },
+    {
+      "label": "timeout_record_claims_F1_not_in_CSV",
+      "accepted": false,
+      "expected_accepted": false,
+      "pass": true,
+      "error": "ValueError('Noncompleted audit row contains completed-only quality/cover metrics')"
+    },
+    {
+      "label": "receipt_F1_disagrees_with_bound_CSV",
+      "accepted": false,
+      "expected_accepted": false,
+      "pass": true,
+      "error": "ValueError('CSV/raw field artificial_case0_q00.F1 differs')"
+    },
+    {
+      "label": "independent_quality_disagrees_with_completed_row",
+      "accepted": false,
+      "expected_accepted": false,
+      "pass": true,
+      "error": "ValueError('Completed independent quality/attempt binding differs')"
+    }
+  ],
+  "actual_raw_or_graph_read": false,
+  "numpy_or_algorithm_imported": false,
+  "initial_control_fixture_adjustment": "Single-case tiny plan rejected by newly added 3-scale/9-case census; corrected artificial plan before counting tests."
+}

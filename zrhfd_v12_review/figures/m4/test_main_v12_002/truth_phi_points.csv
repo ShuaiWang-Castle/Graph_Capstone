@@ -1,0 +1,73 @@
+F1,completed_budget,label,method,method_setting,planned,role,truth_phi_center
+"{""median"": 1.0, ""median_95_CI"": [0.9968454258675079, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.1
+"{""median"": 0.9844475619195047, ""median_95_CI"": [0.9817347789824854, 0.9880529085478595], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.2
+"{""median"": 0.9441323345817727, ""median_95_CI"": [0.9224806201550387, 0.9615384615384616], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.3
+"{""median"": 0.819327731092437, ""median_95_CI"": [0.7436192915066155, 0.8717948717948718], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.4
+"{""median"": 0.4859016393442623, ""median_95_CI"": [0.22027853888510535, 0.6229508196721312], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.5
+"{""median"": 0.2242063492063492, ""median_95_CI"": [0.13653884698971205, 0.3448275862068966], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL,acl,acl_no_volume,72,primary,0.6
+"{""median"": 0.7278899619549313, ""median_95_CI"": [0.6698113207547169, 0.7814569536423841], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.1
+"{""median"": 0.426548796417242, ""median_95_CI"": [0.38779299141332096, 0.47244632845617396], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.2
+"{""median"": 0.3194202898550724, ""median_95_CI"": [0.277992277992278, 0.3870967741935484], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.3
+"{""median"": 0.1809090909090909, ""median_95_CI"": [0.12301957129543337, 0.24390243902439024], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.4
+"{""median"": 0.11695906432748537, ""median_95_CI"": [0.07692307692307693, 0.2], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.5
+"{""median"": 0.0672316384180791, ""median_95_CI"": [0.042036124794745486, 0.09302325581395349], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ACL oracle,acl,acl_oracle,72,oracle_reference,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.1
+"{""median"": 0.9856107660455486, ""median_95_CI"": [0.9827123695976154, 0.9904761904761905], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.2
+"{""median"": 0.9445626477541371, ""median_95_CI"": [0.9245283018867925, 0.9615384615384616], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.3
+"{""median"": 0.8236999684840844, ""median_95_CI"": [0.74235807860262, 0.8671328671328671], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.4
+"{""median"": 0.4746442539735375, ""median_95_CI"": [0.21963686218219197, 0.6386554621848739], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.5
+"{""median"": 0.22434422457432124, ""median_95_CI"": [0.13757609835961343, 0.3492063492063492], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD,hfd_cd,hfd_cd_no_volume,72,primary,0.6
+"{""median"": 1.0, ""median_95_CI"": [0.9947368421052631, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.1
+"{""median"": 0.9771421107628004, ""median_95_CI"": [0.9716297786720323, 0.9818181818181818], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.2
+"{""median"": 0.8845186571528834, ""median_95_CI"": [0.8220858895705522, 0.9210526315789473], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.3
+"{""median"": 0.6496753246753246, ""median_95_CI"": [0.5492957746478874, 0.7222369976359336], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.4
+"{""median"": 0.38722346507581407, ""median_95_CI"": [0.3618181818181818, 0.42857142857142855], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.5
+"{""median"": 0.20282413350449294, ""median_95_CI"": [0.08450704225352113, 0.25185909980430526], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD-CD oracle,hfd_cd,hfd_cd_oracle,72,oracle_reference,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.1
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.2
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.3
+"{""median"": 1.0, ""median_95_CI"": [0.995874692796272, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.4
+"{""median"": 0.9728002920774006, ""median_95_CI"": [0.9537316337452564, 0.9817256341789051], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.5
+"{""median"": 0.7405222437137331, ""median_95_CI"": [0.5909090909090909, 0.7924528301886793], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD,hfd,hfd_no_volume,72,primary,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.1
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.2
+"{""median"": 0.992155777039498, ""median_95_CI"": [0.9681978798586572, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.3
+"{""median"": 0.7877328195247271, ""median_95_CI"": [0.693421557345608, 0.8804614275414564], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.4
+"{""median"": 0.44365079365079363, ""median_95_CI"": [0.38961038961038963, 0.5], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.5
+"{""median"": 0.16666666666666666, ""median_95_CI"": [0.1301775147928994, 0.25806451612903225], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,HFD oracle,hfd,hfd_oracle,72,oracle_reference,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.1
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.2
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.3
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.4
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.5
+"{""median"": 0.8519696166754991, ""median_95_CI"": [0.6045197740112994, 0.9904815670665684], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,Leiden,leiden,leiden_global,72,primary,0.6
+"{""median"": 1.0, ""median_95_CI"": [0.9968454258675079, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.1
+"{""median"": 0.9908256880733946, ""median_95_CI"": [0.9868936374879758, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.2
+"{""median"": 0.9653456853662721, ""median_95_CI"": [0.9606299212598425, 0.9766683518705763], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.3
+"{""median"": 0.8973499361430396, ""median_95_CI"": [0.864, 0.9176470588235294], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.4
+"{""median"": 0.6518796992481203, ""median_95_CI"": [0.4675862068965517, 0.7339940640237439], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.5
+"{""median"": 0.2252575011195701, ""median_95_CI"": [0.13636363636363635, 0.36213991769547327], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm,pnorm,pnorm_no_volume,72,primary,0.6
+"{""median"": 1.0, ""median_95_CI"": [0.9950738916256158, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.1
+"{""median"": 0.9862987987987988, ""median_95_CI"": [0.9824561403508771, 0.9912280701754386], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.2
+"{""median"": 0.9313784246575343, ""median_95_CI"": [0.8771929824561403, 0.9491525423728814], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.3
+"{""median"": 0.6644591611479029, ""median_95_CI"": [0.5401069518716578, 0.7370716043899092], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.4
+"{""median"": 0.3793235055579409, ""median_95_CI"": [0.36, 0.4270516717325228], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.5
+"{""median"": 0.19793555586553213, ""median_95_CI"": [0.08774961597542243, 0.2580678314491264], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,p-norm oracle,pnorm,pnorm_oracle,72,oracle_reference,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.1
+"{""median"": 0.9856107660455486, ""median_95_CI"": [0.9827123695976154, 0.9904761904761905], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.2
+"{""median"": 0.9445626477541371, ""median_95_CI"": [0.9245283018867925, 0.9615384615384616], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.3
+"{""median"": 0.8236999684840844, ""median_95_CI"": [0.74235807860262, 0.8671328671328671], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.4
+"{""median"": 0.4746442539735375, ""median_95_CI"": [0.21963686218219197, 0.6386554621848739], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.5
+"{""median"": 0.22434422457432124, ""median_95_CI"": [0.13757609835961343, 0.3492063492063492], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL*,tlhfd,tlhfd_no_volume,72,primary,0.6
+"{""median"": 1.0, ""median_95_CI"": [0.9947368421052631, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.1
+"{""median"": 0.9771421107628004, ""median_95_CI"": [0.9716297786720323, 0.9818181818181818], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.2
+"{""median"": 0.8845186571528834, ""median_95_CI"": [0.8220858895705522, 0.9210526315789473], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.3
+"{""median"": 0.6496753246753246, ""median_95_CI"": [0.5492957746478874, 0.7222369976359336], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.4
+"{""median"": 0.38722346507581407, ""median_95_CI"": [0.3618181818181818, 0.42857142857142855], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.5
+"{""median"": 0.20282413350449294, ""median_95_CI"": [0.08450704225352113, 0.25185909980430526], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,TL* oracle,tlhfd,tlhfd_oracle,72,oracle_reference,0.6
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.1
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.2
+"{""median"": 1.0, ""median_95_CI"": [1.0, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.3
+"{""median"": 0.9823911630929174, ""median_95_CI"": [0.08655043586550436, 1.0], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.4
+"{""median"": 0.4160558464223386, ""median_95_CI"": [0.07692307692307693, 0.9791666666666666], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.5
+"{""median"": 0.06557572861920688, ""median_95_CI"": [0.03818181818181818, 0.16118598382749327], ""observations"": 72, ""replicates"": 10000, ""seed"": 20261005}",72,ZR-HFD,zrhfd,zrhfd_no_volume,72,primary,0.6

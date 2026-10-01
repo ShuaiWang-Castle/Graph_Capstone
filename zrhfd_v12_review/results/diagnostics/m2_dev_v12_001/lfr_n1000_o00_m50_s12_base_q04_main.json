@@ -1,0 +1,1352 @@
+{
+  "source_raw": "results/m2/run_v12_001/lfr_n1000_o00_m50_s12_base_q04_main.json",
+  "source_raw_sha256": "efa3a1db2b24a25f0a4cb823487786e3adfb7bf319584196b59cbbfd2300fa83",
+  "task": "lfr_n1000_o00_m50_s12_base_q04_main",
+  "diagnosis": {
+    "schema_version": 1,
+    "scope": "offline development truth diagnostic; truth never passed into pipeline",
+    "seed": 56,
+    "target_index": 8,
+    "truth_size": 91,
+    "truth_volume": 1777,
+    "region_size": 11,
+    "region_volume": 266,
+    "C_subset_R": false,
+    "rho_hat": 0.03296703296703297,
+    "outside_truth_volume": 141,
+    "outside_volume_ratio": 0.07934721440630275,
+    "failure_class": "H1",
+    "symmetric_difference": [
+      22,
+      31,
+      34,
+      36,
+      59,
+      61,
+      67,
+      68,
+      86,
+      87,
+      109,
+      117,
+      133,
+      134,
+      138,
+      142,
+      159,
+      166,
+      179,
+      189,
+      224,
+      234,
+      239,
+      246,
+      265,
+      309,
+      345,
+      352,
+      353,
+      357,
+      358,
+      369,
+      381,
+      417,
+      422,
+      423,
+      424,
+      432,
+      436,
+      495,
+      497,
+      519,
+      524,
+      542,
+      546,
+      553,
+      562,
+      569,
+      574,
+      575,
+      590,
+      603,
+      610,
+      637,
+      654,
+      677,
+      679,
+      682,
+      686,
+      690,
+      697,
+      698,
+      702,
+      740,
+      746,
+      749,
+      754,
+      760,
+      761,
+      769,
+      777,
+      782,
+      802,
+      822,
+      825,
+      841,
+      867,
+      869,
+      881,
+      892,
+      895,
+      902,
+      904,
+      932,
+      949,
+      951,
+      966,
+      972,
+      979,
+      980
+    ],
+    "Z_truth_exact": "20266549/34352964",
+    "Z_output_exact": "639325/715284",
+    "FP": {
+      "C_admissible_for_FP": false,
+      "order": [
+        56,
+        83,
+        574,
+        654,
+        657,
+        677,
+        698,
+        860,
+        865,
+        947,
+        966
+      ],
+      "objective_difference_exact": "32184851/105921639",
+      "prefix_bound_exact": "4072/8588241",
+      "penalty_exact": "248077/17176482",
+      "last_bound_exact": "47/3222",
+      "inequalities_numerically_checked_if_admissible": null,
+      "scope_note": "FP comparison with truth is applicable only when C subset R; otherwise arithmetic is descriptive only"
+    },
+    "single_step_margins": [
+      {
+        "operation": "delete",
+        "vertex": 22,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 31,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 34,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 36,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 59,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 61,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 67,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 68,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 83,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 86,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 87,
+        "Z_gap_exact": "23281435/10116947898",
+        "penalty_exact": "235/2862747",
+        "margin_exact": "22450945/10116947898",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 109,
+        "Z_gap_exact": "94014991/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "91275925/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 117,
+        "Z_gap_exact": "94014991/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "91275925/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 133,
+        "Z_gap_exact": "59662027/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "56922961/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 134,
+        "Z_gap_exact": "59662027/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "56922961/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 138,
+        "Z_gap_exact": "59662027/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "56922961/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 142,
+        "Z_gap_exact": "94014991/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "91275925/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 159,
+        "Z_gap_exact": "94014991/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "91275925/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 166,
+        "Z_gap_exact": "94014991/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "91275925/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 179,
+        "Z_gap_exact": "59662027/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "56922961/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 189,
+        "Z_gap_exact": "59662027/30333667212",
+        "penalty_exact": "517/5725494",
+        "margin_exact": "56922961/30333667212",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 224,
+        "Z_gap_exact": "2794483/1010549691",
+        "penalty_exact": "94/954249",
+        "margin_exact": "2694937/1010549691",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 234,
+        "Z_gap_exact": "2794483/1010549691",
+        "penalty_exact": "94/954249",
+        "margin_exact": "2694937/1010549691",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 239,
+        "Z_gap_exact": "2794483/1010549691",
+        "penalty_exact": "94/954249",
+        "margin_exact": "2694937/1010549691",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 246,
+        "Z_gap_exact": "2794483/1010549691",
+        "penalty_exact": "94/954249",
+        "margin_exact": "2694937/1010549691",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 265,
+        "Z_gap_exact": "2794483/1010549691",
+        "penalty_exact": "94/954249",
+        "margin_exact": "2694937/1010549691",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 309,
+        "Z_gap_exact": "6000485/1683295236",
+        "penalty_exact": "611/5725494",
+        "margin_exact": "5820851/1683295236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 345,
+        "Z_gap_exact": "4091987/1683295236",
+        "penalty_exact": "611/5725494",
+        "margin_exact": "3912353/1683295236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 352,
+        "Z_gap_exact": "6000485/1683295236",
+        "penalty_exact": "611/5725494",
+        "margin_exact": "5820851/1683295236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 353,
+        "Z_gap_exact": "6000485/1683295236",
+        "penalty_exact": "611/5725494",
+        "margin_exact": "5820851/1683295236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 357,
+        "Z_gap_exact": "4091987/1683295236",
+        "penalty_exact": "611/5725494",
+        "margin_exact": "3912353/1683295236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 358,
+        "Z_gap_exact": "97831783/30282137766",
+        "penalty_exact": "329/2862747",
+        "margin_exact": "94351621/30282137766",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 369,
+        "Z_gap_exact": "97831783/30282137766",
+        "penalty_exact": "329/2862747",
+        "margin_exact": "94351621/30282137766",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 381,
+        "Z_gap_exact": "97831783/30282137766",
+        "penalty_exact": "329/2862747",
+        "margin_exact": "94351621/30282137766",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 417,
+        "Z_gap_exact": "97831783/30282137766",
+        "penalty_exact": "329/2862747",
+        "margin_exact": "94351621/30282137766",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 422,
+        "Z_gap_exact": "40669859/10088320428",
+        "penalty_exact": "235/1908498",
+        "margin_exact": "39427649/10088320428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 423,
+        "Z_gap_exact": "40669859/10088320428",
+        "penalty_exact": "235/1908498",
+        "margin_exact": "39427649/10088320428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 424,
+        "Z_gap_exact": "29218871/10088320428",
+        "penalty_exact": "235/1908498",
+        "margin_exact": "27976661/10088320428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 432,
+        "Z_gap_exact": "40669859/10088320428",
+        "penalty_exact": "235/1908498",
+        "margin_exact": "39427649/10088320428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 436,
+        "Z_gap_exact": "29218871/10088320428",
+        "penalty_exact": "235/1908498",
+        "margin_exact": "27976661/10088320428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 495,
+        "Z_gap_exact": "18639364/5041297467",
+        "penalty_exact": "376/2862747",
+        "margin_exact": "17977228/5041297467",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 497,
+        "Z_gap_exact": "18639364/5041297467",
+        "penalty_exact": "376/2862747",
+        "margin_exact": "17977228/5041297467",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 519,
+        "Z_gap_exact": "18639364/5041297467",
+        "penalty_exact": "376/2862747",
+        "margin_exact": "17977228/5041297467",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 524,
+        "Z_gap_exact": "18639364/5041297467",
+        "penalty_exact": "376/2862747",
+        "margin_exact": "17977228/5041297467",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 542,
+        "Z_gap_exact": "34004383/7557652080",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "32949703/7557652080",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 546,
+        "Z_gap_exact": "12708071/3778826040",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "12180731/3778826040",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 553,
+        "Z_gap_exact": "12708071/3778826040",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "12180731/3778826040",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 562,
+        "Z_gap_exact": "12708071/3778826040",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "12180731/3778826040",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 569,
+        "Z_gap_exact": "12708071/3778826040",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "12180731/3778826040",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 575,
+        "Z_gap_exact": "34004383/7557652080",
+        "penalty_exact": "799/5725494",
+        "margin_exact": "32949703/7557652080",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 590,
+        "Z_gap_exact": "13983077/3357047982",
+        "penalty_exact": "47/318083",
+        "margin_exact": "13487039/3357047982",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 603,
+        "Z_gap_exact": "13983077/3357047982",
+        "penalty_exact": "47/318083",
+        "margin_exact": "13487039/3357047982",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 610,
+        "Z_gap_exact": "13983077/3357047982",
+        "penalty_exact": "47/318083",
+        "margin_exact": "13487039/3357047982",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 637,
+        "Z_gap_exact": "50010865/10065418452",
+        "penalty_exact": "893/5725494",
+        "margin_exact": "48440971/10065418452",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 654,
+        "Z_gap_exact": "38559877/10065418452",
+        "penalty_exact": "893/5725494",
+        "margin_exact": "36989983/10065418452",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 677,
+        "Z_gap_exact": "69933155/15089539437",
+        "penalty_exact": "470/2862747",
+        "margin_exact": "67455785/15089539437",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 679,
+        "Z_gap_exact": "69933155/15089539437",
+        "penalty_exact": "470/2862747",
+        "margin_exact": "67455785/15089539437",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 682,
+        "Z_gap_exact": "69933155/15089539437",
+        "penalty_exact": "470/2862747",
+        "margin_exact": "67455785/15089539437",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 686,
+        "Z_gap_exact": "27342461/5026983732",
+        "penalty_exact": "329/1908498",
+        "margin_exact": "26475875/5026983732",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 690,
+        "Z_gap_exact": "27342461/5026983732",
+        "penalty_exact": "329/1908498",
+        "margin_exact": "26475875/5026983732",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 697,
+        "Z_gap_exact": "21616967/5026983732",
+        "penalty_exact": "329/1908498",
+        "margin_exact": "20750381/5026983732",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 698,
+        "Z_gap_exact": "27342461/5026983732",
+        "penalty_exact": "329/1908498",
+        "margin_exact": "26475875/5026983732",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 702,
+        "Z_gap_exact": "27342461/5026983732",
+        "penalty_exact": "329/1908498",
+        "margin_exact": "26475875/5026983732",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 740,
+        "Z_gap_exact": "143731081/30127549428",
+        "penalty_exact": "1081/5725494",
+        "margin_exact": "138042859/30127549428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 746,
+        "Z_gap_exact": "178084045/30127549428",
+        "penalty_exact": "1081/5725494",
+        "margin_exact": "172395823/30127549428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 749,
+        "Z_gap_exact": "178084045/30127549428",
+        "penalty_exact": "1081/5725494",
+        "margin_exact": "172395823/30127549428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 754,
+        "Z_gap_exact": "143731081/30127549428",
+        "penalty_exact": "1081/5725494",
+        "margin_exact": "138042859/30127549428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 760,
+        "Z_gap_exact": "178084045/30127549428",
+        "penalty_exact": "1081/5725494",
+        "margin_exact": "172395823/30127549428",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 761,
+        "Z_gap_exact": "27987478/5018395491",
+        "penalty_exact": "188/954249",
+        "margin_exact": "26998786/5018395491",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 769,
+        "Z_gap_exact": "27987478/5018395491",
+        "penalty_exact": "188/954249",
+        "margin_exact": "26998786/5018395491",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 777,
+        "Z_gap_exact": "33712972/5018395491",
+        "penalty_exact": "188/954249",
+        "margin_exact": "32724280/5018395491",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 782,
+        "Z_gap_exact": "27987478/5018395491",
+        "penalty_exact": "188/954249",
+        "margin_exact": "26998786/5018395491",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 802,
+        "Z_gap_exact": "181964809/30076019982",
+        "penalty_exact": "611/2862747",
+        "margin_exact": "175545643/30076019982",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 822,
+        "Z_gap_exact": "32668643/5006944503",
+        "penalty_exact": "658/2862747",
+        "margin_exact": "31517801/5006944503",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 825,
+        "Z_gap_exact": "32668643/5006944503",
+        "penalty_exact": "658/2862747",
+        "margin_exact": "31517801/5006944503",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 841,
+        "Z_gap_exact": "92930783/15012245268",
+        "penalty_exact": "1363/5725494",
+        "margin_exact": "89356997/15012245268",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 867,
+        "Z_gap_exact": "22213253/3332237508",
+        "penalty_exact": "1457/5725494",
+        "margin_exact": "21365279/3332237508",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 869,
+        "Z_gap_exact": "22213253/3332237508",
+        "penalty_exact": "1457/5725494",
+        "margin_exact": "21365279/3332237508",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 881,
+        "Z_gap_exact": "20694755/2496315384",
+        "penalty_exact": "517/1908498",
+        "margin_exact": "20018519/2496315384",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 892,
+        "Z_gap_exact": "79398551/9979536042",
+        "penalty_exact": "799/2862747",
+        "margin_exact": "76613237/9979536042",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 895,
+        "Z_gap_exact": "262408987/29921431644",
+        "penalty_exact": "1645/5725494",
+        "margin_exact": "253812217/29921431644",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 902,
+        "Z_gap_exact": "262408987/29921431644",
+        "penalty_exact": "1645/5725494",
+        "margin_exact": "253812217/29921431644",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 904,
+        "Z_gap_exact": "262408987/29921431644",
+        "penalty_exact": "1645/5725494",
+        "margin_exact": "253812217/29921431644",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 932,
+        "Z_gap_exact": "15580190/1657530513",
+        "penalty_exact": "940/2862747",
+        "margin_exact": "15035930/1657530513",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 949,
+        "Z_gap_exact": "5576761/584000388",
+        "penalty_exact": "2021/5725494",
+        "margin_exact": "5370619/584000388",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 951,
+        "Z_gap_exact": "154322069/14883421653",
+        "penalty_exact": "1034/2862747",
+        "margin_exact": "148946303/14883421653",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 966,
+        "Z_gap_exact": "18493069/1652759268",
+        "penalty_exact": "235/636166",
+        "margin_exact": "17882539/1652759268",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 972,
+        "Z_gap_exact": "107585053/9910830114",
+        "penalty_exact": "1081/2862747",
+        "margin_exact": "103842631/9910830114",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 979,
+        "Z_gap_exact": "346989817/29715313860",
+        "penalty_exact": "2209/5725494",
+        "margin_exact": "335525107/29715313860",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "delete",
+        "vertex": 980,
+        "Z_gap_exact": "312636853/29715313860",
+        "penalty_exact": "2209/5725494",
+        "margin_exact": "301172143/29715313860",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "add",
+        "vertex": 574,
+        "Z_gap_exact": "34988923/10271536236",
+        "penalty_exact": "17/9666",
+        "margin_exact": "16923941/10271536236",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "add",
+        "vertex": 657,
+        "Z_gap_exact": "62716307/15424480836",
+        "penalty_exact": "19/9666",
+        "margin_exact": "32397133/15424480836",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "add",
+        "vertex": 860,
+        "Z_gap_exact": "31047119/3881884932",
+        "penalty_exact": "31/9666",
+        "margin_exact": "18597457/3881884932",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "add",
+        "vertex": 865,
+        "Z_gap_exact": "31047119/3881884932",
+        "penalty_exact": "31/9666",
+        "margin_exact": "18597457/3881884932",
+        "C_and_T_within_R": false
+      },
+      {
+        "operation": "add",
+        "vertex": 947,
+        "Z_gap_exact": "168612107/15630598620",
+        "penalty_exact": "43/9666",
+        "margin_exact": "99078097/15630598620",
+        "C_and_T_within_R": false
+      }
+    ],
+    "single_step_margin_distribution": {
+      "count": 95,
+      "negative": 0,
+      "zero": 0,
+      "positive": 95,
+      "min": 0.0016476543149100175,
+      "median": 0.0036749572982383146,
+      "q05": 0.0018765604765875875,
+      "q95": 0.00943964079912078,
+      "max": 0.011291319640128479
+    },
+    "delete_margin_distribution": {
+      "count": 90,
+      "negative": 0,
+      "zero": 0,
+      "positive": 90,
+      "min": 0.0018765604765875875,
+      "median": 0.0036204748041445004,
+      "q05": 0.0020307222069471083,
+      "q95": 0.009642458714125269,
+      "max": 0.011291319640128479
+    },
+    "add_margin_distribution": {
+      "count": 5,
+      "negative": 0,
+      "zero": 0,
+      "positive": 5,
+      "min": 0.0016476543149100175,
+      "median": 0.004790831600054239,
+      "q05": 0.0017381976618085389,
+      "q95": 0.006029147894483649,
+      "max": 0.006338726968091002
+    },
+    "coverage_mass": {
+      "status": "NUMERIC_COVERAGE_BRACKET",
+      "m_c_upper": 16037.8125,
+      "m_c_lower": 16036.875,
+      "relative_bracket_width": 5.845560296954463e-05,
+      "relative_tolerance": 0.0001,
+      "max_bisections": 20,
+      "initial_bracket": [
+        15360.0,
+        30720.0
+      ],
+      "m_c_over_m_jstar": 66.82421875,
+      "m_c_over_m_jstar_plus1": 33.412109375,
+      "outside_truth_volume_first_covered_upper": 8618,
+      "support_size_first_covered_upper": 517,
+      "bracket_trace": [
+        {
+          "mass": 30.0,
+          "covered": false,
+          "support_size": 1,
+          "support_volume": 10,
+          "outside_truth_volume": 0,
+          "cached": true,
+          "source": "immutable_pipeline_record_support_inferred_exactly_from_size_or_Rsupp",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 0.0,
+          "solver_backend": null
+        },
+        {
+          "mass": 60.0,
+          "covered": false,
+          "support_size": 1,
+          "support_volume": 10,
+          "outside_truth_volume": 0,
+          "cached": true,
+          "source": "immutable_pipeline_record_support_inferred_exactly_from_size_or_Rsupp",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 7.105427357601002e-16,
+          "solver_backend": null
+        },
+        {
+          "mass": 120.0,
+          "covered": false,
+          "support_size": 2,
+          "support_volume": 20,
+          "outside_truth_volume": 0,
+          "cached": true,
+          "source": "immutable_pipeline_record_support_inferred_exactly_from_size_or_Rsupp",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 9.976020010071807e-13,
+          "solver_backend": null
+        },
+        {
+          "mass": 240.0,
+          "covered": false,
+          "support_size": 7,
+          "support_volume": 116,
+          "outside_truth_volume": 36,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 9.867194780542234e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 480.0,
+          "covered": false,
+          "support_size": 11,
+          "support_volume": 266,
+          "outside_truth_volume": 141,
+          "cached": true,
+          "source": "immutable_pipeline_record_support_inferred_exactly_from_size_or_Rsupp",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 8.526512829121202e-13,
+          "solver_backend": null
+        },
+        {
+          "mass": 960.0,
+          "covered": false,
+          "support_size": 11,
+          "support_volume": 266,
+          "outside_truth_volume": 141,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 4.988010005035904e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 1920.0,
+          "covered": false,
+          "support_size": 15,
+          "support_volume": 317,
+          "outside_truth_volume": 192,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "recorded_grid_bracket",
+          "scaled_kkt_residual": 7.553858773058488e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 3840.0,
+          "covered": false,
+          "support_size": 74,
+          "support_volume": 1328,
+          "outside_truth_volume": 817,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "diagnostic_bracket_extension",
+          "scaled_kkt_residual": 9.768347746847377e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 7680.0,
+          "covered": false,
+          "support_size": 191,
+          "support_volume": 4100,
+          "outside_truth_volume": 3062,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "diagnostic_bracket_extension",
+          "scaled_kkt_residual": 9.589237616518917e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 15360.0,
+          "covered": false,
+          "support_size": 474,
+          "support_volume": 9604,
+          "outside_truth_volume": 7854,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "diagnostic_bracket_extension",
+          "scaled_kkt_residual": 1.0913936421275138e-12,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 30720.0,
+          "covered": true,
+          "support_size": 1000,
+          "support_volume": 19332,
+          "outside_truth_volume": 17555,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "diagnostic_bracket_extension",
+          "scaled_kkt_residual": 1.3229013843969865e-11,
+          "solver_backend": "coordinate_queue_then_sparse_active_set"
+        },
+        {
+          "mass": 23040.0,
+          "covered": true,
+          "support_size": 1000,
+          "support_volume": 19332,
+          "outside_truth_volume": 17555,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 5.820766091346741e-12,
+          "solver_backend": "coordinate_queue_then_sparse_active_set"
+        },
+        {
+          "mass": 19200.0,
+          "covered": true,
+          "support_size": 946,
+          "support_volume": 18532,
+          "outside_truth_volume": 16755,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 7.275957614183426e-13,
+          "solver_backend": "coordinate_queue_then_sparse_active_set"
+        },
+        {
+          "mass": 17280.0,
+          "covered": true,
+          "support_size": 626,
+          "support_volume": 12528,
+          "outside_truth_volume": 10751,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.990230864787008e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16320.0,
+          "covered": true,
+          "support_size": 538,
+          "support_volume": 10778,
+          "outside_truth_volume": 9001,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.966630695349262e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 15840.0,
+          "covered": false,
+          "support_size": 511,
+          "support_volume": 10290,
+          "outside_truth_volume": 8530,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.989584916845409e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16080.0,
+          "covered": true,
+          "support_size": 519,
+          "support_volume": 10424,
+          "outside_truth_volume": 8647,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.965361869035405e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 15960.0,
+          "covered": false,
+          "support_size": 514,
+          "support_volume": 10333,
+          "outside_truth_volume": 8573,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.95774891115226e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16020.0,
+          "covered": false,
+          "support_size": 516,
+          "support_volume": 10378,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.987256499846617e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16050.0,
+          "covered": true,
+          "support_size": 518,
+          "support_volume": 10414,
+          "outside_truth_volume": 8637,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.994967816358742e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16035.0,
+          "covered": false,
+          "support_size": 516,
+          "support_volume": 10378,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.936940159605e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16042.5,
+          "covered": true,
+          "support_size": 517,
+          "support_volume": 10395,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 1.0031191563672003e-12,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16038.75,
+          "covered": true,
+          "support_size": 517,
+          "support_volume": 10395,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.971283058500073e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16036.875,
+          "covered": false,
+          "support_size": 516,
+          "support_volume": 10378,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.947598300641403e-13,
+          "solver_backend": "coordinate_queue"
+        },
+        {
+          "mass": 16037.8125,
+          "covered": true,
+          "support_size": 517,
+          "support_volume": 10395,
+          "outside_truth_volume": 8618,
+          "cached": false,
+          "source": "independent_recompute_same_quadratic_objective",
+          "role": "coverage_bisection",
+          "scaled_kkt_residual": 9.976020010071807e-13,
+          "solver_backend": "coordinate_queue"
+        }
+      ],
+      "bisections": [
+        {
+          "iteration": 0,
+          "low_before": 15360.0,
+          "high_before": 30720.0,
+          "mid": 23040.0,
+          "covered": true
+        },
+        {
+          "iteration": 1,
+          "low_before": 15360.0,
+          "high_before": 23040.0,
+          "mid": 19200.0,
+          "covered": true
+        },
+        {
+          "iteration": 2,
+          "low_before": 15360.0,
+          "high_before": 19200.0,
+          "mid": 17280.0,
+          "covered": true
+        },
+        {
+          "iteration": 3,
+          "low_before": 15360.0,
+          "high_before": 17280.0,
+          "mid": 16320.0,
+          "covered": true
+        },
+        {
+          "iteration": 4,
+          "low_before": 15360.0,
+          "high_before": 16320.0,
+          "mid": 15840.0,
+          "covered": false
+        },
+        {
+          "iteration": 5,
+          "low_before": 15840.0,
+          "high_before": 16320.0,
+          "mid": 16080.0,
+          "covered": true
+        },
+        {
+          "iteration": 6,
+          "low_before": 15840.0,
+          "high_before": 16080.0,
+          "mid": 15960.0,
+          "covered": false
+        },
+        {
+          "iteration": 7,
+          "low_before": 15960.0,
+          "high_before": 16080.0,
+          "mid": 16020.0,
+          "covered": false
+        },
+        {
+          "iteration": 8,
+          "low_before": 16020.0,
+          "high_before": 16080.0,
+          "mid": 16050.0,
+          "covered": true
+        },
+        {
+          "iteration": 9,
+          "low_before": 16020.0,
+          "high_before": 16050.0,
+          "mid": 16035.0,
+          "covered": false
+        },
+        {
+          "iteration": 10,
+          "low_before": 16035.0,
+          "high_before": 16050.0,
+          "mid": 16042.5,
+          "covered": true
+        },
+        {
+          "iteration": 11,
+          "low_before": 16035.0,
+          "high_before": 16042.5,
+          "mid": 16038.75,
+          "covered": true
+        },
+        {
+          "iteration": 12,
+          "low_before": 16035.0,
+          "high_before": 16038.75,
+          "mid": 16036.875,
+          "covered": false
+        },
+        {
+          "iteration": 13,
+          "low_before": 16036.875,
+          "high_before": 16038.75,
+          "mid": 16037.8125,
+          "covered": true
+        }
+      ],
+      "diagnosis_seconds": 0.1710688341408968,
+      "precision_scope": "float64 same-objective solver and strict stored positivity; not exact real activation certificate"
+    },
+    "diagnosis_seconds": 0.17378308298066258
+  }
+}

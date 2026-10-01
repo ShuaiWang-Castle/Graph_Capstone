@@ -1,0 +1,17 @@
+{
+  "status": "PASS_PRIMARY_COVER_REPLAY",
+  "utc": "2026-10-01T19:19:08.483163+00:00",
+  "archive_sha256": "48c6ab44aa20b6bcd4de6cd08a1ea88fee3856793ab3f6f95c9c2f428060b83e",
+  "publication_manifest_sha256": "e561f5452c7eeb95e1718bf43b90e1aa15a951568dabee997fa87d1c08b5a4d7",
+  "source_sha256": "145546d7ffa4cdee249bd9c8f9b837e906f204ade3c8dc0863619311870fce27",
+  "cohort_counts": {
+    "dev_ablations_v12_002": 1008,
+    "dev_main_v12_002": 4032,
+    "test_main_v12_002": 5184
+  },
+  "unique_task_count": 10224,
+  "errors": [],
+  "wall_seconds": 4.309200583957136,
+  "cpu_seconds": 4.305623,
+  "scope": "All10224 ordinary final covers F1/P/R/size/cut/volume/exact Z/phi/seed membership metadata and archive member identity. No baseline rerun, solver-witness audit, new truth-region diagnostics or bootstrap. M6 not replayed."
+}
