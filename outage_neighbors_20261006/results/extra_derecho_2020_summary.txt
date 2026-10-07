@@ -1,0 +1,10 @@
+counties 118; with a wind report within 40 km 112
+Spearman(outage onset, wind-report hour) = 0.761
+rise     k= 5 components=1 lambda2=0.011 | |Spearman| of the Fiedler vector: onset_hour 0.90  wind_report_hour 0.83  lon 0.71  peak_share 0.34  restore_hours 0.40
+rise     k= 8 components=1 lambda2=0.019 | |Spearman| of the Fiedler vector: onset_hour 0.88  wind_report_hour 0.84  lon 0.72  peak_share 0.37  restore_hours 0.40
+rise     k=12 components=1 lambda2=0.024 | |Spearman| of the Fiedler vector: onset_hour 0.90  wind_report_hour 0.85  lon 0.73  peak_share 0.37  restore_hours 0.39
+rise     k=20 components=1 lambda2=0.041 | |Spearman| of the Fiedler vector: onset_hour 0.89  wind_report_hour 0.85  lon 0.74  peak_share 0.37  restore_hours 0.40
+recovery k= 5 components=2 lambda2=0.000 | |Spearman| of the Fiedler vector: onset_hour 0.00  wind_report_hour 0.01  lon 0.00  peak_share 0.19  restore_hours 0.12
+recovery k= 8 components=1 lambda2=0.011 | |Spearman| of the Fiedler vector: onset_hour 0.29  wind_report_hour 0.48  lon 0.35  peak_share 0.54  restore_hours 0.93
+recovery k=12 components=1 lambda2=0.017 | |Spearman| of the Fiedler vector: onset_hour 0.29  wind_report_hour 0.49  lon 0.35  peak_share 0.56  restore_hours 0.93
+recovery k=20 components=1 lambda2=0.025 | |Spearman| of the Fiedler vector: onset_hour 0.28  wind_report_hour 0.48  lon 0.35  peak_share 0.55  restore_hours 0.93

@@ -1,0 +1,58 @@
+
+##### all counties, k=8, no weather graph: 26 storm windows
+
+=== hidden counties: random (20% of the counties, 10 draws per window; averages over windows)
+                            mae   skill  mae_active  mae_severe  peak_ratio  mae_rise  mae_recovery  wins  mean_rank
+method                                                                                                              
+distance-weighted        0.0091  0.2945      0.0549      0.0205      0.4792    0.0053        0.0118    20     1.4231
+spatial: neighbour mean  0.0095  0.2723      0.0558      0.0212      0.4292    0.0056        0.0124     2     2.3077
+spatial: harmonic        0.0096  0.2709      0.0556      0.0212      0.4219    0.0056        0.0125     4     2.4615
+nearest county           0.0105  0.2063      0.0698      0.0251      0.5173    0.0061        0.0136     0     4.3077
+state mean               0.0136  0.1562      0.0627      0.0257      0.3278    0.0073        0.0183     0     4.8077
+static: neighbour mean   0.0149  0.0829      0.0647      0.0269      0.3013    0.0085        0.0195     0     6.7308
+static: harmonic         0.0149  0.0848      0.0644      0.0268      0.2904    0.0085        0.0196     0     6.2692
+global mean              0.0168  0.0000      0.0690      0.0295      0.1957    0.0096        0.0221     0     7.6923
+
+=== hidden counties: block (20% of the counties, 10 draws per window; averages over windows)
+                            mae   skill  mae_active  mae_severe  peak_ratio  mae_rise  mae_recovery  wins  mean_rank
+method                                                                                                              
+spatial: harmonic        0.0127  0.1358      0.0580      0.0213      0.2984    0.0072        0.0168    10     2.8846
+distance-weighted        0.0133  0.1255      0.0600      0.0219      0.3581    0.0074        0.0177     2     3.4231
+nearest county           0.0136  0.0907      0.0683      0.0235      0.3475    0.0077        0.0179     5     4.0769
+spatial: neighbour mean  0.0148  0.0654      0.0609      0.0237      0.2610    0.0086        0.0195     1     4.3846
+state mean               0.0158  0.0605      0.0616      0.0242      0.2980    0.0090        0.0207     4     4.7308
+static: harmonic         0.0166 -0.0167      0.0616      0.0256      0.2773    0.0097        0.0219     2     4.7308
+static: neighbour mean   0.0170 -0.0236      0.0640      0.0264      0.2838    0.0099        0.0223     0     6.0000
+global mean              0.0174  0.0000      0.0609      0.0258      0.2204    0.0101        0.0229     2     5.7692
+
+windows in the weather comparison (counties with weather values): [('2018-01-16', 222), ('2018-10-11', 125), ('2019-02-20', 297), ('2019-02-24', 445), ('2019-11-27', 280), ('2020-02-06', 160), ('2020-10-29', 140), ('2021-02-15', 495), ('2021-05-04', 313), ('2021-06-21', 255), ('2021-08-11', 251), ('2021-12-11', 243), ('2022-01-16', 424), ('2022-03-12', 382), ('2022-04-13', 202), ('2022-06-08', 180), ('2022-06-17', 347), ('2022-07-23', 185), ('2024-01-09', 120), ('2024-01-12', 288), ('2024-05-08', 166), ('2024-05-26', 256), ('2024-06-26', 140), ('2024-09-27', 269)]
+
+##### counties with weather values, k=8, three graphs: 24 storm windows
+
+=== hidden counties: random (20% of the counties, 10 draws per window; averages over windows)
+                            mae   skill  mae_active  mae_severe  peak_ratio  mae_rise  mae_recovery  wins  mean_rank
+method                                                                                                              
+distance-weighted        0.0086  0.2563      0.0532      0.0210      0.4530    0.0049        0.0111    11     2.6250
+weather: neighbour mean  0.0089  0.2436      0.0534      0.0215      0.3894    0.0051        0.0115     3     3.4583
+weather: harmonic        0.0089  0.2429      0.0531      0.0215      0.3816    0.0051        0.0116     5     3.1667
+spatial: neighbour mean  0.0089  0.2402      0.0535      0.0217      0.3896    0.0052        0.0116     3     3.7917
+spatial: harmonic        0.0090  0.2396      0.0533      0.0217      0.3834    0.0052        0.0118     0     3.7083
+nearest county           0.0100  0.1628      0.0678      0.0262      0.5178    0.0056        0.0131     0     6.2500
+state mean               0.0116  0.1434      0.0589      0.0251      0.3109    0.0065        0.0154     1     6.5417
+static: neighbour mean   0.0126  0.0839      0.0604      0.0261      0.2849    0.0072        0.0165     1     8.0000
+static: harmonic         0.0126  0.0845      0.0603      0.0261      0.2766    0.0072        0.0166     0     7.7083
+global mean              0.0139  0.0000      0.0638      0.0278      0.1850    0.0080        0.0183     0     9.7500
+
+=== hidden counties: block (20% of the counties, 10 draws per window; averages over windows)
+                            mae   skill  mae_active  mae_severe  peak_ratio  mae_rise  mae_recovery  wins  mean_rank
+method                                                                                                              
+spatial: harmonic        0.0130  0.1596      0.0565      0.0227      0.2534    0.0072        0.0176     5     3.3333
+weather: harmonic        0.0131  0.1536      0.0558      0.0224      0.2564    0.0072        0.0176     8     3.2083
+distance-weighted        0.0136  0.1369      0.0578      0.0233      0.3403    0.0075        0.0184     1     4.3750
+weather: neighbour mean  0.0138  0.0930      0.0584      0.0236      0.2267    0.0078        0.0185     0     5.8333
+spatial: neighbour mean  0.0139  0.0935      0.0582      0.0240      0.2253    0.0079        0.0187     0     5.4167
+nearest county           0.0140  0.1214      0.0652      0.0250      0.3201    0.0078        0.0188     6     4.4583
+state mean               0.0146  0.0501      0.0594      0.0249      0.2663    0.0084        0.0193     0     6.5417
+static: harmonic         0.0153  0.0434      0.0591      0.0257      0.2510    0.0088        0.0203     3     6.3333
+static: neighbour mean   0.0156  0.0252      0.0607      0.0259      0.2612    0.0089        0.0208     0     7.4583
+global mean              0.0159  0.0000      0.0583      0.0257      0.1964    0.0091        0.0213     1     8.0417

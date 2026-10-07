@@ -1,0 +1,38 @@
+
+##### all_counties: 26 storm windows
+
+=== random hiding, severe hidden counties, averages over windows
+                     mae  peak_ratio  shape_corr  peak_time_err  onset_err  above_all_neighbours
+method                                                                                          
+distance-weighted  0.010       0.474       0.808          4.304      2.417                 0.382
+spatial: harmonic  0.010       0.430       0.804          3.865      2.560                 0.382
+static: harmonic   0.015       0.304       0.621          8.574      7.680                 0.382
+
+=== block hiding, severe hidden counties, averages over windows
+                     mae  peak_ratio  shape_corr  peak_time_err  onset_err  above_all_neighbours
+method                                                                                          
+spatial: harmonic  0.014       0.296       0.594          9.973      8.616                 0.254
+distance-weighted  0.014       0.373       0.566          9.676     10.713                 0.254
+static: harmonic   0.017       0.260       0.416         13.509     13.259                 0.254
+
+##### weather_subset: 24 storm windows
+
+=== random hiding, severe hidden counties, averages over windows
+                                     mae  peak_ratio  shape_corr  peak_time_err  onset_err  above_all_neighbours
+method                                                                                                          
+distance-weighted                  0.009       0.477       0.779          5.024      5.332                 0.414
+weather (wind only): harmonic      0.009       0.401       0.752          8.552      7.280                 0.414
+weather: harmonic                  0.009       0.397       0.762          7.431      7.329                 0.414
+spatial: harmonic                  0.009       0.404       0.757          6.322      6.520                 0.414
+weather (storm summary): harmonic  0.010       0.365       0.709          7.447      6.556                 0.414
+static: harmonic                   0.012       0.281       0.596         12.693     11.432                 0.414
+
+=== block hiding, severe hidden counties, averages over windows
+                                     mae  peak_ratio  shape_corr  peak_time_err  onset_err  above_all_neighbours
+method                                                                                                          
+weather (wind only): harmonic      0.013       0.260       0.530         13.197     14.038                 0.371
+weather (storm summary): harmonic  0.013       0.247       0.492         12.223     14.610                 0.371
+weather: harmonic                  0.013       0.254       0.546         12.066     10.994                 0.371
+spatial: harmonic                  0.013       0.255       0.537         13.381     11.635                 0.371
+distance-weighted                  0.014       0.320       0.538         10.881     10.700                 0.371
+static: harmonic                   0.015       0.221       0.407         16.828     16.745                 0.371

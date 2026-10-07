@@ -1,0 +1,6 @@
+noise 0.02, one wave : components 1, |Spearman| of the Fiedler vector with the arrival time 0.997, with longitude 0.991
+noise 0.02, two waves: components 1, |Spearman| of the Fiedler vector with the arrival time 0.954, with longitude 0.949; best of the first three eigenvectors against 'hit by the second wave' 0.660
+noise 0.05, one wave : components 1, |Spearman| of the Fiedler vector with the arrival time 0.983, with longitude 0.978
+noise 0.05, two waves: components 1, |Spearman| of the Fiedler vector with the arrival time 0.866, with longitude 0.861; best of the first three eigenvectors against 'hit by the second wave' 0.747
+noise 0.15, one wave : components 1, |Spearman| of the Fiedler vector with the arrival time 0.902, with longitude 0.900
+noise 0.15, two waves: components 1, |Spearman| of the Fiedler vector with the arrival time 0.707, with longitude 0.709; best of the first three eigenvectors against 'hit by the second wave' 0.761
